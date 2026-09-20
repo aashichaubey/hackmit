@@ -1,0 +1,9 @@
+{
+  "reason": "Independent code review found that unconditional minimal-label decoding can double an ampersand when the model already expands a correct source speaker label. The interactive workspace uses source-first grounding.",
+  "registered_stage": "Raw arm running; no encoded test outputs inspected or used to identify this defect.",
+  "change": "Keep the frozen runner, original scorer, requests, grammar, references and report unchanged. Add a separate offline audit restoring source-valid quotes directly and decoding other quotations, matching the workspace policy.",
+  "reporting": "Show original frozen metrics and corrected product-policy metrics separately, including the number of affected outputs. Do not choose whichever score is more favorable.",
+  "no_additional_model_calls": true,
+  "candidate_tuning_from_test": false,
+  "registered_at_utc": "2026-09-20T12:50:18.642839+00:00"
+}

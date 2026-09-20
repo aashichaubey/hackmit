@@ -1,0 +1,216 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "condition": "four stress-set questions per meeting in one call; raw notes; same frozen batching prompt",
+  "rows": [
+    {
+      "id": "stress-01",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nMaya: I propose moving the launch to October 3.\nLeo: I agree with moving the launch to October 3.\nPriya: We decided to move the launch to October 3.\nLeo: I will update the website by September 28.\n</meeting>\n1. Who will update the website?\n2. When is the website update due?\n3. Was moving the launch to October 3 decided?\n4. Who proposed moving the launch?",
+      "input_text_tokens": 174,
+      "usage": {
+        "input_tokens": 261,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Leo"
+        },
+        {
+          "found": true,
+          "answer": "September 28"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "error": null
+    },
+    {
+      "id": "stress-02",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nAva: Sam might handle the audit, but let's confirm later.\nBen: We decided to run the review.\nAva: No deadline has been set for the review.\n</meeting>\n1. Who owns the audit?\n2. When is the review due?\n3. Was the review decided?\n4. Who decided to run the review?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Ben"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "error": null
+    },
+    {
+      "id": "stress-03",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nNina: I propose using vendor A.\nOmar: I disagree with using vendor A.\nNina: After discussion, we decided to use vendor B.\nOmar: I will draft the vendor B contract by Friday.\n</meeting>\n1. Was using vendor A decided?\n2. Which vendor was decided?\n3. Who owns the vendor B contract?\n4. When is the vendor B contract due?",
+      "input_text_tokens": 164,
+      "usage": {
+        "input_tokens": 251,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "no"
+        },
+        {
+          "found": true,
+          "answer": "vendor B"
+        },
+        {
+          "found": true,
+          "answer": "Omar"
+        },
+        {
+          "found": true,
+          "answer": "Friday"
+        }
+      ],
+      "correctness": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "error": null
+    },
+    {
+      "id": "stress-04",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nKai: I will test the mobile app by next Friday.\nRuth: I will test the web app by this Friday.\nKai: I agree with Ruth's web test plan.\n</meeting>\n1. When is the mobile app test due?\n2. When is the web app test due?\n3. Who will test the mobile app?\n4. Who will test the web app?",
+      "input_text_tokens": 159,
+      "usage": {
+        "input_tokens": 246,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "next Friday"
+        },
+        {
+          "found": true,
+          "answer": "this Friday"
+        },
+        {
+          "found": true,
+          "answer": "Kai"
+        },
+        {
+          "found": true,
+          "answer": "Ruth"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "error": null
+    },
+    {
+      "id": "stress-05",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nElla: I will finish the data cleanup.\nTheo: I disagree with the proposed Monday release.\nElla: I only proposed Monday; we made no release decision.\n</meeting>\n1. Who will finish the data cleanup?\n2. When is data cleanup due?\n3. Was the Monday release decided?\n4. Who disagreed with the Monday release?",
+      "input_text_tokens": 152,
+      "usage": {
+        "input_tokens": 239,
+        "output_tokens": 39
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Ella"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "no"
+        },
+        {
+          "found": true,
+          "answer": "Theo"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "answer_count_correct": true,
+      "error": null
+    },
+    {
+      "id": "stress-06",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nJo: Raj will own the API integration and finish it by October 9.\nRaj: I agree to own the API integration.\nMina: We decided to ship the prototype after the API integration.\n</meeting>\n1. Who owns the API integration?\n2. When is the API integration due?\n3. Was shipping the prototype decided?\n4. Who agreed to own the API integration?",
+      "input_text_tokens": 160,
+      "usage": {
+        "input_tokens": 247,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Raj"
+        },
+        {
+          "found": true,
+          "answer": "October 9"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Raj"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "error": null
+    }
+  ]
+}

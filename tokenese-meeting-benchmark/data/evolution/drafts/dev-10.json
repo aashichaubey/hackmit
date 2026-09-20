@@ -1,0 +1,255 @@
+{
+  "id": "dev-10",
+  "split": "dev",
+  "notes": "# Steering Council Updates for August 2024\n\n## 2024-08-07\n\n- Conclusion of the Code of Conduct violation\n- Discussion on [PEP 667 - Consistent views of namespaces](https://peps.python.org/pep-0667/) semantic changes\n\n## 2024-08-14\n\n- Deliberation of the decision regarding the Code of Conduct violation\n- Discussion on how to make the Steering Council more effective by suggesting a different body parallel with the Steering Council to deal with social matters\n- Highlight on the need to make clarification on the following different bodies: Code of Conduct Working Group, Steering Council and Python Software Foundation\n- Discussion on the resignation of a Core Python Developer\n- Mentoring survey: still to be released\n- Discussion on [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)\n\n## 2024-08-21\n\n- Discussion on [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)\n- Discussion on having overlapping Steering Council terms for continuity’s sake\n- Discussion on mentorship, its role and how the Steering Council can improve mentorship for some at-risk packages/libraries\n\n## 2024-08-28\n\n- Cleared out pending tasks and re-evaluated the priority tasks\n- Accepted [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)\n- Tabled discussion of [PEP 12 – Sample reStructuredText PEP Template](https://peps.python.org/pep-0012/) changes (regrouping rejection rationale, and adding a discussion of  publishing new modules to PyPI) for the Core Dev sprint\n- Discussion on publishing to PyPI, specifically:\n  - Getting approval\n  - Process or flow of release\n- Re-review of [PEP 667 - Consistent views of namespaces](https://peps.python.org/pep-0667/)\n- Discussion on more explicit authority for the Release Manager’s role going forward\n- Highlight on the ongoing [PEP 13 – Python Language Governance](https://peps.python.org/pep-0013/) discussion on potential changes\n- Discussion on whether there should be a PEP for PyREPL\n- Discussion on how to know when something needs a PEP or not and update [PEP 2 – Procedure for Adding New Modules](https://peps.python.org/pep-0002/)",
+  "facts": [
+    {
+      "kind": "decision",
+      "text": "Accepted PEP 741 - Python Configuration C API",
+      "person": "Steering Council",
+      "deadline": "2024-08-28",
+      "source_quote": "Accepted [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)"
+    },
+    {
+      "kind": "proposal",
+      "text": "Suggesting a different body parallel with the Steering Council to deal with social matters",
+      "person": "Steering Council",
+      "deadline": "2024-08-14",
+      "source_quote": "suggesting a different body parallel with the Steering Council to deal with social matters"
+    },
+    {
+      "kind": "action",
+      "text": "Mentoring survey: still to be released",
+      "person": "Unspecified",
+      "deadline": "After 2024-08-14",
+      "source_quote": "Mentoring survey: still to be released"
+    },
+    {
+      "kind": "agreement",
+      "text": "Conclusion of the Code of Conduct violation",
+      "person": "Steering Council",
+      "deadline": "2024-08-07",
+      "source_quote": "Conclusion of the Code of Conduct violation"
+    },
+    {
+      "kind": "disagreement",
+      "text": "Discussion on resignation of a Core Python Developer",
+      "person": "Steering Council",
+      "deadline": "2024-08-14",
+      "source_quote": "Discussion on the resignation of a Core Python Developer"
+    },
+    {
+      "kind": "proposal",
+      "text": "Having overlapping Steering Council terms for continuity’s sake",
+      "person": "Steering Council",
+      "deadline": "2024-08-21",
+      "source_quote": "Discussion on having overlapping Steering Council terms for continuity’s sake"
+    },
+    {
+      "kind": "proposal",
+      "text": "More explicit authority for the Release Manager’s role going forward",
+      "person": "Steering Council",
+      "deadline": "2024-08-28",
+      "source_quote": "Discussion on more explicit authority for the Release Manager’s role going forward"
+    },
+    {
+      "kind": "proposal",
+      "text": "Whether there should be a PEP for PyREPL",
+      "person": "Steering Council",
+      "deadline": "2024-08-28",
+      "source_quote": "Discussion on whether there should be a PEP for PyREPL"
+    },
+    {
+      "kind": "proposal",
+      "text": "How to know when something needs a PEP or not and update PEP 2 – Procedure for Adding New Modules",
+      "person": "Steering Council",
+      "deadline": "2024-08-28",
+      "source_quote": "Discussion on how to know when something needs a PEP or not and update [PEP 2 – Procedure for Adding New Modules](https://peps.python.org/pep-0002/)"
+    },
+    {
+      "kind": "proposal",
+      "text": "Tabled discussion of PEP 12 – Sample reStructuredText PEP Template changes for the Core Dev sprint",
+      "person": "Steering Council",
+      "deadline": "Core Dev sprint after 2024-08-28",
+      "source_quote": "Tabled discussion of [PEP 12 – Sample reStructuredText PEP Template](https://peps.python.org/pep-0012/) changes (regrouping rejection rationale, and adding a discussion of  publishing new modules to PyPI) for the Core Dev sprint"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-10-q01",
+      "question": "Who accepted PEP 741 - Python Configuration C API?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1204,
+          "end": 1286,
+          "quote": "Accepted [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q02",
+      "question": "Was the mentoring survey released by August 14, 2024?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 682,
+          "end": 720,
+          "quote": "Mentoring survey: still to be released"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q03",
+      "question": "What was suggested to deal with social matters parallel to the Steering Council?",
+      "answers": [
+        "a different body parallel with the Steering Council to deal with social matters"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 370,
+          "end": 460,
+          "quote": "suggesting a different body parallel with the Steering Council to deal with social matters"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q04",
+      "question": "Did the Steering Council discuss overlapping terms for continuity?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 919,
+          "end": 996,
+          "quote": "Discussion on having overlapping Steering Council terms for continuity’s sake"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q05",
+      "question": "Was there a decision made about the Code of Conduct violation by August 7, 2024?",
+      "answers": [
+        "Conclusion of the Code of Conduct violation"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 61,
+          "end": 104,
+          "quote": "Conclusion of the Code of Conduct violation"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q06",
+      "question": "Who is assigned to release the mentoring survey?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 682,
+          "end": 720,
+          "quote": "Mentoring survey: still to be released"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q07",
+      "question": "Did the Steering Council decide to create a PEP for PyREPL by August 28, 2024?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1932,
+          "end": 1986,
+          "quote": "Discussion on whether there should be a PEP for PyREPL"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q08",
+      "question": "What was tabled for the Core Dev sprint?",
+      "answers": [
+        "discussion of PEP 12 – Sample reStructuredText PEP Template changes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 1289,
+          "end": 1517,
+          "quote": "Tabled discussion of [PEP 12 – Sample reStructuredText PEP Template](https://peps.python.org/pep-0012/) changes (regrouping rejection rationale, and adding a discussion of  publishing new modules to PyPI) for the Core Dev sprint"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q09",
+      "question": "Did the Steering Council discuss more explicit authority for the Release Manager’s role?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 1715,
+          "end": 1797,
+          "quote": "Discussion on more explicit authority for the Release Manager’s role going forward"
+        }
+      ]
+    },
+    {
+      "id": "dev-10-q10",
+      "question": "Was the resignation of a Core Python Developer agreed upon by the Steering Council?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 623,
+          "end": 679,
+          "quote": "Discussion on the resignation of a Core Python Developer"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2024-08-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-08-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-08-steering-council-update.md",
+    "source_sha256": "280cd3b6b3841e6b20a948b42e6a038ec1e50f6fbbe717afda858f5308e3fcd3",
+    "excerpt_sha256": "280cd3b6b3841e6b20a948b42e6a038ec1e50f6fbbe717afda858f5308e3fcd3",
+    "scope": "supplied excerpt only",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "ef458659501fdc5b61fd9f3cd31b5dfe023ba3c1dacbbb967ac7f0f887d18b7f",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "id": "validation-01",
+  "split": "validation",
+  "notes": "# Return Position Impl Trait in Dyn Trait, an overview\n\n## Summary\n\nDescribes high-level summary of the \"Return Position Impl Trait in Dyn Trait\" (RPITIDT) approach that we propose:\n\n[ToC]\n\n## Problem statement\n\nIn a nutshell, we want to allow users to write traits and impls that include async functions:\n\n```rust trait AsyncIterator { type Item; async fn next(&mut self) -> Option<Self::Item>; }\n\nimpl AsyncIterator for WidgetFactory { type Item = Widget; async fn next(&mut self) -> Option<Self::Item> { } } ```\n\nand then use the traits with `dyn` in a natural fashion:\n\n```rust fn count(f: &mut dyn AsyncIterator<Item = Widget>) -> usize { let mut c = 0; while let Some(_) = c.next().await { c += 1; } c } ```\n\n## Generalizing to impl Trait\n\nWe want the approach to generalize to `-> impl Trait` in a trait. In other words, the `async fn` example could be equivalently written like so:\n\n```rust trait AsyncIterator { type Item; fn(&mut self) -> impl Future<Output = Self::Item> + '_; }\n\nimpl AsyncIterator for WidgetFactory { type Item = Widget; fn(&mut self) -> impl Future<Output = Self::Item> + '_ { async move { ... } } } ```\n\nand `count` should work the same way.\n\nWithout loss of generality, we shall now confine ourselves to talking about async fn.\n\n## Why is this hard? Because of dyn trait.\n\nIn the case of static dispatch, adding `async fn` into traits and impls is not particularly hard. The idea is that the `AsyncIterator` trait would ultimately desugar to something like this, where the associated type `next` represents the future to be returned by `next()`:[^quibble]\n\n[^quibble]: We can quibble about precise name of the associated type and what exactly it should represent, but that choice is orthogonal to the points raised in this doc.\n\n```rust trait AsyncIterator { type Item; type next<'me>: Future<Output = Self::Item> + '_ where Self: 'me; fn next(&mut self) -> Self::next<'_>; } ```\n\nNow I can write a statically dispatched version of `count` easily enough:\n\n```rust fn count_static<A>(f: &mut A) -> usize where A: AsyncIterator<Item = Widget>, { let mut c = 0; while let Some(_) = c.next().await { c += 1; } c } ```\n\nIn this case, the call to `c.next()` will return `A::next`, which is some future type of some size, depending on the precise type `A`. When monomorphizing, the compiler will be able to allocate exactly the amount of stack space required to store that future `A::next` and await it.\n\n**Unfortunately, when we try to have `f: &mut dyn AsyncIterator`, that strategy breaks down**. The whole point is that we don't know the precise type of iterator we have, so we also don't know the precise type of the `next` future that will be returned. Therefore we don't know how much stack space to allocate.\n\nFor this reason, the `#[async_trait]` adapter actually desugars `async fn` to return a `Pin<Box<dyn Future>>` and not an `impl Future`. This solves the problem, because now the returned future is always the same size, regardless of what type is being used. That is ok for `dyn` -- at least, presuming `Box` is ok -- but it's a pessimization for the static dispatch case.\n\n**The design we propose in this document does better than async-trait here.** For static dispatch cases, it has no allocation at all, and works exactly as you would expect. When using dynamic dispatch, it does require that the impl returns some kind of fat pointer, and it *defaults* to returning a `Pin<Box<dyn Future>>`, but it also gives users the ability to override that via adapters.\n\n## Design goals\n\n### Natural usage\n\nUsing traits with `async fn` should be just like using traits without it, at least most of the time.\n\n### Static dispatch should not allocate; dynamic dispatch should be able to avoid allocation, but it takes some effort\n\nWe consider it ok if invoking an `async fn` via `dyn` allocates a `Box` most of the time, but there must be a way to invoke async functions (via `dyn`) without allocation to support no-std, high-performance loops, custom allocators, or other specialized cases.\n\n### Separation of concerns\n\nPeople should be able to write libraries that define traits, impls, and take `dyn` parameters in a natural way which can then readily be used by callers with different requirements (notably, by no-std callers who cannot allocate).\n\nIt is important that:\n\n* a library L can write natural-looking traits, impls, and functions that take `dyn Trait` values; * the library L can be used by a std project with zero annotation overhead; * and the library L can then be used as a dependency by a no-std project with some effort (to specify the alternative memory allocation strategy they want).\n\nPut another way, the code with the most information about its requirements should be making the decisions for how things work at runtime.\n\n### Ship this year\n\nWe don't want a design that is blocked on \"high-falutin'\" features that may or may not ever see the light of day.\n\n## Alternatives considered\n\nWe considered a number of approaches to resolving this problem.\n\n### Design selected: \"Return some wide pointer\"\n\nThe design we describe here we call \"return some pointer\". The idea is that an async function, when invoked through `dyn`, always returns \"some wide pointer\" to a `dyn Future`. This wide pointer *may* be a `Box` (as in the common case) but could also be from some other source.\n\nThe \"wide pointer\" type carries a data pointer and a vtable, and the caller is able to invoke methods on it in the usual way. When the pointer is dropped, the vtable includes a drop function that will ensure the memory is deallocated if necessary.\n\nThe memory allocation strategy used to create this wide pointer is determined by the impl (and hence by the type implementing the trait). The default is to use `Box`, but impls can opt to create the \"wide pointer\" themselves instead via whatever means. Adapter types allow functions to \"override\" the choice to meet their local needs.\n\n### Always return box\n\nWhile simple, we rejected this alternative because of no-std.\n\n### Box that is cached across calls\n\nIt has been observed that, for many async fn, the function takes a `&mut self` \"lock\" on the `self` type. In that case, you can only ever have one active future at a time. Even if you are happy to box, you might get a big speedup by caching that box across calls (this is not clear, we'd have to measure, the allocator might do a better job than you can).\n\nWe rejected this as the primary mechanism because it still requires Box. It also doesn't help with `&self` functions.\n\nHowever, our proposed design can model this if code \"opts in\" to it with an adapter. Moreover, we believe it would be possible to 'upgrade' the ABI to perform this optimization without any change to user code: effectively the compiler would, when calling a function that returns `-> impl Trait` via `dyn`, allocate some \"scratch space\" on the stack and pass it to that function. The default generated shim, which today just boxes, would make use of this scratch space to stash the box in between calls (this would apply to any `&mut self` function, essentially).\n\n### Return a fixed number of bytes (\"small box\")\n\nWe could make traits return some kind of `SmallBox` type which would permit stack allocation for small futures and fallback to box otherwise; this is vaguely similar to the design we have chosen, except that the result may not be a \"wide pointer\" but is more like \"some data\". We rejected this for a number of reasons:\n\n* **What is the right threshold for the small box?** This value would have to be set at the trait level and this violates separation of concerns. * **Futures tend to be quite large.** To avoid boxing an appreciable number of futures, we would have to make the \"small box threshold\" quite large, and that then becomes pure overhead for other cases. * **It's just weird.** This \"small box\" type doesn't exist in libstd and just seems kind of non-canonical and arbitrary.\n\nAll that said, it wouldn't be hard to convert our existing design into a \"small box\"-like approach, if we had convincing data that it would pay off. (We should gather that data.)\n\n### Unsized returns, aka, caller decides\n\nWe could allow functions to return unsized values:\n\n```rust fn foo() -> dyn Future<Output = Option<Item>> { } ```\n\nThe challenge then is that we must arrange for the caller to allocate the memory where the future will live without knowing up front how big the future is. This approach is appealing, but there are some major obstacles.\n\n#### Supporting stack allocation\n\n`async` contexts, and generators in general, do not support unsized allocation on the stack (also known as alloca). This is because their stack values that exist across await points are pre-allocated. Futures being awaited always exist across await points, so this approach would not support stack allocation.\n\n#### \"Caller decides\" is not always desired\n\nIntuitively, it may seem like letting the caller decide the allocation strategy is a correct approach, because the caller has more information than the callee.\n\nThis intuition breaks down, though, when working with libraries that take `dyn` or when using higher order functions. The code that has static information about the type being used is more likely to have information about what allocation strategy should be used.\n\nMoreover, in our chosen approach, *any* code that has static information along the call stack can wrap that type in an adapter (as long as its callees are generic enough). So we think this approach gives far more flexibility than caller decides.\n\n## How it feels to use\n\nDefining a trait and impls look exactly as shown in the \"problem statement\". Importantly, it works the same way whether or not you are boxing:\n\n```rust trait AsyncIterator { type Item; async fn next(&mut self) -> Option<Self::Item>; }\n\nimpl AsyncIterator for WidgetFactory { type Item = Widget; async fn next(&mut self) -> Option<Self::Item> { } } ```\n\nInvoking methods on a `dyn Trait` also works just as you would expect:\n\n```rust fn count(f: &mut dyn AsyncIterator) -> usize { let mut c = 0; while let Some(_) = c.next().await { c += 1; } c } ```\n\n### Creating dyn traits: for std users\n\nIf you are willing to allocate a future when `next` is invoked, then coercing a type into a `dyn Trait` works just as it does for any other trait:\n\n```rust fn invoke_count(mut x: impl AsyncIterator) { let c = count(&mut x); ... } ```\n\n### For the no-std user\n\nImagine we want to adapt `invoke_count` from the previous section for a no-std context; it should therefore avoid allocation. What we can do is to wrap our `impl AsyncIterator` in an \"adapter\". The `dyner` crate, to be published by rust-lang to cargo, will offer a number of convenient adapters, including one that allocates the space for each future on the stack:\n\n```rust fn invoke_count(mut x: impl AsyncIterator) { let c = count(&mut dyner::InlineAsyncIterator::new(x)); // ^^^^^^^^^^^^^^^^^^^^^^^^^^ adapter type ... } ``` ### How you apply an existing \"adapter\" strategy to your own traits\n\nThe `InlineAsyncIterator` adapts an `AsyncIterator` to pre-allocate stack space for the returned futures, but what if you want to apply that inline stategy to one of your traits? You can do that by using the `#[inline_adapter]` attribute macro applied to your trait definition:\n\n```rust #[dyner::inline_adapter(InlineMyTrait)] trait MyTrait { async fn some_function(&mut self); } ```\n\nThis will create an adapter type called `InlineMyTrait` (the name is given as an argument to the attribute macro). You would then use it by invoking `new`:\n\n```rust fn foo(x: impl MyTrait) { let mut w = InlineMyTrait::new(x); bar(&mut w); }\n\nfn bar(x: &mut dyn MyTrait) { x.some_function(); } ```",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "We propose the \"Return Position Impl Trait in Dyn Trait\" (RPITIDT) approach.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "Describes high-level summary of the \"Return Position Impl Trait in Dyn Trait\" (RPITIDT) approach that we propose:"
+    },
+    {
+      "kind": "proposal",
+      "text": "The design we describe here we call \"return some pointer\".",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "The design we describe here we call \"return some pointer\"."
+    },
+    {
+      "kind": "proposal",
+      "text": "An async function, when invoked through `dyn`, always returns \"some wide pointer\" to a `dyn Future`.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "The idea is that an async function, when invoked through `dyn`, always returns \"some wide pointer\" to a `dyn Future`."
+    },
+    {
+      "kind": "proposal",
+      "text": "The default is to use `Box`, but impls can opt to create the \"wide pointer\" themselves instead via whatever means.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "The default is to use `Box`, but impls can opt to create the \"wide pointer\" themselves instead via whatever means."
+    },
+    {
+      "kind": "proposal",
+      "text": "Adapter types allow functions to \"override\" the choice to meet their local needs.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "Adapter types allow functions to \"override\" the choice to meet their local needs."
+    },
+    {
+      "kind": "decision",
+      "text": "We rejected always returning box as the primary mechanism because of no-std.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "While simple, we rejected this alternative because of no-std."
+    },
+    {
+      "kind": "decision",
+      "text": "We rejected caching the box across calls as the primary mechanism because it still requires Box and doesn't help with `&self` functions.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "We rejected this as the primary mechanism because it still requires Box."
+    },
+    {
+      "kind": "agreement",
+      "text": "The design we propose does better than async-trait: no allocation for static dispatch and defaults to Pin<Box<dyn Future>> for dynamic dispatch with ability to override via adapters.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "**The design we propose in this document does better than async-trait here.** For static dispatch cases, it has no allocation at all, and works exactly as you would expect."
+    },
+    {
+      "kind": "agreement",
+      "text": "Using traits with `async fn` should be just like using traits without it, at least most of the time.",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "Using traits with `async fn` should be just like using traits without it, at least most of the time."
+    },
+    {
+      "kind": "action",
+      "text": "The `dyner` crate will be published by rust-lang to cargo offering convenient adapters including one that allocates space for each future on the stack.",
+      "person": "rust-lang",
+      "deadline": "",
+      "source_quote": "The `dyner` crate, to be published by rust-lang to cargo, will offer a number of convenient adapters, including one that allocates the space for each future on the stack:"
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-01-q01",
+      "question": "What is the name of the approach proposed for async fn in dyn traits?",
+      "answers": [
+        "Return Position Impl Trait in Dyn Trait",
+        "RPITIDT"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 68,
+          "end": 181,
+          "quote": "Describes high-level summary of the \"Return Position Impl Trait in Dyn Trait\" (RPITIDT) approach that we propose:"
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q02",
+      "question": "Does the design default to returning a Box for dynamic dispatch?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5724,
+          "end": 5838,
+          "quote": "The default is to use `Box`, but impls can opt to create the \"wide pointer\" themselves instead via whatever means."
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q03",
+      "question": "Who will publish the `dyner` crate?",
+      "answers": [
+        "rust-lang"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 10614,
+          "end": 10784,
+          "quote": "The `dyner` crate, to be published by rust-lang to cargo, will offer a number of convenient adapters, including one that allocates the space for each future on the stack:"
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q04",
+      "question": "Is always returning a box accepted as the primary mechanism?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5945,
+          "end": 6006,
+          "quote": "While simple, we rejected this alternative because of no-std."
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q05",
+      "question": "Does the proposed design allocate for static dispatch?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3115,
+          "end": 3287,
+          "quote": "**The design we propose in this document does better than async-trait here.** For static dispatch cases, it has no allocation at all, and works exactly as you would expect."
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q06",
+      "question": "Can adapter types override the default allocation strategy?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 5839,
+          "end": 5920,
+          "quote": "Adapter types allow functions to \"override\" the choice to meet their local needs."
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q07",
+      "question": "Is caching the box across calls the primary mechanism?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 6402,
+          "end": 6474,
+          "quote": "We rejected this as the primary mechanism because it still requires Box."
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q08",
+      "question": "Does the excerpt mention a specific deadline for shipping the design?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 4781,
+          "end": 4799,
+          "quote": "### Ship this year"
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q09",
+      "question": "Is there a proposal to use a \"small box\" type as the primary design?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 7085,
+          "end": 7133,
+          "quote": "### Return a fixed number of bytes (\"small box\")"
+        }
+      ]
+    },
+    {
+      "id": "validation-01-q10",
+      "question": "Does the excerpt state that the caller decides the allocation strategy?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 8873,
+          "end": 9032,
+          "quote": "Intuitively, it may seem like letting the caller decide the allocation strategy is a correct approach, because the caller has more information than the callee."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2022-03-23-async-fn-and-rpitit.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-03-23-async-fn-and-rpitit.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-03-23-async-fn-and-rpitit.md",
+    "source_sha256": "d31f09a17ce873e35e7ad597cb5c1ceb90583894fb095e91e37bdf40b01dba28",
+    "excerpt_sha256": "9e8e7b65e1a890fa5234d1c928e6b631a4f526645ddeff03fbe5c1a9c090a370",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "b02f130f73ac178e92b0d4581207cbabf5d117a35bcd26a76f2041e4f6c90682",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

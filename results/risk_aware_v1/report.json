@@ -1,0 +1,62 @@
+{
+  "benchmark_sha256": "ad7b34f0308183d28de4e0f67184bda72a50c918dcbe6e0dfc38668fc74739d6",
+  "selected_context_ids": [
+    "factual_passages-02",
+    "factual_passages-03",
+    "meeting_notes-01",
+    "meeting_notes-03",
+    "mixed_narrative_factual-05",
+    "policies_handbooks-01",
+    "policies_handbooks-02",
+    "policies_handbooks-03",
+    "procedural_instructions-01",
+    "procedural_instructions-02",
+    "procedural_instructions-03",
+    "procedural_instructions-04",
+    "structured_business-02",
+    "structured_business-03",
+    "structured_business-05",
+    "technical_documentation-04"
+  ],
+  "recovered_questions": 11,
+  "new_failures": 7,
+  "risk_category_span_counts": {
+    "QUANTITY": 27,
+    "CONDITION": 55,
+    "COMPARISON_THRESHOLD": 10,
+    "CAUSAL_DEPENDENCY": 29,
+    "LOCATION_ENTITY": 10,
+    "TIME_DATE": 37,
+    "REQUIREMENT": 89,
+    "NEGATION": 44,
+    "ORDERING": 30,
+    "PERMISSION": 20,
+    "EXCEPTION": 16
+  },
+  "protected_fraction_reduction_correlation": 0.010494251743522169,
+  "usage": {
+    "risk_aware_generation": {
+      "calls": 4,
+      "input_tokens": 2545,
+      "output_tokens": 799
+    },
+    "downstream_qa": {
+      "calls": 20,
+      "input_tokens": 4771,
+      "output_tokens": 57
+    },
+    "qa_judging": {
+      "calls": 20,
+      "input_tokens": 1697,
+      "output_tokens": 575
+    },
+    "risk_detection": {
+      "calls": 3,
+      "input_tokens": 1469,
+      "output_tokens": 805
+    }
+  },
+  "total_input_tokens": 10482,
+  "total_output_tokens": 2236,
+  "approximate_cost_usd": 0.0077704
+}

@@ -1,0 +1,263 @@
+{"id": "meetingqa:0097ee54d49f09888130", "method": "raw", "f1": 0.6666666666666666}
+{"id": "meetingqa:77ea851912f96812f939", "method": "raw", "f1": 0.4089775561097257}
+{"id": "meetingqa:c60dc8831118eab19637", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:a929eb4b89fd099d0538", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:94c00e96cf9f65c363f6", "method": "raw", "f1": 0.35658914728682173}
+{"id": "meetingqa:7585c84a8872dc86acd5", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:73b314e7d9e77acc4b46", "method": "raw", "f1": 0.5365853658536586}
+{"id": "meetingqa:718404ae86a53c884d8a", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:d72cc516afdf14a9869d", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:dd8a2c4a5e9e7282a8cc", "method": "raw", "f1": 0.5911602209944752}
+{"id": "meetingqa:b116f38ff09ef81ebad7", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:a1899fb84f684bc5b2ca", "method": "raw", "f1": 0.1476510067114094}
+{"id": "meetingqa:9a8203677f086537d269", "method": "raw", "f1": 0.32142857142857145}
+{"id": "meetingqa:a7c66a9f00ac4c493ea0", "method": "raw", "f1": 0.43410852713178294}
+{"id": "meetingqa:a10a4232cfecd06376ad", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:88dc16909004c36cc438", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:5ce50fb2d7e083d23017", "method": "raw", "f1": 0.8}
+{"id": "MeeQA:4e92c19c3c0a66b07473", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:5ffd0cfb36aeb3051659", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:449bd704fba5685849ec", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:cb0a8ae0d6644296a278", "method": "raw", "f1": 0.9032258064516129}
+{"id": "MeeQA:87025e3d98dcd08a83a8", "method": "raw", "f1": 1.0}
+{"id": "MeeQA:8324d9834b73cf3c828c", "method": "raw", "f1": 0.8101983002832861}
+{"id": "MeeQA:1dbc3e1e44b6fae3b00d", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:fb764cf2529c5b483d3d", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:13cb5a6a539e8c76484d", "method": "raw", "f1": 0.5669291338582677}
+{"id": "MeeQA:75e2680271e43f214223", "method": "raw", "f1": 0.17073170731707318}
+{"id": "MeeQA:d99c568dca3ae9a079d6", "method": "raw", "f1": 1.0}
+{"id": "MeeQA:e1cd0d3d2bb17e06394b", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:c3153d54404a8ed31ebd", "method": "raw", "f1": 0.0}
+{"id": "MeeQA:4dd09a91fc9ebb3e1a1c", "method": "raw", "f1": 0.8421052631578947}
+{"id": "MeeQA:73f06d72c8cad742b7dd", "method": "raw", "f1": 0.0}
+{"id": "meetingqa:7585c84a8872dc86acd5", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:c60dc8831118eab19637", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:94c00e96cf9f65c363f6", "method": "encoded", "f1": 0.35658914728682173}
+{"id": "meetingqa:a929eb4b89fd099d0538", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:0097ee54d49f09888130", "method": "encoded", "f1": 0.6666666666666666}
+{"id": "meetingqa:77ea851912f96812f939", "method": "encoded", "f1": 0.4089775561097257}
+{"id": "meetingqa:73b314e7d9e77acc4b46", "method": "encoded", "f1": 0.5365853658536586}
+{"id": "meetingqa:d72cc516afdf14a9869d", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:dd8a2c4a5e9e7282a8cc", "method": "encoded", "f1": 0.5911602209944752}
+{"id": "meetingqa:9a8203677f086537d269", "method": "encoded", "f1": 0.32142857142857145}
+{"id": "meetingqa:b116f38ff09ef81ebad7", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:718404ae86a53c884d8a", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:a1899fb84f684bc5b2ca", "method": "encoded", "f1": 0.1476510067114094}
+{"id": "meetingqa:a10a4232cfecd06376ad", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:5ffd0cfb36aeb3051659", "method": "encoded", "f1": 0.0}
+{"id": "meetingqa:a7c66a9f00ac4c493ea0", "method": "encoded", "f1": 0.43410852713178294}
+{"id": "MeeQA:449bd704fba5685849ec", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:88dc16909004c36cc438", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:13cb5a6a539e8c76484d", "method": "encoded", "f1": 0.5669291338582677}
+{"id": "MeeQA:8324d9834b73cf3c828c", "method": "encoded", "f1": 0.8101983002832861}
+{"id": "MeeQA:cb0a8ae0d6644296a278", "method": "encoded", "f1": 0.6436781609195402}
+{"id": "MeeQA:75e2680271e43f214223", "method": "encoded", "f1": 0.17073170731707318}
+{"id": "MeeQA:87025e3d98dcd08a83a8", "method": "encoded", "f1": 1.0}
+{"id": "MeeQA:5ce50fb2d7e083d23017", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:4e92c19c3c0a66b07473", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:1dbc3e1e44b6fae3b00d", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:d99c568dca3ae9a079d6", "method": "encoded", "f1": 1.0}
+{"id": "MeeQA:fb764cf2529c5b483d3d", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:4dd09a91fc9ebb3e1a1c", "method": "encoded", "f1": 0.6666666666666666}
+{"id": "MeeQA:e1cd0d3d2bb17e06394b", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:c3153d54404a8ed31ebd", "method": "encoded", "f1": 0.0}
+{"id": "MeeQA:73f06d72c8cad742b7dd", "method": "encoded", "f1": 0.0}
+{
+  "grammar": {
+    "version": 1,
+    "style": "consecutive_speaker_indented_list",
+    "speaker_headers": "verbatim",
+    "continuation": "  -",
+    "utterances": "all_characters_unchanged",
+    "legend": null
+  },
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "case_ids": [
+    "meetingqa:0097ee54d49f09888130",
+    "meetingqa:a929eb4b89fd099d0538",
+    "meetingqa:94c00e96cf9f65c363f6",
+    "meetingqa:7585c84a8872dc86acd5",
+    "meetingqa:77ea851912f96812f939",
+    "meetingqa:c60dc8831118eab19637",
+    "meetingqa:73b314e7d9e77acc4b46",
+    "meetingqa:d72cc516afdf14a9869d",
+    "meetingqa:dd8a2c4a5e9e7282a8cc",
+    "meetingqa:718404ae86a53c884d8a",
+    "meetingqa:9a8203677f086537d269",
+    "meetingqa:b116f38ff09ef81ebad7",
+    "meetingqa:a1899fb84f684bc5b2ca",
+    "meetingqa:a10a4232cfecd06376ad",
+    "meetingqa:a7c66a9f00ac4c493ea0",
+    "meetingqa:5ffd0cfb36aeb3051659",
+    "MeeQA:88dc16909004c36cc438",
+    "MeeQA:4e92c19c3c0a66b07473",
+    "MeeQA:5ce50fb2d7e083d23017",
+    "MeeQA:449bd704fba5685849ec",
+    "MeeQA:cb0a8ae0d6644296a278",
+    "MeeQA:87025e3d98dcd08a83a8",
+    "MeeQA:13cb5a6a539e8c76484d",
+    "MeeQA:1dbc3e1e44b6fae3b00d",
+    "MeeQA:8324d9834b73cf3c828c",
+    "MeeQA:fb764cf2529c5b483d3d",
+    "MeeQA:75e2680271e43f214223",
+    "MeeQA:d99c568dca3ae9a079d6",
+    "MeeQA:4dd09a91fc9ebb3e1a1c",
+    "MeeQA:e1cd0d3d2bb17e06394b",
+    "MeeQA:c3153d54404a8ed31ebd",
+    "MeeQA:73f06d72c8cad742b7dd"
+  ],
+  "prompt_hash": "fcbdad710ac103125496b5a69f7cc7467406ca22d13bfdf308c1f418975dcd75",
+  "output_limit": 2048,
+  "quality_policy": "Report quality loss and savings; no zero-loss qualification claim.",
+  "study": "block_grammar_training_tradeoff",
+  "qualified": false,
+  "methods": {
+    "raw": {
+      "questions": 32,
+      "meetings": 30,
+      "macro_f1": 0.29863616478910143,
+      "macro_meeting_f1": 0.3090964235440704,
+      "macro_iou": 0.24050297120036232,
+      "exact_match": 0.0625,
+      "answerable_f1": 0.47227232957820287,
+      "unanswerable_accuracy": 0.125,
+      "answerability_precision": 0.5,
+      "answerability_recall": 0.875,
+      "balanced_answerability": 0.5,
+      "ungrounded_answers": 1,
+      "invalid_answers": 0,
+      "actual_input_tokens": 34589,
+      "actual_output_tokens": 3517,
+      "actual_usd": 0.019462800000000002,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    },
+    "encoded": {
+      "questions": 32,
+      "meetings": 30,
+      "macro_f1": 0.2600428447258733,
+      "macro_meeting_f1": 0.26793021547662704,
+      "macro_iou": 0.20166257949668548,
+      "exact_match": 0.0625,
+      "answerable_f1": 0.3950856894517466,
+      "unanswerable_accuracy": 0.125,
+      "answerability_precision": 0.5416666666666666,
+      "answerability_recall": 0.8125,
+      "balanced_answerability": 0.46875,
+      "ungrounded_answers": 0,
+      "invalid_answers": 3,
+      "actual_input_tokens": 33504,
+      "actual_output_tokens": 3541,
+      "actual_usd": 0.019067200000000003,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    }
+  },
+  "input_savings_fraction": 0.031368354101014795,
+  "f1_loss_percentage_points": 3.859332006322813,
+  "answerability_loss_percentage_points": 3.125,
+  "uncertainty": {
+    "unit": "meeting family, paired cluster bootstrap",
+    "families": 26,
+    "repetitions": 5000,
+    "seed": 20260920,
+    "mean_question_f1_delta": -0.038593320063228145,
+    "percentile_95_interval": [
+      -0.1,
+      0.0
+    ],
+    "improved": 0,
+    "regressed": 3,
+    "tied": 29,
+    "interpretation": "Exploratory training uncertainty, not proof of equivalence or a qualification gate."
+  },
+  "ledger": {
+    "actual_calls": 3334,
+    "known_usd": 1.4022567999999986,
+    "reserved_or_spent_usd": 1.5750635999999982,
+    "unknown_usage_calls": 33,
+    "input_tokens": 3037894,
+    "cached_input_tokens": 234624,
+    "output_tokens": 160929,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 671,
+        "known_usd": 0.15622840000000013
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 990,
+        "known_usd": 0.4850036000000002
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 120,
+        "known_usd": 0.02050120000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      },
+      "successor_discovery:publicqa-blocks": {
+        "calls": 13,
+        "known_usd": 0.0091256
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "successor_discovery_allocations": [
+      {
+        "purpose": "successor_discovery:publicqa-blocks",
+        "max_calls": 48,
+        "reserve_calls": 128,
+        "reason": "User-directed public QA exploration; allocate existing global capacity, retain paired final-evaluation reserve.",
+        "created": 1789908394.5765288
+      }
+    ],
+    "accounting_status": "incomplete"
+  }
+}

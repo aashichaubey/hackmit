@@ -1,0 +1,253 @@
+{
+  "id": "validation-08",
+  "split": "validation",
+  "notes": "# T-lang Questions about Contracts\n\n:::info Currently this doc is a sketch of a list of questions, as well as *potential* answers when pnkfelix saw them. The core point, though, is for T-lang to agree about what **Questions** it wants answered, and *not* to dive deep into the answers, apart from when it helps us better understand poorly phrased questions (which should be subsequently revised).\n\nHowever, if there are some constraints on the answers that T-lang already *knows* it wants to communicate, then we should include that in the document we deliver to the Rust contracts design stakeholders. :::\n\n## Related work:\n\n* [Draft RFC 2022-11-25][]\n\n[Draft RFC 2022-11-25]: https://hackmd.io/w8AS2N09R76aXDFK9ogHBQ?view\n\n## Purpose of Contracts\n\n**Q1:** What is the primary purpose of contracts?\n\nMore specifically, are contracts primarily: * a specification tool? (i.e. meant for *proofs* of correctness properties, showing them to hold prior to the program execution) * correctness proprties might include: * (full-blown) functional correctness (total or partial) * safety (i.e. lack of UB) * panic-freedom * maintenance of a [representation invariant][rep invariant] * an assertion encoding mechanism (i.e. a way to catch mistakes dynamically)? * If so, are the assertions guaranteed to hold? * (This is meant in the sense of `assert!`, which one can rely on in all builds, versus `debug_assert!`, which one should not assume holds when it comes to e.g. safety conditions in release builds.) * The concerns of any assertion mechanism overlaps with the criteria for \"a specification tool\" above (e.g. one might attempt to encode total correctness properties, or just a subset thereof), but an assertion mechanism changes the goal posts so that one need not always demand ahead-of-time proof; mere *eventual* and/or *potential* detection at runtime suffices here) * a blame-assignment mechanism? (i.e. a an aid for identifying which modules injected errors) * If so, what are the parties (functions, traits, modules, crates, or some subset thereof)? * What guarantees are made? E.g. if blame is assigned to a party, then it will be assigned correctly (a kind of \"blame soundness\")? will blame always be assigned to some party (a kind of \"blame completeness\") * a documentation tool? * (pnkfelix: This is an oft-touted benefit of contracts, but its hard to believe the effort spent developing a contract system would pay off if improved documentation were the *primary* purpose.)\n\n[rep invariant]: https://en.wikipedia.org/wiki/Class_invariant\n\n#### Why this question matters\n\nDifferent purposes entail different sets of constraints on the design space.\n\nFor example, an assertion mechanism whose guarantees can be assumed by unsafe code in relase builds is one that needs to *always be proven to hold* (dynamically if necessary). That in turn may entail different constraints on how *expressive* the contract language is allowed to be.\n\n## What is value-add for Contracts?\n\n**Q2:** What would your *minimal acceptable form* of Contracts provide over mere `assert!`?\n\n**Q3:** What be provided via \"natural\" anticipated extensions to the aforementioned minimal form?\n\nIdeas for answers to the second question:\n\n* Automatic injection of checks provided by trait definition into object code of (every) corresponding impl * Automatic generation of test inputs and corresponding validity checks of resulting outputs\n\n**Q4:** What is value-add for building into \"Rust core\" (versus delivery via third-party crate)?\n\n* Encourage uniformity and ubiquity * Can be incorporated into Rust `std` crate.\n\n**Q5:** How are contracts best understood by the programmer?\n\nIn particular, see https://www2.ccs.neu.edu/racket/pubs/icfp16-dnff.pdf which points out that neither a denotational or operational view is ideal, at least for a rich dynamic contract language like Racket's.\n\n#### Why these questions matter\n\nWe have `assert!` in Rust today. We need to understand why this new mechanism is being added to the language.\n\n## Prior art\n\n**Q6:** What is prior art specifically for Rust?\n\ne.g. Attribute-based (i.e. proc-macro) contract encoding\n\n* https://crates.io/crates/contracts * `#[requires(...)]` and `#[ensures(...)]` * `#[invariant(...)]` * all three of above have `debug_`-prefixed variants * Prusti: * `#[requires(...)]` and `#[ensures(...)]` * `#[trusted]` * `#[pure]` * `#[after_expiry(...)]` aka Pledges, etc * Creusot * `#[requires(...)]` and `#[ensures(...)]` * `#[invariant(...)]` (on loop expressions) * `#[trusted]` * uses Pearlite, a pure immutable fragment of Rust with logical operators and mappings to \"models\" of objects\n\n#### Why this question matters\n\nAny divergence from existing contract systems needs to be properly motivated. In other words, it would be good to provide an easy upgrade path for people using existing third party crates (especially the successful ones).\n\n**Q7:** What is *successful* prior art independent from Rust?\n\n(TODO: validate the success of any item listed below...)\n\ne.g. * seL4 * Java Modeling Language (JML) * Contracts for Dynamic Checking * Ada * Kotlin ? * Racket: Findler/Felleisen * Eiffel * Contracts for Static Reasoning * Ada * note Ada has distinct `with Static_Predicate => ...` and `with Dynamic_Predicate => ...` in its DSL * Java (see JML mentioned above, which has ESC/Java) * (Are there examples available of temporal protocols modeled via contracts?)\n\n#### Why this question matters?\n\nThis is a heavily explored space and it would be foolish for us to not ensure we are aware of what has worked and what hasn't worked for other languages.\n\n## Varieties of Contract Language\n\n**Q8:** Where are Contracts meant to be applied?\n\n(This is somewhat connected to the question above about \"who are the parties\" if you think of contracts as being about \"blame assignment\")\n\n* Arbitrary functions? * Methods of traits? * Any associated items of traits? * Types * to express [representation invariants][rep invariant] * Traits themselves * (to express abstract invariants that hold for any impl of the trait, potentially written against so-called \"ghost state\" attached to the trait) * Loop headers (to express \"loop invariants\", a crucial component of correctness proofs for imperative program) * Modules (e.g. for mutable state stored within)\n\n\n\n**Q9:** What are criteria for a useful \"contract language\"?\n\nThe [draft RFC][Draft RFC 2022-11-25] mentioned that there are a number of research tools, each developing its own \"contract language\"\n\nWhat are the criteria for such \"contract languages\"?\n\nFrom RFC: * expression of \"key correctness properties\" * maps to (or serves directly as) testable + verifiable documentation * strong guarantees at module boundaries (enables modular verification effort)\n\nIn addition 1: * understandable to typical Rust developer * writable by (advanced?) Rust developer (or at least typical Rust *library* developer?) * executable?\n\nIn addition 2: * provides operators not available in \"normal\" Rust code? (E.g. Larch IL for C has `minIndex(p)` and `maxIndex(p)` to bound the valid offsets from arbitrary pointer `p`) * (This may be in tension/conflict with \"executable\" above, depending on expressiveness of any given operator) * for example, Prusti's \"Predicate\" system allows definition of helper functions that are solely invocable from specifications * Ada's contract system has quantifiers like `for all` and `for some`. (pnkfelix is not yet clear on whether they are dynamically enforced in all cases) * mocking? * see also type-modeling (prusti) * (pnkfelix *thinks* \"modelling\" is current term-of-art for describing values in the abstract domain that objects represent; i.e., an abstraction function maps concrete data to their corresponding abstract values in the model) * intra-specification checks? i.e. encoding statements that validate parts of the *specification itself*, rather than merely validating that the implementation satisfies the specification * For example, the Larch Shared Language (LSL) enables one to encode semantic claims about the specification itself, independent of any implementation. See section 7.1 of the Larch Book for more discussion on this point.\n\n#### Why these questions matter\n\nThe answer to this question helps inform the scope of the planned contract language and the potential constraints on its design.\n\nThe answer should establish a shared notion of the scope of the design space and the constraints that the stakeholders are bringing to the table.\n\n## Question/Discussion Topic Queue\n\n### How do I write a question?\n\npnkfelix: you put it here!\n\n### What questions are missing?\n\npnkfelix: I want to know what T-lang members think I accidentally left out when I wrote this.\n\njosh: don't think anything was \"missing\" per se. More that there are cross-cutting issues that are somewhat assumed that we need to resolve. E.g. are they a verification-mechanism only? Or are they meant to be a way to increase program *expressiveness* (e.g. allowing cases that are provably impossible to be removed entirely from the program).\n\npnkfelix: indeed. I don't want to *require* a theorem prover. But it probably doesn't suffice (or is uninteresting) to weaken contract system to point where it could be eliminated entirely and still have valid.\n\njoshtriplett: Not proposing to require a theorem prover, but we could have assertions that we can then rely on, after checking them. The compiler would have to understand what the contract is provding/asserting.\n\npnkfelix: I'm definitely seeing dilemma here, between wanting simple assertion semantics versus wanting expressiveness of e.g. universal quantification.\n\ntmandry: similar. Is there an assertion that cannot be checked dynamically?\n\npnkfelix: go-to example is universal quantifier. \"for all X, P(X)\" is typically not an assertion you can check when you hit it. But you can seek *counterexamples* dynamically (i.e checking against the X's you have in your hand)\n\njoshtriplett: seems like there might be value in having distinct notations for the things that are guaranteed to be checked versus things that are \"nice to check\" but not guaranteed.\n\ntmandry: seems related to some of the issues we have with `const fn` vs non-const `fn`.\n\n### Contract purpose: can they affect the interpretation/capabilities of the program, or only constrain them?\n\njoshtriplett: Today, traits and other aspects of the type system can *add* capabilities. If you know that a type implements a trait, that lets you call methods of the trait on that type, or similar. Contracts *could*, in theory, provide guarantees that the program could rely on. Down that road lies full dependent typing, and things like \"this array has at least one element\" or \"these two arrays are the same length\". Do we want a contract system that Rust code can *rely* on for things like that, such that it can then do things it otherwise couldn't? Or is this *just* a verification system that adds zero capabilities to the language?",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "T-lang to agree about what Questions it wants answered, and not to dive deep into the answers, apart from when it helps us better understand poorly phrased questions",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "The core point, though, is for T-lang to agree about what **Questions** it wants answered, and *not* to dive deep into the answers, apart from when it helps us better understand poorly phrased questions (which should be subsequently revised)."
+    },
+    {
+      "kind": "proposal",
+      "text": "If there are some constraints on the answers that T-lang already knows it wants to communicate, then we should include that in the document we deliver to the Rust contracts design stakeholders",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "However, if there are some constraints on the answers that T-lang already *knows* it wants to communicate, then we should include that in the document we deliver to the Rust contracts design stakeholders."
+    },
+    {
+      "kind": "proposal",
+      "text": "Minimal acceptable form of Contracts should provide value over mere assert!",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "**Q2:** What would your *minimal acceptable form* of Contracts provide over mere `assert!`?"
+    },
+    {
+      "kind": "proposal",
+      "text": "Automatic injection of checks provided by trait definition into object code of every corresponding impl",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "* Automatic injection of checks provided by trait definition into object code of (every) corresponding impl * Automatic generation of test inputs and corresponding validity checks of resulting outputs"
+    },
+    {
+      "kind": "proposal",
+      "text": "Automatic generation of test inputs and corresponding validity checks of resulting outputs",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "* Automatic injection of checks provided by trait definition into object code of (every) corresponding impl * Automatic generation of test inputs and corresponding validity checks of resulting outputs"
+    },
+    {
+      "kind": "proposal",
+      "text": "Contracts built into Rust core to encourage uniformity and ubiquity and can be incorporated into Rust std crate",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "**Q4:** What is value-add for building into \"Rust core\" (versus delivery via third-party crate)?"
+    },
+    {
+      "kind": "proposal",
+      "text": "Contracts could provide guarantees that the program could rely on, adding capabilities to the language",
+      "person": "joshtriplett",
+      "deadline": "",
+      "source_quote": "Contracts *could*, in theory, provide guarantees that the program could rely on."
+    },
+    {
+      "kind": "disagreement",
+      "text": "pnkfelix does not want to require a theorem prover for contracts",
+      "person": "pnkfelix",
+      "deadline": "",
+      "source_quote": "I don't want to *require* a theorem prover."
+    },
+    {
+      "kind": "disagreement",
+      "text": "joshtriplett is not proposing to require a theorem prover but suggests assertions that can be relied on after checking them",
+      "person": "joshtriplett",
+      "deadline": "",
+      "source_quote": "joshtriplett: Not proposing to require a theorem prover, but we could have assertions that we can then rely on, after checking them."
+    },
+    {
+      "kind": "agreement",
+      "text": "joshtriplett agrees there might be value in having distinct notations for things guaranteed to be checked versus things nice to check but not guaranteed",
+      "person": "joshtriplett",
+      "deadline": "",
+      "source_quote": "joshtriplett: seems like there might be value in having distinct notations for the things that are guaranteed to be checked versus things that are \"nice to check\" but not guaranteed."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-08-q01",
+      "question": "Who proposed that T-lang should agree about what questions it wants answered?",
+      "answers": [
+        "pnkfelix"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 154,
+          "end": 396,
+          "quote": "The core point, though, is for T-lang to agree about what **Questions** it wants answered, and *not* to dive deep into the answers, apart from when it helps us better understand poorly phrased questions (which should be subsequently revised)."
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q02",
+      "question": "What is the minimal acceptable form of Contracts supposed to provide over?",
+      "answers": [
+        "mere assert!"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 2979,
+          "end": 3070,
+          "quote": "**Q2:** What would your *minimal acceptable form* of Contracts provide over mere `assert!`?"
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q03",
+      "question": "Who suggested automatic injection of checks from trait definitions into object code?",
+      "answers": [
+        "pnkfelix"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 3214,
+          "end": 3414,
+          "quote": "* Automatic injection of checks provided by trait definition into object code of (every) corresponding impl * Automatic generation of test inputs and corresponding validity checks of resulting outputs"
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q04",
+      "question": "Is there agreement that contracts could provide guarantees that the program could rely on?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 10521,
+          "end": 10601,
+          "quote": "Contracts *could*, in theory, provide guarantees that the program could rely on."
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q05",
+      "question": "Does pnkfelix want to require a theorem prover for contracts?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 9071,
+          "end": 9114,
+          "quote": "I don't want to *require* a theorem prover."
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q06",
+      "question": "Who suggested having distinct notations for guaranteed checks versus nice-to-check assertions?",
+      "answers": [
+        "joshtriplett"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 9938,
+          "end": 10120,
+          "quote": "joshtriplett: seems like there might be value in having distinct notations for the things that are guaranteed to be checked versus things that are \"nice to check\" but not guaranteed."
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q07",
+      "question": "Is there a decision to include contracts into Rust core for uniformity and ubiquity?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3416,
+          "end": 3512,
+          "quote": "**Q4:** What is value-add for building into \"Rust core\" (versus delivery via third-party crate)?"
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q08",
+      "question": "Who is assigned to deliver the document including constraints on answers to Rust contracts design stakeholders?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 398,
+          "end": 602,
+          "quote": "However, if there are some constraints on the answers that T-lang already *knows* it wants to communicate, then we should include that in the document we deliver to the Rust contracts design stakeholders."
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q09",
+      "question": "Are contracts primarily intended as a documentation tool according to pnkfelix?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 2088,
+          "end": 2483,
+          "quote": "if blame is assigned to a party, then it will be assigned correctly (a kind of \"blame soundness\")? will blame always be assigned to some party (a kind of \"blame completeness\") * a documentation tool? * (pnkfelix: This is an oft-touted benefit of contracts, but its hard to believe the effort spent developing a contract system would pay off if improved documentation were the *primary* purpose.)"
+        }
+      ]
+    },
+    {
+      "id": "validation-08-q10",
+      "question": "Is there a proposal to automatically generate test inputs and validity checks for contracts?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 3214,
+          "end": 3414,
+          "quote": "* Automatic injection of checks provided by trait definition into object code of (every) corresponding impl * Automatic generation of test inputs and corresponding validity checks of resulting outputs"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2023-01-08-lang-team-questions-around-contracts.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-01-08-lang-team-questions-around-contracts.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-01-08-lang-team-questions-around-contracts.md",
+    "source_sha256": "720605f02beb1a54243541e99021ddea99409c6fbaa6d19d13318b14cde949a1",
+    "excerpt_sha256": "ebdfb67bf01317d2c869ed3359bbf1e457d03428b23e6661f3aaf034dcf6a62d",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "dedd75bca8a5958d5324decddf8db1c89d87d89375fa367a50325d6c449a5fe5",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

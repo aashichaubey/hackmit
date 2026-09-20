@@ -1,0 +1,6128 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "dataset": "data/meetings.json",
+  "condition": "parsed facts; context followed by Question only; no prepended instruction or legend; structured output schema retained",
+  "note": "Exploratory ablation; earlier tests have already been evaluated",
+  "rows": [
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah and Maya are both involved with the launch plan, indicating it has been planned."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 34
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided as Maya agreed with the launch plan proposed by Sarah."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 27
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Both Sarah and Maya are assigned to the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API, as indicated by the responsibility note: '\u8d23|David|finish the API|@Thursday'."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 34
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API since he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided with both Sarah responsible and Maya involved."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah proposed the plan, and Maya agreed with it, indicating agreement and decision on the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 37
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah and Maya are both assigned to the launch plan, indicating it is planned."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 33
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "John owns the API and is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "John owns the API since he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "John owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Both Sarah and Maya are assigned to the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided because Sarah proposed it and Maya agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah is assigned to the launch plan, and Maya is also involved with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 35
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API, as he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided as Sarah and Maya are both involved with the launch plan according to the notes."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 32
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided as Maya agreed with it and Sarah proposed it."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided by Sarah and Maya according to the notes."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 25
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API, as he is responsible for finishing it by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API since he is responsible for finishing it by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided and is associated with Sarah and Maya."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah proposed it, and Maya agreed with it, indicating that the plan was accepted."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 34
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided by Sarah and Maya."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API since he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The launch plan was discussed and mentioned by Sarah and Maya, but there is no clear indication that the launch plan was finalized or decided."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 36
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Based on the information provided, Sarah proposed the launch plan, but Maya disagreed with it. There is no indication that the launch plan was formally agreed upon or decided yet."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 44
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah has it assigned with a 'P' status (possibly indicating 'Planned' or 'Pending'), and Maya also has it assigned with a '-' status, which may indicate a different stage or role related to the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 63
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday, as assigned to David."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya disagreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya disagreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 32,
+      "usage": {
+        "input_tokens": 80,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Maya disagreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API and is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API since he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API, as indicated by the task 'finish the API' assigned to him."
+      },
+      "correct": false,
+      "full_input_tokens": 32,
+      "usage": {
+        "input_tokens": 80,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Both Sarah and Maya are associated with the launch plan, indicating that it was created or planned."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 36
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided since Sarah proposed it and Maya agreed with it, indicating approval."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 29
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Sarah initially proposed the launch plan, and Maya later confirmed or reiterated the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 34
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday, as indicated by David's responsibility to finish the API by that time."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 30
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API since he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API, as indicated by the entry 'A|David|finish the API|@Thursday' where 'A' likely stands for assigned task."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 41
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided. Both Sarah and Maya are associated with the launch plan, indicating it has been addressed."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 34
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided by Sarah."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan was decided by Sarah and Maya as indicated in the input."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The API is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 29,
+      "usage": {
+        "input_tokens": 77,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "When is the API due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The API is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 30,
+      "usage": {
+        "input_tokens": 78,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sarah and Maya agreed with the launch plan."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API, as he is responsible for finishing it by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "raw",
+      "answer": {
+        "found": false,
+        "answer": "The information provided does not specify who owns the API. It only mentions that David will finish the API by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 32
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "David owns the API."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Was the audit decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the audit was decided as assigned to Omar."
+      },
+      "correct": false,
+      "full_input_tokens": 23,
+      "usage": {
+        "input_tokens": 71,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Was the audit decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The information provided states that Omar proposed the audit, but it does not indicate that the audit was decided or approved."
+      },
+      "correct": false,
+      "full_input_tokens": 24,
+      "usage": {
+        "input_tokens": 72,
+        "output_tokens": 32
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Was the audit decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the audit was decided, assigned to Omar."
+      },
+      "correct": false,
+      "full_input_tokens": 23,
+      "usage": {
+        "input_tokens": 71,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "When is the budget review due?",
+      "method": "mixed",
+      "answer": {
+        "found": false,
+        "answer": "The due date for the budget review is not provided in the information given."
+      },
+      "correct": false,
+      "full_input_tokens": 25,
+      "usage": {
+        "input_tokens": 73,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "When is the budget review due?",
+      "method": "raw",
+      "answer": {
+        "found": false,
+        "answer": "The text states that Nina will review the budget, but no deadline was set. Therefore, the due date for the budget review is not specified."
+      },
+      "correct": false,
+      "full_input_tokens": 26,
+      "usage": {
+        "input_tokens": 74,
+        "output_tokens": 38
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "When is the budget review due?",
+      "method": "symbols",
+      "answer": {
+        "found": false,
+        "answer": "The information about when the budget review is due is not provided in the given text."
+      },
+      "correct": false,
+      "full_input_tokens": 25,
+      "usage": {
+        "input_tokens": 73,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who proposed the audit?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Omar proposed the audit."
+      },
+      "correct": false,
+      "full_input_tokens": 23,
+      "usage": {
+        "input_tokens": 71,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who proposed the audit?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Omar proposed the audit."
+      },
+      "correct": false,
+      "full_input_tokens": 24,
+      "usage": {
+        "input_tokens": 72,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who proposed the audit?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Omar proposed the audit."
+      },
+      "correct": false,
+      "full_input_tokens": 23,
+      "usage": {
+        "input_tokens": 71,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who will review the budget?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Nina will review the budget."
+      },
+      "correct": false,
+      "full_input_tokens": 24,
+      "usage": {
+        "input_tokens": 72,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who will review the budget?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Nina will review the budget."
+      },
+      "correct": false,
+      "full_input_tokens": 25,
+      "usage": {
+        "input_tokens": 73,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who will review the budget?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Nina will review the budget."
+      },
+      "correct": false,
+      "full_input_tokens": 24,
+      "usage": {
+        "input_tokens": 72,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Was the demo decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the demo was decided to be run by Priya."
+      },
+      "correct": false,
+      "full_input_tokens": 26,
+      "usage": {
+        "input_tokens": 74,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Was the demo decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the demo was decided. Priya decided to run the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 27,
+      "usage": {
+        "input_tokens": 75,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Was the demo decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the demo was decided to be run by Priya."
+      },
+      "correct": false,
+      "full_input_tokens": 26,
+      "usage": {
+        "input_tokens": 74,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "What was decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The decision was that Priya will run the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 25,
+      "usage": {
+        "input_tokens": 73,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "What was decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "It was decided that Priya would run the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 26,
+      "usage": {
+        "input_tokens": 74,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "What was decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Alex may take the migration, and Priya will run the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 25,
+      "usage": {
+        "input_tokens": 73,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "When is the demo due?",
+      "method": "mixed",
+      "answer": {
+        "found": false,
+        "answer": "The given information does not specify when the demo is due."
+      },
+      "correct": false,
+      "full_input_tokens": 27,
+      "usage": {
+        "input_tokens": 75,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "When is the demo due?",
+      "method": "raw",
+      "answer": {
+        "found": false,
+        "answer": "The due date for the demo is not specified in the provided information."
+      },
+      "correct": false,
+      "full_input_tokens": 28,
+      "usage": {
+        "input_tokens": 76,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "When is the demo due?",
+      "method": "symbols",
+      "answer": {
+        "found": false,
+        "answer": "The information provided does not specify when the demo is due."
+      },
+      "correct": false,
+      "full_input_tokens": 27,
+      "usage": {
+        "input_tokens": 75,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Who owns the migration?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Alex owns the migration."
+      },
+      "correct": false,
+      "full_input_tokens": 26,
+      "usage": {
+        "input_tokens": 74,
+        "output_tokens": 14
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Who owns the migration?",
+      "method": "raw",
+      "answer": {
+        "found": false,
+        "answer": "The owner of the migration is not confirmed based on the given information."
+      },
+      "correct": false,
+      "full_input_tokens": 27,
+      "usage": {
+        "input_tokens": 75,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Who owns the migration?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Alex owns the migration because the statement 'Alex may take the migration' indicates ownership or responsibility for it."
+      },
+      "correct": false,
+      "full_input_tokens": 26,
+      "usage": {
+        "input_tokens": 74,
+        "output_tokens": 30
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Was the launch plan 11 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 11 was decided as both Ruth and Zoe are involved with it, indicating agreement or collaboration on the plan."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 36
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Was the launch plan 11 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 11 was decided since Ruth proposed it and Zoe agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Was the launch plan 11 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 11 was decided as indicated by the plus symbol (+) next to Zoe's 'launch plan 11', which typically denotes confirmation or agreement."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 43
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "When is audit the dashboard due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'audit the dashboard' assigned to Leo is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "When is audit the dashboard due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The audit of the dashboard by Leo is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "When is audit the dashboard due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'audit the dashboard' assigned to Leo is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 11?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Zoe agreed with the launch plan 11."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 11?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Zoe agreed with the launch plan 11."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 11?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Zoe agreed with the launch plan 11."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who owns audit the dashboard?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Leo owns audit the dashboard."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who owns audit the dashboard?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Leo owns auditing the dashboard."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who owns audit the dashboard?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Leo owns audit the dashboard."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Was the launch plan 12 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 12 was decided by Jules."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Was the launch plan 12 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 12 was decided by Jules."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Was the launch plan 12 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 12 was decided. Jules made the decision (D|Jules|launch plan 12) and Paul supported it (+|Paul|launch plan 12)."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 47
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "When is plan the workshop due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'plan the workshop' assigned to Ana is due on Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "When is plan the workshop due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The workshop is due to be planned by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "When is plan the workshop due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'plan the workshop' assigned to Ana is due on Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 12?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Jules and Paul agreed with the launch plan 12."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 12?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Paul agreed with the launch plan 12."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 12?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Jules and Paul agreed with the launch plan 12."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who owns plan the workshop?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Ana owns plan the workshop."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who owns plan the workshop?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Ana owns planning the workshop, as it is stated that she will plan the workshop by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who owns plan the workshop?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Ana owns plan the workshop."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Was the launch plan 13 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, launch plan 13 was decided. Amir was assigned to it (\u63d0|Amir|launch plan 13), and Uma is responsible for reviewing or responding to it (\u53cd|Uma|launch plan 13), indicating that the plan has been decided and is moving forward."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 66
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Was the launch plan 13 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The launch plan 13 was proposed by Amir, but Uma disagreed with it. Since there is disagreement mentioned, it is not clearly stated that the launch plan 13 was decided."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 46
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Was the launch plan 13 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 13 was decided by Amir as indicated by the 'P|Amir|launch plan 13' line, where 'P' likely stands for 'Proposed' or 'Planned'."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 53
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "When is verify the metrics due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'verify the metrics' assigned to Ben is due on Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "When is verify the metrics due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The verification of the metrics by Ben is due by Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "When is verify the metrics due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task \"verify the metrics\" assigned to Ben is due on Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 13?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Uma disagreed with the launch plan 13."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 13?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Uma disagreed with the launch plan 13."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 13?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Uma disagreed with the launch plan 13."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who owns verify the metrics?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Ben owns verify the metrics."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who owns verify the metrics?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Ben owns verify the metrics."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who owns verify the metrics?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Ben owns verify the metrics."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Was the launch plan 14 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 14 was decided, with Kim responsible for it and Luis involved as well."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 30
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Was the launch plan 14 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 14 was decided by Kim."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Was the launch plan 14 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 14 was decided, as indicated by Kim's decision item (D|Kim|launch plan 14) and Luis's addition (+|Luis|launch plan 14)."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 49
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "When is design the landing page due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Design the landing page is due on Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "When is design the landing page due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The landing page design by Tara is due by Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "When is design the landing page due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'design the landing page' assigned to Tara is due on Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 25
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 14?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Luis agreed with the launch plan 14."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 14?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Luis agreed with the launch plan 14."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 14?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Luis agreed with the launch plan 14."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who owns design the landing page?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Tara owns design the landing page."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who owns design the landing page?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Tara owns design the landing page by Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who owns design the landing page?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Tara owns design the landing page."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Was the launch plan 15 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 15 was decided. Zoe proposed it and Jo agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Was the launch plan 15 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 15 was decided. Zoe proposed it, and Jo agreed with it, indicating that the plan was accepted."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 36
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Was the launch plan 15 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 15 was decided. Zoe proposed the launch plan 15, and Jo agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 33
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "When is book the venue due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'book the venue' assigned to Noah is due on Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "When is book the venue due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The venue booking is due by Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "When is book the venue due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task \"book the venue\" assigned to Noah is due on Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 15?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Jo agreed with the launch plan 15."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 15?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Jo agreed with the launch plan 15."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 15?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Jo agreed with the launch plan 15."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who owns book the venue?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Noah owns book the venue."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who owns book the venue?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Noah owns booking the venue."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who owns book the venue?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Noah owns 'book the venue'."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Was the launch plan 16 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 16 was decided by Paul."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Was the launch plan 16 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 16 was decided by Paul."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Was the launch plan 16 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 16 was decided. Paul is associated with 'the launch plan 16' and Mina is mentioned with 'the launch plan 16' without indication of rejection or indecision."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 50
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "When is ship the prototype due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The prototype is due to be shipped on September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "When is ship the prototype due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The prototype is due to be shipped by September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "When is ship the prototype due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'ship the prototype' is due on September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 16?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Mina disagreed with the launch plan 16."
+      },
+      "correct": false,
+      "full_input_tokens": 46,
+      "usage": {
+        "input_tokens": 94,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 16?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Mina disagreed with the launch plan 16."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 16?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Mina disagreed with the launch plan 16."
+      },
+      "correct": false,
+      "full_input_tokens": 45,
+      "usage": {
+        "input_tokens": 93,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who owns ship the prototype?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Eva owns ship the prototype."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who owns ship the prototype?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Eva owns shipping the prototype by September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who owns ship the prototype?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Eva owns 'ship the prototype'."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Was the launch plan 17 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 17 was decided as both Uma and Raj are assigned to it."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Was the launch plan 17 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 17 was decided because Uma proposed it and Raj agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Was the launch plan 17 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 17 was decided as indicated by the entry '+|Raj|launch plan 17' which shows approval or agreement to launch plan 17."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 43
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "When is clean the dataset due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'clean the dataset' assigned to Kai is due next Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "When is clean the dataset due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The dataset cleaning by Kai is due by next Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "When is clean the dataset due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'clean the dataset' assigned to Kai is due next Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 17?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Raj agreed with the launch plan 17."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 17?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Raj agreed with the launch plan 17."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 17?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Uma and Raj agreed with the launch plan 17."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who owns clean the dataset?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Kai owns clean the dataset."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who owns clean the dataset?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Kai owns cleaning the dataset by next Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who owns clean the dataset?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Kai owns the task 'clean the dataset'."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Was the launch plan 18 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 18 was decided as both Luis and Ella are assigned to it."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Was the launch plan 18 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 18 was decided by Luis."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Was the launch plan 18 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 18 was decided. Luis has it listed as a decision (D|Luis|launch plan 18), and Ella is responsible for launching plan 18 (+|Ella|launch plan 18)."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 54
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "When is run the survey due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The survey run by Ruth is due on October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "When is run the survey due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The survey run by Ruth is due by October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "When is run the survey due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task \"run the survey\" assigned to Ruth is due on October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 18?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Luis and Ella agreed with the launch plan 18."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 18?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Ella agreed with the launch plan 18."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 18?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Luis and Ella agreed with the launch plan 18."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who owns run the survey?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Ruth owns run the survey."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who owns run the survey?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Ruth owns running the survey and will run it by October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who owns run the survey?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Ruth owns run the survey."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Was the launch plan 19 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 19 was decided as Jules approved the copy."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Was the launch plan 19 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "No, the launch plan 19 was not decided. Jo proposed the plan, but Theo disagreed with it, and Jules has yet to approve the copy. Therefore, there is no indication that the plan was finalized."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 53
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Was the launch plan 19 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 19 was decided since Theo proceeded with launching the plan after Jules approved the copy."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 31
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "When is approve the copy due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Approve the copy is due tomorrow."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "When is approve the copy due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The copy approval is due by tomorrow."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "When is approve the copy due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'approve the copy' assigned to Jules is due tomorrow."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 19?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Theo disagreed with the launch plan 19."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 19?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Theo disagreed with the launch plan 19."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 19?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Theo disagreed with the launch plan 19."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who owns approve the copy?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Jules owns approve the copy."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who owns approve the copy?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Jules owns approving the copy."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who owns approve the copy?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Jules owns approve the copy."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Was the launch plan 20 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 20 was decided by Mina and David."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Was the launch plan 20 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 20 was decided by Mina."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Was the launch plan 20 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 20 was decided. Mina and David both mentioned 'launch plan 20'."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 31
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "When is schedule the demo due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The demo is scheduled to be done by the end of the month as per Amir's responsibility."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "When is schedule the demo due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The demo is scheduled to be done by the end of the month."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 23
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "When is schedule the demo due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'schedule the demo' assigned to Amir is due at the end of the month."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 20?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Mina and David agreed with the launch plan 20."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 20?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "David agreed with the launch plan 20."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 20?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Mina and David agreed with the launch plan 20."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who owns schedule the demo?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Amir owns schedule the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who owns schedule the demo?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Amir owns scheduling the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who owns schedule the demo?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Amir owns schedule the demo."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Was the launch plan 21 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 21 was decided, as both Raj proposed it and John agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 30
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Was the launch plan 21 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 21 was decided since John agreed with it and Raj proposed it."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Was the launch plan 21 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 21 was decided. Raj initiated the launch plan 21 and John approved or confirmed it."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 33
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "When is review the contract due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'review the contract' assigned to Kim is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "When is review the contract due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The contract review by Kim is due by Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "When is review the contract due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'review the contract' assigned to Kim is due on Thursday."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 21?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "John agreed with the launch plan 21."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 21?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "John agreed with the launch plan 21."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 21?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "John agreed with the launch plan 21."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who owns review the contract?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Kim owns review the contract."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who owns review the contract?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Kim owns reviewing the contract."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who owns review the contract?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Kim owns 'review the contract'."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Was the launch plan 22 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 22 was decided by Ella."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Was the launch plan 22 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 22 was decided by Ella."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Was the launch plan 22 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 22 was decided by Ella, as indicated by the 'D|Ella|launch plan 22' entry."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 37
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "When is publish the guide due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'publish the guide' assigned to Zoe is due by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "When is publish the guide due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The guide is due to be published by Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "When is publish the guide due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'publish the guide' assigned to Zoe is due on Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 22?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Maya disagreed with the launch plan 22."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 22?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Maya disagreed with the launch plan 22."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 22?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Maya disagreed with the launch plan 22."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who owns publish the guide?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Zoe owns publish the guide."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who owns publish the guide?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Zoe owns publishing the guide."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who owns publish the guide?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Zoe owns publish the guide."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Was the launch plan 23 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 23 was decided as both Theo and Lena are involved in it."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Was the launch plan 23 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 23 was decided because Theo proposed it and Lena agreed with it, indicating consensus. Additionally, Paul is set to test the payment flow by Monday, which implies that the plan is moving forward."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 53
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Was the launch plan 23 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 23 was decided. Theo proposed the launch plan 23 (P|Theo|the launch plan 23), and Lena accepted it (+|Lena|the launch plan 23)."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 52
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "When is test the payment flow due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'test the payment flow' assigned to Paul is due on Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 25
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "When is test the payment flow due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Paul will test the payment flow by Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "When is test the payment flow due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task \"test the payment flow\" assigned to Paul is due on Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 25
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 23?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Lena agreed with the launch plan 23."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 23?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Lena agreed with the launch plan 23."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 23?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Theo and Lena agreed with the launch plan 23."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who owns test the payment flow?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Paul owns test the payment flow."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who owns test the payment flow?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Paul owns testing the payment flow, which he plans to complete by Monday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who owns test the payment flow?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Paul owns test the payment flow."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Was the launch plan 24 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 24 was decided, as indicated by David being responsible for it (\u51b3|David|launch plan 24) and Omar being involved as well (\u540c|Omar|launch plan 24)."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 54
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Was the launch plan 24 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 24 was decided by David."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Was the launch plan 24 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 24 was decided. Both David and Omar mentioned 'launch plan 24,' indicating that it was planned or agreed upon."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 39
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "When is update the roadmap due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'update the roadmap' assigned to Uma is due on Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "When is update the roadmap due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The roadmap update is due by Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 34,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "When is update the roadmap due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'update the roadmap' assigned to Uma is due on Tuesday."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 24?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "David and Omar agreed with the launch plan 24."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 24?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Omar agreed with the launch plan 24."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 24?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Both David and Omar agreed with the launch plan 24."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who owns update the roadmap?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Uma owns update the roadmap."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who owns update the roadmap?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Uma owns updating the roadmap."
+      },
+      "correct": false,
+      "full_input_tokens": 33,
+      "usage": {
+        "input_tokens": 81,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who owns update the roadmap?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Uma owns 'update the roadmap'."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Was the launch plan 25 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 25 was decided, as indicated by Priya's response regarding it."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 29
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Was the launch plan 25 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The launch plan 25 was proposed by John and disagreed upon by Priya. There is no clear information indicating that the launch plan 25 was decided or approved. Therefore, based on the given information, it cannot be concluded that the launch plan 25 was decided."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 64
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Was the launch plan 25 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 25 was decided by John as indicated by 'P|John|the launch plan 25', where 'P' likely stands for 'proposed' or 'planned'. Priya's line '-|Priya|the launch plan 25' with '-' could indicate no objection or a negative response is not present, so we can infer the plan was indeed decided."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 88
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "When is prepare the report due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task \"prepare the report\" assigned to Luis is due on Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "When is prepare the report due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The report prepared by Luis is due by Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "When is prepare the report due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'prepare the report' assigned to Luis is due on Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Who disagreed with the launch plan 25?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Priya disagreed with the launch plan 25."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Who disagreed with the launch plan 25?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Priya disagreed with the launch plan 25."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Who disagreed with the launch plan 25?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Priya disagreed with the launch plan 25."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Who owns prepare the report?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Luis owns prepare the report."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Who owns prepare the report?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Luis owns prepare the report, as he is assigned to prepare the report by Wednesday."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "question": "Who owns prepare the report?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Luis owns prepare the report."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Was the launch plan 26 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 26 was decided by Maya and also agreed upon by Alex."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 27
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Was the launch plan 26 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 26 was decided by Maya."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Was the launch plan 26 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 26 was decided by Maya and Alex, as indicated by the lines 'D|Maya|launch plan 26' and '+|Alex|launch plan 26' which show Maya decided on it and Alex added the launch plan 26."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 64
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "When is inspect the logs due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'inspect the logs' assigned to Jo is due on September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "When is inspect the logs due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The logs inspection is due by September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "When is inspect the logs due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'inspect the logs' assigned to Jo is due on September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Who agreed with the launch plan 26?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Alex agreed with the launch plan 26."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Who agreed with the launch plan 26?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Alex agreed with the launch plan 26."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Who agreed with the launch plan 26?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Alex agreed with the launch plan 26."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Who owns inspect the logs?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Jo owns inspect the logs."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Who owns inspect the logs?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Jo owns inspecting the logs by September 25."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "question": "Who owns inspect the logs?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Jo owns inspect the logs."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Was the launch plan 27 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 27 was decided. Both Lena and Nina are responsible for the launch plan 27, indicating that it is confirmed and assigned."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 40
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Was the launch plan 27 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 27 was decided, as Nina agreed with it and Mina is committed to finishing the integration by next Friday, indicating that the plan is moving forward."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 44
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Was the launch plan 27 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 27 was decided by Lena and Nina according to the notes provided."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 28
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "When is finish the integration due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'finish the integration' assigned to Mina is due next Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "When is finish the integration due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The integration is due by next Friday, as stated by Mina."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "When is finish the integration due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'finish the integration' is due on next Friday."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Who agreed with the launch plan 27?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Lena and Nina agreed with the launch plan 27."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Who agreed with the launch plan 27?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Nina agreed with the launch plan 27."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Who agreed with the launch plan 27?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Lena and Nina agreed with the launch plan 27."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Who owns finish the integration?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Mina owns finish the integration."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Who owns finish the integration?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Mina owns finishing the integration."
+      },
+      "correct": false,
+      "full_input_tokens": 35,
+      "usage": {
+        "input_tokens": 83,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "question": "Who owns finish the integration?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Mina owns finish the integration."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Was the launch plan 28 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 28 was decided by Omar."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Was the launch plan 28 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, Omar decided the launch plan 28, although Sam disagreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Was the launch plan 28 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The launch plan 28 was decided by Omar as indicated by 'D|Omar|launch plan 28'. The 'D' likely stands for 'Decided'."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 44
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "When is draft the email due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The draft email is due on October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "When is draft the email due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The draft of the email is due by October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "When is draft the email due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'draft the email' assigned to Raj is due on October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 26
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Who disagreed with the launch plan 28?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Sam disagreed with the launch plan 28."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Who disagreed with the launch plan 28?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Sam disagreed with the launch plan 28."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Who disagreed with the launch plan 28?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Sam disagreed with launch plan 28."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Who owns draft the email?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Raj owns draft the email."
+      },
+      "correct": false,
+      "full_input_tokens": 40,
+      "usage": {
+        "input_tokens": 88,
+        "output_tokens": 15
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Who owns draft the email?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Raj owns drafting the email by October 2."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "question": "Who owns draft the email?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Raj owns 'draft the email.'"
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Was the launch plan 29 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 29 was decided as it has been assigned to Priya and Iris for action and collaboration."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 33
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Was the launch plan 29 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 29 was decided because Priya proposed it and Iris agreed with it, indicating agreement and acceptance."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 34
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Was the launch plan 29 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 29 was decided. Priya mentioned the launch plan 29, and Iris also referenced the launch plan 29, indicating that it was discussed and agreed upon."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 47
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "When is review the mockups due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task 'review the mockups' assigned to Ella is due tomorrow."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "When is review the mockups due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The review of the mockups by Ella is due by tomorrow."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "When is review the mockups due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'review the mockups' assigned to Ella is due tomorrow."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 24
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Who agreed with the launch plan 29?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Iris agreed with the launch plan 29."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Who agreed with the launch plan 29?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Iris agreed with the launch plan 29."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 19
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Who agreed with the launch plan 29?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Priya and Iris agreed with the launch plan 29."
+      },
+      "correct": false,
+      "full_input_tokens": 44,
+      "usage": {
+        "input_tokens": 92,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Who owns review the mockups?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Ella owns review the mockups."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Who owns review the mockups?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Ella owns the review of the mockups."
+      },
+      "correct": false,
+      "full_input_tokens": 36,
+      "usage": {
+        "input_tokens": 84,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "question": "Who owns review the mockups?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Ella owns \"review the mockups\"."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Was the launch plan 30 decided?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 30 was decided. Both Alex and Leo are associated with the launch plan 30, indicating it was decided."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 37
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Was the launch plan 30 decided?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 30 was decided by Alex, and Leo agreed with it."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 27
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Was the launch plan 30 decided?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Yes, the launch plan 30 was decided, as indicated by both Alex and Leo having 'launch plan 30' in their plans."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 37
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "When is set up the server due?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "The task \"set up the server\" assigned to Theo is due by the end of the month."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 29
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "When is set up the server due?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "The server setup is due by the end of the month."
+      },
+      "correct": false,
+      "full_input_tokens": 38,
+      "usage": {
+        "input_tokens": 86,
+        "output_tokens": 21
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "When is set up the server due?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "The task 'set up the server' assigned to Theo is due at the end of the month."
+      },
+      "correct": false,
+      "full_input_tokens": 42,
+      "usage": {
+        "input_tokens": 90,
+        "output_tokens": 29
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Who agreed with the launch plan 30?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Leo agreed with the launch plan 30."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Who agreed with the launch plan 30?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Leo agreed with the launch plan 30."
+      },
+      "correct": false,
+      "full_input_tokens": 39,
+      "usage": {
+        "input_tokens": 87,
+        "output_tokens": 18
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Who agreed with the launch plan 30?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Alex and Leo agreed with the launch plan 30."
+      },
+      "correct": false,
+      "full_input_tokens": 43,
+      "usage": {
+        "input_tokens": 91,
+        "output_tokens": 20
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Who owns set up the server?",
+      "method": "mixed",
+      "answer": {
+        "found": true,
+        "answer": "Theo owns set up the server."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 16
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Who owns set up the server?",
+      "method": "raw",
+      "answer": {
+        "found": true,
+        "answer": "Theo owns setting up the server by the end of the month."
+      },
+      "correct": false,
+      "full_input_tokens": 37,
+      "usage": {
+        "input_tokens": 85,
+        "output_tokens": 22
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "question": "Who owns set up the server?",
+      "method": "symbols",
+      "answer": {
+        "found": true,
+        "answer": "Theo owns set up the server."
+      },
+      "correct": false,
+      "full_input_tokens": 41,
+      "usage": {
+        "input_tokens": 89,
+        "output_tokens": 16
+      },
+      "error": null
+    }
+  ]
+}

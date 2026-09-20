@@ -1,0 +1,5483 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "condition": "raw notes; shortened instructions preserving rules; dev and validation only",
+  "instructions": {
+    "s4": "Use only these meeting notes. The person assigned an action is its owner. Answer who/when with only a name/date; yes/no with only yes/no. If missing or uncertain: found=false, answer=\"not found\". Do not treat proposals as decisions.",
+    "s5": "Answer only from these notes. Action assignee = owner. Who/when: name/date only. Yes/no: yes/no only. Missing or uncertain: found=false, answer=\"not found\". A proposal is not a decision.",
+    "s6": "Answer using meeting notes only. An action assignee is its owner. Give just the name, exact date, yes/no, or exact subject. If unsupported, found=false and answer=\"not found\". Proposal does not imply decision."
+  },
+  "rows": [
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "John"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "John"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "John"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan?",
+      "kind": "disagreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan?",
+      "kind": "disagreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 88,
+      "usage": {
+        "input_tokens": 136,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan?",
+      "kind": "disagreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 88,
+      "usage": {
+        "input_tokens": 136,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Was the launch plan decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "When is the API due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 85,
+      "usage": {
+        "input_tokens": 133,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who agreed with the launch plan?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "question": "Who owns the API?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Was the audit decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Was the audit decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 80,
+      "usage": {
+        "input_tokens": 128,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Was the audit decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 80,
+      "usage": {
+        "input_tokens": 128,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "When is the budget review due?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Nina/none"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 88,
+      "usage": {
+        "input_tokens": 136,
+        "output_tokens": 13
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "When is the budget review due?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 82,
+      "usage": {
+        "input_tokens": 130,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "When is the budget review due?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "No deadline was set"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 82,
+      "usage": {
+        "input_tokens": 130,
+        "output_tokens": 13
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who proposed the audit?",
+      "kind": "proposal",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Omar"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 86,
+      "usage": {
+        "input_tokens": 134,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who proposed the audit?",
+      "kind": "proposal",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Omar"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 80,
+      "usage": {
+        "input_tokens": 128,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who proposed the audit?",
+      "kind": "proposal",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Omar"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 80,
+      "usage": {
+        "input_tokens": 128,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who will review the budget?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Nina"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 87,
+      "usage": {
+        "input_tokens": 135,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who will review the budget?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Nina"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 81,
+      "usage": {
+        "input_tokens": 129,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "question": "Who will review the budget?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Nina"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 81,
+      "usage": {
+        "input_tokens": 129,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Was the demo decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 89,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Was the demo decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 83,
+      "usage": {
+        "input_tokens": 131,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Was the demo decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 83,
+      "usage": {
+        "input_tokens": 131,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "What was decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Priya decided to run the demo."
+      },
+      "correct": false,
+      "baseline_correct": false,
+      "input_text_tokens": 88,
+      "usage": {
+        "input_tokens": 136,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "What was decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Priya decided to run the demo."
+      },
+      "correct": false,
+      "baseline_correct": false,
+      "input_text_tokens": 82,
+      "usage": {
+        "input_tokens": 130,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "What was decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Priya decided to run the demo."
+      },
+      "correct": false,
+      "baseline_correct": false,
+      "input_text_tokens": 82,
+      "usage": {
+        "input_tokens": 130,
+        "output_tokens": 17
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "When is the demo due?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "When is the demo due?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "When is the demo due?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 84,
+      "usage": {
+        "input_tokens": 132,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Who owns the migration?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 89,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Who owns the migration?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 83,
+      "usage": {
+        "input_tokens": 131,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "question": "Who owns the migration?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 83,
+      "usage": {
+        "input_tokens": 131,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Was the launch plan 11 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Was the launch plan 11 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Was the launch plan 11 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "When is audit the dashboard due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "When is audit the dashboard due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "When is audit the dashboard due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 11?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Zoe"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 11?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Zoe"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 11?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Zoe"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who owns audit the dashboard?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Leo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who owns audit the dashboard?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Leo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "question": "Who owns audit the dashboard?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Leo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Was the launch plan 12 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Was the launch plan 12 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Was the launch plan 12 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "When is plan the workshop due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "When is plan the workshop due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "When is plan the workshop due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 12?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Paul"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 12?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Paul"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 12?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Paul"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who owns plan the workshop?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Ana"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who owns plan the workshop?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Ana"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "question": "Who owns plan the workshop?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Ana"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Was the launch plan 13 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Was the launch plan 13 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Was the launch plan 13 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "When is verify the metrics due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Monday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "When is verify the metrics due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Monday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "When is verify the metrics due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Monday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 13?",
+      "kind": "disagreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Uma"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 101,
+      "usage": {
+        "input_tokens": 149,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 13?",
+      "kind": "disagreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Uma"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 95,
+      "usage": {
+        "input_tokens": 143,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 13?",
+      "kind": "disagreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Uma"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 95,
+      "usage": {
+        "input_tokens": 143,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who owns verify the metrics?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Ben"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who owns verify the metrics?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Ben"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "question": "Who owns verify the metrics?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Ben"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Was the launch plan 14 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Was the launch plan 14 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Was the launch plan 14 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "When is design the landing page due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Tuesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "When is design the landing page due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Tuesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "When is design the landing page due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Tuesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 14?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Luis"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 14?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Luis"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 14?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Luis"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who owns design the landing page?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Tara"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who owns design the landing page?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Tara"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "question": "Who owns design the landing page?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Tara"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Was the launch plan 15 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Was the launch plan 15 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Was the launch plan 15 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "When is book the venue due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Wednesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "When is book the venue due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Wednesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "When is book the venue due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Wednesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 15?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Jo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 15?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Jo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 15?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Jo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who owns book the venue?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Noah"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who owns book the venue?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Noah"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "question": "Who owns book the venue?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Noah"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Was the launch plan 16 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 100,
+      "usage": {
+        "input_tokens": 148,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Was the launch plan 16 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Was the launch plan 16 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "When is ship the prototype due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "September 25"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "When is ship the prototype due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "September 25"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "When is ship the prototype due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "September 25"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 16?",
+      "kind": "disagreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Mina"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 102,
+      "usage": {
+        "input_tokens": 150,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 16?",
+      "kind": "disagreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Mina"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who disagreed with the launch plan 16?",
+      "kind": "disagreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Mina"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who owns ship the prototype?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Eva"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who owns ship the prototype?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Eva"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "question": "Who owns ship the prototype?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Eva"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Was the launch plan 17 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Was the launch plan 17 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Was the launch plan 17 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "When is clean the dataset due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "next Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "When is clean the dataset due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "next Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "When is clean the dataset due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "next Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 17?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Raj"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 17?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Raj"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 17?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Raj"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who owns clean the dataset?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Kai"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who owns clean the dataset?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Kai"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "question": "Who owns clean the dataset?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Kai"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Was the launch plan 18 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Was the launch plan 18 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Was the launch plan 18 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "When is run the survey due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "October 2"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "When is run the survey due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "October 2"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "When is run the survey due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "October 2"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 18?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Ella"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 100,
+      "usage": {
+        "input_tokens": 148,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 18?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Ella"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who agreed with the launch plan 18?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Ella"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who owns run the survey?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Ruth"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who owns run the survey?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Ruth"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "question": "Who owns run the survey?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Ruth"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Was the launch plan 19 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Was the launch plan 19 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Was the launch plan 19 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "When is approve the copy due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "tomorrow"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "When is approve the copy due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "tomorrow"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "When is approve the copy due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "tomorrow"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 19?",
+      "kind": "disagreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Theo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 100,
+      "usage": {
+        "input_tokens": 148,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 19?",
+      "kind": "disagreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Theo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 19?",
+      "kind": "disagreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Theo"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who owns approve the copy?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Jules"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who owns approve the copy?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Jules"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "question": "Who owns approve the copy?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Jules"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Was the launch plan 20 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 100,
+      "usage": {
+        "input_tokens": 148,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Was the launch plan 20 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Was the launch plan 20 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "When is schedule the demo due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "end of month"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "When is schedule the demo due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "end of month"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 12
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "When is schedule the demo due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "by end of month"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 13
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 20?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 101,
+      "usage": {
+        "input_tokens": 149,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 20?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 95,
+      "usage": {
+        "input_tokens": 143,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 20?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "David"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 95,
+      "usage": {
+        "input_tokens": 143,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who owns schedule the demo?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Amir"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who owns schedule the demo?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Amir"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "question": "Who owns schedule the demo?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Amir"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Was the launch plan 21 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Was the launch plan 21 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Was the launch plan 21 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "When is review the contract due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "When is review the contract due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "When is review the contract due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Thursday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 21?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "John"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 21?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "John"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 21?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "John"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who owns review the contract?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Kim"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 95,
+      "usage": {
+        "input_tokens": 143,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who owns review the contract?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Kim"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 89,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "question": "Who owns review the contract?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Kim"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 89,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Was the launch plan 22 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Was the launch plan 22 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Was the launch plan 22 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "When is publish the guide due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "When is publish the guide due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "When is publish the guide due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Friday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 22?",
+      "kind": "disagreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 100,
+      "usage": {
+        "input_tokens": 148,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 22?",
+      "kind": "disagreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who disagreed with the launch plan 22?",
+      "kind": "disagreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Maya"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 94,
+      "usage": {
+        "input_tokens": 142,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who owns publish the guide?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Zoe"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who owns publish the guide?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Zoe"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "question": "Who owns publish the guide?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Zoe"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Was the launch plan 23 decided?",
+      "kind": "unknown",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "no"
+      },
+      "correct": false,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Was the launch plan 23 decided?",
+      "kind": "unknown",
+      "variant": "s5",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Was the launch plan 23 decided?",
+      "kind": "unknown",
+      "variant": "s6",
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "When is test the payment flow due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Monday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "When is test the payment flow due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Monday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "When is test the payment flow due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Monday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 23?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Lena"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 99,
+      "usage": {
+        "input_tokens": 147,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 23?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Lena"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 155,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 23?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Lena"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 93,
+      "usage": {
+        "input_tokens": 141,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who owns test the payment flow?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Paul"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who owns test the payment flow?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Paul"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "question": "Who owns test the payment flow?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Paul"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Was the launch plan 24 decided?",
+      "kind": "decision",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 97,
+      "usage": {
+        "input_tokens": 145,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Was the launch plan 24 decided?",
+      "kind": "decision",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Was the launch plan 24 decided?",
+      "kind": "decision",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "yes"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 91,
+      "usage": {
+        "input_tokens": 139,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "When is update the roadmap due?",
+      "kind": "deadline",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Tuesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 96,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "When is update the roadmap due?",
+      "kind": "deadline",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Tuesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "When is update the roadmap due?",
+      "kind": "deadline",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Tuesday"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 90,
+      "usage": {
+        "input_tokens": 138,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 24?",
+      "kind": "agreement",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Omar"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 98,
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 24?",
+      "kind": "agreement",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Omar"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who agreed with the launch plan 24?",
+      "kind": "agreement",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Omar"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 92,
+      "usage": {
+        "input_tokens": 140,
+        "output_tokens": 11
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who owns update the roadmap?",
+      "kind": "owner",
+      "variant": "s4",
+      "answer": {
+        "found": true,
+        "answer": "Uma"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 95,
+      "usage": {
+        "input_tokens": 143,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who owns update the roadmap?",
+      "kind": "owner",
+      "variant": "s5",
+      "answer": {
+        "found": true,
+        "answer": "Uma"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 89,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 10
+      },
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "question": "Who owns update the roadmap?",
+      "kind": "owner",
+      "variant": "s6",
+      "answer": {
+        "found": true,
+        "answer": "Uma"
+      },
+      "correct": true,
+      "baseline_correct": true,
+      "input_text_tokens": 89,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 10
+      },
+      "error": null
+    }
+  ]
+}

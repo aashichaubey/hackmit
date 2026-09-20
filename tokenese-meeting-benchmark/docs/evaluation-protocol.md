@@ -1,0 +1,12 @@
+# Evaluation protocol v1
+
+The dataset is `data/meetings.json` version 1. It contains 30 meetings and 120 reference questions: 18 development, six validation, and six test meetings. Meetings are the unit of splitting. The first ten development meetings provide the smoke set. The pilot set has 40 labeled pairs.
+
+A short answer is correct when lowercased alphanumeric words match one accepted answer after punctuation and whitespace normalization. Unknown answers require `found=false` and exactly `not found`. A failure, refusal, or missing record scores incorrect. Owner and deadline errors are counted separately. An extracted fact matches gold when kind and deadline agree, any required gold person agrees, and its normalized text or source quote overlaps the gold fact. An unmatched gold fact is an extraction miss; an unmatched extracted fact is an addition. Source quotes are visible but excluded from encoded answering contexts.
+Longer answer variants receive a separate judge verdict and human review. Human-reviewed correctness is reported alongside exact correctness; critical owner, date, negation, and proposal/decision checks remain the acceptance gate.
+
+Local context and full prompt token counts use `tiktoken.encoding_for_model` for the pinned model. API input and output usage is recorded from each response. Extraction is charged once per meeting in end-to-end reports. LLMLingua compression time and Bear-2 compression time are separate; Bear-2 may also incur a separate provider charge. Output-schema overhead contributes to API usage but not the locally counted prompt string.
+
+Candidate screening uses only development and validation meetings. A candidate qualifies only when validation has no added owner, date, negation, or proposal/decision errors versus compact English, and loses no more than one of 24 validation answers. Among qualified candidates, choose the lowest full prompt token cost. The test split is assessed once after freezing the choice. A missing API key produces no model quality score, rather than a fabricated result. Embeddings, LLM judging, and the Jev pilot are optional diagnostics and cannot override hard answer checks.
+
+API call budget: at most 1,500 answering calls for the initial 30-meeting full run. Research calls are separately capped at 100. The default local screen makes no paid calls. The API runner writes exact prompts, outputs, model ID, prompt version, token counts, and failures to `reports/latest.json`, and caches unchanged calls in `reports/cache.json`. Only bundled examples may enter these files.

@@ -1,0 +1,825 @@
+{
+  "split": "dev",
+  "pairs": [
+    {
+      "id": "contrast-01",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "person",
+      "category": "speaker_assignee",
+      "before": {
+        "notes": "Morgan: Alice will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Alice will ship the API by next Friday."
+          }
+        ],
+        "question": "Who is assigned to ship the API?",
+        "answers": [
+          "Alice"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Morgan: Bo will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Bo",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Bo will ship the API by next Friday."
+          }
+        ],
+        "question": "Who is assigned to ship the API?",
+        "answers": [
+          "Bo"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-02",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "deadline",
+      "category": "date_modifier",
+      "before": {
+        "notes": "Alice will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Alice will publish the report by next Friday."
+          }
+        ],
+        "question": "When must Alice publish the report?",
+        "answers": [
+          "next Friday"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Alice will publish the report by this Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "publish the report",
+            "deadline": "this Friday",
+            "source_quote": "Alice will publish the report by this Friday."
+          }
+        ],
+        "question": "When must Alice publish the report?",
+        "answers": [
+          "this Friday"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-03",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "proposal",
+      "before": {
+        "notes": "Alice proposed to ship the API.",
+        "facts": [
+          {
+            "kind": "proposal",
+            "person": "Alice",
+            "text": "ship the API",
+            "deadline": "",
+            "source_quote": "Alice proposed to ship the API."
+          }
+        ],
+        "question": "Was the plan to ship the API decided?",
+        "answers": [
+          "not found"
+        ],
+        "expected_found": false
+      },
+      "after": {
+        "notes": "Alice decided to ship the API.",
+        "facts": [
+          {
+            "kind": "decision",
+            "person": "Alice",
+            "text": "ship the API",
+            "deadline": "",
+            "source_quote": "Alice decided to ship the API."
+          }
+        ],
+        "question": "Was the plan to ship the API decided?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-04",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "negation",
+      "before": {
+        "notes": "Alice agreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "agreement",
+            "person": "Alice",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Alice agreed with the launch plan."
+          }
+        ],
+        "question": "Did Alice agree with the launch plan?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Alice disagreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "disagreement",
+            "person": "Alice",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Alice disagreed with the launch plan."
+          }
+        ],
+        "question": "Did Alice agree with the launch plan?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-05",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "text",
+      "category": "negation",
+      "before": {
+        "notes": "Alice will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Alice will ship the API by next Friday."
+          }
+        ],
+        "question": "Will Alice ship the API?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Alice will not ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "not ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Alice will not ship the API by next Friday."
+          }
+        ],
+        "question": "Will Alice ship the API?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-06",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "person",
+      "category": "speaker_assignee",
+      "before": {
+        "notes": "Morgan: Alice will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Alice will publish the report by next Friday."
+          }
+        ],
+        "question": "Who is assigned to publish the report?",
+        "answers": [
+          "Alice"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Morgan: Bo will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Bo",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Bo will publish the report by next Friday."
+          }
+        ],
+        "question": "Who is assigned to publish the report?",
+        "answers": [
+          "Bo"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-07",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "deadline",
+      "category": "date_modifier",
+      "before": {
+        "notes": "Alice will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Alice will ship the API by next Friday."
+          }
+        ],
+        "question": "When must Alice ship the API?",
+        "answers": [
+          "next Friday"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Alice will ship the API by this Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "ship the API",
+            "deadline": "this Friday",
+            "source_quote": "Alice will ship the API by this Friday."
+          }
+        ],
+        "question": "When must Alice ship the API?",
+        "answers": [
+          "this Friday"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-08",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "proposal",
+      "before": {
+        "notes": "Alice proposed to publish the report.",
+        "facts": [
+          {
+            "kind": "proposal",
+            "person": "Alice",
+            "text": "publish the report",
+            "deadline": "",
+            "source_quote": "Alice proposed to publish the report."
+          }
+        ],
+        "question": "Was the plan to publish the report decided?",
+        "answers": [
+          "not found"
+        ],
+        "expected_found": false
+      },
+      "after": {
+        "notes": "Alice decided to publish the report.",
+        "facts": [
+          {
+            "kind": "decision",
+            "person": "Alice",
+            "text": "publish the report",
+            "deadline": "",
+            "source_quote": "Alice decided to publish the report."
+          }
+        ],
+        "question": "Was the plan to publish the report decided?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-09",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "negation",
+      "before": {
+        "notes": "Alice agreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "agreement",
+            "person": "Alice",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Alice agreed with the launch plan."
+          }
+        ],
+        "question": "Did Alice agree with the launch plan?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Alice disagreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "disagreement",
+            "person": "Alice",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Alice disagreed with the launch plan."
+          }
+        ],
+        "question": "Did Alice agree with the launch plan?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-10",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "text",
+      "category": "negation",
+      "before": {
+        "notes": "Alice will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Alice will publish the report by next Friday."
+          }
+        ],
+        "question": "Will Alice publish the report?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Alice will not publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Alice",
+            "text": "not publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Alice will not publish the report by next Friday."
+          }
+        ],
+        "question": "Will Alice publish the report?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-11",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "person",
+      "category": "speaker_assignee",
+      "before": {
+        "notes": "Morgan: Zeynep will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Zeynep will ship the API by next Friday."
+          }
+        ],
+        "question": "Who is assigned to ship the API?",
+        "answers": [
+          "Zeynep"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Morgan: Łukasz will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Łukasz",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Łukasz will ship the API by next Friday."
+          }
+        ],
+        "question": "Who is assigned to ship the API?",
+        "answers": [
+          "Łukasz"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-12",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "deadline",
+      "category": "date_modifier",
+      "before": {
+        "notes": "Zeynep will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Zeynep will publish the report by next Friday."
+          }
+        ],
+        "question": "When must Zeynep publish the report?",
+        "answers": [
+          "next Friday"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Zeynep will publish the report by this Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "publish the report",
+            "deadline": "this Friday",
+            "source_quote": "Zeynep will publish the report by this Friday."
+          }
+        ],
+        "question": "When must Zeynep publish the report?",
+        "answers": [
+          "this Friday"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-13",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "proposal",
+      "before": {
+        "notes": "Zeynep proposed to ship the API.",
+        "facts": [
+          {
+            "kind": "proposal",
+            "person": "Zeynep",
+            "text": "ship the API",
+            "deadline": "",
+            "source_quote": "Zeynep proposed to ship the API."
+          }
+        ],
+        "question": "Was the plan to ship the API decided?",
+        "answers": [
+          "not found"
+        ],
+        "expected_found": false
+      },
+      "after": {
+        "notes": "Zeynep decided to ship the API.",
+        "facts": [
+          {
+            "kind": "decision",
+            "person": "Zeynep",
+            "text": "ship the API",
+            "deadline": "",
+            "source_quote": "Zeynep decided to ship the API."
+          }
+        ],
+        "question": "Was the plan to ship the API decided?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-14",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "negation",
+      "before": {
+        "notes": "Zeynep agreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "agreement",
+            "person": "Zeynep",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Zeynep agreed with the launch plan."
+          }
+        ],
+        "question": "Did Zeynep agree with the launch plan?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Zeynep disagreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "disagreement",
+            "person": "Zeynep",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Zeynep disagreed with the launch plan."
+          }
+        ],
+        "question": "Did Zeynep agree with the launch plan?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-15",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "text",
+      "category": "negation",
+      "before": {
+        "notes": "Zeynep will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Zeynep will ship the API by next Friday."
+          }
+        ],
+        "question": "Will Zeynep ship the API?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Zeynep will not ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "not ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Zeynep will not ship the API by next Friday."
+          }
+        ],
+        "question": "Will Zeynep ship the API?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-16",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "person",
+      "category": "speaker_assignee",
+      "before": {
+        "notes": "Morgan: Zeynep will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Zeynep will publish the report by next Friday."
+          }
+        ],
+        "question": "Who is assigned to publish the report?",
+        "answers": [
+          "Zeynep"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Morgan: Łukasz will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Łukasz",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Morgan: Łukasz will publish the report by next Friday."
+          }
+        ],
+        "question": "Who is assigned to publish the report?",
+        "answers": [
+          "Łukasz"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-17",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "deadline",
+      "category": "date_modifier",
+      "before": {
+        "notes": "Zeynep will ship the API by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "ship the API",
+            "deadline": "next Friday",
+            "source_quote": "Zeynep will ship the API by next Friday."
+          }
+        ],
+        "question": "When must Zeynep ship the API?",
+        "answers": [
+          "next Friday"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Zeynep will ship the API by this Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "ship the API",
+            "deadline": "this Friday",
+            "source_quote": "Zeynep will ship the API by this Friday."
+          }
+        ],
+        "question": "When must Zeynep ship the API?",
+        "answers": [
+          "this Friday"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-18",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "proposal",
+      "before": {
+        "notes": "Zeynep proposed to publish the report.",
+        "facts": [
+          {
+            "kind": "proposal",
+            "person": "Zeynep",
+            "text": "publish the report",
+            "deadline": "",
+            "source_quote": "Zeynep proposed to publish the report."
+          }
+        ],
+        "question": "Was the plan to publish the report decided?",
+        "answers": [
+          "not found"
+        ],
+        "expected_found": false
+      },
+      "after": {
+        "notes": "Zeynep decided to publish the report.",
+        "facts": [
+          {
+            "kind": "decision",
+            "person": "Zeynep",
+            "text": "publish the report",
+            "deadline": "",
+            "source_quote": "Zeynep decided to publish the report."
+          }
+        ],
+        "question": "Was the plan to publish the report decided?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-19",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "kind",
+      "category": "negation",
+      "before": {
+        "notes": "Zeynep agreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "agreement",
+            "person": "Zeynep",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Zeynep agreed with the launch plan."
+          }
+        ],
+        "question": "Did Zeynep agree with the launch plan?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Zeynep disagreed with the launch plan.",
+        "facts": [
+          {
+            "kind": "disagreement",
+            "person": "Zeynep",
+            "text": "the launch plan",
+            "deadline": "",
+            "source_quote": "Zeynep disagreed with the launch plan."
+          }
+        ],
+        "question": "Did Zeynep agree with the launch plan?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    },
+    {
+      "id": "contrast-20",
+      "split": "dev",
+      "review_status": "deterministic_checked",
+      "field": "text",
+      "category": "negation",
+      "before": {
+        "notes": "Zeynep will publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Zeynep will publish the report by next Friday."
+          }
+        ],
+        "question": "Will Zeynep publish the report?",
+        "answers": [
+          "yes"
+        ],
+        "expected_found": true
+      },
+      "after": {
+        "notes": "Zeynep will not publish the report by next Friday.",
+        "facts": [
+          {
+            "kind": "action",
+            "person": "Zeynep",
+            "text": "not publish the report",
+            "deadline": "next Friday",
+            "source_quote": "Zeynep will not publish the report by next Friday."
+          }
+        ],
+        "question": "Will Zeynep publish the report?",
+        "answers": [
+          "no"
+        ],
+        "expected_found": true
+      }
+    }
+  ]
+}

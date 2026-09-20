@@ -1,10 +1,18 @@
+.env
 .venv/
+venv/
 __pycache__/
+*.pyc
 .pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Local resumability caches contain raw API responses and are not needed to
+# inspect the published experiment artifacts.
+results/**/cache/
 *.egg-info/
 dist/
-.DS_Store
-.env
 .env.*
 !.env.example
 runs/

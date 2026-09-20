@@ -1,0 +1,253 @@
+{
+  "id": "dev-12",
+  "split": "dev",
+  "notes": "# Steering Council Updates for October 2024\n\n## 2024-10-02\n\nRelease Management:\n\n- Preparations for next week's release underway - Python 3.13 RC3 released with Windows installer updates and the Incremental GC rolled back - Some concerns about RC3, mostly cosmetic issues to be addressed in 3.13.1 - Performance discussions: mixed reports on speed compared to 3.12\n\nCore Developer Updates:\n\n- Someone nominated for triaging, open vote on Discourse - Increase in core developer numbers noted\n\nProcess Improvements:\n\n- Discussion on requiring reviews for features in 3.13 and 3.14 - Acknowledgment of trust issues within the community - Considering changes to discussion processes and decision-making - Concerns about workload and response times for working groups\n\nCommunity Engagement:\n\n- Łukasz invited for Python 3.13 celebrations - Upcoming Discord event with Pablo and Łukasz\n\nPyREPL and Windows Issues:\n\n- Functionality issues noted for Windows and shell support - Discussions on function key behavior and documentation\n\nFuture Planning:\n\n- New PEP 2026 for calendar version to be reviewed next week - PEP 667 re-review closed - Mentorship survey responses to be checked\n\nCore Developer Sprints:\n\n- Discussions about 2025 sprint location (Cambridge UK proposal) - Considerations for accessibility and travel logistics - Suggestion to create a document outlining sprint hosting requirements and costs\n\nMiscellaneous:\n\n- Office hours with another developer in residence scheduled for next week - PEP 2026 to be discussed next week - Łukasz's requirement review process discussed\n\n## 2024-10-09\n\nDeveloper in Residence Discussion:\n\n- Addressed concerns about a core developer's behavior and communication - Discussed workload distribution and priorities - Mentioned potential improvements for buildbots and test result tracking - Explored ideas for better utilization of developer in residence role\n\nCommunity Communication:\n\n- Acknowledged concerns about transparency and fear within the community - Discussed need for clearer communication about processes and decisions - Considered ways to address misconceptions about Steering Council responsibilities\n\nCore Developer Promotion:\n\n- The Steering Council unanimously accepts the community vote to promote Matt Page to Core Developer\n\nElection Process:\n\n- Discussed implementation of STAR voting for upcoming term - Noted need for Python Software Foundation to have 4 weeks to implement new voting tools - Considered conducting mock elections to test new system\n\nPython 3.13 Release:\n\n- Announced release of Python 3.13\n\nCore Developer Sprints:\n\n- Discussed potential Arm-hosted sprint in Cambridge UK - Considered logistics, including hotel bookings and travel arrangements - Explored sponsorship possibilities, including potential separate corporate sponsorship for 2026\n\nFinancial Considerations:\n\n- Discussed need for responsible budgeting aligned with non-profit status - Mentioned adherence to US State Department guidelines for per diem and expenses - Emphasized importance of Python Software Foundation involvement in financial decisions\n\nProcedural Matters:\n\n- Considered need for Call for Proposals (CFP) for future sprints - Discussed community satisfaction and transparency in decision-making\n\n## 2024-10-16\n\nDeveloper in Residence Discussion:\n\n- Concerns raised about collaboration and communication within the active asyncio developers - Discussed the need for multiple experts in asyncio due to its complexity - Emphasized the importance of aligning grant work with larger project goals\n\nCore Developer Management:\n\n- Discussed process for removing commit bits from inactive core devs - Agreed to defer this discussion to the next Steering Council to avoid confusion with upcoming elections\n\nCore Developer Sprint:\n\n- Proceeding with Arm's offer to host in Cambridge UK - Exploring additional sponsorship opportunities - Clarified need to set expectations with sponsors regarding exclusivity\n\nPEP 2026 (Calendar Versioning):\n\n- Mixed opinions among SC members, ranging from slightly positive to slightly negative - Noted lack of community consensus on the proposal - Decided to defer decision to the next Steering Council\n\nElection Process:\n\n- Discussed need for clear timeline for upcoming Steering Council elections - Considered using Notion Calendar for scheduling office hours. Decided to defer decision to the next Steering Council\n\nPEP Delegation:\n\n- Discussed process for delegating PEPs to working groups (e.g., C API working group) - Considered whether to fully delegate decisions or just seek recommendations\n\nCommunity Engagement:\n\n- Discussed need for clearer communication about Steering Council's focus in coming months - Considered public announcement about deferring certain PEPs to next Steering Council. Decided to respond to all PEPs that will be deferred\n\n## 2024-10-23\n\nCore Developer Sprint:\n\n- Discussion about possible locations and timing for next year - Need to open a poll for dates - Location has good facilities including breakout rooms and cafeteria - Host site has experience with similar events like Linux mini conference\n\nAdministrative Updates:\n\n- Standing delegation docs PR needs review - Need to formalize mentorship resources and working group - Discussion about type annotations standardization - Need to document code of conduct violation handling process\n\nCore Developer Promotion Process:\n\n- Need for more transparent criteria and process - Concerns about pushing mentors too hard on promotions - Need to balance mentor discretion with transparency\n\nPEP Decisions:\n\n- Decision to defer PEPs 2026 and 661 to next steering council - Discussion about handling PEP 761 - Need for clarity on PEP decision timing relative to steering council election\n\nTechnical Discussions on JIT\n\n- Concerns raised about debugging and profiling capabilities - Discussion about JIT implementation impacts - Need for balance between performance improvements and debugging capabilities - Suggestion for informational PEP to lay out debugging/profiling issues\n\n## 2024-10-30\n\nDeveloper in Residence Update:\n\n- Required reviews for PRs are now implemented, though not disruptive as no PRs are currently automatically marked as features - Small disruption occurred due to changing required checks on main, requiring some PRs to update their branches - \"Do not merge\" check was renamed for clarity - ARM runners are being added for GitHub for Linux and Windows: - Windows runner temporarily on hold due to compiler issues - Using paid runners with ARM sponsorship arrangement - Cost expected to be lower than MacOS runners ($500/week) - ARM will reimburse costs through GitHub sponsorship\n\n- New episode of the core.py podcast released - Work ongoing on asyncio debugging changes - Making changes so borrowed reference to task isn't needed on every generator - _asynciomodule.c now holds list of pointers to root tasks for each interpreter\n\n- Increased moderation challenges on Python Discourse forums recently - Dealing with controversial discussions about moderation - Some users potentially trying to provoke bans\n\n- Another core developer was accepted into the Python Software Foundation Code of Conduct Working Group\n\nMeeting among the Steering Council Members\n\n- Discussion on PEP 744 (JIT PEP): - Potential change from informational to standards track PEP - Need to set clearer expectations and requirements - Concerns about debugging/profiling support\n\n- Issues with CPython development complexity: - Performance-focused work making contribution harder - Challenge for community contributors to keep up\n\n- Discussion of full-time developer impact: - Faster CPython team and Meta employees' (free-threading work) pace of changes - Balance between progress and community involvement - Review process challenges - Discussing if we could require non-affiliated or cross-discipline core dev reviews for a broader perspective on changes - Timing and responsiveness concerns - Community involvement challenges: - Review workload distribution - Election planning: - Timeline discussion - Encouraging nominations - Approved August monthly notes for publishing - Concerns about maintaining community accessibility - Documentation challenges - Onboarding new contributors - Balance between corporate and community contributions",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "open vote on Discourse for triaging nomination",
+      "person": "someone",
+      "deadline": "not specified",
+      "source_quote": "Someone nominated for triaging, open vote on Discourse"
+    },
+    {
+      "kind": "proposal",
+      "text": "requiring reviews for features in 3.13 and 3.14",
+      "person": "not specified",
+      "deadline": "not specified",
+      "source_quote": "Discussion on requiring reviews for features in 3.13 and 3.14"
+    },
+    {
+      "kind": "agreement",
+      "text": "Steering Council unanimously accepts the community vote to promote Matt Page to Core Developer",
+      "person": "Steering Council",
+      "deadline": "not specified",
+      "source_quote": "The Steering Council unanimously accepts the community vote to promote Matt Page to Core Developer"
+    },
+    {
+      "kind": "decision",
+      "text": "proceeding with Arm's offer to host in Cambridge UK for 2025 sprint",
+      "person": "not specified",
+      "deadline": "not specified",
+      "source_quote": "Proceeding with Arm's offer to host in Cambridge UK"
+    },
+    {
+      "kind": "decision",
+      "text": "defer decision on PEP 2026 to the next Steering Council",
+      "person": "Steering Council",
+      "deadline": "next Steering Council meeting",
+      "source_quote": "Decided to defer decision to the next Steering Council"
+    },
+    {
+      "kind": "decision",
+      "text": "defer decision on Steering Council election timeline to the next Steering Council",
+      "person": "Steering Council",
+      "deadline": "next Steering Council meeting",
+      "source_quote": "Decided to defer decision to the next Steering Council"
+    },
+    {
+      "kind": "decision",
+      "text": "defer PEPs 2026 and 661 to next steering council",
+      "person": "Steering Council",
+      "deadline": "not specified",
+      "source_quote": "Decision to defer PEPs 2026 and 661 to next steering council"
+    },
+    {
+      "kind": "action",
+      "text": "open a poll for dates for next year's core developer sprint",
+      "person": "not specified",
+      "deadline": "not specified",
+      "source_quote": "Need to open a poll for dates"
+    },
+    {
+      "kind": "action",
+      "text": "review standing delegation docs PR",
+      "person": "not specified",
+      "deadline": "not specified",
+      "source_quote": "Standing delegation docs PR needs review"
+    },
+    {
+      "kind": "action",
+      "text": "formalize mentorship resources and working group",
+      "person": "not specified",
+      "deadline": "not specified",
+      "source_quote": "Need to formalize mentorship resources and working group"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-12-q01",
+      "question": "Who was promoted to Core Developer?",
+      "answers": [
+        "Matt Page"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 2251,
+          "end": 2286,
+          "quote": "promote Matt Page to Core Developer"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q02",
+      "question": "When was the Python 3.13 release announced?",
+      "answers": [
+        "2024-10-09"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 2540,
+          "end": 2572,
+          "quote": "Announced release of Python 3.13"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q03",
+      "question": "Did the Steering Council decide to require reviews for features in Python 3.13 and 3.14?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 517,
+          "end": 578,
+          "quote": "Discussion on requiring reviews for features in 3.13 and 3.14"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q04",
+      "question": "Who is hosting the 2025 core developer sprint?",
+      "answers": [
+        "Arm"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3786,
+          "end": 3837,
+          "quote": "Proceeding with Arm's offer to host in Cambridge UK"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q05",
+      "question": "Was the decision on PEP 2026 made in October 2024?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 4135,
+          "end": 4189,
+          "quote": "Decided to defer decision to the next Steering Council"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q06",
+      "question": "Is there a plan to open a poll for sprint dates?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 4948,
+          "end": 4977,
+          "quote": "Need to open a poll for dates"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q07",
+      "question": "Has the standing delegation docs PR been reviewed?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 5150,
+          "end": 5190,
+          "quote": "Standing delegation docs PR needs review"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q08",
+      "question": "Did the Steering Council accept the community vote for Matt Page unanimously?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2188,
+          "end": 2247,
+          "quote": "The Steering Council unanimously accepts the community vote"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q09",
+      "question": "Is there a proposal to change the election process to STAR voting?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 2309,
+          "end": 2366,
+          "quote": "Discussed implementation of STAR voting for upcoming term"
+        }
+      ]
+    },
+    {
+      "id": "dev-12-q10",
+      "question": "Was there a discussion about adding ARM runners for GitHub?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 6382,
+          "end": 6442,
+          "quote": "ARM runners are being added for GitHub for Linux and Windows"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2024-10-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-10-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-10-steering-council-update.md",
+    "source_sha256": "3ff2eb28f8324a81254f4edbf420d863d5dca677cd9bd053bb87832d1d642ae9",
+    "excerpt_sha256": "f25819964a8cdc2695f98469cc50b47194b7dd54ee25d13f70606800c8283029",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "ee2f782805497748398040c55449fd4ea4092d1a88bc292ce86d76d5836b965e",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

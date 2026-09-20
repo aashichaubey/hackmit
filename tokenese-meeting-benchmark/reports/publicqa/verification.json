@@ -1,0 +1,165 @@
+{
+  "verified_at_utc": "2026-09-20T13:01:33.253299+00:00",
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "passed": 125,
+    "failed": 0
+  },
+  "heldout_audit": {
+    "checks": {
+      "frozen_files": true,
+      "manifest": true,
+      "source_provenance": true,
+      "pairs_complete": true,
+      "reconstruction": true,
+      "requests": true,
+      "native_scores": true,
+      "aggregates": true
+    },
+    "all_reproduced": true,
+    "families": 31,
+    "questions": 64,
+    "product_policy_changed_rows": 25,
+    "no_model_calls": true
+  },
+  "legacy_audit": {
+    "freeze_hash": "20a1ee626ef53e3b4a0f3e424408780301c7dc289296d9a4632094dd760b4f1e",
+    "loaded_splits": [
+      "validation",
+      "test"
+    ],
+    "checks": {
+      "validation": {
+        "language_gate_matches": true,
+        "product_quality_matches": true,
+        "workflow_arithmetic_matches": true
+      },
+      "test": {
+        "language_gate_matches": true,
+        "product_quality_matches": true,
+        "workflow_arithmetic_matches": true
+      }
+    },
+    "passed": true
+  },
+  "ledger": {
+    "actual_calls": 3462,
+    "known_usd": 1.5091867999999986,
+    "reserved_or_spent_usd": 1.6819935999999982,
+    "unknown_usage_calls": 33,
+    "input_tokens": 3265755,
+    "cached_input_tokens": 234624,
+    "output_tokens": 170795,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 671,
+        "known_usd": 0.15622840000000013
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 990,
+        "known_usd": 0.4850036000000002
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 248,
+        "known_usd": 0.1274312000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      },
+      "successor_discovery:publicqa-blocks": {
+        "calls": 13,
+        "known_usd": 0.0091256
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "successor_discovery_allocations": [
+      {
+        "purpose": "successor_discovery:publicqa-blocks",
+        "max_calls": 48,
+        "reserve_calls": 128,
+        "reason": "User-directed public QA exploration; allocate existing global capacity, retain paired final-evaluation reserve.",
+        "created": 1789908394.5765288
+      }
+    ],
+    "accounting_status": "incomplete"
+  },
+  "runtime": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "tokenizer": "o200k_base",
+    "versions": {
+      "tiktoken": "0.14.0",
+      "openai": "2.54.0",
+      "pydantic": "2.13.5",
+      "streamlit": "1.64.0"
+    }
+  },
+  "browser_verification": "Restarted owned app server with current code; visually checked tradeoff chart and new transcript workspace at http://127.0.0.1:8502.",
+  "review": "Parallel code review complete; all reported findings fixed, including final per-transcript cost caption.",
+  "completion_scope": "User-clarified exploratory application with measured token savings and visible quality/cost tradeoffs; not equal-accuracy certification.",
+  "source_hashes": {
+    "tokenese/evo_audit.py": "831f4656125cb0e96b65d5849199c488179e5f45eefbce17dd89ea476eecc03a",
+    "tokenese/evo_benchmark.py": "1c3d55e5dcbd70396a032e3fb52e2ee61a6b75cf290bad71df022984ae6e2b0f",
+    "tokenese/evo_build_data.py": "de772e82d9b78cc3214a8657256a80e75e7f5863fb235d73b7372e71f20b2ddf",
+    "tokenese/evo_classifier_next.py": "cee8f2d51658c9198b21d4a4d0e07cdb2955d61ce0b395c9eb55f96ea52a3cd5",
+    "tokenese/evo_contrasts.py": "80a857de0938524912abe74f8cf6d09ba56e355f8692830cb6e7bb984f2042b4",
+    "tokenese/evo_data.py": "48eb47b86a169422c72df9a765aea593005038e4e76aff70fa48e00052816875",
+    "tokenese/evo_eval.py": "7473875ec7294f9f1c0cc990e07d574d11941849f11284fe0737f584c7f8b4c4",
+    "tokenese/evo_grammar.py": "e9a7ddd3ce01d782fd6bf8299eb59f93d2f6956ba34f34d3c16f6d370b8865e8",
+    "tokenese/evo_label_audit.py": "712433f099437cee1f51bfa1a1410a534b7e84ee0179a5b9db8b6d7cc21ba8fd",
+    "tokenese/evo_memory.py": "aafe1f0b6d76c60a61c67ae873c5c5dad21adf72da376db21963e94110bc79b0",
+    "tokenese/evo_mutate.py": "ed0bd79664948fc6c58d0a87137231f594d180e7537f75fb07eb70fb22847ce3",
+    "tokenese/evo_public_blocks.py": "0193d5207e8272d53f3067b1c604f0546b7d7f50abd5f72ee4cb241c4d205c2d",
+    "tokenese/evo_public_data.py": "eb41ac2d7b03695d57f1333a6ace6debae355963b983ee0992e2e1a806e6831b",
+    "tokenese/evo_public_dialogue.py": "4cbfe27653d33a7db40652edd3593c846f90d8c759740b7360bdd31f3ec92b65",
+    "tokenese/evo_public_eval.py": "fb88d69d2b2a446aea60b743cfd42edd9013c65ea60359eea33e16f934dd8bf4",
+    "tokenese/evo_public_fetch.py": "2b6af82e6adac37a1191dcd588a71ad281e311e3ea0262c37282c26c2f703a9f",
+    "tokenese/evo_public_holdout.py": "9657668d8c5bd1dc63a0ee556bd3657fcafa035a222af61972ba00203a065057",
+    "tokenese/evo_public_holdout_audit.py": "c71df884e696e884d437905cee20b3f2850b60fca1afac29112a4e83ab8bcbbe",
+    "tokenese/evo_public_inheritance.py": "0841edb77b95cae121d03c4a4917cb729af4722006c0419c298baed7979aa5f1",
+    "tokenese/evo_public_report.py": "8b0ed7d9439129cf885ded057dcca122d6e53af812396deb794dc3571c6249bb",
+    "tokenese/evo_repair.py": "d2f83fd2bbc1c6c07494491afb3f3397c0c232fd6185af2249a1d93574e43946",
+    "tokenese/evo_report.py": "e305016c7603a541f66c62b43f90c7fa3a1b69d2a16a1d1dea68be41e7adf418",
+    "tokenese/evo_search.py": "eee62307c3eab532839957b1b7c4d9410d598cce302d32d413e38b7289ce9047",
+    "tokenese/evo_source.py": "c4ef3b4959ef24e5bb4d4279bdf6a9acfefc3dd048346493095f13d420d43d6d",
+    "tokenese/evo_source_groups.py": "04f40a25120416c142895322de91ff2c8fc4524dd0b116c259d4e829b7ac68b9",
+    "tokenese/evo_source_study.py": "207b80a89a381883f6be7db4a546865139b01de8987c756acb44fa46868273a2",
+    "tokenese/evo_stability.py": "bfaf77b55bfbf44fe78ae0638b27a1f9e488521965aaf1596224e011453149aa",
+    "tokenese/evo_tradeoffs.py": "9e5d123dec8da2af34445d9988fc6622534b4773a3bedaa003b9555d46488bcb",
+    "tokenese/evo_transcript.py": "94ac22be78bcb05b10556c40ed0665d80441a9c92a2f16079777074385f032fc",
+    "tokenese/evo_transcript_blocks.py": "d66fc25a3b7312a1a4ca95976ee8a2ad895ed0a4d3eb2840fce85054685dca41",
+    "tokenese/evo_transcript_response.py": "9f34c143548b9fc88cd09e8e4c91933526e20d3e12512e5704dcf5cb970e7c06",
+    "tokenese/evo_transcript_search.py": "c5fca372357557c2fae64147ef653ae5bdafc5cffb6c3d1fe3e760404cee8bb3",
+    "tokenese/evo_transcript_workspace.py": "8475ee12533d8eca3959ef818b513e03de0be360546fecee26cf30a722209c57",
+    "tokenese/evo_usage.py": "cb3910b222406c71c57967bfb981a6d310baec668f137e95feadb0d6c972e481",
+    "tokenese/evo_view.py": "6958faacda13c9213b54473c789f024784ad4386f898ea7adffe7fc0d793d875"
+  }
+}

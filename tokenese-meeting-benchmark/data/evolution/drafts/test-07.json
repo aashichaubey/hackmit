@@ -1,0 +1,253 @@
+{
+  "id": "test-07",
+  "split": "test",
+  "notes": "# 110th TC39 Meeting\n\nDay One—22 September 2025\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |--------------------|--------------|--------------------| | Chris de Almeida | CDA | IBM | | Samina Husain | SHN | Ecma | | Keith Miller | KM | Apple | | Ben Allen | BAN | Igalia | | Nicolò Ribaudo | NRO | Igalia | | Daniel Minor | DLM | Mozilla | | Dmitry Makhnev | DJM | JetBrains | | Eemeli Aro | EAO | Mozilla | | Ron Buckton | RBN | F5 | | Jesse Alama | JMN | Igalia | | Andreu Botella | ABO | Igalia | | Waldemar Horwat | WH | Invited Expert | | Zbyszek Tenerowicz | ZTZ | Consensys | | Michael Saboff | MLS | Invited Expert | | Richard Gibson | RGN | Agoric | | Bradford C. Smith | BSH | Google | | Philip Chimento | PFC | Igalia | | Chip Morningstar | CM | Consensys | | Mikhail Barash | MBH | Univ. of Bergen | | Duncan MacGregor | DMM | ServiceNow | | Mathieu Hofman | MAH | Agoric | | James Snell | JSL | Cloudflare | | Istvan Sebestyen | IS | Ecma | | Erik Marks | REK | Consensys | | Aki Braun | AKI | Ecma International | | Daniel Rosenwasser | DRR | Microsoft | | Jordan Harband | JHD | HeroDevs | | Justin Ridgewell | JRL | Google | | Kevin Gibbons | KG | F5 | | Michael Ficarra | MF | F5 | | Mark S. Miller | MM | Agoric | | Olivier Flückiger | OFR | Google | | Ryan Cavanaugh | RCH | Microsoft | | Rob Palmer | RPR | Bloomberg | | Shane Carr | SFC | Google | | Stephen Hicks | SHS | Google | | Ujjwal Sharma | USA | Igalia |\n\n## Opening & Welcome\n\nPresenter: Chris de Almeida (CDA)\n\nCDA: Welcome to the 110 meeting of the TC39. This is the September plenary. Remote only. And meet your facilitation group. That is going to be RPR, USA and CDA as chairs, JRL, and two of our favorite Daniels as facilitators. Make sure you have signed in, presumably, if you are in the meeting, you have completed this form. And that’s how you got the link.\n\nAlso, it would be great if in the notes doc, you could add your name to the name of the attendees at the top. Reminder that TC39 follows its code of conduct available on the website. But the TLDR to to be excellent to each other. Please and thank you Schedule is as follows: we are on central time for this meeting. Meetings beginning at 10 with a break at noon for lunch. For one hour, you then resume for two additional hours.\n\nCommunication tools, most people are aware. New folks may not be. We use TCB. The link will be in the reflector issue nor this meeting Github. This is how the agenda view looks. And the navigation is at the top. You will have an agenda link and then the queue link next to it. Which then will reveal something like this. Note the buttons there for, if you want to discuss a new topic, if you have a reply to discuss the current topic. If you have a clarifying question. Or in the case of something that requires immediate attention, point of order. Please use these correctly and do not jump the queue. It would be greatly appreciated. There wills be—if you are the current person speaking, there’s a button that says, I am done speaking. Counterintuitively, please do not click on this button. It can—it will cause or can cause race general between chairs that are able to advance the queue. If you click that when we also click the advanced queue button on our end, that will result in somebody’s topic completely disappearing.\n\nWe use matrix for chat while the meeting is ongoing. Most of this will be happening in the delegates channel. And then, for offtopic banter in the Temporal dead zone channel. And as always, there’s the TC39 space in the matrix which has all the other channels, but those get little to no activity during the meeting.\n\nReminder about the IP policy. Please familiar yourself with the contributing MD in the 262 repo, if you are not familiar. Notes. So a detailed transcript of the meeting is being prepared. And will be eventually posted on Github. You may edit this at any time during the meeting, in Google docs for accuracy, including deleting comments which you don’t wish to appear. You may request correctionsI am or deletions after the fact by the editing. The gooing the doc in the first two after the TC39 meeting or subsequently, making a PR in the notes repository or contacting TC39 chairs. Our next meeting is coming up in November. This is no Tokyo. Hostedly Bloomberg.\n\nI see we have a nice picture there of the scramble as well as presumably taking by delegate Michael Ficarra at the cafe. It’s looking like it’s the biggest Asia meeting so far, the highest attendance. Please do join us, if you are on the fence about going.\n\nWe would love to have you in person. Otherwise we will see you virtually. Just a nope, the Sunday before the meeting there is a recent—there is an opportunity to be on panel for that, which also gives you free attendance, which is otherwise not free.\n\nAnd yeah. That brings us to the end of the slide deck where we will go through our normal housekeeping The approval of the approval minutes of the last meeting. Those have been reviewed and first of all cleaned up, thank you, Aki. That has been reviewed and merged into Github. Presuming, we are approving the minutes from the previous meeting. We have a second for any objections? And that brings us to adoption of the current agenda. Which we have presumption of adoption, as long as nobody is speaking in opposition.\n\nAll right. Seeing nothing, hearing nothing, the agenda is adopted. I will stop sharing now.\n\nAnd now, for everybody’s favorite—before I ask, is our transcriptionist with us? I don’t have the notes up.\n\nI see many words on the notes. Great.\n\nAll right. My favorite part of the meeting: calling for note-takers. We are looking for two. TC39 heroes, who are willing to help with the notes for this session. We will lavish you with praise, both privately and publicly, unless you do not want praise lavished upon you publicly.\n\nOnce we have two volunteers, we can go on and begin the meeting.\n\nJMN: I can help with the first block, but not for the final presentation about the amount.\n\nCDA Okay. Thank you, Jesse. Please do, if we fail to notice, please remind us when you are coming off of duty so we can find someone to help out in your stead. Can we get one more person to help Jesse on the notes?\n\n## Secretary's Report\n\nPresenter: Samina Husain (SHN)\n\n* slides\n\nSHN: Thank you, CDA, for the excellent start. And great to hear about the next plenary in Japan, it will be a great turnout.\n\nI will go through the usual secretary’s report. I would like to give a bit of an update, of course on topics relevant to TC39. But, of course also with what is happening in the GA, and other TC’s that are also of interest to the TC39 committee. I will talk about the collaboration and update on invited experts.\n\nSHN: Just to bring to everybody’s attention, TC54, SBOM, have been working diligently and they will be proposing three standards for approval at the upcoming GA. I wanted to bring that to everybody’s attention. They will be available shortly for the review process. There will be the second edition of CycloneDX, the first editions of the Common Lifecycle Enumeration Specification (CLE) and Package-URL Specification (PURL). There are a number of organizations and participants that are overlapping in TC39 and TC54. So I thought it’s good to bring to your attention, if there is an interest to participate in TC54. Thank you to those who have participated. It was a lot of work. And they have all done very well.\n\nSHN: A new TC. This was a proposal that came from Microsoft for standardization of high-level shading language, HLSL. It was taken away for a bit, they needed more time to prepare. So it is now moving forward. It will be proposed to the executive committee at ECMA at the October meeting as a new TC. I think it will be TC58. The scope and the program of work, the individuals involved currently from Microsoft and the supporting members that want to be also involved, and not only Microsoft, but Google and Sony are showing interest. We want the representatives of the other organizations to commit to being involved, this is very good for ECMA. It’s a new TC. And I think it will bring new work. Also to bring to your attention, if you or your organization want to participate, please reach out to me, to show interest to participate in the new TC.\n\nSHN: JSON Schema. This is an ongoing discussion. The interest was a discussion that was in the JSON community. To bring in the JSON Schema work into ECMA. Similarly, with KLD. But the focus has been on the JSON Schema community. There’s a lot of work in conversation with the committee to discuss their interest to come to ECMA There has been an outreach to all contributors, 60 + have been involved in the JSON Schema to agree on ECMA IPRs that is a requirement for us to move forward. We have received many positive interests. We also have had a very good conversation with the IETF folks to align and ensure that they are also aligned and not seeing any reason for disagreement to bring it to ECMA. Would not force the committee to move into ECMA unless the entire community is in agreement. This work is ongoing. If your organization is involved in JSON Schema, it would be great if you reach out to me, any comments or questions or on the Slack channel, and thank you JMN and AKI for support on this topic.\n\nSHN: Collaborations. I brought up the interest of W3C and the interest for collaboration and engagement with ECMA. I understand that internationalization working group TG2 will engage more formally with W3C and if SFC is on the call, you may comment, but I understand this is moving forward. That’s excellent. We thought that would be the lowest hanging fruit and opportunity to have strong collaboration with the work ongoing with TC39 and the work going on within the working group at W3C.\n\nSHN: We had also discussed some time back having a liaison with IETF. That’s between the TC39 and IETF committees. There had been somebody in the who no longer is active, and it was left on the back burner, thank you very much RGN volunteered to do this. RGN is active in both, and RGN has been introduced to IETF. So his name should be updated on the website shortly and RGN would be the point of contact to be able to share information between the TC and IETF. To ensure that we are well informed of each other’s work. There’s open communication. And that when there is something that needs more attention, that it is done.\n\nSHN: And RGN, if you are on the call, you are free to make comments when I stop my presentation.\n\nRGN: I am on the call. I don’t have any substantial updates as well. I will be sorting out the relationship between now and the next meeting",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "We are looking for two TC39 heroes, who are willing to help with the notes for this session.",
+      "person": "Chris de Almeida",
+      "deadline": "during the meeting",
+      "source_quote": "TC39 heroes, who are willing to help with the notes for this session."
+    },
+    {
+      "kind": "agreement",
+      "text": "JMN: I can help with the first block, but not for the final presentation about the amount.",
+      "person": "Jesse Alama",
+      "deadline": "during the meeting",
+      "source_quote": "JMN: I can help with the first block, but not for the final presentation about the amount."
+    },
+    {
+      "kind": "agreement",
+      "text": "Thank you, Jesse.",
+      "person": "Chris de Almeida",
+      "deadline": "during the meeting",
+      "source_quote": "Thank you, Jesse."
+    },
+    {
+      "kind": "proposal",
+      "text": "Can we get one more person to help Jesse on the notes?",
+      "person": "Chris de Almeida",
+      "deadline": "during the meeting",
+      "source_quote": "Can we get one more person to help Jesse on the notes?"
+    },
+    {
+      "kind": "decision",
+      "text": "Presuming, we are approving the minutes from the previous meeting.",
+      "person": "Chris de Almeida",
+      "deadline": "during the meeting",
+      "source_quote": "Presuming, we are approving the minutes from the previous meeting."
+    },
+    {
+      "kind": "decision",
+      "text": "Seeing nothing, hearing nothing, the agenda is adopted.",
+      "person": "Chris de Almeida",
+      "deadline": "during the meeting",
+      "source_quote": "Seeing nothing, hearing nothing, the agenda is adopted."
+    },
+    {
+      "kind": "proposal",
+      "text": "If you or your organization want to participate, please reach out to me, to show interest to participate in the new TC.",
+      "person": "Samina Husain",
+      "deadline": "not specified",
+      "source_quote": "Also to bring to your attention, if you or your organization want to participate, please reach out to me, to show interest to participate in the new TC."
+    },
+    {
+      "kind": "agreement",
+      "text": "Thank you very much RGN volunteered to do this.",
+      "person": "Samina Husain",
+      "deadline": "not specified",
+      "source_quote": "There had been somebody in the who no longer is active, and it was left on the back burner, thank you very much RGN volunteered to do this."
+    },
+    {
+      "kind": "agreement",
+      "text": "RGN has been introduced to IETF.",
+      "person": "Samina Husain",
+      "deadline": "not specified",
+      "source_quote": "RGN is active in both, and RGN has been introduced to IETF."
+    },
+    {
+      "kind": "agreement",
+      "text": "RGN would be the point of contact to be able to share information between the TC and IETF.",
+      "person": "Samina Husain",
+      "deadline": "not specified",
+      "source_quote": "So his name should be updated on the website shortly and RGN would be the point of contact to be able to share information between the TC and IETF."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-07-q01",
+      "question": "Who proposed looking for two note-takers for the session?",
+      "answers": [
+        "Chris de Almeida"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 5673,
+          "end": 5742,
+          "quote": "TC39 heroes, who are willing to help with the notes for this session."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q02",
+      "question": "Did Jesse Alama agree to help with note-taking?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 5929,
+          "end": 6019,
+          "quote": "JMN: I can help with the first block, but not for the final presentation about the amount."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q03",
+      "question": "Was the agenda for the meeting adopted?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5350,
+          "end": 5405,
+          "quote": "Seeing nothing, hearing nothing, the agenda is adopted."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q04",
+      "question": "Who volunteered to be the liaison between TC39 and IETF?",
+      "answers": [
+        "RGN"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 9930,
+          "end": 10069,
+          "quote": "There had been somebody in the who no longer is active, and it was left on the back burner, thank you very much RGN volunteered to do this."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q05",
+      "question": "Did Chris de Almeida thank Jesse Alama for agreeing to help?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 6031,
+          "end": 6048,
+          "quote": "Thank you, Jesse."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q06",
+      "question": "Is there a new TC proposed for high-level shading language standardization?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 7472,
+          "end": 7574,
+          "quote": "This was a proposal that came from Microsoft for standardization of high-level shading language, HLSL."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q07",
+      "question": "Did Samina Husain specify a deadline for organizations to show interest in the new TC?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 8155,
+          "end": 8307,
+          "quote": "Also to bring to your attention, if you or your organization want to participate, please reach out to me, to show interest to participate in the new TC."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q08",
+      "question": "Is there a disagreement mentioned about the JSON Schema work moving to ECMA?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 8538,
+          "end": 8795,
+          "quote": "There’s a lot of work in conversation with the committee to discuss their interest to come to ECMA There has been an outreach to all contributors, 60 + have been involved in the JSON Schema to agree on ECMA IPRs that is a requirement for us to move forward."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q09",
+      "question": "Who is responsible for approving the minutes from the previous meeting?",
+      "answers": [
+        "Chris de Almeida"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5096,
+          "end": 5162,
+          "quote": "Presuming, we are approving the minutes from the previous meeting."
+        }
+      ]
+    },
+    {
+      "id": "test-07-q10",
+      "question": "Did RGN provide any substantial updates during the call?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 10563,
+          "end": 10608,
+          "quote": "I don’t have any substantial updates as well."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2025-09/september-22.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-09/september-22.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-09/september-22.md",
+    "source_sha256": "1d620c8e7d51486ce903ecb7bd7564aae512fd66dadc6e875905d661036888ab",
+    "excerpt_sha256": "530314554a35e7c6274ecae91e9185b574fe22579df6f61af476d0c00a607bec",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "a3b45d0656a565f56e29cacacfa52bbbeb0dc2dfed3ed8c5547d35f7cd09e134",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

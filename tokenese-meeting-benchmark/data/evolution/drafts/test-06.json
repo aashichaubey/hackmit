@@ -1,0 +1,253 @@
+{
+  "id": "test-06",
+  "split": "test",
+  "notes": "# 109th TC39 Meeting\n\nDay One—28 July 2025\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |------------------------|--------------|--------------------| | Jesse Alama | JMN | Igalia | | Dmitry Makhnev | DJM | JetBrains | | Waldemar Horwat | WH | Invited Expert | | Guy Bedford | GB | Cloudflare | | Daniel Minor | DLM | Mozilla | | Zbyszek Tenerowicz | ZTZ | Consensys | | Jordan Harband | JHD | HeroDevs | | Sergey Rubanov | SRV | Invited Expert | | Chip Morningstar | CM | Consensys | | Nicolò Ribaudo | NRO | Igalia | | Mikhail Barash | MBH | Univ. of Bergen | | Keith Miller | KM | Apple Inc. | | Aki Rose Braun | AKI | Ecma International | | Samina Husain | SHN | Ecma International | | Olivier Flückiger | OFR | Google | | Richard Gibson | RGN | Agoric | | Rezvan Mahdavi Hezaveh | RMH | Google | | J. S. Choi | JSC | Invited Expert | | Eemeli Aro | EAO | Mozilla | | Tab Atkins-Bittner | TAB | Google | | Istvan Sebestyen | IS | Ecma | | Daniel Rosenwasser | DRR | Microsoft | | Andreu Botella | ABO | Igalia | | Chris de Almeida | CDA | IBM | | Chengzhong Wu | CZW | Bloomberg | | Justin Ridgewell | JRL | Google | | Kevin Gibbons | KG | F5 | | Mathieu Hofman | MAH | Agoric | | Michael Ficarra | MF | F5 | | Mark S. Miller | MM | Agoric | | Rob Palmer | RPR | Bloomberg | | Stephen Hicks | SHS | Google | | Ujjwal Sharma | USA | Igalia |\n\n## Opening & Welcome\n\nPresenter: Rob Palmer (RPR)\n\nRPR: Okay. According to the international clock, I think it is time to begin the meeting. We have a good. We have 20 people in here. I think we’ll have a few more. So welcome, everyone. To the 109th meeting of TC39. All very excited to be here. This is obviously, a remote meeting. Oh, dear, sorry, I’m—I’m, my windows wrong. Here we go. So, let’s get stuck into it. We have our chairs here today. I think, all three. Myself, Rob, Ujjwal, Chris joined by our facilitators I know Dan minor will be here for quite a bit, as well as Justin will be with us as well. I’m not sure Daniel, we shall find out. And let’s just, let’s just check on the notetaking upfront. I think we have Carrie as transcriptionist. Is the doc all working? Yes! It is. That’s good. Please could we have a couple of volunteers to help out with editing the notes?\n\nRPR: All right. On we go. So please can everyone remember to sign-in using the regular meeting entry form. I know sometimes people get the URL to log into this video by other means, but that’s the official route. And make sure that we get all of the correct legal tracking information. IP connection. We have a code of conduct. Please do read it. It is available on the website. TC39 dot ES. Do your best to reflect the spirit of it, not just the, not just going very finally litigating through it. As we all are here to have a good time and to be respectful to each other. We are on U.S. Pacific Time this week. So we got our usual remote two hours, plus two hours schedule. Our comms tools in some ways have not changed. In some ways everything has changed in terms of TCQ as our primary tool. Today if you look at the URL you may have noticed the reloaded part in it. Please do have a go opening this now. The link is on the reflector post. The reason is worth logging in early to this is that this is the new version implemented by CHU. Is CHU with us today? I do not think so. So, we’re using his new special deployment and upgrade of BT's orange TCQ tool. This is all enhanced. This is all very bespoke. I’m sure it will be high quality. But if any issues do arise, any technical issues, please do call them out. If they are of a blocking nature, if you cannot communicate using TCQ, please escalate to the chairs, that would be kind of point of order worthy.\n\nRPR: So for anyone who hasn’t used TCQ. You can see a screenshot all of the queue of our agenda topics. In the middle, if you choose the queue section of the app you will see four different buttons of increasing invasiveness. So, we start on the left, on the blue. Well, sorry, this is the screen we should not have anymore, if you see his, you’re using an old version of TCQ. But normally, we prefer new topics, that’s the gentle way of suggesting what to talk about next. You can also discuss the current topic or intervene with a clarifying question or just stop the show entirely if there is something significantly, like something is completely broken and you can enter with a point of order.\n\nRPR: We also use matrix for the realtime chat. Hopefully, everyone should have been on board toed this. It is part of our standard onboarding procedures. But most of the conversation relevant to today’s topic will be in TC39 delegates and on topic in the zone.\n\nRPR: We have an intellectual property policy. So a lot of people here, perhaps most people will be delegates from their member companies or institutions in which case, your institution will have signed the appropriate forms. Otherwise, we also have invited experts that are confirmed by the ECMA secretariat, subject to completing the form. Everyone should be signing the royalty-free form. If you have not signed any of this, then we interpret that as you are an observer. You're welcome to observe in a read-only way. But please do not speak. All right.\n\nRPR: Also, another important notice is that we are transcribing this meeting. And so be aware that a detailed transcription of the meeting is being prepared and will eventually be posted on GitHub. You can edit this at any time during the meeting for accuracy, including deleting comments you do not wish to appear, and you can request corrections up to two weeks after the meeting completion, and afterwards making a public PR in the notes repository or contacting the chairs.\n\nRPR: Our next meeting is another remote meeting. This is in roughly two months time. And then following that, I’m very excited the next, next meeting, which is in Tokyo, that’s the, that will be hosted by my company, Bloomberg, in the same building where we were approximately, I don’t know—not that long ago. 18 months ago. So, yeah. Please come along to that. I think MF can speak highly of the capybara cafe, you need to book very early for that. You need the book now if you wish to do it. All right. We have notetakers. Can I get approval for the last meeting’s minutes? That would have been the meeting in A Coruña, at the Igalia office. If I—will ask for any objections to approving those minutes. I see nothing on the queue. No one speaking up. So we can consider the previous minutes are approved. All right. And we have our current agenda along with the associated schedule that CDA has posted. Draft schedule. Are there any objections to that? Nothing on the queue. So the agenda is, for this meeting, is approved. And so, the next up will be SHN with the secretary's report.\n\n## Secretary’s Report\n\nPresenter: Samina Husain (SHN)\n\n* slides\n\nSHN: Thank you. Great. I have a short update, since our last meeting to share with everybody. Thank you AKI, for helping me put this report together. And add any comments you may like to make, just do so as you see needed. I want to talk about some recognitions that we have had, the Ecma recognition award, the GA approvals and some new projects and members. The slides, as always, talk about the code of conduct, which we have already talked about. Invited experts and the list of documents that are available for the community read, TC39 and GA documents. And, of course, the next schedule, which RPR has already mentioned.\n\nSHN: Recognition awards. Ecma gives recognition awards which honors individuals that have been involved with Ecma and been doing a considerable amount of work and involved in multiple technical committees or the executive committee. We honored four individuals in this last General Assembly. You all may not know everybody here, but I wanted to share the names. Touradj Ebrahimi has received an Ecma recognition award, he has been active with Ecma for over 20 years and quite a contributor in TC31, TC51 and a number of other committees, he represents EPFL, a not-for-profit member, which is the university here in Lausanne. We extend congratulations to Touradj. Then we have Hyun Kahng. I apologize I mispronounced his name, for contributions in TC51. And also the liaison officer with the relationship that we have with ISO in SC6. He has been active also for 30 years in both in ISO and in Ecma, and has made a lot of contributions in that technical committee 51 and with the preparation in multiple different standards. We also extend congratulations to him.\n\nSHN: As many of you know, MLS has taken retirement from Apple. MLS has been, is the process of becoming an invited expert with TC39, which I think is excellent. MLS has been active within Ecma for a number of years and served as the chair for our ExeCom for three years, that was excellent. He has also been, as you know, a very active member of TC39 involved in multiple different areas of discussions. I think MLS has been a great individual to work with. He has brought a lot of benefit to both the ExeCom and TC39 with his style of working. His approaches, and his contributions. So I’m not sure if MLS is on the call already today, but I would like the committee to please recognize MLS and congratulate MLS for his efforts. He is not on the call right now, we look forward to seeing Michael at the next call as an invited expert.\n\nSHN: And last, but not least, Rob, congratulations, RPR, you have been nominated by your committee and members for this award. RPR, you have been working very hard with TC39. Your work has not gone unrecognized. We thank you for all of the efforts you take to ensure TC39 runs as smoothly as it does. Together with your co-chairs and with your leadership we have discussed many topics, sensitive, active, and exciting conversations. You always kept everything organized and found solutions to move forward. RPR, thank you very much for your contribution. I will stop for a moment and let the committee congratulate you on receiving this award. Congratulations, RPR. There should be fireworks and clapping and so forth.\n\nSHN: The next line of congratulations is for the approval of the ECMA standards. ECMA-262 16th edition was approved by the GA in June. And ECMA-402 12th edition. Congratulations to the committee for your efforts and work. To complete the two. I know you’re beginning your efforts already for the 17th and 13th edition. So that is fantastic. I also want to recognize all of the editors and all of the chairs of the subcommittees with their work that goes in, and recognize AKI for her work to ensure that both of the standards and other work that’s coming out of the TC39 are all being—very, very nicely made into PDFs so we have an excellent—archive of all of these standards. So, congratulations.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Please could we have a couple of volunteers to help out with editing the notes?",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Please could we have a couple of volunteers to help out with editing the notes?"
+    },
+    {
+      "kind": "proposal",
+      "text": "Please can everyone remember to sign-in using the regular meeting entry form.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "So please can everyone remember to sign-in using the regular meeting entry form."
+    },
+    {
+      "kind": "agreement",
+      "text": "No one speaking up. So we can consider the previous minutes are approved.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "No one speaking up."
+    },
+    {
+      "kind": "decision",
+      "text": "So the agenda is, for this meeting, is approved.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "So the agenda is, for this meeting, is approved."
+    },
+    {
+      "kind": "agreement",
+      "text": "Everyone should be signing the royalty-free form.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Everyone should be signing the royalty-free form."
+    },
+    {
+      "kind": "agreement",
+      "text": "If you have not signed any of this, then we interpret that as you are an observer.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "If you have not signed any of this, then we interpret that as you are an observer."
+    },
+    {
+      "kind": "agreement",
+      "text": "You're welcome to observe in a read-only way.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "You're welcome to observe in a read-only way."
+    },
+    {
+      "kind": "agreement",
+      "text": "But please do not speak.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "But please do not speak."
+    },
+    {
+      "kind": "agreement",
+      "text": "The previous meeting’s minutes are approved.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "So we can consider the previous minutes are approved."
+    },
+    {
+      "kind": "agreement",
+      "text": "The agenda for this meeting is approved.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "So the agenda is, for this meeting, is approved."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-06-q01",
+      "question": "Who asked for volunteers to help with editing the notes?",
+      "answers": [
+        "Rob Palmer"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 2163,
+          "end": 2242,
+          "quote": "Please could we have a couple of volunteers to help out with editing the notes?"
+        }
+      ]
+    },
+    {
+      "id": "test-06-q02",
+      "question": "Did the committee approve the previous meeting’s minutes?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 6441,
+          "end": 6460,
+          "quote": "No one speaking up."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q03",
+      "question": "Is signing the royalty-free form mandatory for all participants?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 5013,
+          "end": 5062,
+          "quote": "Everyone should be signing the royalty-free form."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q04",
+      "question": "Who is responsible for reminding participants to sign in using the regular meeting entry form?",
+      "answers": [
+        "Rob Palmer"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 2270,
+          "end": 2350,
+          "quote": "So please can everyone remember to sign-in using the regular meeting entry form."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q05",
+      "question": "Was the agenda for the current meeting approved?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 6685,
+          "end": 6733,
+          "quote": "So the agenda is, for this meeting, is approved."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q06",
+      "question": "Are observers allowed to speak during the meeting?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 5192,
+          "end": 5216,
+          "quote": "But please do not speak."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q07",
+      "question": "Who congratulated Rob Palmer for receiving an award?",
+      "answers": [
+        "Samina Husain"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 9390,
+          "end": 9516,
+          "quote": "SHN: And last, but not least, Rob, congratulations, RPR, you have been nominated by your committee and members for this award."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q08",
+      "question": "Is there a mention of a specific deadline for the next meeting?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 5757,
+          "end": 5792,
+          "quote": "This is in roughly two months time."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q09",
+      "question": "Did CHU attend the meeting?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 3285,
+          "end": 3325,
+          "quote": "Is CHU with us today? I do not think so."
+        }
+      ]
+    },
+    {
+      "id": "test-06-q10",
+      "question": "Is there any disagreement recorded about the agenda approval?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 6629,
+          "end": 6684,
+          "quote": "Are there any objections to that? Nothing on the queue."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2025-07/july-28.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-07/july-28.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-07/july-28.md",
+    "source_sha256": "8f38609c1641ae3d2172a046905ae08bc7cbb5b2d035a42ec72eb11dcc1282d4",
+    "excerpt_sha256": "5522fd5041e1a923e51610a5dbed6c20caf797a157e835f5dbbe35c5ba828b94",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "4d52199a9d153f149033b48f6a858377e009f6bfd2fe64fb1e0a7f8f805f847e",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

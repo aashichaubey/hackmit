@@ -1,0 +1,254 @@
+{
+  "id": "test-11",
+  "split": "test",
+  "notes": "# 114th TC39 Meeting\n\nDay One—2026-05-19\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |------------------------|--------------|--------------------| | Daniel Minor | DLM | Mozilla | | Ujjwal Sharma | USA | Igalia | | Samina Husain | SHN | Ecma | | Chris de Almeida | CDA | IBM | | Waldemar Horwat | WH | Invited Expert | | Gustavo Tonietto | GTO | Mozilla | | Zbyszek Tenerowicz | ZTZ | Consensys | | Yusuke Suzuki | YSZ | Apple | | Dmitry Makhnev | DJM | JetBrains | | Linus Groh | LGH | Bloomberg | | Justin Ridgewell | JRL | Google | | Olivier Flückiger | OFR | Google | | Aurèle Barrière | AUR | CNRS | | Luna Pfeiffer | LPR | Yavashark | | Caio Lima | CLA | Igalia | | Richard Gibson | RGN | Agoric | | Jordan Harband | JHD | Socket | | Keith Miller | KM | Apple | | Bradford C. Smith | BSH | Google | | Mathieu Hofman | MAH | Agoric | | Chip Morningstar | CM | Consensys | | Mikhail Barash | MBH | Univ. of Bergen | | Ron Buckton | RBN | F5 | | Ruben Bridgewater | RBR | Datadog | | Gus Caplan | GCL | Deno | | Oliver Medhurst | OMT | IE (Porffor) | | Andreu Botella | ABO | Igalia | | Christian Ulbrich | CHU | Zalari | | Tom Kopp | TKP | Zalari | | Sergey Rubanov | SRV | Invited Expert | | Eemeli Aro | EAO | Mozilla | | Lea Verou | LVU | OpenJS | | Justin Grant | JGT | Invited Expert | | Nicolò Ribaudo | NRO | Igalia | | Istvan Sebestyen | IS | Ecma | | Philip Chimento | PFC | Igalia | | Aki Braun | AKI | Ecma International | | Kristen Hewell Garrett | KHG | Invited Expert | | Clément Pit-Claudel | CPC | EPFL | | Luca Casonato | LCA | Invited Expert | | Michael Ficarra | MF | F5 | | Patrick Soquet | PST | Moddable | | Shane Carr | SFC | Google |\n\n## Opening & Welcome\n\nPresenter: Ujjwal Sharma (USA)\n\nUSA: Okay. Looks like the bot is running. That's it. I guess we start and we explain the note-taking setup. Great. Hello. And welcome, everyone, to the 114th meeting of TC39 in Amsterdam. Good morning. If you're there, and greetings, otherwise. Hope you're enjoying it. I've heard it's a Gura place to be. Please join me in meeting your chair group, me, Pujo, who's starting out, Justin, and Daniel are there with you in person. And Rob and Chris are here with us online. And Dan Rosmosser, so I hope you won't need us too much, but sure, make sure to sign in in the form. If you're there, either you're you've already filled in this form, or you're there in person, which means you'll get an in-person form. Please fill that. And please if you're in the call without filling this form, go back and fill that up, please. Next, we have the code of conduct. Okay. I think I'll just briefly summarize. Please check out our code of conduct and on the TC39 website. That's tc39.es/coc. As well as check out Chair Brain's code of conduct. A quick rundown through our daily schedule. The breakfast, that started around 40 minutes earlier. I think goes until the next 15 minutes or so. The meeting has started, though. So don't try to skip the first 15 minutes of meeting. The lunch starts at noon and goes until 13:00. And then we have a 15-minute break at half past 3:00. So until the end of the meeting all the way at 5:00. Regarding our communications tools, you might remember this is the boring old section, but pay attention. We have changed a few things here. So first of all, Google Meet. Since we're using Google Meet, if you're there in person, please use companion mode. This is a feature in Google Meet that is designed for this. Exact situation. And would help us with not having issues with the audio. If you're remote and not one of the chairs and facilitators, I would implore you to join it in incognito mode or private browsing. Something where you can set your username and set your username to include your affiliation. And next, we have TCQ. However, we don't have TCQ, or we have a new TCQ. Michael will make TCQ. So we'll go over that in more detail later. But I added a few photos to show you how the new TCQ looks. Here's the agenda view. And well, we're back. So in the participant view, there's all of these different buttons. There's still the same. In the new TCQ. And they go in increasing order of importance or interruption. So you can add a new topic. At the bottom of the queue, you can discuss the current topic. That is ongoing at the top of the queue. You can add a clarifying question. That jumps to the top of the queue as well as a point of order, which is something that should be used in a case of emergency or something that's gone wrong. Please let us know through a point of order. But don't misuse that, please. Then there's the speaker view. It says, \"Please do not use this.\" But apparently, this applies to this old TCQ. So please feel free to use the new TCQ. And I guess Michael will tell you in more detail. All right. So we have matrix chat. You might already be in some or more of the in some of these chat rooms. But if you aren't, join them on matrix and join the TC39 space. That's like a group of these chat rooms that you can use them to explore more of these chat rooms. Next, we have the TC39 and ECMA IPR policy. The too long, didn't read version of this is that this is something that you should be aware of. If you are here, and participating, and looking forward to participate, if not, then you're welcome to observe. But please be aware of this. IPR policy, because this is how we govern intellectual property regarding the work that comes out of this meeting. Regarding notes, we do not have a human transcriptionist anymore. Instead, we have a bot that transcribes the notes. We would be running a similar workflow than earlier, though. To see how it goes. So we would ask for your assistance. Please summarize, key points. If you're presenting at the end of your presentation, and if you're helping out, thank you, I guess. Please note this, that a detailed transcript of the meeting is being prepared and it will be in the notes and you may edit them. Or contact the TC39 chairs. Please help out with the notes. So as I mentioned, you might be curious about helping out with the notes if this is one of your first meetings, then I would highly request you to consider joining us volunteer this is something that helps the committee run smoothly and I think we'll come to that real quick. Next up, though, the meeting after the next one, the next in-person meeting is the 100 the 116th meeting. This is oh, or wait, is this no, yes, this is the next in-person meeting. On the 29th of September to 30 sorry, Thursday, 21st October. By our friends at Sony Interactive Entertainment in Tokyo. The next meeting is I shall look it up real quick. In two months. But in August, 20th, in the Aronipe time zone. So that's UTC minus 5. Fun. Let's move on then with the committee housekeeping. And as I mentioned, it all starts with asking for note takers. So who would like to have the honor of helping us in this very first session of this meeting? To help out the notes I believe the bot is better and might be faster for there any volunteers in the room that I'm not seeing. Maybe the room's first thing with enthusiasm and I don't know.\n\nI think OMT. Yes.\n\nThank you.\n\nDo we have a second? We cannot move on until we have note takers. Perfect. So we have two.\n\nThank you, Justin. And thank you, Canada Honk. And I will yeah.\n\nWho's the other?\n\nWho's the second?\n\nZTZ?\n\nWait. Thank you, ZTZ then. So moving on with the committee housekeeping. Do let us know, though, if you need any assistance. And yeah. Okay. The approval of the previous minutes of the meeting. So the notes of the previous TC39 meeting are in the repo. Do we have confirmation of those previous minutes? And what about the current agenda? Do we have agreement on adopting the current agenda? I don't hear any opposition. Do you adopting the current agenda? Next, let's move on to the secretary's report. Samina. You have the.\n\nThanks, Ujjwal. Can I share my screen if?\n\nAbsolutely.\n\nThank you.\n\nSo quick point of order. According to the schedule, oh, you've it has been reordered. Okay.\n\nSorry. I don't know what order we want to go this one. We can go directly to Michael or we can go to.\n\nYeah. I think we should do Michael because this kind of going to cover kind of TCQ things. And people may want to avail themselves of that during Samina's presentation.\n\nOkay. Sorry about that. Samina, we'll get back to you in just 10 minutes. First up is Michael. Please tell us about the new TCQ tool.\n\n## Overview of communication tools\n\nPresenter: Michael Ficarra (MF)\n\n* slides\n\nMF: All right. Hey, everyone. Yeah. So this just kind of started out as me screwing around and now we're using it. So I'm terrified. So this is what it looks like. If you go there, just click the button to log in. It'll take you to a page like this. You might already have the meeting listed in your list of meetings if you've been added to the agenda or something like that. But if not, just use the direct link to the meeting or put in the meeting code in the box. There is a help tab both here and within the meeting. If you want to learn more about how to use it, this is like a kind of narrow directed way to do that. So yeah, in your vast amounts of free time, go ahead and read that.\n\nMF: This is what the queue looks like. You'll see it has a lot more features than TCQ that we're used to. You'll see there's a marker for your own topics there. There's timers for time boxes. You can now edit your topic. Or delete it over there on the right. You can also rearrange your topic. You have permission to move it to later if you want. Because you might see something else on the queue that you want to defer to. So yeah, that's the queue tab. You'll also be able to look at the agenda tab and see what's upcoming. Your own topics, again, have the similar marker on the left. And the current topic is highlighted there. In yellow.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Please fill that.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Please fill that."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please fill that.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "And please if you're in the call without filling this form, go back and fill that up, please."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please check out our code of conduct and on the TC39 website.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Please check out our code of conduct and on the TC39 website."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please use companion mode.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Since we're using Google Meet, if you're there in person, please use companion mode."
+    },
+    {
+      "kind": "proposal",
+      "text": "If you're remote and not one of the chairs and facilitators, I would implore you to join it in incognito mode or private browsing.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "If you're remote and not one of the chairs and facilitators, I would implore you to join it in incognito mode or private browsing."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please let us know through a point of order.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Please let us know through a point of order."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please help out with the notes.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Please help out with the notes."
+    },
+    {
+      "kind": "proposal",
+      "text": "I would highly request you to consider joining us volunteer this is something that helps the committee run smoothly",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "So as I mentioned, you might be curious about helping out with the notes if this is one of your first meetings, then I would highly request you to consider joining us volunteer this is something that helps the committee run smoothly and I think we'll come to that real quick."
+    },
+    {
+      "kind": "decision",
+      "text": "We have two note takers: Justin and Zbyszek Tenerowicz.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Thank you, Justin."
+    },
+    {
+      "kind": "agreement",
+      "text": "I don't hear any opposition to adopting the current agenda.",
+      "person": "Ujjwal Sharma",
+      "deadline": "",
+      "source_quote": "Do we have confirmation of those previous minutes? And what about the current agenda? Do we have agreement on adopting the current agenda? I don't hear any opposition."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-11-q01",
+      "question": "Who asked attendees to fill the form?",
+      "answers": [
+        "Ujjwal Sharma"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 2439,
+          "end": 2456,
+          "quote": "Please fill that."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q02",
+      "question": "What mode did Ujjwal Sharma propose for in-person Google Meet users?",
+      "answers": [
+        "companion mode"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 3320,
+          "end": 3404,
+          "quote": "Since we're using Google Meet, if you're there in person, please use companion mode."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q03",
+      "question": "Did the meeting decide on note takers?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7248,
+          "end": 7266,
+          "quote": "Thank you, Justin."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q04",
+      "question": "Who are the two note takers?",
+      "answers": [
+        "Justin",
+        "Zbyszek Tenerowicz"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 7248,
+          "end": 7266,
+          "quote": "Thank you, Justin."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q05",
+      "question": "Is there any opposition to adopting the current agenda?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 7609,
+          "end": 7776,
+          "quote": "Do we have confirmation of those previous minutes? And what about the current agenda? Do we have agreement on adopting the current agenda? I don't hear any opposition."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q06",
+      "question": "Who requested volunteers to help with notes?",
+      "answers": [
+        "Ujjwal Sharma"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 6006,
+          "end": 6281,
+          "quote": "So as I mentioned, you might be curious about helping out with the notes if this is one of your first meetings, then I would highly request you to consider joining us volunteer this is something that helps the committee run smoothly and I think we'll come to that real quick."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q07",
+      "question": "Did Michael Ficarra present about the new TCQ tool?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 8488,
+          "end": 8519,
+          "quote": "Presenter: Michael Ficarra (MF)"
+        }
+      ]
+    },
+    {
+      "id": "test-11-q08",
+      "question": "Is there a human transcriptionist for notes?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 5451,
+          "end": 5516,
+          "quote": "Regarding notes, we do not have a human transcriptionist anymore."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q09",
+      "question": "Was the exact date of the next in-person meeting given?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 6282,
+          "end": 6387,
+          "quote": "Next up, though, the meeting after the next one, the next in-person meeting is the 100 the 116th meeting."
+        }
+      ]
+    },
+    {
+      "id": "test-11-q10",
+      "question": "Did the excerpt mention any disagreement about the agenda?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 7609,
+          "end": 7776,
+          "quote": "Do we have confirmation of those previous minutes? And what about the current agenda? Do we have agreement on adopting the current agenda? I don't hear any opposition."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2026-05/may-19.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-05/may-19.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-05/may-19.md",
+    "source_sha256": "550f3894f16e3bcbe2c962f830bbd3a51321678d2b61d9dbc5752e8881cdce82",
+    "excerpt_sha256": "cd16dd51562ef1695acdadf5b7001fd753a25417eed51043136455bc3cf81b49",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "65e127672c3b658af80f10d1a03f5187255384d15420f4721e0cefb090f9706b",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

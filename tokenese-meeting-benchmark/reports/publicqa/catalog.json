@@ -1,0 +1,88 @@
+{
+  "loaded_splits": [
+    "train"
+  ],
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "counts": {
+    "meetingqa": {
+      "questions": 2976,
+      "meeting_families": 39
+    },
+    "MeeQA": {
+      "questions": 10309,
+      "meeting_families": 223
+    },
+    "MISeD": {
+      "questions": 2817,
+      "meeting_families": 87
+    }
+  },
+  "cross_dataset_family_overlap": {
+    "MeeQA / meetingqa": 33,
+    "MISeD / meetingqa": 23,
+    "MISeD / MeeQA": 56
+  },
+  "exclusion_counts": {
+    "meetingqa:invalid_source_offset": 23,
+    "meetingqa:annotator_answerability_disagreement": 3,
+    "MeeQA:annotator_answerability_disagreement": 3102,
+    "MISeD:invalid_attribution_range": 105
+  },
+  "pilot_ids": {
+    "meetingqa": [
+      "meetingqa:0097ee54d49f09888130",
+      "meetingqa:a929eb4b89fd099d0538",
+      "meetingqa:94c00e96cf9f65c363f6",
+      "meetingqa:7585c84a8872dc86acd5",
+      "meetingqa:77ea851912f96812f939",
+      "meetingqa:c60dc8831118eab19637",
+      "meetingqa:73b314e7d9e77acc4b46",
+      "meetingqa:d72cc516afdf14a9869d",
+      "meetingqa:dd8a2c4a5e9e7282a8cc",
+      "meetingqa:718404ae86a53c884d8a",
+      "meetingqa:9a8203677f086537d269",
+      "meetingqa:b116f38ff09ef81ebad7",
+      "meetingqa:a1899fb84f684bc5b2ca",
+      "meetingqa:a10a4232cfecd06376ad",
+      "meetingqa:a7c66a9f00ac4c493ea0",
+      "meetingqa:5ffd0cfb36aeb3051659"
+    ],
+    "MeeQA": [
+      "MeeQA:88dc16909004c36cc438",
+      "MeeQA:4e92c19c3c0a66b07473",
+      "MeeQA:5ce50fb2d7e083d23017",
+      "MeeQA:449bd704fba5685849ec",
+      "MeeQA:cb0a8ae0d6644296a278",
+      "MeeQA:87025e3d98dcd08a83a8",
+      "MeeQA:13cb5a6a539e8c76484d",
+      "MeeQA:1dbc3e1e44b6fae3b00d",
+      "MeeQA:8324d9834b73cf3c828c",
+      "MeeQA:fb764cf2529c5b483d3d",
+      "MeeQA:75e2680271e43f214223",
+      "MeeQA:d99c568dca3ae9a079d6",
+      "MeeQA:4dd09a91fc9ebb3e1a1c",
+      "MeeQA:e1cd0d3d2bb17e06394b",
+      "MeeQA:c3153d54404a8ed31ebd",
+      "MeeQA:73f06d72c8cad742b7dd"
+    ]
+  }
+}

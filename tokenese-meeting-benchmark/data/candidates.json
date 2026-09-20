@@ -1,0 +1,4 @@
+{
+  "symbols": {"version": "3", "labels": {"proposal": "P", "decision": "D", "action": "A", "agreement": "+", "disagreement": "-"}, "separator": "|", "deadline_marker": "@"},
+  "mixed": {"version": "3", "labels": {"proposal": "提", "decision": "决", "action": "责", "agreement": "同", "disagreement": "反"}, "separator": "|", "deadline_marker": "@"}
+}

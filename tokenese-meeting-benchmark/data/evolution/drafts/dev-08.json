@@ -1,0 +1,253 @@
+{
+  "id": "dev-08",
+  "split": "dev",
+  "notes": "# April through June 19, 2024 Steering Council update\n\n- Steering Council discussion topics: - **PEPs** - Ongoing PEP 741, a Configuration C API discussions; seeking consensus and clarity and WG input. Ultimately decided to postpone this until 3.14. - Repeated check-ins on PEP 649, deferred evaluation of annotations using descriptors implementation. We're collectively okay if this slips into 3.14. - Finalized and posted our decision on PEP 734, subinterpreters in the stdlib. - Accepted PEP 667, Consistent views of namespaces after much discussion. The alternatives were considered worse in the long run. - Sync up meetings with Łukasz, the Developer-in-Residence: - The untangling of potential license and CLA issues on the infrastructure repositories. Not glamorous work, needs doing, will involve PSF counsel as appropriate. - Discussed the fall core dev sprint Meta and PSF sponsorship status. - PyCon US 2024 language summit signs up at capacity. - Ł is going to EuroPython: Landed a keynote slot. - Regarding the PyCon US Language Summit: Noted feedback on masking policy vs being able to hear presenters, present, and speak clearly. We follow the conference policy. Polite reminders are deemed useful. - Ł and Pablo discussed encouraging people to make useful contributions to open source. - Discussed buildbot config issues & speed.python.org updates. - Discussed a growing TODO list of things desiring work and which of those should be delegated. - Observations of potential (mis)uses of discuss.python.org as a symptom of people seeking attention on filed issues. - 3.13 Beta 1 draws near (feature freeze). Preparing a last minute new REPL to land, based on PyPy's. Many edge case bugs revealed on many platforms by this. - Happy to hear that PSF infrastructure hiring is in progress. - Discussed Łukasz' potential mentoring of someone. - Discussed too many hats being worn on interrupt driven roles leading to burnout. - Discussed feedback about the the language summit and whether or not there is anything we could do in the future that wouldn't just be alternately perceived poorly as a burden. - Discussed a conduct issue reported at our PyCon US 2024 core dev sprint and what we can do to make a proper welcoming environment at future events. Popularity, limited space, lack of organization, differing unaligned expectations, and biased invalid assumptions culminated in problems this year. :( - Recommendation letters needed for some core dev travel Visas; being drafted. Can come from the PSF if helpful. - Discussions around our Communications Liaison hiring. PSF working out the contract. Our initial offer fell through, we extended an offer to our alternate equally qualified candidate, as we had discussed might happen with them during our initial rejection communication. The title was renamed from Secretary to Communications Liaison to better reflect the role. - Discussed how it'd be nice if our monthly SC update summaries were actually created, reviewed, and published before PyCon US 2024. *(editors note: LOL... given the backlog this is being posted as part of, volunteer time is precious, thus hiring)* - Discussed new 3.13 REPL platform implementation woes. \"At least it is not using readline\" also means \"people who rely on obscure readline featureitis frown\". - Discussions of type annotations in the stdlib. More community discussions needed before any proposal can be made. Annotations in `Tools/` have found actual bugs. - Discussed capacity issues at the upcoming September core dev sprint; space limitations are real and lead to hard choices. - Discussed logistics of the remaining two core dev mentorship sessions that Edward is holding this quarter. *(editors note: held)* - Discussed further ongoing core dev mentorship needs and the utility of a possible Mentorship WG. One theme has always been lack of volunteer time availability. - Discussed how it'd be good if release managers wrote up retrospectives. That requires extra time commitment on their part. We'd all benefit, not just future RMs. - Discussed our recent core dev promotion votes. No vetoes (all approved). We're noticing that our process feels a bit odd, the SC represents the community thus a veto of any form would not be well received. Nor would a vote itself failing. So this means anyone proposing someone effectively needs to do homework and talk via backchannels to a slew of core devs and SC first to ensure that neither negative outcome is likely. Maybe this is working as intended? But we don't state it as such anywhere... But what would be meaningfully better to propose? - Discussed and announced who would be our next Release Manager (RM) and related logistical issues. - Continual brainstorming on what to include in what form for our PyCon US 2024 keynote address. In classic PyCon fashion our collective presentation was congealing up until the day we gave it. - Discussed a PR brought to our attention that we believe should not have been merged as is, regardless of intent, and whether or not we can do anything about it right now. - More discussions on community friction regarding Packaging and PyPI, the Packaging WG, and PyPA with the PSF. - Noticing how we have misaligned cadences among many of our collective core dev working styles. It leads to a strain on decision making. Perhaps a discussion topic for the core dev sprint at Meta? - Greg and Barry employer changes; no PEP 13 conflicts. - Office hours visit from Carol Willing to discuss inclusion in our community. Rationale behind the impacts, challenges, differing burdens, and ideas for possible next steps. Some of which also align with ideas the PSF has been pondering. Lots of food for thought. Nothing is simple or quick. - Started discussing a proposed PSF grant that could potentially be used to help grow early-career folks? Information being gathered.",
+  "facts": [
+    {
+      "kind": "decision",
+      "text": "Ultimately decided to postpone this until 3.14",
+      "person": "Steering Council",
+      "deadline": "3.14",
+      "source_quote": "Ultimately decided to postpone this until 3.14."
+    },
+    {
+      "kind": "agreement",
+      "text": "We're collectively okay if this slips into 3.14",
+      "person": "Steering Council",
+      "deadline": "3.14",
+      "source_quote": "We're collectively okay if this slips into 3.14."
+    },
+    {
+      "kind": "decision",
+      "text": "Finalized and posted our decision on PEP 734",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Finalized and posted our decision on PEP 734, subinterpreters in the stdlib."
+    },
+    {
+      "kind": "decision",
+      "text": "Accepted PEP 667",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Accepted PEP 667, Consistent views of namespaces after much discussion."
+    },
+    {
+      "kind": "action",
+      "text": "Untangling of potential license and CLA issues on the infrastructure repositories",
+      "person": "Łukasz",
+      "deadline": "",
+      "source_quote": "The untangling of potential license and CLA issues on the infrastructure repositories."
+    },
+    {
+      "kind": "action",
+      "text": "Recommendation letters needed for some core dev travel Visas; being drafted",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Recommendation letters needed for some core dev travel Visas; being drafted."
+    },
+    {
+      "kind": "action",
+      "text": "Extended an offer to our alternate equally qualified candidate for Communications Liaison",
+      "person": "PSF",
+      "deadline": "",
+      "source_quote": "we extended an offer to our alternate equally qualified candidate"
+    },
+    {
+      "kind": "decision",
+      "text": "Title was renamed from Secretary to Communications Liaison",
+      "person": "PSF",
+      "deadline": "",
+      "source_quote": "The title was renamed from Secretary to Communications Liaison"
+    },
+    {
+      "kind": "action",
+      "text": "Discussed and announced who would be our next Release Manager (RM)",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Discussed and announced who would be our next Release Manager (RM)"
+    },
+    {
+      "kind": "proposal",
+      "text": "Started discussing a proposed PSF grant that could potentially be used to help grow early-career folks",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Started discussing a proposed PSF grant that could potentially be used to help grow early-career folks"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-08-q01",
+      "question": "Who is responsible for untangling license and CLA issues?",
+      "answers": [
+        "Łukasz"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 672,
+          "end": 758,
+          "quote": "The untangling of potential license and CLA issues on the infrastructure repositories."
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q02",
+      "question": "Was PEP 667 accepted by the Steering Council?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 482,
+          "end": 553,
+          "quote": "Accepted PEP 667, Consistent views of namespaces after much discussion."
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q03",
+      "question": "Has the title Secretary been renamed?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 2799,
+          "end": 2861,
+          "quote": "The title was renamed from Secretary to Communications Liaison"
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q04",
+      "question": "Did the Steering Council finalize a decision on PEP 734?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 403,
+          "end": 479,
+          "quote": "Finalized and posted our decision on PEP 734, subinterpreters in the stdlib."
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q05",
+      "question": "Is the new REPL implementation using readline?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 3196,
+          "end": 3229,
+          "quote": "At least it is not using readline"
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q06",
+      "question": "Has the Steering Council announced the next Release Manager?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 4600,
+          "end": 4666,
+          "quote": "Discussed and announced who would be our next Release Manager (RM)"
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q07",
+      "question": "Is the PSF currently hiring for Communications Liaison?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 2529,
+          "end": 2612,
+          "quote": "Discussions around our Communications Liaison hiring. PSF working out the contract."
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q08",
+      "question": "Did the Steering Council decide to implement PEP 741 before 3.14?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 202,
+          "end": 249,
+          "quote": "Ultimately decided to postpone this until 3.14."
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q09",
+      "question": "Are recommendation letters for core dev travel Visas being drafted?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 2416,
+          "end": 2492,
+          "quote": "Recommendation letters needed for some core dev travel Visas; being drafted."
+        }
+      ]
+    },
+    {
+      "id": "dev-08-q10",
+      "question": "Has a PSF grant been approved to help early-career folks?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 5726,
+          "end": 5828,
+          "quote": "Started discussing a proposed PSF grant that could potentially be used to help grow early-career folks"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2024-04,05,06-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-04%2C05%2C06-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-04%2C05%2C06-steering-council-update.md",
+    "source_sha256": "7dbedfb7a4d17380a73b3735600f27b563f9d7def6397356ebaa18814e700ffe",
+    "excerpt_sha256": "a59fca2db4071f3243c843272732eedb20dc05d54d8332ab7842c31d56b06975",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "c4cc99dd76ff324145ad12f32bb0763157999d6d3c21000ee83f511fed496b26",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

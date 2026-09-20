@@ -1,0 +1,4 @@
+strategy,contexts,qa_pairs,mean_tokens,median_tokens,token_stddev,mean_reduction_percent,median_reduction_percent,reduction_ci_low,reduction_ci_high,total_tokens_saved,deterministic_accuracy,judge_accuracy,qa_diff_vs_original,qa_diff_ci_low,qa_diff_ci_high,contexts_smaller,contexts_unchanged,contexts_larger,candidate_zero_selected
+ORIGINAL,5,25,255.2,250,7.467261881037787,0.0,0.0,0.0,0.0,0,1,0.96,0.0,0.0,0.0,0,5,0,0
+COMPACT_ENGLISH,5,25,173.8,175,17.83704011320264,0.3172354251290448,0.32183908045977017,0.23953857677902618,0.39354476259514315,407,0.76,0.92,-0.039999999999999994,-0.15999999999999998,0.07999999999999999,5,0,0,0
+TOKEN_OPTIMIZED,5,25,174.8,175,14.005713120009277,0.31367022728819227,0.32950191570881227,0.2518007662835249,0.36746798009718107,402,0.64,0.96,0.0,-0.11999999999999997,0.11999999999999997,5,0,0,0

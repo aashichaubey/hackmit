@@ -1,0 +1,261 @@
+{
+  "id": "dev-02",
+  "split": "dev",
+  "notes": "## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "work on drafting this change",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "The SC thinks this is a good idea and will work on drafting this change."
+    },
+    {
+      "kind": "action",
+      "text": "An email will be sent to gauge interest and usage of the mailing list",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "An email will be sent to gauge interest and usage of the mailing list."
+    },
+    {
+      "kind": "action",
+      "text": "pause the discussion to solidify what we are looking for in this arrangement",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "The SC decided to pause the discussion to solidify what we are looking for in this arrangement."
+    },
+    {
+      "kind": "decision",
+      "text": "formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so."
+    },
+    {
+      "kind": "decision",
+      "text": "roll back changes only in 3.12, not main (3.13) for now",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "The SC decided to roll back changes only in 3.12, not main (3.13) for now."
+    },
+    {
+      "kind": "decision",
+      "text": "close the python-committers email list",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it."
+    },
+    {
+      "kind": "agreement",
+      "text": "The SC thinks this is a good idea",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "The SC thinks this is a good idea and will work on drafting this change."
+    },
+    {
+      "kind": "agreement",
+      "text": "87% of respondents think we should be actively looking to make Python free-threaded",
+      "person": "Poll respondents",
+      "deadline": "",
+      "source_quote": "87% of respondents think we should be actively looking to make Python free-threaded"
+    },
+    {
+      "kind": "agreement",
+      "text": "63% want to accept and support the maintenance cost of PEP 703",
+      "person": "Poll respondents",
+      "deadline": "",
+      "source_quote": "63% want to accept and support the maintenance cost of PEP 703."
+    },
+    {
+      "kind": "action",
+      "text": "evaluate how we could require code reviews for feature PRs",
+      "person": "Łukasz, the Developer-in-Residence",
+      "deadline": "",
+      "source_quote": "The SC asked the DiR to evaluate how we could require code reviews for feature PRs."
+    },
+    {
+      "kind": "decision",
+      "text": "gave our approval to the Security Developer-in-Residence for their CNA proposal",
+      "person": "The SC",
+      "deadline": "",
+      "source_quote": "The SC gave our approval to the Security Developer-in-Residence for their CNA proposal."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-02-q01",
+      "question": "Who will work on drafting the change to PEP 12?",
+      "answers": [
+        "The SC"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 300,
+          "end": 372,
+          "quote": "The SC thinks this is a good idea and will work on drafting this change."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q02",
+      "question": "What will be done to gauge interest in the python-committers mailing list?",
+      "answers": [
+        "An email will be sent to gauge interest and usage of the mailing list"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 437,
+          "end": 507,
+          "quote": "An email will be sent to gauge interest and usage of the mailing list."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q03",
+      "question": "Did the SC decide to close the python-committers email list?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 2330,
+          "end": 2454,
+          "quote": "The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q04",
+      "question": "Who is assigned to evaluate how to require code reviews for feature PRs?",
+      "answers": [
+        "Łukasz, the Developer-in-Residence",
+        "The DiR"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 2990,
+          "end": 3073,
+          "quote": "The SC asked the DiR to evaluate how we could require code reviews for feature PRs."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q05",
+      "question": "Did the SC decide to roll back changes in main (3.13) for the C API?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 2048,
+          "end": 2122,
+          "quote": "The SC decided to roll back changes only in 3.12, not main (3.13) for now."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q06",
+      "question": "What percentage of respondents want to accept and support the maintenance cost of PEP 703?",
+      "answers": [
+        "63%"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 1530,
+          "end": 1593,
+          "quote": "63% want to accept and support the maintenance cost of PEP 703."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q07",
+      "question": "Did the SC pause the discussion on core developer mentorship support?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1217,
+          "end": 1312,
+          "quote": "The SC decided to pause the discussion to solidify what we are looking for in this arrangement."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q08",
+      "question": "Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 3882,
+          "end": 3982,
+          "quote": "The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q09",
+      "question": "Has the SC finalized the hard requirements for PEP 703 acceptance?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 3705,
+          "end": 3879,
+          "quote": "The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced."
+        }
+      ]
+    },
+    {
+      "id": "dev-02-q10",
+      "question": "Did the SC approve the CNA proposal for the Security Developer-in-Residence?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3224,
+          "end": 3311,
+          "quote": "The SC gave our approval to the Security Developer-in-Residence for their CNA proposal."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2023-07-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-07-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-07-steering-council-update.md",
+    "source_sha256": "b81ffc39bbd1dd21947bce0d6c25d847bea54e8a4d5c73b0cccfa9146afcdb65",
+    "excerpt_sha256": "74d9e2844ba364e41cac69706f5342b55879796b5fa76314bfd7d1b137994251",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "abcff63a2bcf49b01a6a5d1bd3f2afb0d109ce92a07e709d83527363835ab914",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

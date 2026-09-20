@@ -1,0 +1,95 @@
+{
+  "version": "1",
+  "meetings": [
+    {
+      "id": "stress-01", "split": "stress",
+      "notes": "Maya: I propose moving the launch to October 3.\nLeo: I agree with moving the launch to October 3.\nPriya: We decided to move the launch to October 3.\nLeo: I will update the website by September 28.",
+      "facts": [
+        {"kind": "proposal", "text": "move the launch to October 3", "person": "Maya", "deadline": "", "source_quote": "I propose moving the launch to October 3."},
+        {"kind": "agreement", "text": "move the launch to October 3", "person": "Leo", "deadline": "", "source_quote": "I agree with moving the launch to October 3."},
+        {"kind": "decision", "text": "move the launch to October 3", "person": "Priya", "deadline": "", "source_quote": "We decided to move the launch to October 3."},
+        {"kind": "action", "text": "update the website", "person": "Leo", "deadline": "September 28", "source_quote": "I will update the website by September 28."}
+      ],
+      "questions": [
+        {"question": "Who will update the website?", "answers": ["Leo"], "kind": "owner"},
+        {"question": "When is the website update due?", "answers": ["September 28"], "kind": "deadline"},
+        {"question": "Was moving the launch to October 3 decided?", "answers": ["yes"], "kind": "decision"},
+        {"question": "Who proposed moving the launch?", "answers": ["Maya"], "kind": "proposal"}
+      ]
+    },
+    {
+      "id": "stress-02", "split": "stress",
+      "notes": "Ava: Sam might handle the audit, but let's confirm later.\nBen: We decided to run the review.\nAva: No deadline has been set for the review.",
+      "facts": [
+        {"kind": "decision", "text": "run the review", "person": "Ben", "deadline": "", "source_quote": "We decided to run the review."}
+      ],
+      "questions": [
+        {"question": "Who owns the audit?", "answers": ["not found"], "kind": "unknown"},
+        {"question": "When is the review due?", "answers": ["not found"], "kind": "unknown"},
+        {"question": "Was the review decided?", "answers": ["yes"], "kind": "decision"},
+        {"question": "Who decided to run the review?", "answers": ["Ben"], "kind": "owner"}
+      ]
+    },
+    {
+      "id": "stress-03", "split": "stress",
+      "notes": "Nina: I propose using vendor A.\nOmar: I disagree with using vendor A.\nNina: After discussion, we decided to use vendor B.\nOmar: I will draft the vendor B contract by Friday.",
+      "facts": [
+        {"kind": "proposal", "text": "use vendor A", "person": "Nina", "deadline": "", "source_quote": "I propose using vendor A."},
+        {"kind": "disagreement", "text": "use vendor A", "person": "Omar", "deadline": "", "source_quote": "I disagree with using vendor A."},
+        {"kind": "decision", "text": "use vendor B", "person": "Nina", "deadline": "", "source_quote": "we decided to use vendor B."},
+        {"kind": "action", "text": "draft the vendor B contract", "person": "Omar", "deadline": "Friday", "source_quote": "I will draft the vendor B contract by Friday."}
+      ],
+      "questions": [
+        {"question": "Was using vendor A decided?", "answers": ["not found"], "kind": "unknown"},
+        {"question": "Which vendor was decided?", "answers": ["vendor B"], "kind": "decision"},
+        {"question": "Who owns the vendor B contract?", "answers": ["Omar"], "kind": "owner"},
+        {"question": "When is the vendor B contract due?", "answers": ["Friday"], "kind": "deadline"}
+      ]
+    },
+    {
+      "id": "stress-04", "split": "stress",
+      "notes": "Kai: I will test the mobile app by next Friday.\nRuth: I will test the web app by this Friday.\nKai: I agree with Ruth's web test plan.",
+      "facts": [
+        {"kind": "action", "text": "test the mobile app", "person": "Kai", "deadline": "next Friday", "source_quote": "I will test the mobile app by next Friday."},
+        {"kind": "action", "text": "test the web app", "person": "Ruth", "deadline": "this Friday", "source_quote": "I will test the web app by this Friday."},
+        {"kind": "agreement", "text": "Ruth's web test plan", "person": "Kai", "deadline": "", "source_quote": "I agree with Ruth's web test plan."}
+      ],
+      "questions": [
+        {"question": "When is the mobile app test due?", "answers": ["next Friday"], "kind": "deadline"},
+        {"question": "When is the web app test due?", "answers": ["this Friday"], "kind": "deadline"},
+        {"question": "Who will test the mobile app?", "answers": ["Kai"], "kind": "owner"},
+        {"question": "Who will test the web app?", "answers": ["Ruth"], "kind": "owner"}
+      ]
+    },
+    {
+      "id": "stress-05", "split": "stress",
+      "notes": "Ella: I will finish the data cleanup.\nTheo: I disagree with the proposed Monday release.\nElla: I only proposed Monday; we made no release decision.",
+      "facts": [
+        {"kind": "action", "text": "finish the data cleanup", "person": "Ella", "deadline": "", "source_quote": "I will finish the data cleanup."},
+        {"kind": "disagreement", "text": "Monday release", "person": "Theo", "deadline": "", "source_quote": "I disagree with the proposed Monday release."},
+        {"kind": "proposal", "text": "Monday release", "person": "Ella", "deadline": "", "source_quote": "I only proposed Monday; we made no release decision."}
+      ],
+      "questions": [
+        {"question": "Who will finish the data cleanup?", "answers": ["Ella"], "kind": "owner"},
+        {"question": "When is data cleanup due?", "answers": ["not found"], "kind": "unknown"},
+        {"question": "Was the Monday release decided?", "answers": ["not found"], "kind": "unknown"},
+        {"question": "Who disagreed with the Monday release?", "answers": ["Theo"], "kind": "disagreement"}
+      ]
+    },
+    {
+      "id": "stress-06", "split": "stress",
+      "notes": "Jo: Raj will own the API integration and finish it by October 9.\nRaj: I agree to own the API integration.\nMina: We decided to ship the prototype after the API integration.",
+      "facts": [
+        {"kind": "action", "text": "finish the API integration", "person": "Raj", "deadline": "October 9", "source_quote": "Raj will own the API integration and finish it by October 9."},
+        {"kind": "agreement", "text": "own the API integration", "person": "Raj", "deadline": "", "source_quote": "I agree to own the API integration."},
+        {"kind": "decision", "text": "ship the prototype after the API integration", "person": "Mina", "deadline": "", "source_quote": "We decided to ship the prototype after the API integration."}
+      ],
+      "questions": [
+        {"question": "Who owns the API integration?", "answers": ["Raj"], "kind": "owner"},
+        {"question": "When is the API integration due?", "answers": ["October 9"], "kind": "deadline"},
+        {"question": "Was shipping the prototype decided?", "answers": ["yes"], "kind": "decision"},
+        {"question": "Who agreed to own the API integration?", "answers": ["Raj"], "kind": "agreement"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{"id": "meetingqa:0097ee54d49f09888130", "method": "raw", "f1": 0.6666666666666666, "error": null}
+{"id": "meetingqa:94c00e96cf9f65c363f6", "method": "encoded", "f1": 0.35658914728682173, "error": null}
+{"id": "meetingqa:a929eb4b89fd099d0538", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:94c00e96cf9f65c363f6", "method": "raw", "f1": 0.35658914728682173, "error": null}
+{"id": "meetingqa:0097ee54d49f09888130", "method": "encoded", "f1": 0.6666666666666666, "error": null}
+{"id": "meetingqa:a929eb4b89fd099d0538", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:c60dc8831118eab19637", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:c60dc8831118eab19637", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:77ea851912f96812f939", "method": "raw", "f1": 0.4089775561097257, "error": null}
+{"id": "meetingqa:7585c84a8872dc86acd5", "method": "raw", "f1": 0.0, "error": "ValidationError: 1 validation error for SpanAnswer\n  Invalid JSON: EOF while parsing a string at line 1 column 1965 [type=json_invalid, input_value='{\"found\":true,\"spans\":[\"...ad of the joystick. For', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"}
+{"id": "meetingqa:7585c84a8872dc86acd5", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:73b314e7d9e77acc4b46", "method": "raw", "f1": 0.5555555555555556, "error": null}
+{"id": "meetingqa:77ea851912f96812f939", "method": "encoded", "f1": 0.3685393258426966, "error": null}
+{"id": "meetingqa:73b314e7d9e77acc4b46", "method": "encoded", "f1": 0.5365853658536586, "error": null}
+{"id": "meetingqa:d72cc516afdf14a9869d", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:d72cc516afdf14a9869d", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:718404ae86a53c884d8a", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:dd8a2c4a5e9e7282a8cc", "method": "raw", "f1": 0.5911602209944752, "error": null}
+{"id": "meetingqa:dd8a2c4a5e9e7282a8cc", "method": "encoded", "f1": 0.576, "error": null}
+{"id": "meetingqa:718404ae86a53c884d8a", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:9a8203677f086537d269", "method": "raw", "f1": 0.32142857142857145, "error": null}
+{"id": "meetingqa:9a8203677f086537d269", "method": "encoded", "f1": 0.32142857142857145, "error": null}
+{"id": "meetingqa:b116f38ff09ef81ebad7", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:b116f38ff09ef81ebad7", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:a10a4232cfecd06376ad", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:a1899fb84f684bc5b2ca", "method": "raw", "f1": 0.1476510067114094, "error": null}
+{"id": "meetingqa:a10a4232cfecd06376ad", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "meetingqa:a1899fb84f684bc5b2ca", "method": "encoded", "f1": 0.1317365269461078, "error": null}
+{"id": "meetingqa:a7c66a9f00ac4c493ea0", "method": "raw", "f1": 0.43410852713178294, "error": null}
+{"id": "meetingqa:5ffd0cfb36aeb3051659", "method": "raw", "f1": 0.0, "error": null}
+{"id": "meetingqa:a7c66a9f00ac4c493ea0", "method": "encoded", "f1": 0.43410852713178294, "error": null}
+{"id": "meetingqa:5ffd0cfb36aeb3051659", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:88dc16909004c36cc438", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:88dc16909004c36cc438", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:4e92c19c3c0a66b07473", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:4e92c19c3c0a66b07473", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:5ce50fb2d7e083d23017", "method": "raw", "f1": 0.8, "error": null}
+{"id": "MeeQA:5ce50fb2d7e083d23017", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:449bd704fba5685849ec", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:cb0a8ae0d6644296a278", "method": "raw", "f1": 0.22857142857142856, "error": null}
+{"id": "MeeQA:449bd704fba5685849ec", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:cb0a8ae0d6644296a278", "method": "encoded", "f1": 0.835820895522388, "error": null}
+{"id": "MeeQA:87025e3d98dcd08a83a8", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:87025e3d98dcd08a83a8", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:13cb5a6a539e8c76484d", "method": "raw", "f1": 0.5669291338582677, "error": null}
+{"id": "MeeQA:13cb5a6a539e8c76484d", "method": "encoded", "f1": 0.1188118811881188, "error": null}
+{"id": "MeeQA:1dbc3e1e44b6fae3b00d", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:1dbc3e1e44b6fae3b00d", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:8324d9834b73cf3c828c", "method": "raw", "f1": 0.8101983002832861, "error": null}
+{"id": "MeeQA:8324d9834b73cf3c828c", "method": "encoded", "f1": 0.8411764705882353, "error": null}
+{"id": "MeeQA:fb764cf2529c5b483d3d", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:fb764cf2529c5b483d3d", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:d99c568dca3ae9a079d6", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:75e2680271e43f214223", "method": "raw", "f1": 0.07329842931937172, "error": null}
+{"id": "MeeQA:75e2680271e43f214223", "method": "encoded", "f1": 0.17073170731707318, "error": null}
+{"id": "MeeQA:d99c568dca3ae9a079d6", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:4dd09a91fc9ebb3e1a1c", "method": "raw", "f1": 0.8421052631578947, "error": null}
+{"id": "MeeQA:4dd09a91fc9ebb3e1a1c", "method": "encoded", "f1": 0.8421052631578947, "error": null}
+{"id": "MeeQA:e1cd0d3d2bb17e06394b", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:e1cd0d3d2bb17e06394b", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:c3153d54404a8ed31ebd", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:c3153d54404a8ed31ebd", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:73f06d72c8cad742b7dd", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:73f06d72c8cad742b7dd", "method": "encoded", "f1": 0.0, "error": null}
+{
+  "study": "public_native_extractive_train_pilot",
+  "qualified": false,
+  "grammar": {
+    "version": 1,
+    "speaker_marker": "@",
+    "speaker_id": "unchanged_digits",
+    "utterance_policy": "all_characters_unchanged",
+    "inheritance": false
+  },
+  "protocol_sha256": "b1ac2d255e0289b8b8b222fe6cb690a924055e79bed828eed3e8cf5b74b6033b",
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "case_ids": [
+    "meetingqa:0097ee54d49f09888130",
+    "meetingqa:a929eb4b89fd099d0538",
+    "meetingqa:94c00e96cf9f65c363f6",
+    "meetingqa:7585c84a8872dc86acd5",
+    "meetingqa:77ea851912f96812f939",
+    "meetingqa:c60dc8831118eab19637",
+    "meetingqa:73b314e7d9e77acc4b46",
+    "meetingqa:d72cc516afdf14a9869d",
+    "meetingqa:dd8a2c4a5e9e7282a8cc",
+    "meetingqa:718404ae86a53c884d8a",
+    "meetingqa:9a8203677f086537d269",
+    "meetingqa:b116f38ff09ef81ebad7",
+    "meetingqa:a1899fb84f684bc5b2ca",
+    "meetingqa:a10a4232cfecd06376ad",
+    "meetingqa:a7c66a9f00ac4c493ea0",
+    "meetingqa:5ffd0cfb36aeb3051659",
+    "MeeQA:88dc16909004c36cc438",
+    "MeeQA:4e92c19c3c0a66b07473",
+    "MeeQA:5ce50fb2d7e083d23017",
+    "MeeQA:449bd704fba5685849ec",
+    "MeeQA:cb0a8ae0d6644296a278",
+    "MeeQA:87025e3d98dcd08a83a8",
+    "MeeQA:13cb5a6a539e8c76484d",
+    "MeeQA:1dbc3e1e44b6fae3b00d",
+    "MeeQA:8324d9834b73cf3c828c",
+    "MeeQA:fb764cf2529c5b483d3d",
+    "MeeQA:75e2680271e43f214223",
+    "MeeQA:d99c568dca3ae9a079d6",
+    "MeeQA:4dd09a91fc9ebb3e1a1c",
+    "MeeQA:e1cd0d3d2bb17e06394b",
+    "MeeQA:c3153d54404a8ed31ebd",
+    "MeeQA:73f06d72c8cad742b7dd"
+  ],
+  "development_family_ids": [
+    "ami:en2001",
+    "ami:en2002",
+    "ami:en2003",
+    "ami:en2005",
+    "ami:es2002",
+    "ami:es2003",
+    "ami:es2004",
+    "ami:es2005",
+    "ami:es2006",
+    "ami:es2007",
+    "ami:es2008",
+    "ami:es2009",
+    "ami:es2010",
+    "ami:es2011",
+    "ami:es2012",
+    "ami:es2013",
+    "ami:es2014",
+    "ami:es2015",
+    "ami:es2016",
+    "ami:is1000",
+    "ami:is1001",
+    "ami:is1002",
+    "ami:is1003",
+    "ami:is1004",
+    "ami:is1005",
+    "ami:is1006",
+    "ami:is1007",
+    "ami:is1008",
+    "ami:is1009",
+    "ami:ts3003",
+    "ami:ts3004",
+    "ami:ts3005",
+    "ami:ts3006",
+    "ami:ts3007",
+    "ami:ts3008",
+    "ami:ts3009",
+    "ami:ts3010",
+    "ami:ts3011",
+    "ami:ts3012",
+    "icsi:bed003",
+    "icsi:bed004",
+    "icsi:bed005",
+    "icsi:bed006",
+    "icsi:bed008",
+    "icsi:bed009",
+    "icsi:bed011",
+    "icsi:bed012",
+    "icsi:bed013",
+    "icsi:bed014",
+    "icsi:bed016",
+    "icsi:bed017",
+    "icsi:bmr002",
+    "icsi:bmr003",
+    "icsi:bmr005",
+    "icsi:bmr007",
+    "icsi:bmr008",
+    "icsi:bmr009",
+    "icsi:bmr010",
+    "icsi:bmr011",
+    "icsi:bmr012",
+    "icsi:bmr013",
+    "icsi:bmr015",
+    "icsi:bmr016",
+    "icsi:bmr018",
+    "icsi:bmr019",
+    "icsi:bmr020",
+    "icsi:bmr021",
+    "icsi:bmr022",
+    "icsi:bmr023",
+    "icsi:bmr024",
+    "icsi:bmr025",
+    "icsi:bmr027",
+    "icsi:bmr028",
+    "icsi:bmr029",
+    "icsi:bmr030",
+    "icsi:bmr031",
+    "icsi:bro003",
+    "icsi:bro004",
+    "icsi:bro005",
+    "icsi:bro007",
+    "icsi:bro008",
+    "icsi:bro010",
+    "icsi:bro012",
+    "icsi:bro013",
+    "icsi:bro014",
+    "icsi:bro016",
+    "icsi:bro017",
+    "icsi:bro018",
+    "icsi:bro019",
+    "icsi:bro021",
+    "icsi:bro022",
+    "icsi:bro023",
+    "icsi:bro024",
+    "icsi:bro025",
+    "icsi:bro026",
+    "icsi:bro027",
+    "icsi:bro028",
+    "icsi:buw001",
+    "meeting:04-28-2007opsregsopenday2of2.pdf",
+    "meeting:04-29-06boardopen-part20f2.pdf",
+    "meeting:05020402.pdf",
+    "meeting:05020403.pdf",
+    "meeting:05020501.pdf",
+    "meeting:05053102.pdf",
+    "meeting:05053103.pdf",
+    "meeting:05053104.pdf",
+    "meeting:05_27_2008boardtelephonemeetingopensessiontranscript.pdf",
+    "meeting:07-28-06-provisions-open.pdf",
+    "meeting:07-29-06-finance-open.pdf",
+    "meeting:072805fincom.open.pdf",
+    "meeting:07_27_2007board_open.pdf",
+    "meeting:07_28_2007boardofdirectors_open.pdf",
+    "meeting:07_28_2007financecommitteeopen.pdf",
+    "meeting:07_28_2007opsregs_open.pdf",
+    "meeting:08_01_2008ops_regsopensessiontranscript.pdf",
+    "meeting:08_01_2008provisionsopensessiontranscript.pdf",
+    "meeting:08_02_2008auditopensessiontranscriptday2of2.pdf",
+    "meeting:08_02_2008boardopensessiontranscript.pdf",
+    "meeting:08_18_2008boardtelephonemeetingopensessiontranscript.pdf",
+    "meeting:09-22-06boardopensession.pdf",
+    "meeting:09_11_07opsregsmeetingopen.pdf",
+    "meeting:09_17_07financemeetingopen.pdf",
+    "meeting:10-27-06provisionsopensession.pdf",
+    "meeting:10-28-06boardtranscriptopensessionaa.pdf",
+    "meeting:10-28-06performancereviewscommitteeopensession.pdf",
+    "meeting:101105bodtm.pdf",
+    "meeting:102805fincomopen.pdf",
+    "meeting:102805provopen.pdf",
+    "meeting:10_26_07boardmeetingopen.pdf",
+    "meeting:10_26_07provisionsmeetingopen.pdf",
+    "meeting:10_27_07opsregsmeetingopen.pdf",
+    "meeting:10_31_2008_ops___regs_open_session_transcript.pdf",
+    "meeting:112805bodopen.pdf",
+    "meeting:11_01_2008_finance_committee_open_session_transcript.pdf",
+    "meeting:11_01_2008_gov___perf_review_committee_open_session_transcript.pdf",
+    "meeting:11_27_07boardmeetingtranscriptopen.pdf",
+    "meeting:12-18-06boardmeetingopen.pdf",
+    "meeting:12_11_2__8_joint_telephonic_meeting_audit___ad_hoc_committe.pdf",
+    "meeting:2009_04_24_lsc_finance.pdf",
+    "meeting:2009_04_25_lsc_board_open__2_.pdf",
+    "meeting:2016july14fintelemeeting.pdf",
+    "meeting:april 13, 2015 audit committee.pdf",
+    "meeting:april 13, 2015 delivery of legal services committee.pdf",
+    "meeting:april 13, 2015 governance and performance review.pdf",
+    "meeting:april 13, 2015 institutional advancment committee.pdf",
+    "meeting:auditcommjuly202017.pdf",
+    "meeting:bdb001",
+    "meeting:bns002",
+    "meeting:bns003",
+    "meeting:btr001",
+    "meeting:covid0",
+    "meeting:covid10",
+    "meeting:covid5",
+    "meeting:covid7",
+    "meeting:covid8",
+    "meeting:education1",
+    "meeting:education11",
+    "meeting:education12",
+    "meeting:education14",
+    "meeting:education15",
+    "meeting:education16",
+    "meeting:education19",
+    "meeting:education2",
+    "meeting:education20",
+    "meeting:education21",
+    "meeting:education23",
+    "meeting:education24",
+    "meeting:education3",
+    "meeting:education5",
+    "meeting:education6",
+    "meeting:education7",
+    "meeting:education8",
+    "meeting:fomc-transcript-19770118",
+    "meeting:fomc-transcript-19770215",
+    "meeting:fomc-transcript-19770315",
+    "meeting:fomc-transcript-19770419",
+    "meeting:fomc-transcript-19770517",
+    "meeting:fomc-transcript-19770920",
+    "meeting:fomc-transcript-19771018",
+    "meeting:fomc-transcript-19771115",
+    "meeting:fomc-transcript-19771220",
+    "meeting:fomc-transcript-19780117",
+    "meeting:fomc-transcript-19780228",
+    "meeting:fomc-transcript-19780418",
+    "meeting:fomc-transcript-19780516",
+    "meeting:fomc-transcript-19780620",
+    "meeting:fomc-transcript-19780718",
+    "meeting:fomc-transcript-19781121",
+    "meeting:fomc-transcript-19790417",
+    "meeting:fomc-transcript-19790522",
+    "meeting:fomc-transcript-19821221",
+    "meeting:fomc-transcript-19830524",
+    "meeting:fomc-transcript-19830823",
+    "meeting:fomc-transcript-19850326",
+    "meeting:fomc-transcript-19880920",
+    "meeting:fomc-transcript-19910514",
+    "meeting:fomc-transcript-19930817",
+    "meeting:fomc-transcript-19931116",
+    "meeting:fomc-transcript-19940706",
+    "meeting:fomc-transcript-19960326",
+    "meeting:fomc-transcript-19960924",
+    "meeting:fomc-transcript-19971112",
+    "meeting:fomc-transcript-19971216",
+    "meeting:fomc-transcript-19990203",
+    "meeting:fomc-transcript-20000516",
+    "meeting:fomc-transcript-20011211",
+    "meeting:fomc-transcript-20020626",
+    "meeting:fomc-transcript-20030129",
+    "meeting:fomc-transcript-20031209",
+    "meeting:fomc-transcript-20040630",
+    "meeting:ib4001",
+    "meeting:ib4002",
+    "meeting:ib4003",
+    "meeting:ib4004",
+    "meeting:ib4005",
+    "meeting:ib4010",
+    "meeting:in1001",
+    "meeting:in1014",
+    "meeting:jan282016dls_0.pdf",
+    "meeting:january 20, 2012 - finance committee meeting.pdf",
+    "meeting:january 21, 2012 - institutional advancement committee.pdf",
+    "meeting:january_28__2011___finance_committee_meeting.pdf",
+    "meeting:july162015fincom.pdf",
+    "meeting:may 21, 2012 - board of directors meeting.pdf",
+    "meeting:meeting-transcript593.pdf",
+    "meeting:meeting-transcript594.pdf",
+    "meeting:meeting-transcript595.pdf",
+    "meeting:meetingtranscript560.pdf",
+    "meeting:meetingtranscript561.pdf",
+    "meeting:meetingtranscript564.pdf",
+    "meeting:meetingtranscript566.pdf",
+    "meeting:meetingtranscript568.pdf",
+    "meeting:meetingtranscript569.pdf",
+    "meeting:meetingtranscript570.pdf",
+    "meeting:meetingtranscript571.pdf",
+    "meeting:meetingtranscript572.pdf",
+    "meeting:meetingtranscript573.pdf",
+    "meeting:meetingtranscript574.pdf",
+    "meeting:meetingtranscript575.pdf",
+    "meeting:meetingtranscript577.pdf",
+    "meeting:meetingtranscript579.pdf",
+    "meeting:meetingtranscript581.pdf",
+    "meeting:meetingtranscript582.pdf",
+    "meeting:meetingtranscript583.pdf",
+    "meeting:meetingtranscript584.pdf",
+    "meeting:meetingtranscript585.pdf",
+    "meeting:meetingtranscript586.pdf",
+    "meeting:oct__19__2010___finance_committee_meeting.pdf",
+    "meeting:oct__19__2010_board_of_directors_meeting.pdf",
+    "meeting:october 6, 2014 - governance & performance review committee meeting.pdf",
+    "meeting:sartelecontranscript11-27-2006.pdf",
+    "meeting:september_8__2009_teleconference_bod_meeting.pdf",
+    "meeting:transcripts_20110501_lancaster.pdf",
+    "meeting:transcripts_20110505_norco.pdf",
+    "meeting:transcripts_20110506_sana.pdf",
+    "meeting:transcripts_20110519_auburn.pdf",
+    "meeting:transcripts_20110723_sacto.pdf",
+    "meeting:transcripts_20110724_sacto.pdf",
+    "meeting:transcripts_20110728_sacto.pdf",
+    "meeting:transcripts_20110815_sacto.pdf"
+  ],
+  "methods": {
+    "raw": {
+      "questions": 32,
+      "meetings": 30,
+      "macro_f1": 0.2751012439711018,
+      "macro_meeting_f1": 0.2839925080048708,
+      "macro_iou": 0.21763302461211434,
+      "exact_match": 0.0625,
+      "answerable_f1": 0.4252024879422036,
+      "unanswerable_accuracy": 0.125,
+      "answerability_precision": 0.5185185185185185,
+      "answerability_recall": 0.875,
+      "balanced_answerability": 0.5,
+      "ungrounded_answers": 1,
+      "invalid_answers": 1,
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_usd": null,
+      "unknown_usage_calls": 1,
+      "extraction_calls": 0
+    },
+    "encoded": {
+      "questions": 32,
+      "meetings": 30,
+      "macro_f1": 0.256259385904063,
+      "macro_meeting_f1": 0.2713631469445319,
+      "macro_iou": 0.20565213752253,
+      "exact_match": 0.0625,
+      "answerable_f1": 0.387518771808126,
+      "unanswerable_accuracy": 0.125,
+      "answerability_precision": 0.48148148148148145,
+      "answerability_recall": 0.8125,
+      "balanced_answerability": 0.46875,
+      "ungrounded_answers": 2,
+      "invalid_answers": 0,
+      "actual_input_tokens": 31308,
+      "actual_output_tokens": 3332,
+      "actual_usd": 0.017854400000000006,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    }
+  },
+  "gates": {
+    "reconstruction_exact": true,
+    "actual_input_lower": false,
+    "macro_f1_noninferior": false,
+    "balanced_answerability_noninferior": false,
+    "ungrounded_nonincreasing": false
+  },
+  "advance": false,
+  "by_dataset": {
+    "meetingqa": {
+      "raw": {
+        "questions": 16,
+        "meetings": 15,
+        "macro_f1": 0.21763357824281304,
+        "macro_meeting_f1": 0.23214248345900057,
+        "macro_iou": 0.1454178050478814,
+        "exact_match": 0.0,
+        "answerable_f1": 0.4352671564856261,
+        "unanswerable_accuracy": 0.0,
+        "answerability_precision": 0.5333333333333333,
+        "answerability_recall": 1.0,
+        "balanced_answerability": 0.5,
+        "ungrounded_answers": 1,
+        "invalid_answers": 1,
+        "actual_input_tokens": null,
+        "actual_output_tokens": null,
+        "actual_usd": null,
+        "unknown_usage_calls": 1,
+        "extraction_calls": 0
+      },
+      "encoded": {
+        "questions": 16,
+        "meetings": 15,
+        "macro_f1": 0.2119783831972691,
+        "macro_meeting_f1": 0.2261102754104204,
+        "macro_iou": 0.14082921265976522,
+        "exact_match": 0.0,
+        "answerable_f1": 0.4239567663945382,
+        "unanswerable_accuracy": 0.0,
+        "answerability_precision": 0.5,
+        "answerability_recall": 1.0,
+        "balanced_answerability": 0.5,
+        "ungrounded_answers": 1,
+        "invalid_answers": 0,
+        "actual_input_tokens": 10229,
+        "actual_output_tokens": 2200,
+        "actual_usd": 0.0076116000000000005,
+        "unknown_usage_calls": 0,
+        "extraction_calls": 0
+      }
+    },
+    "MeeQA": {
+      "raw": {
+        "questions": 16,
+        "meetings": 15,
+        "macro_f1": 0.33256890969939057,
+        "macro_meeting_f1": 0.335842532550741,
+        "macro_iou": 0.28984824417634725,
+        "exact_match": 0.125,
+        "answerable_f1": 0.4151378193987811,
+        "unanswerable_accuracy": 0.25,
+        "answerability_precision": 0.5,
+        "answerability_recall": 0.75,
+        "balanced_answerability": 0.5,
+        "ungrounded_answers": 0,
+        "invalid_answers": 0,
+        "actual_input_tokens": 23917,
+        "actual_output_tokens": 1385,
+        "actual_usd": 0.0117828,
+        "unknown_usage_calls": 0,
+        "extraction_calls": 0
+      },
+      "encoded": {
+        "questions": 16,
+        "meetings": 15,
+        "macro_f1": 0.30054038861085686,
+        "macro_meeting_f1": 0.3166160184786434,
+        "macro_iou": 0.27047506238529484,
+        "exact_match": 0.125,
+        "answerable_f1": 0.35108077722171377,
+        "unanswerable_accuracy": 0.25,
+        "answerability_precision": 0.45454545454545453,
+        "answerability_recall": 0.625,
+        "balanced_answerability": 0.4375,
+        "ungrounded_answers": 1,
+        "invalid_answers": 0,
+        "actual_input_tokens": 21079,
+        "actual_output_tokens": 1132,
+        "actual_usd": 0.0102428,
+        "unknown_usage_calls": 0,
+        "extraction_calls": 0
+      }
+    }
+  },
+  "paired_f1": {
+    "meetingqa:0097ee54d49f09888130": 0.0,
+    "meetingqa:a929eb4b89fd099d0538": 0.0,
+    "meetingqa:94c00e96cf9f65c363f6": 0.0,
+    "meetingqa:7585c84a8872dc86acd5": 0.0,
+    "meetingqa:77ea851912f96812f939": -0.040438230267029085,
+    "meetingqa:c60dc8831118eab19637": 0.0,
+    "meetingqa:73b314e7d9e77acc4b46": -0.01897018970189701,
+    "meetingqa:d72cc516afdf14a9869d": 0.0,
+    "meetingqa:dd8a2c4a5e9e7282a8cc": -0.015160220994475226,
+    "meetingqa:718404ae86a53c884d8a": 0.0,
+    "meetingqa:9a8203677f086537d269": 0.0,
+    "meetingqa:b116f38ff09ef81ebad7": 0.0,
+    "meetingqa:a1899fb84f684bc5b2ca": -0.01591447976530161,
+    "meetingqa:a10a4232cfecd06376ad": 0.0,
+    "meetingqa:a7c66a9f00ac4c493ea0": 0.0,
+    "meetingqa:5ffd0cfb36aeb3051659": 0.0,
+    "MeeQA:88dc16909004c36cc438": 0.0,
+    "MeeQA:4e92c19c3c0a66b07473": 0.0,
+    "MeeQA:5ce50fb2d7e083d23017": -0.8,
+    "MeeQA:449bd704fba5685849ec": 0.0,
+    "MeeQA:cb0a8ae0d6644296a278": 0.6072494669509595,
+    "MeeQA:87025e3d98dcd08a83a8": 0.0,
+    "MeeQA:13cb5a6a539e8c76484d": -0.4481172526701489,
+    "MeeQA:1dbc3e1e44b6fae3b00d": 0.0,
+    "MeeQA:8324d9834b73cf3c828c": 0.030978170304949204,
+    "MeeQA:fb764cf2529c5b483d3d": 0.0,
+    "MeeQA:75e2680271e43f214223": 0.09743327799770146,
+    "MeeQA:d99c568dca3ae9a079d6": 0.0,
+    "MeeQA:4dd09a91fc9ebb3e1a1c": 0.0,
+    "MeeQA:e1cd0d3d2bb17e06394b": 0.0,
+    "MeeQA:c3153d54404a8ed31ebd": 0.0,
+    "MeeQA:73f06d72c8cad742b7dd": 0.0
+  },
+  "ledger": {
+    "actual_calls": 3243,
+    "known_usd": 1.3057971999999987,
+    "reserved_or_spent_usd": 1.4736527999999984,
+    "unknown_usage_calls": 31,
+    "input_tokens": 2834409,
+    "cached_input_tokens": 234624,
+    "output_tokens": 151513,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 634,
+        "known_usd": 0.13291080000000005
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 949,
+        "known_usd": 0.42098720000000006
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 120,
+        "known_usd": 0.02050120000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "accounting_status": "incomplete"
+  }
+}

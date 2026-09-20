@@ -1,0 +1,253 @@
+{
+  "id": "test-12",
+  "split": "test",
+  "notes": "# 115th TC39 Meeting\n\nDay One—20 July 2026\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |---------------------|--------------|----------------------| | Dmitry Makhnev | DJM | JetBrains | | Waldemar Horwat | WH | Invited Expert | | Bradford C. Smith | BSH | Google | | Lea Verou | LVU | OpenJS | | Keith Miller | KM | Apple Inc | | Ashley Claymore | ACE | Bloomberg | | Aki Rose Braun | AKI | Ecma International | | Linus Groh | LGH | Bloomberg | | Istvan Sebestyen | IS | Ecma International | | Nicolò Ribaudo | NRO | Igalia | | Philip Chimento | PFC | Igalia | | Chip Morningstar | CM | Consensys | | Ujjwal Sharma | USA | Igalia | | Eemeli Aro | EAO | Mozilla | | Caio Lima | CLA | Igalia | | Olivier Flückiger | OFR | Google | | Nikolaos Papaspyrou | NPU | Google | | Chris de Almeida | CDA | IBM | | Richard Gibson | RGN | Agoric | | James Snell | JSL | Cloudflare | | Guy Bedford | GB | Cloudflare | | Devin Rousso | DRO | Invited Expert | | Samina Husain | SHN | Ecma International | | Luna Pfeiffer | LPR | Invited Expert | | Chip Morningstar | CM | Consensys (MetaMask) | | Dan Minor | DLM | Mozilla Foundation | | Justin Ridgewell | JRL | Google | | Kevin Gibbons | KG | Invited Expert | | Keith Miller | KM | Apple | | Michael Ficarra | MF | F5 | | Mark S. Miller | MM | Agoric | | Nicolò Ribaudo | NRO | Igalia | | Peter Klecha | PKA | Bloomberg LP | | Stephen Hicks | SHS | Google | | Ujjwal Sharma | USA | Igalia |\n\n## Opening & Welcome\n\nPresenter: Chris de Almeida (CDA)\n\nCDA: Excellent. All right, welcome to the 115th meeting of TC39. This is your chair group, Rob, Ujwal, Chris (myself), and Justin, Daniel Minor, and Daniel Rosenwasser as facilitators. Rob is on PTO, so he will not be joining us on this occasion, but I think the rest of us are mostly here, myself, Ujwal, and whoever else is currently in the meeting. You— this says make sure to sign in, but, almost surely you must have if you got the meeting link. But if you got the meeting link, via some other means, please do complete the sign-in form that helps us track who was actually here. And that is available on the reflector issue for the meeting. Just a reminder, we follow our code of conduct, which TL;DR of which is be excellent to each other. Our schedule is as follows. For the next 4 days, meeting starts at 10:00 local time, then we break for lunch at noon, and, for an hour, and then we return for 2 additional hours. Communication tools: hopefully folks are familiar already with TCQ, and we have got the screenshots updated to reflect the new, fancy TCQ, courtesy of Michael Ficarra and other contributors. This is the— oh, this is an old screenshot, but it's more or less the same. So this is the participant view of TCQ. You have your buttons there to, state what sort of, reply you have to things, whether it's a new topic or reply to the current topic. A clarifying question or a point of order. A gentle reminder on point of order, feel free to kind of abruptly interrupt without waiting for, someone to bring attention to your point of order. Those tend to be things that we need attention on immediately. We use matrix for chat. The primary channel during plenary meetings will be the second one you see there, TC39 delegates. That top link is for the TC39 space itself. If you join the space, you will see all of the different TC39 channels without having to find them, cherry-picking. The Temporal dead zone channel is used for off-topic things, so please keep, off-topic and banter, in that channel. And so the TC39 delegates channel is for, real business. Just a reminder on the IPR policy, which applies for the member delegates. Invited experts, any invited experts that, I believe everybody's got, signed the RFTG form as that's now a condition of becoming an invited expert. And yeah, details are in the contributing MD. Make sure you have reviewed this. I believe we may have some observers attending in this meeting, and a reminder that observers are welcome to observe, but do not have voice. The dialogue is being transcribed live. We always ask for note helpers to assist in making corrections and attributions. And, as Aki, I'm sure will remind us, many times during the meeting, to please add your summaries and conclusions. And those are different things. Which, Aki will, will, will be happy to reiterate, later. And just a reminder that the transcript that's being prepared will eventually be posted on GitHub. You may edit this at any time during the meeting, in Google Docs for accuracy, including deleting comments which you do not wish to appear. You may also request corrections or deletions after the fact by editing the Google Doc in the first 2 weeks after the meeting or subsequently by making a PR in the notes repository or by contacting the chairs. Please help with notes. We really rely on our note helpers, to make these smaller corrections and attributions. And for those helping with the notes, it always helps to have the text file with all of the delegates' 3-letter acronyms, available in a browser tab for quick reference.\n\nKG: Before we move on, one note there is that we are using a even newer transcription model than we were at the last meeting. And I do think it is, performing perhaps marginally better. So hopefully the experience of being a note, taker/corrector, will be even easier at this meeting than it previous ones. Although please feel free to ping me if it is not. But, yeah.\n\nCDA: Yep. Thank you, Kevin. Yeah, definitely, it also would be helpful feedback for anyone who has taken notes, you know, for example, at the last meeting, if you do notice, any differences, good or bad, that would be, helpful information as well. All right. Our next meeting will be an in-person/hybrid meeting, once again in Tokyo. We are returning to the Sony Interactive Entertainment office, in Shinagawa, in late September to early October. We did complete the interest survey for that, and deemed there was enough interest to proceed with the in-person meeting, keep an eye out. There should be a, a, for folks that completed the in-person, survey, you will still need to complete the new form that's coming, very soon, for actual in-person registration. So keep an eye out for that. And we will go through our regular, agenda, first, of course, asking for note-takers and then some other items here. Let me just take a quick look at TCQ, make sure I'm not missing anything. Because I think I do not have on here the approval of the previous minutes. So let's do that now. Actually, let's do that once we have, note-takers. So let's do that. Do we have any volunteers to help with the notes? We are looking for 2. Two individuals.\n\nACE: I'll help you out.\n\nCDA: With the notes for this session. Who was that?\n\nACE: Ashley.\n\nCDA: Ashley, thank you so much. Can we get one additional person to help with the notes? We can proceed with the meeting once we have one additional volunteer. Still looking for one person to help out with notes. Which entails making small corrections, and attributions. As KG noted, the new model should make the number of corrections you need to make, even less than before. Which was already a small amount. Maybe we could get somebody to volunteer for the first hour.\n\nNRO: I can volunteer. At least for the first hour. I have another meeting in 1 hour, though, so I need to step out for 20 minutes.\n\nCDA: Okay. Thank you so much, NRO. All right.\n\nCDA: So, first order of business: approval of the previous meeting minutes. Are there any objections to approving? I believe we already merged those. Yep. The PR has been merged. In the notes repo. All right. No objections. We have approved the previous minutes. Next up, adoption of the current agenda. Is there any objection to the agenda as it stands? Okay. The agenda is approved. I will cease to share my screen at this point. NRO mentions there's a 3-weeks-long meeting in Tokyo. Did we have a bad-? It should be the first 29 September through the 1st, not the 21st. I as much as people like the Tokyo meetings, probably that would be, too much plenary for anybody. Noting here that, typically we would start with the Secretary's report, Samina has a conflict and so that will be coming later in the meeting. So the first topic is editors' reports. Michael, are you there?\n\n## Editors Report\n\nPresenter: Michael Ficarra (MF)\n\n* slides\n\nMF: This is the editors' update. We've had 3 major normative changes since the last meeting. We landed joint iteration, which includes `Iterator.zip` and `Iterator.zipKeyed`. We landed `Atomics.pause`. And also explicit resource management, which includes `using`, `await using`, that kind of stuff. Also, we had a small follow-up because something got dropped in a rebase, so explicit resource management is split across those 2 PRs.\n\nMF: Notable editorial changes. We did a lot of work on the aliases used in the spec. We are now consistently either abbreviating or not abbreviating certain terms. So you won't see, like, `attr` and `attribute`, they’ll be, just one of those. We also made sure that we use the same alias for the same concept used in many different places, so you won't have, like, `s` and `sym` and `symbol`, all talking about a Symbol. So yeah, yeah, just small consistency things that I think are going to improve the quality of the spec little by little. You can look at the editorial conventions document to see what our policy is there now for naming. If you maintain a proposal, it'd be nice if you, you know, update accordingly. Otherwise, we'll just have to do it during review, when it's trying to land after stage 4. We also notably renamed these internal slots on private elements and property descriptors to `[[Getter]]` or `[[Setter]]`, from `[[Get]` and `[[Set]]`, because that overlapped with a concrete method name, and now you can just Ctrl+F on the spec for getter and setter, and it brings you to all the occurrences of exactly that thing, which is working toward our goal of improving the spec navigation when it comes to, like, concrete methods and internal methods and stuff. And here, in this case, internal slots.\n\nMF: We also added a feature to ecmarkup for preserving your multipage preference, which means, like, whether you view the spec as single-page or multipage. By default, it will just have no preference, which means you can just use the `m` keyboard shortcut to toggle between single-page and multipage viewing. If you do have a preference, you can go into the keyboard shortcut help dialog with `?` and select one of those preferences. So if you select always single-page, if you receive a link to the multipage document, it will navigate you to the single-page immediately. You know, and the other way around for always multipage. Most people probably want to leave it on no preference, and you won't notice a difference.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Complete the sign-in form if you got the meeting link via some other means",
+      "person": "Attendees",
+      "deadline": "During meeting",
+      "source_quote": "But if you got the meeting link, via some other means, please do complete the sign-in form that helps us track who was actually here."
+    },
+    {
+      "kind": "proposal",
+      "text": "Use TCQ for communication during the meeting",
+      "person": "Chris de Almeida",
+      "deadline": "During meeting",
+      "source_quote": "Communication tools: hopefully folks are familiar already with TCQ, and we have got the screenshots updated to reflect the new, fancy TCQ, courtesy of Michael Ficarra and other contributors."
+    },
+    {
+      "kind": "agreement",
+      "text": "Use matrix for chat with TC39 delegates channel for real business and Temporal dead zone channel for off-topic",
+      "person": "Chris de Almeida",
+      "deadline": "During meeting",
+      "source_quote": "We use matrix for chat."
+    },
+    {
+      "kind": "agreement",
+      "text": "Invited experts must have signed the RFTG form as a condition of becoming an invited expert",
+      "person": "Chris de Almeida",
+      "deadline": "Before meeting",
+      "source_quote": "Invited experts, any invited experts that, I believe everybody's got, signed the RFTG form as that's now a condition of becoming an invited expert."
+    },
+    {
+      "kind": "action",
+      "text": "Note helpers to assist in making corrections and attributions in the live transcript",
+      "person": "Note helpers",
+      "deadline": "During meeting",
+      "source_quote": "We always ask for note helpers to assist in making corrections and attributions."
+    },
+    {
+      "kind": "decision",
+      "text": "Transcript will be posted on GitHub and can be edited during meeting and for 2 weeks after",
+      "person": "Chairs",
+      "deadline": "2 weeks after meeting",
+      "source_quote": "And just a reminder that the transcript that's being prepared will eventually be posted on GitHub."
+    },
+    {
+      "kind": "action",
+      "text": "Volunteers needed for note-taking to make small corrections and attributions",
+      "person": "Chris de Almeida",
+      "deadline": "During meeting",
+      "source_quote": "Do we have any volunteers to help with the notes? We are looking for 2."
+    },
+    {
+      "kind": "agreement",
+      "text": "Ashley Claymore volunteers to help with notes",
+      "person": "Ashley Claymore",
+      "deadline": "During meeting",
+      "source_quote": "ACE: I'll help you out."
+    },
+    {
+      "kind": "agreement",
+      "text": "Nicolò Ribaudo volunteers to help with notes for the first hour",
+      "person": "Nicolò Ribaudo",
+      "deadline": "First hour of meeting",
+      "source_quote": "NRO: I can volunteer."
+    },
+    {
+      "kind": "decision",
+      "text": "Previous meeting minutes approved with no objections",
+      "person": "Meeting attendees",
+      "deadline": "During meeting",
+      "source_quote": "We have approved the previous minutes."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-12-q01",
+      "question": "Who volunteered to help with notes for the first hour?",
+      "answers": [
+        "Nicolò Ribaudo"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 7250,
+          "end": 7271,
+          "quote": "NRO: I can volunteer."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q02",
+      "question": "Was the previous meeting minutes approved?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7653,
+          "end": 7691,
+          "quote": "We have approved the previous minutes."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q03",
+      "question": "What communication tool is proposed for use during the meeting?",
+      "answers": [
+        "TCQ"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 2423,
+          "end": 2613,
+          "quote": "Communication tools: hopefully folks are familiar already with TCQ, and we have got the screenshots updated to reflect the new, fancy TCQ, courtesy of Michael Ficarra and other contributors."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q04",
+      "question": "Who is responsible for assisting with making corrections and attributions in the transcript?",
+      "answers": [
+        "Note helpers"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 4058,
+          "end": 4138,
+          "quote": "We always ask for note helpers to assist in making corrections and attributions."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q05",
+      "question": "Is there a deadline for editing the transcript after the meeting?",
+      "answers": [
+        "2 weeks after meeting"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 4344,
+          "end": 4442,
+          "quote": "And just a reminder that the transcript that's being prepared will eventually be posted on GitHub."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q06",
+      "question": "Did Ashley Claymore volunteer to help with notes?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 6685,
+          "end": 6708,
+          "quote": "ACE: I'll help you out."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q07",
+      "question": "Are invited experts required to sign the RFTG form?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 3649,
+          "end": 3796,
+          "quote": "Invited experts, any invited experts that, I believe everybody's got, signed the RFTG form as that's now a condition of becoming an invited expert."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q08",
+      "question": "Is there a mention of a new transcription model being used?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 5076,
+          "end": 5201,
+          "quote": "KG: Before we move on, one note there is that we are using a even newer transcription model than we were at the last meeting."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q09",
+      "question": "Is there any mention of a decision about the next meeting location?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5705,
+          "end": 5779,
+          "quote": "Our next meeting will be an in-person/hybrid meeting, once again in Tokyo."
+        }
+      ]
+    },
+    {
+      "id": "test-12-q10",
+      "question": "Was there any disagreement about the agenda?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 7733,
+          "end": 7789,
+          "quote": "Is there any objection to the agenda as it stands? Okay."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2026-07/july-20.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-07/july-20.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-07/july-20.md",
+    "source_sha256": "9734c2f011ea764aaa504091721a22f37166e867af78a8d7dc70b36d2b6e4f10",
+    "excerpt_sha256": "13caf8d60989918f3b66b5376305bd4b33e387a9b306d0252b0b610ee429d5da",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "f6c9561b78a9313c34a9eeda6425875a706e2234e5e8898e68144955495ca8e5",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

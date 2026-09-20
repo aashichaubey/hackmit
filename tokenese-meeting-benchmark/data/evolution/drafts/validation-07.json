@@ -1,0 +1,253 @@
+{
+  "id": "validation-07",
+  "split": "validation",
+  "notes": "# Rust Contracts RFC Draft\n\n* Feature Name: contracts * Start Date: 25th November 2022 * RFC PR: TBD * Rust Issue: rust-lang/lang-team/issues/181\n\n# Expected outcomes\n\nThis RFC is intended to solicit feedback on the best approach for adding contracts as a standard feature of Rust. We hope that language designers, tool developers and others will feel able to contribute their experience and efforts into such a design process.\n\n# Agenda\n\nWe are considering investing effort in developing a specification language for Rust. Before we do so, we would appreciate feedback from the language team:\n\n1. If adding specifications to rust is something the community and the language team wins interested in and will support. 1. If this is something the community supports, what's the best way to drive this effort? 1. Get a general sense of what the desired goals for specifications are, and their relative importance to the rust community. 1. If time allows, discuss some of the key questions about what the spec language should look like, and how we might start implementing it.\n\n# Summary\n\nOther languages have shown the utility of contracts in supporting various forms of verification, covering both static and dynamic styles. Currently, there are a number of research tools developing such capabilities, but each developing its own contract language which risks fragmentation, repetition of effort and long-term incompatibility. A single, standard, core contract language would offer users benefit in familiarity and productivity, and would enable a rational market to develop for competitive and complementary verification tools.\n\nWhile Rust has an expressive design-by-contract system for generics units and their instantiation (i.e. trait bounds), the lack of the more \"basic\" contract forms, such as pre- and post-conditions remains a curious omission. The use of contracts and their verification has become an accepted practice in safety-critical systems, an area where interest in Rust is growing substantially. For those markets, the lack of contracts might be perceived as a weakness.\n\nSeveral tools (notably Kani, Creusot and Prusti) have begun to address this problem, but are taking different, and incompatible approaches. This risks divergence, repetition of work for tool vendors, and (for customers) a risk of \"lock in\" to a particular single tool for the lifetime of their project.\n\nThe design of a contract language is not a simple matter. There are several subtle issues that must be addressed, especially if the goal is to support a reasonable case for the soundness of subsequent verification activities. Later sections of this RFC cover some of the less-obvious issues, mainly based on the authors' experience with SPARK (the Ada subset), Frama-C and contemporary Rust tools.\n\n# Motivation\n\nImagine a future where Rust has a carefully designed contract language and a mature ecosystem of verification tools. Benefits to users might include:\n\n* The language allows programmers to express key correctness properties about their code in an ergonomic and familiar syntax. This enables developers to add testable and verifiable documentation * The language allows programs to combine both static (e.g. deductive proof) and dynamic (e.g. fuzzing) verification styles, with strong guarantees of correctness between module boundaries. * A single set of contracts for a program can be read and processed by several tools, perhaps coming from distinct tool vendors, providing both dissimilar verification styles and redundancy of verification. * Static proof of key program properties (e.g. panic-freedom) is possible, supported by a defensible soundness case, even where a full-blown proof of correctness is neither achievable nor desirable. * Contracts provide strong guarantees at module boundaries. This enables verification tools to run in parallel, and so enables tools that scale to large programs. * Where panic-freedom (and, more generally, \"type safety\") has been proven, units can be compiled in a manner that eliminates all run-time overhead, and so brings Rust close to matching the run-time performance of C or SPARK. * Rust's \"core\" and parts of \"std\" libraries have contracts supplied as part of their specification, and so enables verification of units that depend on them. Assurance of the implementation of those libraries is also improved. * For developers of real-time and embedded systems, the contracts work “as advertised” in Rust’s “no_std” profile.\n\n# A Draft Roadmap\n\nIf contracts are to become a standard feature of Rust, we need to consider a roadmap for their design, implementation and adoption that makes technical sense, fits with Rust’s release schedule, and offers an approachable adoption path for users.\n\nA risk is to be over-ambitious here in an attempt to support the union of all features currently supported by all existing tools.\n\nAn entirely hypothetical “batting order”:\n\n0. Terminology. Define terms and their meanings, inheriting what we can from existing tools and other languages. 1. Decide: static, dynamic or both? (We presume that “no static checking at all” is off the table, given that Kani, Prusti, Creusot and Flux all emphasize static verification, so the only serious options remains “All static” and “Both”) 2. Function purity. Rules for panic-freedom and absence of UB in contracts. 3. Decide how to deal with static mutable state. 4. Simple pre- and post-conditions with existing expression language. 5. Determine subset of “core” libraries required to support majority of early-adopter use-cases. We may have to seek input from the safety-critical/embedded community on what features they really require. 6. Attempt to contractualize subset of “core” to guarantee safe and intended behaviour. 7. Language extension: Validity intrinsic, ranged types, extended expressive power of “expression” to support more contract forms, including quantifiers, logical operators, pledges, original and final values of mutable parameters and so on. 8. Loop invariants 9. Ghost entities. 10. Other items... all TBD.\n\n# Guide-level explanation\n\nThe Rust type system is a powerful tool for ensuring the memory safety and correctness of your code, but it has its limits. Type-safe code can still panic, and even panic-free code can return wrong or unexpected behaviour due to programming bugs. We consider code “correct” when it follows its \"specification\". Typically, specifications are documented in plain language (e.g. English), possibly along with executable assert! checks. However, there is nothing that enforces that the checks match the documentation, and that the documentation matches the code.\n\nFor example, consider a simple Cursor datatype:\n\n``` struct Cursor<T> { data : &mut [T], //TODO should this be a *? read : usize, write: usize, } ```\n\nThis struct has an implicit correctness criteria: the read cursor should lag the write cursor, and both cursors should remain within the allocated data. If we add this as a “type invariant“, then Rust can now check this property whenever Cursor objects are modified.\n\n``` // This is pseudocode. Bikeshed later. impl <T> TypeInvariant for Cursor<T> { pub fn is_valid(&self) -> bool { self.read <= self.write && self.write <= self.data.len } } ``` Similarly, the methods of Cursor have both pre and postconditions.\n\n``` // This is pseudocode. Bikeshed later. impl <T> Cursor<T> {\n\npub fn write_bytes (&mut self, newdata &[u8]) // TODO check for no integer overflow?? precondition(self.is_valid() && self.data.len < self.write + newdata.len) postcondition(self.is_valid() && UNCHANGED(self.read) && self.write == old(self.write) + newdata.len) { // Code goes here } } ```\n\nThese specifications provide value in multiple ways:\n\n1. They form precise, machine readable documentation of the expected behaviour of your code. 2. They can be automatically converted into assert! checks, and then validated using your existing unit, property, fuzz, and integration tests. 3. They form the specification for formal verification tools. In cases where these tools can *prove* the absence of bugs, the checks can be elided entirely from the code, giving you safety with no runtime cost. These formally verified checks can even form the basis of assume statements, enabling additional optimization within the compiler (e.g. allowing the compiler to remove bounds checks on accesses that can be formally proven to be safe).\n\n# Reference-level explanation\n\nThis section expands on some of the issues that need to be considered in the design of a contract language.\n\n## Semantics of violated contracts It is clearly a **bug** when a contract is violated. The question is what should happen when a contract violation occurs, and what can the compiler assume\n\n1. **Is it required that all contract violations be detected?** We suspect that this will be too expensive for many users to enable at all times. Some contracts may involve checks that are expensive to perform at runtime, e.g. a `forall` predicate over a large array. Others may involve primitives, such as pointer validity, that would require Rust runtime extensions to support. As with regular assertions, we propose that contracts be marked as either `contract` or `debug_contract`, allowing users to disable expensive checks. This is parallel to how integer overflow behaviour differs in debug and production builds. 2. **Are contract violations UB**? From a compilers prespective, it is tempting to say that contract violations constitute UB, because that opens the door to various optimizations, since the compiler can then `assume` the correctness of the contract. However, this would have the preverse effect that adding contracts to code could actually make it less safe. We propose that, at least to start, contract violations should therefore NOT be considered UB.\n\n## Static, Dynamic, or Both?\n\nThe design of a contract language is influenced by the competing demands of expressiveness, simplicity, and ease of adoption into developer workflows.\n\nAt one extreme, languages and tools designed for interactive functional verification (e.g. early versions of SPARK, and Creusot) prefer contracts that exhibit an abstract and mathematical semantics, and are NOT designed to be compiled and checked at run-time. Advantages of this approach include higher expressive power of the contracts (since the language is not limited to constructs that the compiler can understand and compile), and freedom from concerns for overflow of arithmetic and so on. For example, Creusot supports “prophecy variables” which reflect the value that a variable will take at a point in the future. Similarly, a mathematical contract for a perfect hashing function might be ∀ i, j | i ∋ domain(f) ^ j ∋ domain(f) ^ i != j => f(i) != f(j). A drawbacks are that the contracts are seen as a \"new\" language by developers (which has to be learned), leading to more difficult adoption for users. Since this style of contract often includes constructs that cannot be concretely evaluated by the compiler, it is difficult for users to adopt them into their existing workflow: how do you test or debug a contact that you can’t compile?\n\nAt the other extreme are contracts designed to be compiled and checked at run-time, as notably offered by Eiffel and Ada2012. This offers easier adoption for users, since the \"contract language\" is really the same as the programming language itself, and this approach allows a gradual shift from simple testing to fuzzing to more static verification styles. The main drawback is that the expressive power of the contracts is limited to expression forms that can be compiled.",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "We are considering investing effort in developing a specification language for Rust.",
+      "person": "language team",
+      "deadline": "not specified",
+      "source_quote": "We are considering investing effort in developing a specification language for Rust."
+    },
+    {
+      "kind": "proposal",
+      "text": "If adding specifications to rust is something the community and the language team wins interested in and will support.",
+      "person": "language team",
+      "deadline": "not specified",
+      "source_quote": "If adding specifications to rust is something the community and the language team wins interested in and will support."
+    },
+    {
+      "kind": "proposal",
+      "text": "If this is something the community supports, what's the best way to drive this effort?",
+      "person": "language team",
+      "deadline": "not specified",
+      "source_quote": "If this is something the community supports, what's the best way to drive this effort?"
+    },
+    {
+      "kind": "proposal",
+      "text": "Get a general sense of what the desired goals for specifications are, and their relative importance to the rust community.",
+      "person": "language team",
+      "deadline": "not specified",
+      "source_quote": "Get a general sense of what the desired goals for specifications are, and their relative importance to the rust community."
+    },
+    {
+      "kind": "proposal",
+      "text": "If time allows, discuss some of the key questions about what the spec language should look like, and how we might start implementing it.",
+      "person": "language team",
+      "deadline": "not specified",
+      "source_quote": "If time allows, discuss some of the key questions about what the spec language should look like, and how we might start implementing it."
+    },
+    {
+      "kind": "proposal",
+      "text": "Define terms and their meanings, inheriting what we can from existing tools and other languages.",
+      "person": "language team",
+      "deadline": "step 0",
+      "source_quote": "0. Terminology. Define terms and their meanings, inheriting what we can from existing tools and other languages."
+    },
+    {
+      "kind": "proposal",
+      "text": "Decide: static, dynamic or both?",
+      "person": "language team",
+      "deadline": "step 1",
+      "source_quote": "1. Decide: static, dynamic or both?"
+    },
+    {
+      "kind": "proposal",
+      "text": "Function purity. Rules for panic-freedom and absence of UB in contracts.",
+      "person": "language team",
+      "deadline": "step 2",
+      "source_quote": "2. Function purity. Rules for panic-freedom and absence of UB in contracts."
+    },
+    {
+      "kind": "proposal",
+      "text": "Decide how to deal with static mutable state.",
+      "person": "language team",
+      "deadline": "step 3",
+      "source_quote": "3. Decide how to deal with static mutable state."
+    },
+    {
+      "kind": "proposal",
+      "text": "Simple pre- and post-conditions with existing expression language.",
+      "person": "language team",
+      "deadline": "step 4",
+      "source_quote": "4. Simple pre- and post-conditions with existing expression language."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-07-q01",
+      "question": "Who is considering investing effort in developing a specification language for Rust?",
+      "answers": [
+        "language team"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 439,
+          "end": 523,
+          "quote": "We are considering investing effort in developing a specification language for Rust."
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q02",
+      "question": "What is the first step in the draft roadmap?",
+      "answers": [
+        "Terminology"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4923,
+          "end": 5035,
+          "quote": "0. Terminology. Define terms and their meanings, inheriting what we can from existing tools and other languages."
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q03",
+      "question": "Is it proposed to decide between static, dynamic, or both for contracts?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 5036,
+          "end": 5071,
+          "quote": "1. Decide: static, dynamic or both?"
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q04",
+      "question": "Does the RFC consider contract violations as undefined behavior (UB) initially?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 9727,
+          "end": 9821,
+          "quote": "We propose that, at least to start, contract violations should therefore NOT be considered UB."
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q05",
+      "question": "Are contracts intended to be compiled and checked at run-time only?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 9853,
+          "end": 10003,
+          "quote": "The design of a contract language is influenced by the competing demands of expressiveness, simplicity, and ease of adoption into developer workflows."
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q06",
+      "question": "Who is the assignee for deciding how to deal with static mutable state?",
+      "answers": [
+        "language team"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 5349,
+          "end": 5397,
+          "quote": "3. Decide how to deal with static mutable state."
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q07",
+      "question": "Is there a decision to support only static checking for contracts?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5036,
+          "end": 5071,
+          "quote": "1. Decide: static, dynamic or both?"
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q08",
+      "question": "Is there an agreement that contracts should be marked as either contract or debug_contract?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 9154,
+          "end": 9230,
+          "quote": "we propose that contracts be marked as either `contract` or `debug_contract`"
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q09",
+      "question": "When did the RFC start?",
+      "answers": [
+        "25th November 2022"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 56,
+          "end": 86,
+          "quote": "Start Date: 25th November 2022"
+        }
+      ]
+    },
+    {
+      "id": "validation-07-q10",
+      "question": "Is the RFC PR number specified?",
+      "answers": [
+        "TBD"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 89,
+          "end": 100,
+          "quote": "RFC PR: TBD"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2022-11-25-contracts.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-11-25-contracts.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-11-25-contracts.md",
+    "source_sha256": "822a0c68c982e6a722437725c44ff1983b2f29cf8a76acb7f2e9d0435267f5ac",
+    "excerpt_sha256": "1c020ec9cd347adbd33c0ef175a158c007f9ce562025fa3e1176716cb7d4f38a",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "e393b861f49ca70b4db7f1619f9704c354a76d784dc3c71911dbc94ce4229903",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

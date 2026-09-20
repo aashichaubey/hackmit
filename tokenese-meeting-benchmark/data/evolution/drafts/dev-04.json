@@ -1,0 +1,246 @@
+{
+  "id": "dev-04",
+  "split": "dev",
+  "notes": "## 2023-09-04\n\n- An abbreviated Steering Council (Thomas, Pablo, and Greg; Brett and Emily were out on holiday) met with Łukasz, the Developer-in-Residence, and discussed: - The status of current work for PEP 703 (Making the Global Interpreter Lock Optional in CPython) and the plan to rebase current work for 3.13. - Changes to ctypes that involved pointer ownership was rolled back (in 3.12 as well). - Memory-safety in Python and ideas for getting funding to support this and related work. - The SC discussed next steps for PEP 703 (Making the Global Interpreter Lock Optional in CPython), including updates on the draft document for publishing.\n\n## 2023-09-11\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - Hiring for the Deputy Developer-In-Residence role, including takeaways and next steps from the final interviews that the SC conducted. - The SC worked on the list of acceptance criteria for PEP 703.\n\n## 2023-09-18\n\n- An abbreviated Steering Council (Pablo, Greg, Emily, and Brett) met with Łukasz, the Developer-in-Residence, and discussed: - Communications to candidates for the Deputy Developer in Residence role now that a final list has been selected. - Updates on the RFI from the US Government around memory-safe languages. - Next steps on mentorship support – we will be getting a more conservative estimate and scope. - A further abbreviated Steering Council (Pablo, Greg, and Emily) discussed: - Action items for PEP 703 (Making the Global Interpreter Lock Optional in CPython) and PEP 712 (Adding a “converter” parameter to dataclasses.field).\n\n## 2023-09-25\n\n- The Steering Council used their first “office hour” and talked to Jelle about a potential Typing Council. - The SC fleshed out the acceptance criteria for PEP 703 (Making the Global Interpreter Lock Optional in CPython).",
+  "facts": [
+    {
+      "kind": "decision",
+      "text": "Changes to ctypes that involved pointer ownership was rolled back (in 3.12 as well)",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Changes to ctypes that involved pointer ownership was rolled back (in 3.12 as well)."
+    },
+    {
+      "kind": "proposal",
+      "text": "Next steps for PEP 703 (Making the Global Interpreter Lock Optional in CPython), including updates on the draft document for publishing",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed next steps for PEP 703 (Making the Global Interpreter Lock Optional in CPython), including updates on the draft document for publishing."
+    },
+    {
+      "kind": "proposal",
+      "text": "Hiring for the Deputy Developer-In-Residence role, including takeaways and next steps from the final interviews",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Hiring for the Deputy Developer-In-Residence role, including takeaways and next steps from the final interviews that the SC conducted."
+    },
+    {
+      "kind": "action",
+      "text": "Worked on the list of acceptance criteria for PEP 703",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC worked on the list of acceptance criteria for PEP 703."
+    },
+    {
+      "kind": "decision",
+      "text": "A final list has been selected for candidates for the Deputy Developer in Residence role",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Communications to candidates for the Deputy Developer in Residence role now that a final list has been selected."
+    },
+    {
+      "kind": "proposal",
+      "text": "Next steps on mentorship support – we will be getting a more conservative estimate and scope",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Next steps on mentorship support – we will be getting a more conservative estimate and scope."
+    },
+    {
+      "kind": "action",
+      "text": "Discussed action items for PEP 703 and PEP 712",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Action items for PEP 703 (Making the Global Interpreter Lock Optional in CPython) and PEP 712 (Adding a “converter” parameter to dataclasses.field)."
+    },
+    {
+      "kind": "action",
+      "text": "Talked to Jelle about a potential Typing Council",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The Steering Council used their first “office hour” and talked to Jelle about a potential Typing Council."
+    },
+    {
+      "kind": "action",
+      "text": "Fleshed out the acceptance criteria for PEP 703",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC fleshed out the acceptance criteria for PEP 703"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-04-q01",
+      "question": "Who rolled back changes to ctypes involving pointer ownership?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 318,
+          "end": 402,
+          "quote": "Changes to ctypes that involved pointer ownership was rolled back (in 3.12 as well)."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q02",
+      "question": "Did the Steering Council discuss next steps for PEP 703 including updates on the draft document?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 495,
+          "end": 648,
+          "quote": "The SC discussed next steps for PEP 703 (Making the Global Interpreter Lock Optional in CPython), including updates on the draft document for publishing."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q03",
+      "question": "Who worked on the list of acceptance criteria for PEP 703?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 887,
+          "end": 948,
+          "quote": "The SC worked on the list of acceptance criteria for PEP 703."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q04",
+      "question": "Has a final list of candidates for the Deputy Developer in Residence role been selected?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1093,
+          "end": 1205,
+          "quote": "Communications to candidates for the Deputy Developer in Residence role now that a final list has been selected."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q05",
+      "question": "What did the Steering Council plan to get for mentorship support?",
+      "answers": [
+        "a more conservative estimate and scope"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 1282,
+          "end": 1375,
+          "quote": "Next steps on mentorship support – we will be getting a more conservative estimate and scope."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q06",
+      "question": "Who did the Steering Council talk to about a potential Typing Council?",
+      "answers": [
+        "Jelle"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1622,
+          "end": 1727,
+          "quote": "The Steering Council used their first “office hour” and talked to Jelle about a potential Typing Council."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q07",
+      "question": "Did the Steering Council discuss action items for PEP 712?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1455,
+          "end": 1603,
+          "quote": "Action items for PEP 703 (Making the Global Interpreter Lock Optional in CPython) and PEP 712 (Adding a “converter” parameter to dataclasses.field)."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q08",
+      "question": "Did the Steering Council include Brett and Emily in the meeting on 2023-09-04?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 17,
+          "end": 127,
+          "quote": "An abbreviated Steering Council (Thomas, Pablo, and Greg; Brett and Emily were out on holiday) met with Łukasz"
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q09",
+      "question": "Was the Deputy Developer-In-Residence role hiring process completed by 2023-09-11?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 750,
+          "end": 884,
+          "quote": "Hiring for the Deputy Developer-In-Residence role, including takeaways and next steps from the final interviews that the SC conducted."
+        }
+      ]
+    },
+    {
+      "id": "dev-04-q10",
+      "question": "Did the Steering Council decide on funding for memory-safety work in Python?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 405,
+          "end": 492,
+          "quote": "Memory-safety in Python and ideas for getting funding to support this and related work."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2023-09-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-09-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-09-steering-council-update.md",
+    "source_sha256": "5439e853d959268758a6dcf77e20284558970a47f1a0afacfe5fb4b1bc20293f",
+    "excerpt_sha256": "438d2aa76acee8b620edf6da586eda8a83331e54ad241c80a7844cf70ca0225c",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "a13d3a113b4f35d71cf940ac70eaffc7a9307ca1f8ec5d4c9bff74af1e1af0fd",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

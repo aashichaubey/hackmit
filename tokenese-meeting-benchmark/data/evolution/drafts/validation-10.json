@@ -1,0 +1,259 @@
+{
+  "id": "validation-10",
+  "split": "validation",
+  "notes": "--- tags: design-meeting ---\n\n# Return Position Impl Trait in Trait Stabilization\n\n[RFC #3425] proposes return-position impl trait in Trait. This is a long awaited feature and in particular would be helpful as a stepping stone towards async functions in trait. We would like to stabilize it quickly if possible. The goal of this meeting is to make sure that everyone on the lang team is aware of the key points in the design as well as the concerns that have been raised thus far. Ideally, we'll emerge with alignment about the correct way forward.\n\n[RFC #3425]: https://github.com/rust-lang/rfcs/pull/3425\n\n[RFC #3245]: https://github.com/rust-lang/rfcs/pull/3245\n\n## Motivation and stabilization strategy\n\nImpl trait is allowed in return types everywhere except for traits and impls. This makes it inconvenient to author traits that return iterators, closures, futures, or other instances of combinator traits. Generic associated types make it possible to create traits that return complex values, but the resulting traits are verbose and confusing.\n\n### Example: Iterators that return traits\n\nThe classic example where `-> impl Trait` is useful is returning an iterator:\n\n```rust trait Factory { fn widgets(&self) -> impl Iterator<Item = Widget> + '_; } ```\n\nExamples like this \"just work\" under the MVP proposed below.\n\n### Example: Expressing async fn that don't capture their arguments\n\nThe current Tower service trait does not capture `self` in the resulting future and thus cannot use the `async fn` notation. It could be expressed with `impl Trait` like so:\n\n```rust trait Service { fn serve(&mut self, request: Request) -> impl Future<Output = Response>; // ------------------------------- // NB: the result does not capture | // the lifetime from `&mut self` -------------------------+ } ```\n\n### Example: Expressing async fn that must be send\n\nSome traits would like to express the idea of an async function whose future is guaranteed to be `Send`. This can be expressed like so\n\n```rust trait Provider { fn provide(&self) -> impl Future<Output = Result> + Send + '_; // ---- -- // | | // Guarantee that future returned is `Send` ------+ | // | // Capture the `&self` --------------------------------+ } ```\n\nIn cases like this, it is desirable that people can *implement* the trait using `async fn` sugar:\n\n```rust impl Provider for MyType { async fn provide(&self) -> Result { // Use the design below, this works for *this* trait. } } ```\n\nGiven the design below, this example compiles even though the `-> impl Future` produced by `async fn` is different from the signature that appears in the trait. For more complex functions that take more references as arguments, the differences between `async fn` capture rules and `-> impl Future` capture rules become more challenging to express, but that issue is orthogonal to the questions at hand today.\n\n## Key highlights of the design in the RFC\n\nThe RFC permits `impl Trait` to be used in return position in a trait:\n\n```rust trait IntoIntIterator { fn into_int_iter(self) -> impl Iterator<Item = u32>; // nb. Just as with other functions, // `-> (impl Iterator, impl Iterator)` and // `-> impl Iterator<Item = impl Trait>` are also supported, // but not `impl PartialEq<impl Debug>`. } ```\n\nIntuitively, this desugars to a (potentially generic) associated type -- or multiple, for more complex types like `(impl Debug, impl Debug)`:\n\n```rust trait IntoIntIterator { // desugared (approximately) type $: Iterator<Item = u32>; fn into_int_iter(self) -> Self::$; } ```\n\nUsers cannot directly name this associated type. This is analogous to the way that `impl Trait` in argument position desugars to an anonymous generic parameter that cannot be directly referenced.\n\n### Impls of traits using `-> impl Trait`\n\nIn [RFC #3245][], we decided that impls should meet the declared interface from the trait unless annotated with `#[refine]`. In accordance with this, implementations of methods using `impl Trait` in return position must use `-> impl Trait` with equivalent bounds by default:\n\n```rust impl IntoIntIterator for Vec<u32> { // OK fn into_int_iter(self) -> impl Iterator<Item = u32> { self.into_iter() } }\n\nimpl IntoIntIterator for Vec<u32> { // ERROR: Impl bounds are stronger than trait fn into_int_iter(self) -> impl ExactSizeIterator<Item = u32> { self.into_iter() } }\n\nimpl IntoIntIterator for Vec<u32> { // ERROR: Impl uses precise type but trait uses `impl Trait` fn into_int_iter(self) -> std::vec::IntoIter<u32> { self.into_iter() } } ```\n\nThis is equivalent to a desugaring based on impl Trait in associated type position, roughly as follows:\n\n```rust impl IntoIntIterator for Vec<u32> { // OK type $ = impl Iterator<Item = u32>; fn into_int_iter(self) -> Self::$ { self.into_iter() } } ```\n\nIn particular, an implication of this desugaring is that auto traits \"leak\" through the `impl Iterator` value, so while callers cannot observe exactly what sort of `Iterator` is returned, they can test if the iterator is `Send`:\n\n```rust fn is_send_iter<T>(t: T) where T: Send { } is_exact_size_iter(vec![22_u32].into_int_iter()) // OK ```\n\n### Impls with `#[refine]`\n\nImpls can also specify more precise types for the return type by using `#[refine]`. For example, the impl of `IntoIntIterator` for `Vec<u32>` could go so far as to specify the *precise* return type:\n\n```rust impl IntoIntIterator for Vec<u32> { #[refine] // OK fn into_int_iter(self) -> std::vec::IntoIter<u32> { self.into_iter() } } ```\n\nThis is equivalent to a desugaring as follows:\n\n```rust impl IntoIntIterator for Vec<u32> { type $ = std::vec::IntoIter<u32>; fn into_int_iter(self) -> Self::$ { self.into_iter() } } ```\n\nCallers of `into_int_iter` can rely on this return type:\n\n```rust let x: std::vec::IntoIter<u32> = vec![22_u32].into_int_iter(); ```\n\nRefine can also be used to strengthen the bounds without revealing the exact type:\n\n```rust impl IntoIntIterator for Vec<u32> { #[refine] fn into_int_iter(self) -> impl ExactSizeIterator<Item = u32> { self.into_iter() } } ```\n\nThis example simply desugars to `type $ = impl ExactSizeIterator<Item = u32>`.\n\n```rust fn is_exact_size_iter<T>(t: T) where T: ExactSizeIterator { } is_exact_size_iter(vec![22_u32].into_int_iter()) // OK ```\n\n### Interoperability of `impl Future` and async fn\n\nOne of the goals for this RFC is that users should be able to convert from `async fn` into equivalent functions using `-> impl Future`, either on the trait *or* the impl side, and everything should continue to work.\n\nExample:\n\n```rust trait AsyncProvider { async fn provide(&self) -> Value; }\n\nimpl AsyncProvider for MyType { fn provide(&self) -> impl Future<Output = Value> + '_ { async move { self.provide() } } } ```\n\n```rust trait AsyncProvider { async fn provide(&self) -> Value; }\n\nimpl AsyncProvider for MyType { fn provide(&self) -> impl Future<Output = Value> { async move { self.provide() } } } ```\n\n### Differences from what is implemented on nightly\n\nThe implementation of this feature on nightly does not respect the `#[refine]` semantics -- all methods act as though `#[refine]` has been provided, so they are free to refine the trait interface.\n\n## Stabilization proposal\n\nThe proposal is to stabilize a specific subset of the above content:\n\n* `#[refine]` would not be stabilized * traits that use `-> impl Trait` would require impls to use `-> impl Trait` (or, equivalently, `async fn`) and meet the following conditions * the actual type from the impl must meet the bounds in the trait * So if the trait says `-> impl X0 + ... + Xn`, the impl must return a type that implements `X0 + ... + Xn`. * Given that the impl must have a return type of the form `impl Y`, this implies that for each `i`: * `Xi` must be an auto trait that \"leaks\" from the actual type used in the impl * e.g. `async fn` in the impl but `-> impl Future + Send` in the trait * `Y => Xi` * e.g. `impl Eq` in the impl but `impl PartialEq` in the trait (this would cause an error below, however) * or `Xi` is provable for all types for which `Y` is true * e.g. `impl Debug` in the impl but `impl Debug + Foo` in the trait where `impl<T> Foo for T` * the bounds from the trait must imply the bounds from the impl * `-> impl Eq` in the impl and `-> impl Eq` in the trait is ok * `-> impl PartialEq` in the impl and `-> impl Eq` in the trait is ok by this check (but errors in the check above) * `-> impl Eq` in the impl and `-> impl PartialEq` in the trait is an error by this check (but ok by the check above)\n\nThe goal is to let people use `-> impl Trait` in traits and impls, and interchange it with `async fn` when that becomes stable, but not to stabilize the \"refine\" mechanism yet. Instead, we only permit impls whose semantics would not change when \"refine\" is used.\n\n## Key questions for this meeting\n\n### Are we ok to stabilize this MVP?\n\nMajor concerns raised (complete list) and some brief responses:\n\n> On their own, RPITITs work against maximum flexibility, as compared to normal associated types, because there is no way to add bounds to them. Using them in widely used libraries is likely to be a kind of anti-pattern.\n\nThis is true, but it's also consistent with impl Trait elsewhere. For example, best practice for widely portable libraries remains to use newtypes rather than RPIT, so that people can name the types returned by your functions, for example for use in structs. Similarly, impl Trait in argument position is less flexible, as people cannot use turbofish. It would be good to address these shortcomings in future work, but the future stands up on its own just as much as impl Trait in other positions stands up.\n\nmore\n\n> RPITITs are different from other \"opaque\" uses of impl Trait (e.g., RPIT, TAIT), in that they desugar, on the trait side, to an associated type (on the impl side, they are exactly analogous, I believe). This weakens the \"more consistent language\" story, since it's not just a matter of applying the exact same desugaring we already have elsewhere.\n\nIt's true that, if you start with the implementation, impl Trait is \"inconsistent\" in that it can desugar in different ways. But the intent of the impl Trait syntax, as a user, is that any place you use it it winds up desugaring to \"some type that implements Trait\" in a sensible way. So in fn argument position, that is a fresh generic type parameter. In (inherent) return position, it's an inferred opaque trait. And yes, under this RFC, in trait return position, it's an associated type.\n\nmore\n\n> If we stabilize TAITs or uses of impl Trait in associated type values (AssocIT), that -- combined with GATs -- lets users model RPITIT explicitly. It'd be a better place to start.",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "We would like to stabilize it quickly if possible",
+      "person": "lang team",
+      "deadline": "",
+      "source_quote": "We would like to stabilize it quickly if possible."
+    },
+    {
+      "kind": "proposal",
+      "text": "Impl trait is allowed in return types everywhere except for traits and impls",
+      "person": "RFC #3425",
+      "deadline": "",
+      "source_quote": "Impl trait is allowed in return types everywhere except for traits and impls."
+    },
+    {
+      "kind": "proposal",
+      "text": "The RFC permits `impl Trait` to be used in return position in a trait",
+      "person": "RFC #3425",
+      "deadline": "",
+      "source_quote": "The RFC permits `impl Trait` to be used in return position in a trait"
+    },
+    {
+      "kind": "proposal",
+      "text": "Implementations of methods using `impl Trait` in return position must use `-> impl Trait` with equivalent bounds by default",
+      "person": "RFC #3245",
+      "deadline": "",
+      "source_quote": "implementations of methods using `impl Trait` in return position must use `-> impl Trait` with equivalent bounds by default"
+    },
+    {
+      "kind": "proposal",
+      "text": "Impls can also specify more precise types for the return type by using `#[refine]`",
+      "person": "RFC #3425",
+      "deadline": "",
+      "source_quote": "Impls can also specify more precise types for the return type by using `#[refine]`."
+    },
+    {
+      "kind": "proposal",
+      "text": "Users should be able to convert from `async fn` into equivalent functions using `-> impl Future` on trait or impl side",
+      "person": "RFC #3425",
+      "deadline": "",
+      "source_quote": "One of the goals for this RFC is that users should be able to convert from `async fn` into equivalent functions using `-> impl Future`"
+    },
+    {
+      "kind": "decision",
+      "text": "`#[refine]` would not be stabilized",
+      "person": "lang team",
+      "deadline": "",
+      "source_quote": "`#[refine]` would not be stabilized"
+    },
+    {
+      "kind": "decision",
+      "text": "Traits that use `-> impl Trait` would require impls to use `-> impl Trait` and meet conditions",
+      "person": "lang team",
+      "deadline": "",
+      "source_quote": "traits that use `-> impl Trait` would require impls to use `-> impl Trait`"
+    },
+    {
+      "kind": "agreement",
+      "text": "The actual type from the impl must meet the bounds in the trait",
+      "person": "lang team",
+      "deadline": "",
+      "source_quote": "the actual type from the impl must meet the bounds in the trait"
+    },
+    {
+      "kind": "disagreement",
+      "text": "RPITITs work against maximum flexibility, as compared to normal associated types",
+      "person": "meeting concerns",
+      "deadline": "",
+      "source_quote": "RPITITs work against maximum flexibility, as compared to normal associated types"
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-10-q01",
+      "question": "Who proposed to stabilize return-position impl trait in Trait quickly?",
+      "answers": [
+        "lang team"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 261,
+          "end": 311,
+          "quote": "We would like to stabilize it quickly if possible."
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q02",
+      "question": "Is impl trait currently allowed in return types in traits and impls?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 708,
+          "end": 785,
+          "quote": "Impl trait is allowed in return types everywhere except for traits and impls."
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q03",
+      "question": "What must impls of traits using `-> impl Trait` do by default?",
+      "answers": [
+        "use `-> impl Trait` with equivalent bounds"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3920,
+          "end": 4043,
+          "quote": "implementations of methods using `impl Trait` in return position must use `-> impl Trait` with equivalent bounds by default"
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q04",
+      "question": "Can impls specify more precise return types using `#[refine]`?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 5136,
+          "end": 5219,
+          "quote": "Impls can also specify more precise types for the return type by using `#[refine]`."
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q05",
+      "question": "Will `#[refine]` be stabilized in the initial proposal?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7245,
+          "end": 7280,
+          "quote": "`#[refine]` would not be stabilized"
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q06",
+      "question": "Are users able to convert from async fn to `-> impl Future` functions on trait or impl side?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 6323,
+          "end": 6419,
+          "quote": "users should be able to convert from `async fn` into equivalent functions using `-> impl Future`"
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q07",
+      "question": "Does the actual type from the impl have to meet the bounds in the trait?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 7425,
+          "end": 7488,
+          "quote": "the actual type from the impl must meet the bounds in the trait"
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q08",
+      "question": "Is it agreed that RPITITs reduce flexibility compared to normal associated types?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 8899,
+          "end": 8979,
+          "quote": "RPITITs work against maximum flexibility, as compared to normal associated types"
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q09",
+      "question": "Is there a plan to stabilize the full `#[refine]` mechanism now?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 7245,
+          "end": 7357,
+          "quote": "`#[refine]` would not be stabilized * traits that use `-> impl Trait` would require impls to use `-> impl Trait`"
+        }
+      ]
+    },
+    {
+      "id": "validation-10-q10",
+      "question": "Is the desugaring of impl Trait in trait return position identical to other impl Trait desugarings?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 9622,
+          "end": 9824,
+          "quote": "RPITITs are different from other \"opaque\" uses of impl Trait (e.g., RPIT, TAIT), in that they desugar, on the trait side, to an associated type (on the impl side, they are exactly analogous, I believe)."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2023-05-17-rpitit-stabilization-schedule.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-05-17-rpitit-stabilization-schedule.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-05-17-rpitit-stabilization-schedule.md",
+    "source_sha256": "74b0a742bd1704d4c7d99498c2582b511f39a7cc6a346b278c7104472769a1c5",
+    "excerpt_sha256": "d25c23e0d51648adfca70240b396666d92efbbec2baf3220b83666d7ae148319",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "f2efd7a280c2d52f2026975237f701c5056a6194e0c9a83f5bb02064b82c005d",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "dev": {
+    "source_documents": 12,
+    "questions": 120,
+    "categories": {
+      "owner": 33,
+      "deadline": 39,
+      "action": 9,
+      "proposal": 28,
+      "decision": 6,
+      "agreement": 5
+    },
+    "answerable": 77,
+    "unknown": 43,
+    "independently_reviewed": 0,
+    "unique_source_series": 1,
+    "warnings": [
+      "Cross-series splits test domain shift but confound split with organization.",
+      "Provisional model-authored facts can contain semantic annotation errors.",
+      "Field-preservation QA is narrower than arbitrary meeting questions.",
+      "Macro meeting accuracy and category metrics supplement exact micro accuracy."
+    ]
+  },
+  "validation": {
+    "source_documents": 12,
+    "questions": 120,
+    "categories": {
+      "owner": 33,
+      "proposal": 55,
+      "deadline": 26,
+      "agreement": 3,
+      "disagreement": 1,
+      "decision": 2
+    },
+    "answerable": 73,
+    "unknown": 47,
+    "independently_reviewed": 0,
+    "unique_source_series": 1,
+    "warnings": [
+      "Cross-series splits test domain shift but confound split with organization.",
+      "Provisional model-authored facts can contain semantic annotation errors.",
+      "Field-preservation QA is narrower than arbitrary meeting questions.",
+      "Macro meeting accuracy and category metrics supplement exact micro accuracy."
+    ]
+  },
+  "test": {
+    "source_documents": 12,
+    "questions": 120,
+    "categories": {
+      "owner": 36,
+      "decision": 2,
+      "agreement": 10,
+      "disagreement": 1,
+      "deadline": 38,
+      "action": 11,
+      "proposal": 22
+    },
+    "answerable": 85,
+    "unknown": 35,
+    "independently_reviewed": 0,
+    "unique_source_series": 1,
+    "warnings": [
+      "Cross-series splits test domain shift but confound split with organization.",
+      "Provisional model-authored facts can contain semantic annotation errors.",
+      "Field-preservation QA is narrower than arbitrary meeting questions.",
+      "Macro meeting accuracy and category metrics supplement exact micro accuracy."
+    ]
+  }
+}

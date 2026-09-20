@@ -1,0 +1,253 @@
+{
+  "id": "validation-11",
+  "split": "validation",
+  "notes": "--- tags: design-meeting ---\n\n# Return Type Notation\n\n## The \"send bound\" problem\n\nUsers of async fn in traits quickly hit the problem that they need a way to add \"send bounds\" to the futures returned by methods in the trait. We call this the \"send bounds\" problem. In fact, the problem is more general, and applies to any `-> impl Trait` method defined in a trait. In this doc though we will focus on examples of async functions and send bounds, with only minimal discussion of other examples and applications.\n\nThe async WG conducted a series of case studies in which we found that stabilizing async functions in traits *without* a solution to the send bounds problem is not sufficient for many desired use cases. Therefore, to meet our goal of shipping usable (if not perfect) support for async fn in traits in 2023, we must solve the send bound problem in some way.\n\n## Proposed solution: return type notation\n\nWe are proposing a solution dubbed \"return type notation\". There is a [draft RFC][] available[^name] that covers a minimal subset. The core idea is simple. Users can add where clauses like `T::m(): Send` to bound the return type of invoking the method `m` on a value of type `T`. Alternatively, users can leverage [associated type bounds][] (RFC #2289) notation like so `T: Trait<m(): Send>`. Only this second form is implemented, presently, so we will focus on that.\n\n[associated type bounds]: https://github.com/rust-lang/rust/issues/52662\n\n[^name]: The RFC uses the term \"associated return type\", but the name seems unpopular and doesn't seem particularly better, so I'm giving up on it. --nikomatsakis\n\n[draft RFC]: https://hackmd.io/@wg-async/H1qTVUMgn\n\n## How it works: HRTB\n\nA where clause like `T: Trait<m(): Send>` expands to a higher-ranked trait bound. Let's work through an example:\n\n```rust trait HealthCheck { async fn check(&mut self, server: Server); }\n\nfn spawn_check<HC>(hc: HC) where HC: HealthCheck<check(): Send> + Send + 'static, // ------------- -------------- // | | // What we are interested in; | // says that future returned by | // check() is Send. | // | // What will, unfortunately, also // be necessary much of the time. // We intend to ship a proc-macro // to reduce boilerplate in the // short-term (discussed below) // and pursue other solutions in // longer term. {} ```\n\nAs discussed in the [RPITIT RFC][], the `Healthcheck` trait is \"desugared\" into a trait with an (anonymous) associated type `$`, like:\n\n[RPITIT RFC]: https://github.com/rust-lang/rfcs/pull/3425\n\n```rust trait HealthCheck { type $<'a>: Future<Output = ()>; fn check(&mut self, server: Server) -> Self::$<'a>; } ```\n\nWe can express the `HealthCheck<check(): Send>` bound as a higher-ranked trait bound on `$` like:\n\n```rust where HC: HealthCheck, for<'a> HC::$<'a>: Send, ```\n\nThe bound `check(): Send` then says: no matter what types `check` is invoked with, the result is `Send`.\n\n## Limitation: only RPITIT methods, only lifetime parameters\n\nIn the interest of minimality, the current [draft RFC][] limits RTN to RPITIT methods (including async functions) that only have lifetime parameters. The following methods would not (yet) be supported:\n\n```rust trait Foo { // Not supported: Not async nor RPITIT fn foo(&self) -> String; }\n\ntrait Bar { // Not supported: type parameter T fn bar<T: Display>(&self, t: T) -> impl Display; }\n\ntrait Baz { // Not supported: anonymous type parameter from // `impl Display` in argument position. fn baz(&self, t: impl Display) -> impl Display; } ```\n\nThe first limitation (just RPITIT) is easiest to lift.\n\nThe second requires two things. First, support for higher-ranked trait bounds parameterized over types (available on nightly but still experimental) with \"where clauses\" (not yet implemented). Second, some decision about whether to include other default bounds. For example, consider `X: Bar<bar(): Send>` with the example above. Should that be `for<T: Display>`, i.e., return type is send for all `T`, or do we want `for<T: Display + Send>`? The latter seems too hard-coded, but the former will almost certainly not be true. We choose to defer this question until we have more concrete use cases to work from.\n\n## Experience\n\nAs part of the async WG's case studies, we evaluated how well RTN works in practice. We found that it was easy to explain and it works \"OK\" for simple cases, like the one shown above, though writing `HealthCheck<check(): Send> + Send + 'static` still felt suboptimal (how many times do we have to say `Send`?). For more complex cases where there are multiple methods being invoked, it simply doesn't scale.\n\nThe workaround is to introduce an \"trait alias\":\n\n```rust trait SendHealthCheck: where Self: HealthCheck<check(): Send>, Self: Send + 'static {}\n\nimpl<T> SendHealthCheck for T where T: HealthCheck<check(): Send>, T: Send + 'static {} ```\n\nNow users can write\n\n```rust fn spawn_check<HC>(hc: HC) where HC: SendHealthCheck, {} ```\n\nA number of the developers we spoke with described plans to create aliases of this kind. Tower, for example, expected to make the alias the *primary* trait (i.e., `Service`) and then have the non-send variant be called `LocalService`.\n\nTo resolve some of the boilerplate, a proc macro has been implemented.\n\n## Other uses for RTN\n\nRTN can be used for things beyond the \"send bound\" problem. Consider the `IntoIntIterator` trait introduced in the [RPITIT RFC][]:\n\n```rust trait IntoIntIterator { fn into_iter(self) -> impl Iterator<Item = u32>; } ```\n\nUsers could write a function that requires a `DoubleEndedIterator` (and hence can be reversed) like so:\n\n```rust fn gimme<T>(t: T) where T: IntoIntIterator<into_iter(): DoubleEndedIterator> { for i in t.into_iter().rev() { ... } } ```\n\n(If we wind up stabilizing `#[refine]`, this function would only be callable for impls that `#[refine]` the trait to promise the stronger bounds.)\n\n## Concerns\n\nA number of concerns have been raised about RTN. This section walks through them.\n\n### Doesn't scale to larger examples\n\n> The syntax as defined constraints the return of only one method at a time. But most traits have more than one method. Aren't users going to be immediately frustrated?\n\nYes, many users will definitely be unsatisfied with send bounds on their own, which is why we want to provide a proc-macro to alleviate the boilerplate of creating an alias. In the future a solution that applies to many methods at once would be a nice extension.\n\n### Confusing, confusable with const generics\n\n> The syntax `foo()` looks like an expression but is actually a type; it could be confusing that no actual function call occurs, particularly given that const generics permit `{foo()}` notation, in which the function is called at compilation time. It's also confusing that `foo()` works no matter how many arguments `foo` has.\n\nIt's true that under this proposal the interpretation of `T::m()` would depend on whether it appeared in a type or expression context. It's also true that `T::m()` (as a type) is only permitted in a very limited set of contexts right now, specifically the subject of where bounds like `T::m(): Send` or `T: Foo<m(): Send>`. Note that nested usages (e.g., `where Foo<T::m()>: Send` or `T::m()::Item`) are not included, nor are types outside of where bounds like `let x: T::m() = ...`. These ideas are discussed under the Futures Possibilities section, but there are some significant complications for the latter (the former is possible without great trouble, if ill-motivated).\n\nIt's not obvious though that having types and expressions look like one another is a problem. In fact, we consciously *tried* to make constructors and their types line up in other cases, e.g. `(id1, id2)` or `[id1; n]`. While no doubt some users will find notation like `T: HealthCheck<check(): Send>` confusing, we've not seen a lot of evidence of this so far in our ancedotal experimentation.\n\nOne particularly interesting example is type vs const generics. For example `T<foo()>` and `T<{foo()}>` would have quite different interpretations. Today the proposal does not permit one to write `T<foo()>`, but one could imagine it, perhaps only in where-clauses like `where Rc<T::m()>: Something`. In cases like this, the compiler can easily detect the mistake and suggest adding (or removing) the `{}`.\n\n### Too general, YAGNI.\n\n> The syntax as proposed permits users to place all kinds of bounds, not just `Send` bounds or other auto-traits. Do we really need that? Can we do something more tailored to `Send` and `Sync`?\n\nAnswer: There are also reasons that you might want to place other bounds when you consider RPITIT, as we demonstrated with the `IntoIntIterator<into_iter(): DoubleEndedIterator>` example.\n\n### Too narrow, where is this going?\n\n> As currently proposed, RTN can only be used in where clauses, applies only to RPITIT trait methods, and always constraints the return type for all possible argument types. As currently *implemented*, RTN can only be used in associated type bound position (i.e., `HC: HealthCheck<check(): Send>` and not `HC::check(): Send`). The future possibilities section below walks through ways that all of these limitations could be lifted, but each of them has tradeoffs of their own (even ignoring implementation complexity), and it's not obvious that we want to do them. If we never accept any of those ideas, won't this feature feel half-baked forever?\n\nHalf-baked is of course a mater of opinion, but it makes sense for us to think about how far we want to take this feature. The future possibilities section outlines a number of extensions we could consider that loosely build on one another:\n\nUsing in more places:\n\n* Use `HC: HealthCheck<check(): Send>` (implemented now) * Permit use as top-level type in a where-clause, e.g. * `where HC::check(): Send` * Permit use as a type elsewhere in where-clauses, e.g. * `where Foo<HC::check()>: Send` * Allow `HC::check()` as a type in other contexts, e.g. * `let x: HC::check() = ...` * `fn foo<HC>(x: HC::check()) where HC: HealthCheck`\n\nExpanding range of things you can name:\n\n* Permit naming and constraining free functions like `some_function()` * Permit local variables and other expressions like `c()`\n\nNiko's estimate is that the following extensions are \"relatively straightforward\" to implement:\n\n* Permit use as top-level type in a where-clause * Permit use as a type elsewhere in where-clauses * Allow `HC::check()` as a type in other contexts * Permit naming and constraining free functions like `some_function()`\n\n...but this one is pretty dang hard and is likely out of scope for all time:\n\n* Permit local variables and other expressions like `c()`\n\n## Alternatives\n\nHere are some of the alternatives that have been proposed and\n\n### type-of\n\nThe compiler currently supports a `typeof` operation as an experimental feature (never RFC'd). The idea is that `typeof <expr>` type-checks `expr` and evaluates to the result of that expression.\n\nIt might appear that `typeof` can be used in a similar way to RTN, but in fact it is significantly more complex. Consider our first example, bounding the `HealthCheck` trait:\n\n```rust fn start_health_check<H>(health_check: H, server: Server) where H: HealthCheck + Send + 'static, H::check(): Send, // 👈 How would we write this with `typeof`? ```\n\nTo write the above with `typeof`, you would do something like this\n\n```rust fn dummy<T>() -> T { panic!() }",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "We are proposing a solution dubbed \"return type notation\".",
+      "person": "async WG",
+      "deadline": "2023",
+      "source_quote": "We are proposing a solution dubbed \"return type notation\"."
+    },
+    {
+      "kind": "proposal",
+      "text": "Users can add where clauses like `T::m(): Send` to bound the return type of invoking the method `m` on a value of type `T`.",
+      "person": "async WG",
+      "deadline": "2023",
+      "source_quote": "Users can add where clauses like `T::m(): Send` to bound the return type of invoking the method `m` on a value of type `T`."
+    },
+    {
+      "kind": "proposal",
+      "text": "Alternatively, users can leverage associated type bounds notation like so `T: Trait<m(): Send>`.",
+      "person": "async WG",
+      "deadline": "2023",
+      "source_quote": "Alternatively, users can leverage [associated type bounds][] (RFC #2289) notation like so `T: Trait<m(): Send>`."
+    },
+    {
+      "kind": "action",
+      "text": "We intend to ship a proc-macro to reduce boilerplate in the short-term.",
+      "person": "async WG",
+      "deadline": "not specified",
+      "source_quote": "// We intend to ship a proc-macro // to reduce boilerplate in the // short-term (discussed below) // and pursue other solutions in // longer term."
+    },
+    {
+      "kind": "agreement",
+      "text": "The async WG must solve the send bound problem in some way to ship usable support for async fn in traits in 2023.",
+      "person": "async WG",
+      "deadline": "2023",
+      "source_quote": "Therefore, to meet our goal of shipping usable (if not perfect) support for async fn in traits in 2023, we must solve the send bound problem in some way."
+    },
+    {
+      "kind": "agreement",
+      "text": "The proc macro has been implemented to resolve some of the boilerplate.",
+      "person": "async WG",
+      "deadline": "not specified",
+      "source_quote": "To resolve some of the boilerplate, a proc macro has been implemented."
+    },
+    {
+      "kind": "disagreement",
+      "text": "The syntax `foo()` looks like an expression but is actually a type; it could be confusing that no actual function call occurs.",
+      "person": "some users",
+      "deadline": "not specified",
+      "source_quote": "### Confusing, confusable with const generics"
+    },
+    {
+      "kind": "disagreement",
+      "text": "While some users may find notation like `T: HealthCheck<check(): Send>` confusing, anecdotal experimentation has not shown much evidence of confusion.",
+      "person": "async WG",
+      "deadline": "not specified",
+      "source_quote": "While no doubt some users will find notation like `T: HealthCheck<check(): Send>` confusing, we've not seen a lot of evidence of this so far in our ancedotal experimentation."
+    },
+    {
+      "kind": "proposal",
+      "text": "Introduce trait aliases like `SendHealthCheck` to scale to multiple methods and reduce boilerplate.",
+      "person": "async WG",
+      "deadline": "not specified",
+      "source_quote": "The workaround is to introduce an \"trait alias\":"
+    },
+    {
+      "kind": "agreement",
+      "text": "Developers plan to create aliases of this kind; Tower plans to make the alias the primary trait.",
+      "person": "developers",
+      "deadline": "not specified",
+      "source_quote": "A number of the developers we spoke with described plans to create aliases of this kind."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-11-q01",
+      "question": "What is the name of the proposed solution to the send bound problem?",
+      "answers": [
+        "return type notation"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 915,
+          "end": 973,
+          "quote": "We are proposing a solution dubbed \"return type notation\"."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q02",
+      "question": "Who intends to ship a proc-macro to reduce boilerplate?",
+      "answers": [
+        "async WG"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 2167,
+          "end": 2313,
+          "quote": "// We intend to ship a proc-macro // to reduce boilerplate in the // short-term (discussed below) // and pursue other solutions in // longer term."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q03",
+      "question": "Is the proc macro to reduce boilerplate already implemented?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5166,
+          "end": 5236,
+          "quote": "To resolve some of the boilerplate, a proc macro has been implemented."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q04",
+      "question": "Does the proposal currently support adding send bounds to all methods in a trait at once?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 5961,
+          "end": 5997,
+          "quote": "### Doesn't scale to larger examples"
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q05",
+      "question": "Who plans to create trait aliases like `SendHealthCheck`?",
+      "answers": [
+        "developers"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 4930,
+          "end": 5018,
+          "quote": "A number of the developers we spoke with described plans to create aliases of this kind."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q06",
+      "question": "Is the syntax `foo()` in return type notation an actual function call?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 6433,
+          "end": 6478,
+          "quote": "### Confusing, confusable with const generics"
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q07",
+      "question": "Does the async WG agree that the send bound problem must be solved to ship usable async fn in traits in 2023?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 716,
+          "end": 869,
+          "quote": "Therefore, to meet our goal of shipping usable (if not perfect) support for async fn in traits in 2023, we must solve the send bound problem in some way."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q08",
+      "question": "Is the current implementation of return type notation limited to RPITIT methods with only lifetime parameters?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 2965,
+          "end": 3114,
+          "quote": "In the interest of minimality, the current [draft RFC][] limits RTN to RPITIT methods (including async functions) that only have lifetime parameters."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q09",
+      "question": "Has the async WG found that writing `HealthCheck<check(): Send> + Send + 'static` feels optimal for complex cases?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4277,
+          "end": 4502,
+          "quote": "We found that it was easy to explain and it works \"OK\" for simple cases, like the one shown above, though writing `HealthCheck<check(): Send> + Send + 'static` still felt suboptimal (how many times do we have to say `Send`?)."
+        }
+      ]
+    },
+    {
+      "id": "validation-11-q10",
+      "question": "Is there a plan to permit local variables and other expressions like `c()` in return type notation soon?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 10130,
+          "end": 10187,
+          "quote": "* Permit local variables and other expressions like `c()`"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2023-05-24-return-type-notation.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-05-24-return-type-notation.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-05-24-return-type-notation.md",
+    "source_sha256": "e189d27aa7568c494b7b1064c79fcebed69e792445a6d7d2952fe3ea009b15b9",
+    "excerpt_sha256": "8765647ceea0ce0731e9784c11c7c938468b78c90824a36e1585ffad64632a4d",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "c35c50ccd636c74ebb33c889be78a3988de5a6aff6a04f1af51e7c751e0ccc57",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}
