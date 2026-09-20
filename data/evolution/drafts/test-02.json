@@ -1,0 +1,260 @@
+{
+  "id": "test-02",
+  "split": "test",
+  "notes": "# 105th TC39 Meeting | 2nd December 2024\n\n-----\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |------------------|--------------|--------------------| | Waldemar Horwat | WH | Invited Expert | | Daniel Ehrenberg | DE | Bloomberg | | Istvan Sebestyen | IS | Ecma | | Jordan Harband | JHD | HeroDevs | | Dmitry Makhnev | DJM | JetBrains | | Chris de Almeida | CDA | IBM | | Sergey Rubanov | SRV | Invited Expert | | Michael Saboff | MLS | Apple | | Jesse Alama | JMN | Igalia | | Andreu Botella | ABO | Igalia | | Jirka Marsik | JMK | Oracle | | Rob Palmer | RPR | Bloomberg | | Eemeli Aro | EAO | Mozilla | | Josh Goldberg | JKG | Invited Expert | | Aki Rose Braun | AKI | Ecma International | | Ron Buckton | RBN | Microsoft | | Luca Forstner | LFR | Sentry | | Mikhail Barash | MBH | Univ. Bergen | | Ujjwal Sharma | USA | Igalia | | J. S. Choi | JSC | Invited Expert | | Linus Groh | LGH | Bloomberg | | Keith Miller | KM | Apple | | Richard Gibson | RGN | Agoric | | James M Snell | JSL | Cloudflare | | Samina Husain | SHN | Ecma International | | Devin Rousso | DRO | Invited Expert | | Nicolo Ribaudo | NRO | Igalia | | Jan Olaf Martin | JOM | Google | | Daniel Minor | DLM | Mozilla | | Philip Chimento | PFC | Igalia |\n\n## Opening & Welcome\n\nPresenter: Rob Palmer (RPR)\n\nRPR: Welcome everyone to the 105th TC39 meeting. It’s labelled 106th in the meeting notes. That’s my fault changing the name. I can see the transcription is beginning which is excellent. Before we start, could I get a couple of volunteers to assist with the note taking to polish up the notes as we go. I’ll get started with the slides, then. Here we go. So welcome everyone. We are here with our remote meeting today. And so let’s begin. Are these slides working? There we go. So you know who we all are, I’m rob one of the three chairs that we have here today. We also have Ujjwal and Chris in the meeting and assisted by the three facilitators. I’m not sure if any are here at the moment. But we have Brian, Justin, and Yulia who help us out with running the meetings. So if you have any requests or any curiosity, please do reach out to us at any time. We try to keep the meeting on time and give everyone a chance to speak using our TCQ tool which I’ll get to. Before we begin, hopefully the way that you all got here today was through the meeting entry form. So the reflector links to this. If you found your way here through any other means, for example, someone sharing the URL direct, please do return back to the reflect and make sure you sign in the form. This is an Ecma requirement that we take attendance.\n\nWe have a code of conduct. This can be found on the main TC39.es site. Please do give it a read and do your best to stick to the spirit of the document and with the best faith interpretation and if you have any concerns or any issues that come up, you can always reach out to us chairs direct, we’re available direct on matrix or if you need to, you can reach out to the code of conduct committee and these can be kept confidential. We are having a remote meeting this week which means we have four days and that’s broken up into a morning session or a.m. session and p.m. session. Of course, that depends on your TimeZone.\n\nWe’re on mountain time this week. So that is UTC -7. For communicating during the meeting we are using our regular tools. So primarily that is TCQ. TCQ I think we were just getting that linked from the reflector. Do you know, Chris, is this now available on the reflector?\n\nCDA: Yes, it’s available on reflector and I also posted it in the meeting chat. Still being populated, but it’s up.\n\nRPR: Awesome. And so we use this tool to manage both our agenda and discussions. You can see what’s coming up. Let’s go through some of the controls. So you’ll see if you switch to the view where you see the current item, we have the name of the current item, then within that, there will be a topic when someone has proposed a topic to discuss. And within that will be a current person speaking. When you’re using this tool and if you’re actually speaking, you will see an extra button called I’m done speaking. So when you have finished saying your piece and wish to move on with the conversation, please do click this button or otherwise the chairs will click it when they see appropriate. And then on the actual buttons you see there, please prefer to use the buttons on the left, so the blue ones, so the new topic, and discuss current topic. Those are preferred. The ones on the right will generally interrupt the conversation or will be increasingly urgent. So you’re allowed to ask clarifying questions at any point. If you really need to stop the discussion urgently, choose point of order such as I can’t hear anything. You’re muted, that kind of thing. We use for synchronous realtime chat, we have matrix. Our better version of IRC. It’s a little bit like slack and discord. So hopefully you’re all signed up there. Primarily we use the TC39 delegates room for talking about work and everything that is on topic. If you have things that are off topic, then please keep them in the temporal dead zone. That is the place for any conversations about Pokmon or joking or puns or that kind of thing. We have an IPR policy. So to make sure that everything is clean and so on, everyone here is expected to be into a particular category. Most people, the standard original classification is an ECMA member. That way you have delegates people from the ECMA member organization and everyone here who is in that status has, you know, they’re company has already signed the agreements when they joined. Otherwise, we have the concept of invited experts which is a formal process by which people can be invited to join. And as part of that equally you will have signed the forms. If you are not in either of those categories, then we expect that you are perhaps an observer. Normally notified on the TC39 reflector and in advance, you are welcome to observe. Please do not talk. Because that’s the principle of being a signed up—if you haven’t yet signed the agreements. We also have transcription running. So I will just read out this so that everyone is fully aware that a detailed transcript of the meeting is being prepared and will eventually be posted on GitHub. You may edit this at any time during the meeting in Google Docs for accuracy including deleting comments which you do not wish to appear. And you may also request corrections or deletions after the fact by editing the Google Doc in the first two weeks after the TC39 meeting or subsequently making GitHub or contacting the chairs. The next meeting after this, the 106th will be in February next year. Some of us will be going to Seattle as kindly hosted by F5. We were there roughly two years ago or so. So some of you may remember. I don’t know. Michael, is it in the same place as last time?\n\nMF: Yes, it is.\n\nRPR: Okay. So having attended it previously, it was an awesome place to visit. So please do join us for that. The survey for that, the interest survey, is currently open. We have already seen lots of interest. So you can see who else is planning to go. Let’s return to the opportunity to volunteer as a note taker. We will make this request at the start of each session hoping for volunteers.\n\nRPR: First of all, hopefully everyone has reviewed the previous minutes. Are there any objections to approving the previous minutes? Silence means no objections. They are approved. Next we have our current agenda. Are there any objections against proceeding with the current agenda? None? Okay. We have adopted the agenda. So first up, we have SHN with the secretary’s report.\n\n## Secretary’s Report\n\nPresenter: Samina Husain (SHN)\n\n- (no proposal) - (no link to slides)\n\nSHN: Also want to thank everybody for all the efforts. It’s been a very busy year. You had in June, your new edition. There’s been lots of work going on. So all those efforts are very much appreciated. I also want to recognize and thank AKI who supports me and you on the secretariat for all her work she has done in the months past. Just want to make those small recognitions.\n\nSHN: Just some of the topics I would like to cover today, I would like to go through some of the new projects we are working on, some conversations I’m having at W3C for the source map that I think closes very soon. A lot of work done there. Confirmation of the chairs and editors. And a comment on IETF and a short comment on the invited experts. And then as per usual, there’s always the general overview of the invited experts. I always like to repeat the code of conduct. I think mentioned by RPR and then some documents and some dates.\n\nSHN: So first for recognitions, I want to first bring this up. So CDA has been recognized as a pathfinder for security. I want to congratulate you on this nomination and winning this prestigious recognition. That’s wonderful and it’s great because you’re also so involved with Ecma. Very much pleased to announce that to everybody who didn’t know. And secondly, I want to thank all of you for giving me the opportunity to be recognized and thank you for all of that because I understand that much of my recognition is a result of a lot of work that you all do in TC39. So you play a big role in this nomination. So the energy and professionalism that comes, actually comes from all of you. So thank you for giving me this honour.\n\nSHN: So moving on to a little bit of the new activities. So TC55 has been a conversation that has been going on for some months as many of you are aware. We had lots of to and fro regarding the scope and the work that will continue whether it’s in W3C or move into Ecma. It is moving forward slowly but surely to move the entire WinterCG work into Ecma. The committee that will be formed will be TC55. The scope had a lot of conversation. Over the last weeks we had a number of meetings to really fine tune the scope and address a lot of the comments that came from the ExeCom and other members of TCs and thank you for all the work. LCA and OMT and AKI and others on the call. So forgive me if I’ve forgotten your name or didn’t mention your name. We did a lot of work. The scope looks quite fine. It will be proposed and discussed at the GA coming up in ten days.\n\nSHN: TC56 is another new proposal. It is the first one covering artificial intelligence. It has been proposed by IBM and other members involved Purdue university and Microsoft to just name the first three and others that will be interested. I wanted to bring it to your attention that perhaps organizations that are involved in may find interest and seek to participate. This will be discussed in the GA coming up. We had the initial proposal already at the last ExeCom. It’s good to see new work coming into Ecma.\n\nSHN: I have also mentioned this particular—I don’t have a TC number to it. It hasn’t yet been officially formalized the high-level shading language HLSL is proposed by Microsoft and there is interest from other members. Microsoft just needs a little bit more time to work this through to the management. So they will be proposing this probably in the new year in the Execom and if we haven’t had any others it will be T C57 and those within TC39 find that of interest within your organization. Just to keep you aware.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "get a couple of volunteers to assist with the note taking to polish up the notes as we go",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Before we start, could I get a couple of volunteers to assist with the note taking to polish up the notes as we go."
+    },
+    {
+      "kind": "agreement",
+      "text": "Silence means no objections to approving the previous minutes",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Are there any objections to approving the previous minutes? Silence means no objections."
+    },
+    {
+      "kind": "decision",
+      "text": "previous minutes are approved",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "They are approved."
+    },
+    {
+      "kind": "agreement",
+      "text": "No objections against proceeding with the current agenda",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Are there any objections against proceeding with the current agenda? None? Okay."
+    },
+    {
+      "kind": "decision",
+      "text": "We have adopted the agenda",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "We have adopted the agenda."
+    },
+    {
+      "kind": "agreement",
+      "text": "CDA has been recognized as a pathfinder for security",
+      "person": "Samina Husain",
+      "deadline": "",
+      "source_quote": "So CDA has been recognized as a pathfinder for security."
+    },
+    {
+      "kind": "agreement",
+      "text": "CDA won this prestigious recognition",
+      "person": "Samina Husain",
+      "deadline": "",
+      "source_quote": "I want to congratulate you on this nomination and winning this prestigious recognition."
+    },
+    {
+      "kind": "proposal",
+      "text": "TC55 will be proposed and discussed at the GA coming up in ten days",
+      "person": "Samina Husain",
+      "deadline": "in ten days",
+      "source_quote": "It will be proposed and discussed at the GA coming up in ten days."
+    },
+    {
+      "kind": "proposal",
+      "text": "TC56 is a new proposal covering artificial intelligence proposed by IBM and others",
+      "person": "Samina Husain",
+      "deadline": "",
+      "source_quote": "It is the first one covering artificial intelligence."
+    },
+    {
+      "kind": "proposal",
+      "text": "High-level shading language HLSL is proposed by Microsoft and will be proposed probably in the new year in the Execom",
+      "person": "Samina Husain",
+      "deadline": "probably in the new year",
+      "source_quote": "Microsoft just needs a little bit more time to work this through to the management."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-02-q01",
+      "question": "Who requested volunteers to assist with note taking?",
+      "answers": [
+        "Rob Palmer"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 1476,
+          "end": 1591,
+          "quote": "Before we start, could I get a couple of volunteers to assist with the note taking to polish up the notes as we go."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q02",
+      "question": "Were there any objections to approving the previous minutes?",
+      "answers": [
+        "no",
+        "No",
+        "none"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 7373,
+          "end": 7461,
+          "quote": "Are there any objections to approving the previous minutes? Silence means no objections."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q03",
+      "question": "What was the decision about the previous minutes?",
+      "answers": [
+        "They are approved",
+        "previous minutes are approved"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7462,
+          "end": 7480,
+          "quote": "They are approved."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q04",
+      "question": "Was the current agenda adopted?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7595,
+          "end": 7622,
+          "quote": "We have adopted the agenda."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q05",
+      "question": "Who was recognized as a pathfinder for security?",
+      "answers": [
+        "CDA",
+        "Chris de Almeida"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 8756,
+          "end": 8812,
+          "quote": "So CDA has been recognized as a pathfinder for security."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q06",
+      "question": "When will TC55 be proposed and discussed?",
+      "answers": [
+        "in ten days"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 10223,
+          "end": 10289,
+          "quote": "It will be proposed and discussed at the GA coming up in ten days."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q07",
+      "question": "Is TC56 a proposal related to artificial intelligence?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 10326,
+          "end": 10379,
+          "quote": "It is the first one covering artificial intelligence."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q08",
+      "question": "Has the high-level shading language HLSL been officially formalized as a TC number?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 10807,
+          "end": 10881,
+          "quote": "SHN: I have also mentioned this particular—I don’t have a TC number to it."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q09",
+      "question": "Is there a proposal to discuss HLSL in the current meeting?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 10807,
+          "end": 10881,
+          "quote": "SHN: I have also mentioned this particular—I don’t have a TC number to it."
+        }
+      ]
+    },
+    {
+      "id": "test-02-q10",
+      "question": "Did Samina Husain present slides during the Secretary’s Report?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 7733,
+          "end": 7770,
+          "quote": "- (no proposal) - (no link to slides)"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2024-12/december-02.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2024-12/december-02.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2024-12/december-02.md",
+    "source_sha256": "a3fe0309163d5fa5243c19818ea2518120a8a5b04dc60d66994c15924b343a20",
+    "excerpt_sha256": "2cb103b2056599964bec6fce0276fdc518f613617613619ea0db23f7800cb5aa",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "5446556529c1a36a8aacd5f6e7612a46dfdfbc02584f8a94bb17e2e3df427222",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

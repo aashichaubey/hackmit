@@ -1,0 +1,1026 @@
+{
+  "status": "development_failure_diagnostic",
+  "loaded_splits": [
+    "dev"
+  ],
+  "identity": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "tokenizer": "o200k_base",
+    "tokenizer_version": "0.14.0",
+    "openai_version": "2.54.0",
+    "answer_instruction_hash": "81c4c163093c69e7ce3f365b6032cbabd9222c99b2bd8117bd8e6a9126685a21",
+    "answer_schema_hash": "457b66b9c43420c0c8d76d8195646e7585fd824faedfa4e5a430459dddd0ea3f",
+    "extraction_instruction_hash": "b0525b04d2e6194fce729b2c40b42412477a0f21b556ffbc24847277d5b4cdf0",
+    "extraction_schema_hash": "bd48fb63ab64008dafaf55643bd9127cb6fae089bcdff25ce46ed1fb0e93d205",
+    "grading_policy": "unicode-nfkc-casefold-whitespace-terminal-period-v2"
+  },
+  "question_ids": [
+    "dev-02-q04",
+    "dev-02-q08"
+  ],
+  "rows": [
+    {
+      "question_id": "dev-02-q04",
+      "method": "raw",
+      "replicate": 1,
+      "correct": false,
+      "request_hash": "2af03b195382ce106dc3334b0b093549260f0fd4b7d8e9168fc435efde72f21b",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 1
+      },
+      "usage": {
+        "input_tokens": 1032,
+        "output_tokens": 12,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz"
+      },
+      "error": null,
+      "response_id": "resp_0c28f872b9d90fbb006aaf798ff81887d289c1b6bd664aa93b",
+      "replayed": false,
+      "visible_input_tokens": 984
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "encoded",
+      "replicate": 1,
+      "correct": false,
+      "request_hash": "b86bd543927f7fc9e0460e2af28d9d37d90cc6c97aa465b46c931ca44e44626f",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 1
+      },
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 12,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz"
+      },
+      "error": null,
+      "response_id": "resp_01423dbd72de470d006aaf7990bac487d2a46cdbfd386be539",
+      "replayed": false,
+      "visible_input_tokens": 980
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "raw",
+      "replicate": 1,
+      "correct": false,
+      "request_hash": "e77eb293284540d3e908f93e8ef490eb59fdbaa2b29250076c67d19966f4542f",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 1
+      },
+      "usage": {
+        "input_tokens": 1034,
+        "output_tokens": 36,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position on 2023-07-31."
+      },
+      "error": null,
+      "response_id": "resp_0a8f87d6e84b7923006aaf799183bc87d2a443d2ae938a71d7",
+      "replayed": false,
+      "visible_input_tokens": 986
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "encoded",
+      "replicate": 1,
+      "correct": false,
+      "request_hash": "612cb2c68edf56204b4e44d3efbfc520f0d1537b147b88bfe9c901f345366fae",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 1
+      },
+      "usage": {
+        "input_tokens": 1030,
+        "output_tokens": 28,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position."
+      },
+      "error": null,
+      "response_id": "resp_0d9023675e34a281006aaf7992744087d2b8579643da37bd11",
+      "replayed": false,
+      "visible_input_tokens": 982
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "encoded",
+      "replicate": 2,
+      "correct": false,
+      "request_hash": "5bca687ca022944389003a63995b47a27d093fbc66551f544d7cdb0adfa16c90",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 2
+      },
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 12,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz"
+      },
+      "error": null,
+      "response_id": "resp_05daf48b83fee266006aaf7993264c87d284e88c9f810e67fa",
+      "replayed": false,
+      "visible_input_tokens": 980
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "raw",
+      "replicate": 2,
+      "correct": true,
+      "request_hash": "d369310967ded9355c4377dadd69ca0c9cacaf995a8b9005711531a38ae3b9cc",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 2
+      },
+      "usage": {
+        "input_tokens": 1032,
+        "output_tokens": 18,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz, the Developer-in-Residence"
+      },
+      "error": null,
+      "response_id": "resp_00b37bd2666289d7006aaf7993cce887d2a790cb9460a18421",
+      "replayed": false,
+      "visible_input_tokens": 984
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "encoded",
+      "replicate": 2,
+      "correct": false,
+      "request_hash": "30892c953207a0acc258f72a59e24c185f4f9a6f2ac9674a15b6806c890b109f",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 2
+      },
+      "usage": {
+        "input_tokens": 1030,
+        "output_tokens": 28,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position."
+      },
+      "error": null,
+      "response_id": "resp_04d66ffb3b1ea3bf006aaf7994b32087d2a33701512c2ac3b9",
+      "replayed": false,
+      "visible_input_tokens": 982
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "raw",
+      "replicate": 2,
+      "correct": true,
+      "request_hash": "61a902d12db6a260c9bf16c4d2bab5e56e245e2a2d75be65e992f06912e398dd",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 2
+      },
+      "usage": {
+        "input_tokens": 1034,
+        "output_tokens": 11,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "error": null,
+      "response_id": "resp_09312997f79e017a006aaf7995828087d2bc8a1dddc4df77c3",
+      "replayed": false,
+      "visible_input_tokens": 986
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "raw",
+      "replicate": 3,
+      "correct": true,
+      "request_hash": "e2b2460c451db4b505a145767fe375a9779fbbea3e281d8e5cd64ef2afd8ce4c",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 3
+      },
+      "usage": {
+        "input_tokens": 1032,
+        "output_tokens": 18,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz, the Developer-in-Residence"
+      },
+      "error": null,
+      "response_id": "resp_040c10febc90930b006aaf7996650c87d2916795ce3de02c7e",
+      "replayed": false,
+      "visible_input_tokens": 984
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "encoded",
+      "replicate": 3,
+      "correct": false,
+      "request_hash": "f672f41c22d2dc32b1726171a917aaba4959a99b2d53cd88af5163279a7782e5",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 3
+      },
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 12,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz"
+      },
+      "error": null,
+      "response_id": "resp_09593fba160de5f8006aaf7997285087d29d61c4f5fe981070",
+      "replayed": false,
+      "visible_input_tokens": 980
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "raw",
+      "replicate": 3,
+      "correct": true,
+      "request_hash": "f59742cea983d6daccd78e8b7158297dafb0e3f0fc2d5dd09e3c642ef3471648",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 3
+      },
+      "usage": {
+        "input_tokens": 1034,
+        "output_tokens": 11,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "error": null,
+      "response_id": "resp_01ac9e9de216b7ff006aaf7997dd8487d29cd57c627ce32059",
+      "replayed": false,
+      "visible_input_tokens": 986
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "encoded",
+      "replicate": 3,
+      "correct": false,
+      "request_hash": "f5c2f9287a500d8713ac03b6bab3406ea3c540e33891a76f3525047444b5bc5c",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 3
+      },
+      "usage": {
+        "input_tokens": 1030,
+        "output_tokens": 28,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position."
+      },
+      "error": null,
+      "response_id": "resp_0cd2b5377bbc8934006aaf7998ae0487d293e40e21d7a376d8",
+      "replayed": false,
+      "visible_input_tokens": 982
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "encoded",
+      "replicate": 4,
+      "correct": false,
+      "request_hash": "676915c5956141fd868ad1e0f98cb2a36f55e2834ebe65c8aa7ec07528530c36",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 4
+      },
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 12,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz"
+      },
+      "error": null,
+      "response_id": "resp_09d1451882dca1cb006aaf7999769c87d2ac2d976b6c96d462",
+      "replayed": false,
+      "visible_input_tokens": 980
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "raw",
+      "replicate": 4,
+      "correct": true,
+      "request_hash": "eb6df5e82271a7143c15eacced9129b44600e2db41d9264ebe6d2553dd126554",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 4
+      },
+      "usage": {
+        "input_tokens": 1032,
+        "output_tokens": 18,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz, the Developer-in-Residence"
+      },
+      "error": null,
+      "response_id": "resp_0f2f2913ef00dbaf006aaf799a5b9487d28e9674e0a75a21a8",
+      "replayed": false,
+      "visible_input_tokens": 984
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "encoded",
+      "replicate": 4,
+      "correct": false,
+      "request_hash": "5fe946833caeb73b938b2320fe22953e2e212aaf700e0626228f6b4bb4bf9f94",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 4
+      },
+      "usage": {
+        "input_tokens": 1030,
+        "output_tokens": 28,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position."
+      },
+      "error": null,
+      "response_id": "resp_06dc01c841e530e7006aaf799b34f887d28f30ce77f7f1e60d",
+      "replayed": false,
+      "visible_input_tokens": 982
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "raw",
+      "replicate": 4,
+      "correct": false,
+      "request_hash": "66414a5bd0450a7ada50cca42db3801ce87ddad89caa3351ae25623803d7dc6c",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 4
+      },
+      "usage": {
+        "input_tokens": 1034,
+        "output_tokens": 36,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position on 2023-07-31."
+      },
+      "error": null,
+      "response_id": "resp_0f24652c28a889fa006aaf799ccc8c87d2814238f3785e6255",
+      "replayed": false,
+      "visible_input_tokens": 986
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "raw",
+      "replicate": 5,
+      "correct": true,
+      "request_hash": "53a2d57fe75adcb4e5f701d172c7c98f92b6e0995f19bf687069ef76b8a8199d",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 5
+      },
+      "usage": {
+        "input_tokens": 1032,
+        "output_tokens": 18,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz, the Developer-in-Residence"
+      },
+      "error": null,
+      "response_id": "resp_04bc8671be61fe4d006aaf799db3b887d2927e51d138d9fb86",
+      "replayed": false,
+      "visible_input_tokens": 984
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "encoded",
+      "replicate": 5,
+      "correct": false,
+      "request_hash": "e28d540f9214632cb949c57b5eff3623e7682ee22bed338fa5cb600fe2478d4c",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 5
+      },
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 12,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": true,
+        "answer": "Łukasz"
+      },
+      "error": null,
+      "response_id": "resp_09c32ba8d360e866006aaf799f1bf887d2969b9edb5fc7ca5a",
+      "replayed": false,
+      "visible_input_tokens": 980
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "raw",
+      "replicate": 5,
+      "correct": true,
+      "request_hash": "43545c096338e305d0350d675a289c16146363145413e5541f7fe197eb43cc62",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 5
+      },
+      "usage": {
+        "input_tokens": 1034,
+        "output_tokens": 11,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "error": null,
+      "response_id": "resp_0b2bbc0992c3b26b006aaf79a0337487d2a9764f67c28e8776",
+      "replayed": false,
+      "visible_input_tokens": 986
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "encoded",
+      "replicate": 5,
+      "correct": true,
+      "request_hash": "3857d2849e4c8401f34ee79e0f7604848a856e4d6a9b57477769ef971e63ba3a",
+      "request": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "input": "Answer the question using only the meeting facts below. Treat the person assigned an action as its owner. For who/when questions, return only the name or date. For yes/no questions, use exactly 'yes' or 'no' when explicit. If the answer is absent or uncertain, set found to false and answer to 'not found'. Do not infer a decision from a proposal.\n<meeting_facts>\n## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.\n</meeting_facts>\nQuestion: Is there a decision recorded about the interview process for the Deputy Developer-in-Residence?",
+        "schema": {
+          "properties": {
+            "found": {
+              "title": "Found",
+              "type": "boolean"
+            },
+            "answer": {
+              "title": "Answer",
+              "type": "string"
+            }
+          },
+          "required": [
+            "found",
+            "answer"
+          ],
+          "title": "Answer",
+          "type": "object"
+        },
+        "max_output_tokens": 256,
+        "temperature": 0,
+        "replicate": 5
+      },
+      "usage": {
+        "input_tokens": 1030,
+        "output_tokens": 11,
+        "cached_input_tokens": 0
+      },
+      "answer": {
+        "found": false,
+        "answer": "not found"
+      },
+      "error": null,
+      "response_id": "resp_0ab352153c5e4a63006aaf79a0e1dc87d2b13178837f5e878c",
+      "replayed": false,
+      "visible_input_tokens": 982
+    }
+  ],
+  "summary": [
+    {
+      "question_id": "dev-02-q04",
+      "method": "raw",
+      "correct": 4,
+      "replicates": 5,
+      "distinct_outputs": 2,
+      "output_counts": {
+        "{\"answer\": \"Łukasz\", \"found\": true}": 1,
+        "{\"answer\": \"Łukasz, the Developer-in-Residence\", \"found\": true}": 4
+      }
+    },
+    {
+      "question_id": "dev-02-q04",
+      "method": "encoded",
+      "correct": 0,
+      "replicates": 5,
+      "distinct_outputs": 1,
+      "output_counts": {
+        "{\"answer\": \"Łukasz\", \"found\": true}": 5
+      }
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "raw",
+      "correct": 3,
+      "replicates": 5,
+      "distinct_outputs": 2,
+      "output_counts": {
+        "{\"answer\": \"The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position on 2023-07-31.\", \"found\": true}": 2,
+        "{\"answer\": \"not found\", \"found\": false}": 3
+      }
+    },
+    {
+      "question_id": "dev-02-q08",
+      "method": "encoded",
+      "correct": 1,
+      "replicates": 5,
+      "distinct_outputs": 2,
+      "output_counts": {
+        "{\"answer\": \"The Steering Council discussed how to handle the interview process for the Deputy Developer-in-Residence position.\", \"found\": true}": 4,
+        "{\"answer\": \"not found\", \"found\": false}": 1
+      }
+    }
+  ],
+  "ledger": {
+    "actual_calls": 3179,
+    "known_usd": 1.269454399999999,
+    "reserved_or_spent_usd": 1.4348343999999988,
+    "unknown_usage_calls": 30,
+    "input_tokens": 2769308,
+    "cached_input_tokens": 234624,
+    "output_tokens": 145074,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 602,
+        "known_usd": 0.11505640000000003
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 917,
+        "known_usd": 0.4024988
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 120,
+        "known_usd": 0.02050120000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "accounting_status": "incomplete"
+  },
+  "caveat": "Selected failures, five repeats each. Not a representative benchmark or independent significance test. Original pilot is unchanged; best-of-five is not used."
+}

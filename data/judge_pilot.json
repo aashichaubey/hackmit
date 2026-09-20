@@ -1,0 +1,325 @@
+{
+  "version": "1",
+  "pairs": [
+    {
+      "id": "pilot-01",
+      "field": "owner",
+      "original": "David owns project 1",
+      "encoded": "David owns project 1",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-02",
+      "field": "deadline",
+      "original": "project 2 is due Friday",
+      "encoded": "project 2 is due Monday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-03",
+      "field": "negation",
+      "original": "Maya disagreed with project 3",
+      "encoded": "Maya disagreed with project 3",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-04",
+      "field": "decision",
+      "original": "Lena proposed project 4",
+      "encoded": "Lena decided project 4",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-05",
+      "field": "owner",
+      "original": "Omar owns project 5",
+      "encoded": "Omar owns project 5",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-06",
+      "field": "deadline",
+      "original": "project 6 is due September 25",
+      "encoded": "project 6 is due next Friday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-07",
+      "field": "negation",
+      "original": "Alex disagreed with project 7",
+      "encoded": "Alex disagreed with project 7",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-08",
+      "field": "decision",
+      "original": "Nina proposed project 8",
+      "encoded": "Nina decided project 8",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-09",
+      "field": "owner",
+      "original": "Sam owns project 9",
+      "encoded": "Sam owns project 9",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-10",
+      "field": "deadline",
+      "original": "project 10 is due end of month",
+      "encoded": "project 10 is due Thursday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-11",
+      "field": "negation",
+      "original": "Leo disagreed with project 11",
+      "encoded": "Leo disagreed with project 11",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-12",
+      "field": "decision",
+      "original": "Ana proposed project 12",
+      "encoded": "Ana decided project 12",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-13",
+      "field": "owner",
+      "original": "Ben owns project 13",
+      "encoded": "Ben owns project 13",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-14",
+      "field": "deadline",
+      "original": "project 14 is due Tuesday",
+      "encoded": "project 14 is due Wednesday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-15",
+      "field": "negation",
+      "original": "Noah disagreed with project 15",
+      "encoded": "Noah disagreed with project 15",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-16",
+      "field": "decision",
+      "original": "Eva proposed project 16",
+      "encoded": "Eva decided project 16",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-17",
+      "field": "owner",
+      "original": "Kai owns project 17",
+      "encoded": "Kai owns project 17",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-18",
+      "field": "deadline",
+      "original": "project 18 is due October 2",
+      "encoded": "project 18 is due tomorrow",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-19",
+      "field": "negation",
+      "original": "Jules disagreed with project 19",
+      "encoded": "Jules disagreed with project 19",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-20",
+      "field": "decision",
+      "original": "Amir proposed project 20",
+      "encoded": "Amir decided project 20",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-21",
+      "field": "owner",
+      "original": "Kim owns project 21",
+      "encoded": "Kim owns project 21",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-22",
+      "field": "deadline",
+      "original": "project 22 is due Friday",
+      "encoded": "project 22 is due Monday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-23",
+      "field": "negation",
+      "original": "Paul disagreed with project 23",
+      "encoded": "Paul disagreed with project 23",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-24",
+      "field": "decision",
+      "original": "Uma proposed project 24",
+      "encoded": "Uma decided project 24",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-25",
+      "field": "owner",
+      "original": "Luis owns project 25",
+      "encoded": "Luis owns project 25",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-26",
+      "field": "deadline",
+      "original": "project 26 is due September 25",
+      "encoded": "project 26 is due next Friday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-27",
+      "field": "negation",
+      "original": "Mina disagreed with project 27",
+      "encoded": "Mina disagreed with project 27",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-28",
+      "field": "decision",
+      "original": "Raj proposed project 28",
+      "encoded": "Raj decided project 28",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-29",
+      "field": "owner",
+      "original": "Ella owns project 29",
+      "encoded": "Ella owns project 29",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-30",
+      "field": "deadline",
+      "original": "project 30 is due end of month",
+      "encoded": "project 30 is due Thursday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-31",
+      "field": "negation",
+      "original": "David disagreed with project 31",
+      "encoded": "David disagreed with project 31",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-32",
+      "field": "decision",
+      "original": "John proposed project 32",
+      "encoded": "John decided project 32",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-33",
+      "field": "owner",
+      "original": "Maya owns project 33",
+      "encoded": "Maya owns project 33",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-34",
+      "field": "deadline",
+      "original": "project 34 is due Tuesday",
+      "encoded": "project 34 is due Wednesday",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-35",
+      "field": "negation",
+      "original": "Omar disagreed with project 35",
+      "encoded": "Omar disagreed with project 35",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-36",
+      "field": "decision",
+      "original": "Priya proposed project 36",
+      "encoded": "Priya decided project 36",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-37",
+      "field": "owner",
+      "original": "Alex owns project 37",
+      "encoded": "Alex owns project 37",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-38",
+      "field": "deadline",
+      "original": "project 38 is due October 2",
+      "encoded": "project 38 is due tomorrow",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    },
+    {
+      "id": "pilot-39",
+      "field": "negation",
+      "original": "Sam disagreed with project 39",
+      "encoded": "Sam disagreed with project 39",
+      "preserved": true,
+      "false_accept_if_preserved": false
+    },
+    {
+      "id": "pilot-40",
+      "field": "decision",
+      "original": "Iris proposed project 40",
+      "encoded": "Iris decided project 40",
+      "preserved": false,
+      "false_accept_if_preserved": true
+    }
+  ]
+}

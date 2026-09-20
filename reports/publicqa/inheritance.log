@@ -1,0 +1,60 @@
+{
+  "rows": 8,
+  "ledger": {
+    "actual_calls": 3321,
+    "known_usd": 1.3931311999999982,
+    "reserved_or_spent_usd": 1.5659379999999978,
+    "unknown_usage_calls": 33,
+    "input_tokens": 3018476,
+    "cached_input_tokens": 234624,
+    "output_tokens": 160080,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 671,
+        "known_usd": 0.15622840000000013
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 990,
+        "known_usd": 0.4850036000000002
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 120,
+        "known_usd": 0.02050120000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "accounting_status": "incomplete"
+  }
+}

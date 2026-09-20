@@ -1,0 +1,20 @@
+{
+  "freeze_hash": "20a1ee626ef53e3b4a0f3e424408780301c7dc289296d9a4632094dd760b4f1e",
+  "loaded_splits": [
+    "validation",
+    "test"
+  ],
+  "checks": {
+    "validation": {
+      "language_gate_matches": true,
+      "product_quality_matches": true,
+      "workflow_arithmetic_matches": true
+    },
+    "test": {
+      "language_gate_matches": true,
+      "product_quality_matches": true,
+      "workflow_arithmetic_matches": true
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "frozen_files": true,
+    "manifest": true,
+    "source_provenance": true,
+    "pairs_complete": true,
+    "reconstruction": true,
+    "requests": true,
+    "native_scores": true,
+    "aggregates": true
+  },
+  "all_reproduced": true,
+  "families": 31,
+  "questions": 64,
+  "product_policy_changed_rows": 25,
+  "no_model_calls": true
+}

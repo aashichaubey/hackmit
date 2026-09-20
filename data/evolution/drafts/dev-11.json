@@ -1,0 +1,252 @@
+{
+  "id": "dev-11",
+  "split": "dev",
+  "notes": "# Steering Council Updates for September 2024\n\n## 2024-09-04\n\nDeveloper in Residence Update:\n\n- Release of [Python 3.13rc2](https://www.python.org/downloads/release/python-3130rc2/) with resolved blockers\n- PyREPL fixes nearing completion\n- Security releases pending due to ongoing fixes\n\nCode Review on PRs:\n\n- Discussion on implementing mandatory core developers PR code reviews (starting with new features only)\n\nFunding for Developers in Residence:\n\n- Ongoing discussions about retaining current developers\n- Budget planning for 2024 and 2025\n- Funding for developers in residence appears secure for the near future\n\nCore Developer Sprint in 2025:\n\n- Venue selection dependent on sponsorship\n- Considering reaching out to potential sponsors for additional costs outside of venue\n\nGrants Discussion:\n\n- Proposal to sponsor a developer for specific work\n- Emphasis on clear communication and defining grant parameters\n- Concerns about transparency and community perception if we started a grants program.\n\nCommunity and Governance:\n\n- Discussions on separating technical and community direction roles\n- Need for clarification on Python Software Foundation and core developer responsibilities\n- Consideration of updating [PEP 13](https://peps.python.org/pep-0013/) to reflect evolving governance structure (this must come from the community, not the Steering Council)\n\nDiversity and Inclusion:\n\n- Acknowledgment of frustrations regarding the pace of Diversity, Equity and Inclusion (DEI) initiatives\n- Need to balance technical contributions with community dynamics\n\nNext Steps:\n\n- Continue discussions on grant processes and parameters\n- Follow up on potential sponsorships for core developer sprint\n\n## 2024-09-11\n\nMeeting with Guido and Steering Council (office hours!)\n\nGuido's Focus:\n\n- Guido has been working extensively on [asyncio](https://docs.python.org/3/library/asyncio.html)\n- His priority remains Python contributions\n\nA core dev ban Incident:\n\n- The developer received a 3-month ban, which was unexpected by some\n- The ban was not solely based on a single discussion but considered other factors.\n- Concerns raised about how this affects the reputation of core developers, and the impact on the inclusion and outreach efforts.\n- The Steering Council is following procedures recommended by the Code of Conduct Working Group\n\nDiversity in Hiring:\n\n- Feedback received on a desire to see balanced hiring practices\n- Considering a grants program as an alternative to direct hiring for specific CPython maintenance needs\n- Discussing the legal requirements and ethical considerations around targeted hiring practices\n\nDiscourse Moderation:\n\n- Issues with automatic moderation on Discourse have been identified\n- There's a need to improve communication about moderation actions\n- The Steering Council is considering ways to improve the situation and clarify areas of responsibility\n\nGovernance and Responsibilities:\n\n- Discussions about re-examining areas of authority and responsibility within the Python community\n- Considering separating Code of Conduct responsibilities from the Steering Council. Community must drive this change\n- Exploring ways to improve the feedback mechanism for moderators\n\nVoting Procedures:\n\n- Considering changes to the voting system, potentially moving to [STAR voting](https://discuss.python.org/t/adopting-star-voting/63637)\n- Discussing the process for changing [PEP 13](https://peps.python.org/pep-0013/) and the required support from core developers\n\nNext Steps based on this discussion:\n\n- Propose a plan to improve voting organization\n- Consider changes to [PEP 13](https://peps.python.org/pep-0013/)\n- Clarify which matters require voting and how to conduct votes effectively\n\nMeeting among the Steering Council Members\n\nCode of Conduct (CoC) Issues:\n\n- Questions raised about the ban of a core dev and the responsibility for this action\n- Concerns about harassment related to the CoC decisions\n\nPEP-related Discussions:\n\n- Steering Council to consider [PEP 2](https://peps.python.org/pep-0002/) and inclusion matters, with a focus on PyPI integration\n- Ongoing discussions about adding to the PyPI library and involving more people in the process\n- No updates on [PEP 667](https://peps.python.org/pep-0667/) at this time\n\nCommunity Engagement:\n\n- Suggestions for moderating panel discussions to maintain focus among core developers\n- Discussions on requiring code review during sprints\n\nMentoring and Resources:\n\n- Acknowledgment of the need to develop mentoring resources\n- Plans to determine how to implement mentoring effectively\n\nPyPI Policy:\n\n- Ongoing discussions about PyPI policies\n\nPyREPL:\n\n- Request for an informational PEP for PyREPL\n\n## 2024-09-18\n\nCore Developer Promotion:\n\n- The Steering Council unanimously accepts the community vote to promote Kirill Podoprigora to Core Developer\n- Steering Council to follow up on the promotion process\n\nCore Developer Sprint 2025:\n\n- Considering Arm's proposal to host in Cambridge, UK\n- Pablo to discuss expectations and needs with Diego\n- Visa considerations to be clarified with Arm and PSF\n- Six months advance notice required for invitees\n\nPython 3.13 Release:\n\n- Proceeding with 3.13.0 release as planned, no RC3\n- Two potential blockers under consideration\n- The exec+compile double traceback issue not considered a blocker\n\nPyPI and Packaging Discussions:\n\n- Ongoing conversations about decision-making processes for PyPI and packaging\n- Consideration of creating a working group for cross-cutting concerns\n\nCommunity Concerns:\n\n- Discussions around recent community concerns and responses\n- Acknowledgment of community division and the need for careful communication\n- Consideration of proposing changes to PEP-13 to clarify Steering Council roles\n\nUpcoming Sprint:\n\n- Plans for in-person discussions at the Bellevue sprint\n- Suggestion to have separate rooms for sensitive topics to accommodate all participants\n\n## 2024-09-23\n\nSteering Council met informally at the Core Dev Sprint in Bellevue, WA (USA)",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Pablo to discuss expectations and needs with Diego",
+      "person": "Pablo",
+      "deadline": "",
+      "source_quote": "Pablo to discuss expectations and needs with Diego"
+    },
+    {
+      "kind": "proposal",
+      "text": "Proposal to sponsor a developer for specific work",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Proposal to sponsor a developer for specific work"
+    },
+    {
+      "kind": "proposal",
+      "text": "Considering changes to PEP 13",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Consider changes to [PEP 13](https://peps.python.org/pep-0013/)"
+    },
+    {
+      "kind": "decision",
+      "text": "The Steering Council unanimously accepts the community vote to promote Kirill Podoprigora to Core Developer",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The Steering Council unanimously accepts the community vote to promote Kirill Podoprigora to Core Developer"
+    },
+    {
+      "kind": "agreement",
+      "text": "Funding for developers in residence appears secure for the near future",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Funding for developers in residence appears secure for the near future"
+    },
+    {
+      "kind": "disagreement",
+      "text": "Concerns about transparency and community perception if we started a grants program",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Concerns about transparency and community perception if we started a grants program."
+    },
+    {
+      "kind": "action",
+      "text": "Continue discussions on grant processes and parameters",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Continue discussions on grant processes and parameters"
+    },
+    {
+      "kind": "action",
+      "text": "Follow up on potential sponsorships for core developer sprint",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Follow up on potential sponsorships for core developer sprint"
+    },
+    {
+      "kind": "proposal",
+      "text": "Considering a grants program as an alternative to direct hiring for specific CPython maintenance needs",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Considering a grants program as an alternative to direct hiring for specific CPython maintenance needs"
+    },
+    {
+      "kind": "decision",
+      "text": "Proceeding with 3.13.0 release as planned, no RC3",
+      "person": "",
+      "deadline": "",
+      "source_quote": "Proceeding with 3.13.0 release as planned, no RC3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-11-q01",
+      "question": "Who is assigned to discuss expectations and needs with Diego?",
+      "answers": [
+        "Pablo"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 4992,
+          "end": 5042,
+          "quote": "Pablo to discuss expectations and needs with Diego"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q02",
+      "question": "What proposal was made regarding developer sponsorship?",
+      "answers": [
+        "Proposal to sponsor a developer for specific work"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 806,
+          "end": 855,
+          "quote": "Proposal to sponsor a developer for specific work"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q03",
+      "question": "Did the Steering Council accept the community vote to promote Kirill Podoprigora to Core Developer?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 4741,
+          "end": 4848,
+          "quote": "The Steering Council unanimously accepts the community vote to promote Kirill Podoprigora to Core Developer"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q04",
+      "question": "Is funding for developers in residence currently considered secure?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 549,
+          "end": 619,
+          "quote": "Funding for developers in residence appears secure for the near future"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q05",
+      "question": "Was there concern about transparency if a grants program started?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 922,
+          "end": 1006,
+          "quote": "Concerns about transparency and community perception if we started a grants program."
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q06",
+      "question": "What is the decision about the Python 3.13.0 release?",
+      "answers": [
+        "Proceeding with 3.13.0 release as planned, no RC3"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5173,
+          "end": 5222,
+          "quote": "Proceeding with 3.13.0 release as planned, no RC3"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q07",
+      "question": "Is there a plan to continue discussions on grant processes?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1583,
+          "end": 1637,
+          "quote": "Continue discussions on grant processes and parameters"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q08",
+      "question": "Has the Steering Council decided to change PEP 13?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3585,
+          "end": 3648,
+          "quote": "Consider changes to [PEP 13](https://peps.python.org/pep-0013/)"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q09",
+      "question": "Who is responsible for following up on potential sponsorships for the core developer sprint?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1640,
+          "end": 1701,
+          "quote": "Follow up on potential sponsorships for core developer sprint"
+        }
+      ]
+    },
+    {
+      "id": "dev-11-q10",
+      "question": "Is there a decision on the venue for the Core Developer Sprint in 2025?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 655,
+          "end": 695,
+          "quote": "Venue selection dependent on sponsorship"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2024-09-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-09-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-09-steering-council-update.md",
+    "source_sha256": "db1074f2ccba2b0985b385889d0813d0cda6dacd4b153258c42a900c06095631",
+    "excerpt_sha256": "53b0ab61c7990a1b6732e611313d37564d1ae27a6be15bec21d7db1e10d0d12f",
+    "scope": "supplied excerpt only",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "7e095509555198a12aba5816df6620fe6c67c60587070ecb73037773683345d7",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

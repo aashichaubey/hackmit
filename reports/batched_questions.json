@@ -1,0 +1,1267 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "condition": "all four bundled questions per meeting in one structured-output call; raw notes; exploratory",
+  "instruction": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.",
+  "rows": [
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. John will finish the API by Thursday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "John"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. David will finish the API by Friday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Friday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. David will finish the API by Thursday. Maya disagreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who disagreed with the launch plan?",
+      "input_text_tokens": 140,
+      "usage": {
+        "input_tokens": 227,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nSarah decided the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.\n</meeting>\n1. Who owns the API?\n2. When is the API due?\n3. Was the launch plan decided?\n4. Who agreed with the launch plan?",
+      "input_text_tokens": 138,
+      "usage": {
+        "input_tokens": 225,
+        "output_tokens": 39
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "David"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nNina will review the budget. No deadline was set. Omar proposed the audit.\n</meeting>\n1. Who will review the budget?\n2. When is the budget review due?\n3. Was the audit decided?\n4. Who proposed the audit?",
+      "input_text_tokens": 133,
+      "usage": {
+        "input_tokens": 220,
+        "output_tokens": 42
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Nina"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Omar"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nAlex may take the migration, but nobody confirmed an owner. Priya decided to run the demo.\n</meeting>\n1. Who owns the migration?\n2. Was the demo decided?\n3. When is the demo due?\n4. What was decided?",
+      "input_text_tokens": 133,
+      "usage": {
+        "input_tokens": 220,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nRuth proposed the launch plan 11. Leo will audit the dashboard by Thursday. Zoe agreed with the launch plan 11.\n</meeting>\n1. Who owns audit the dashboard?\n2. When is audit the dashboard due?\n3. Was the launch plan 11 decided?\n4. Who agreed with the launch plan 11?",
+      "input_text_tokens": 149,
+      "usage": {
+        "input_tokens": 236,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Leo"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Zoe"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nJules decided the launch plan 12. Ana will plan the workshop by Friday. Paul agreed with the launch plan 12.\n</meeting>\n1. Who owns plan the workshop?\n2. When is plan the workshop due?\n3. Was the launch plan 12 decided?\n4. Who agreed with the launch plan 12?",
+      "input_text_tokens": 149,
+      "usage": {
+        "input_tokens": 236,
+        "output_tokens": 38
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Ana"
+        },
+        {
+          "found": true,
+          "answer": "Friday"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Paul"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nAmir proposed the launch plan 13. Ben will verify the metrics by Monday. Uma disagreed with the launch plan 13.\n</meeting>\n1. Who owns verify the metrics?\n2. When is verify the metrics due?\n3. Was the launch plan 13 decided?\n4. Who disagreed with the launch plan 13?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 39
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Ben"
+        },
+        {
+          "found": true,
+          "answer": "Monday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Uma"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nKim decided the launch plan 14. Tara will design the landing page by Tuesday. Luis agreed with the launch plan 14.\n</meeting>\n1. Who owns design the landing page?\n2. When is design the landing page due?\n3. Was the launch plan 14 decided?\n4. Who agreed with the launch plan 14?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 39
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Tara"
+        },
+        {
+          "found": true,
+          "answer": "Tuesday"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Luis"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nZoe proposed the launch plan 15. Noah will book the venue by Wednesday. Jo agreed with the launch plan 15.\n</meeting>\n1. Who owns book the venue?\n2. When is book the venue due?\n3. Was the launch plan 15 decided?\n4. Who agreed with the launch plan 15?",
+      "input_text_tokens": 149,
+      "usage": {
+        "input_tokens": 236,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Noah"
+        },
+        {
+          "found": true,
+          "answer": "Wednesday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Jo"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nPaul decided the launch plan 16. Eva will ship the prototype by September 25. Mina disagreed with the launch plan 16.\n</meeting>\n1. Who owns ship the prototype?\n2. When is ship the prototype due?\n3. Was the launch plan 16 decided?\n4. Who disagreed with the launch plan 16?",
+      "input_text_tokens": 152,
+      "usage": {
+        "input_tokens": 239,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Eva"
+        },
+        {
+          "found": true,
+          "answer": "September 25"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Mina"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nUma proposed the launch plan 17. Kai will clean the dataset by next Friday. Raj agreed with the launch plan 17.\n</meeting>\n1. Who owns clean the dataset?\n2. When is clean the dataset due?\n3. Was the launch plan 17 decided?\n4. Who agreed with the launch plan 17?",
+      "input_text_tokens": 149,
+      "usage": {
+        "input_tokens": 236,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Kai"
+        },
+        {
+          "found": true,
+          "answer": "next Friday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Raj"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nLuis decided the launch plan 18. Ruth will run the survey by October 2. Ella agreed with the launch plan 18.\n</meeting>\n1. Who owns run the survey?\n2. When is run the survey due?\n3. Was the launch plan 18 decided?\n4. Who agreed with the launch plan 18?",
+      "input_text_tokens": 150,
+      "usage": {
+        "input_tokens": 237,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Ruth"
+        },
+        {
+          "found": true,
+          "answer": "October 2"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Ella"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nJo proposed the launch plan 19. Jules will approve the copy by tomorrow. Theo disagreed with the launch plan 19.\n</meeting>\n1. Who owns approve the copy?\n2. When is approve the copy due?\n3. Was the launch plan 19 decided?\n4. Who disagreed with the launch plan 19?",
+      "input_text_tokens": 150,
+      "usage": {
+        "input_tokens": 237,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Jules"
+        },
+        {
+          "found": true,
+          "answer": "tomorrow"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Theo"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nMina decided the launch plan 20. Amir will schedule the demo by end of month. David agreed with the launch plan 20.\n</meeting>\n1. Who owns schedule the demo?\n2. When is schedule the demo due?\n3. Was the launch plan 20 decided?\n4. Who agreed with the launch plan 20?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Amir"
+        },
+        {
+          "found": true,
+          "answer": "end of month"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "David"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nRaj proposed the launch plan 21. Kim will review the contract by Thursday. John agreed with the launch plan 21.\n</meeting>\n1. Who owns review the contract?\n2. When is review the contract due?\n3. Was the launch plan 21 decided?\n4. Who agreed with the launch plan 21?",
+      "input_text_tokens": 148,
+      "usage": {
+        "input_tokens": 235,
+        "output_tokens": 39
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Kim"
+        },
+        {
+          "found": true,
+          "answer": "Thursday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "John"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nElla decided the launch plan 22. Zoe will publish the guide by Friday. Maya disagreed with the launch plan 22.\n</meeting>\n1. Who owns publish the guide?\n2. When is publish the guide due?\n3. Was the launch plan 22 decided?\n4. Who disagreed with the launch plan 22?",
+      "input_text_tokens": 150,
+      "usage": {
+        "input_tokens": 237,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Zoe"
+        },
+        {
+          "found": true,
+          "answer": "Friday"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Maya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nTheo proposed the launch plan 23. Paul will test the payment flow by Monday. Lena agreed with the launch plan 23.\n</meeting>\n1. Who owns test the payment flow?\n2. When is test the payment flow due?\n3. Was the launch plan 23 decided?\n4. Who agreed with the launch plan 23?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Paul"
+        },
+        {
+          "found": true,
+          "answer": "Monday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Lena"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nDavid decided the launch plan 24. Uma will update the roadmap by Tuesday. Omar agreed with the launch plan 24.\n</meeting>\n1. Who owns update the roadmap?\n2. When is update the roadmap due?\n3. Was the launch plan 24 decided?\n4. Who agreed with the launch plan 24?",
+      "input_text_tokens": 148,
+      "usage": {
+        "input_tokens": 235,
+        "output_tokens": 39
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Uma"
+        },
+        {
+          "found": true,
+          "answer": "Tuesday"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Omar"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nJohn proposed the launch plan 25. Luis will prepare the report by Wednesday. Priya disagreed with the launch plan 25.\n</meeting>\n1. Who owns prepare the report?\n2. When is prepare the report due?\n3. Was the launch plan 25 decided?\n4. Who disagreed with the launch plan 25?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Luis"
+        },
+        {
+          "found": true,
+          "answer": "Wednesday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Priya"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nMaya decided the launch plan 26. Jo will inspect the logs by September 25. Alex agreed with the launch plan 26.\n</meeting>\n1. Who owns inspect the logs?\n2. When is inspect the logs due?\n3. Was the launch plan 26 decided?\n4. Who agreed with the launch plan 26?",
+      "input_text_tokens": 151,
+      "usage": {
+        "input_tokens": 238,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Jo"
+        },
+        {
+          "found": true,
+          "answer": "September 25"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Alex"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nLena proposed the launch plan 27. Mina will finish the integration by next Friday. Nina agreed with the launch plan 27.\n</meeting>\n1. Who owns finish the integration?\n2. When is finish the integration due?\n3. Was the launch plan 27 decided?\n4. Who agreed with the launch plan 27?",
+      "input_text_tokens": 150,
+      "usage": {
+        "input_tokens": 237,
+        "output_tokens": 42
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Mina"
+        },
+        {
+          "found": true,
+          "answer": "next Friday"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Nina"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nOmar decided the launch plan 28. Raj will draft the email by October 2. Sam disagreed with the launch plan 28.\n</meeting>\n1. Who owns draft the email?\n2. When is draft the email due?\n3. Was the launch plan 28 decided?\n4. Who disagreed with the launch plan 28?",
+      "input_text_tokens": 153,
+      "usage": {
+        "input_tokens": 240,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Raj"
+        },
+        {
+          "found": true,
+          "answer": "October 2"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Sam"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nPriya proposed the launch plan 29. Ella will review the mockups by tomorrow. Iris agreed with the launch plan 29.\n</meeting>\n1. Who owns review the mockups?\n2. When is review the mockups due?\n3. Was the launch plan 29 decided?\n4. Who agreed with the launch plan 29?",
+      "input_text_tokens": 152,
+      "usage": {
+        "input_tokens": 239,
+        "output_tokens": 41
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Ella"
+        },
+        {
+          "found": true,
+          "answer": "tomorrow"
+        },
+        {
+          "found": false,
+          "answer": "not found"
+        },
+        {
+          "found": true,
+          "answer": "Iris"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "prompt": "Answer each question using only the meeting notes. Treat the person assigned an action as its owner. Return only the name or date for who/when questions, and exactly yes or no when explicit. For absent or uncertain facts, set found=false and answer=\"not found\"; lack of a decision is not an explicit no. Do not infer a decision from a proposal. Return answers in question order.\n<meeting>\nAlex decided the launch plan 30. Theo will set up the server by end of month. Leo agreed with the launch plan 30.\n</meeting>\n1. Who owns set up the server?\n2. When is set up the server due?\n3. Was the launch plan 30 decided?\n4. Who agreed with the launch plan 30?",
+      "input_text_tokens": 153,
+      "usage": {
+        "input_tokens": 240,
+        "output_tokens": 40
+      },
+      "answers": [
+        {
+          "found": true,
+          "answer": "Theo"
+        },
+        {
+          "found": true,
+          "answer": "end of month"
+        },
+        {
+          "found": true,
+          "answer": "yes"
+        },
+        {
+          "found": true,
+          "answer": "Leo"
+        }
+      ],
+      "correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "answer_count_correct": true,
+      "baseline_correctness": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "error": null
+    }
+  ]
+}

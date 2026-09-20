@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "splits": {
+    "dev": {
+      "sha256": "1d29e9b557af7294b2ae58abb10f6c35d89e90d35cf5f49da2a458b14d3cacdb",
+      "cases": 12,
+      "questions": 120,
+      "source_ids": [
+        "python/steering-council/updates/2023-06-steering-council-update.md",
+        "python/steering-council/updates/2023-07-steering-council-update.md",
+        "python/steering-council/updates/2023-08-steering-council-update.md",
+        "python/steering-council/updates/2023-09-steering-council-update.md",
+        "python/steering-council/updates/2023-10-steering-council-update.md",
+        "python/steering-council/updates/2023-11,12-steering-council-update.md",
+        "python/steering-council/updates/2024-01,02,03-steering-council-update.md",
+        "python/steering-council/updates/2024-04,05,06-steering-council-update.md",
+        "python/steering-council/updates/2024-07-steering-council-update.md",
+        "python/steering-council/updates/2024-08-steering-council-update.md",
+        "python/steering-council/updates/2024-09-steering-council-update.md",
+        "python/steering-council/updates/2024-10-steering-council-update.md"
+      ],
+      "series_ids": [
+        "python/steering-council"
+      ]
+    },
+    "validation": {
+      "sha256": "8a8e87e15eaf9c9fd64c0d972c0635d46adc374755fe215d204ef8352e628206",
+      "cases": 12,
+      "questions": 120,
+      "source_ids": [
+        "rust-lang/lang-team/design-meeting-minutes/2022-03-23-async-fn-and-rpitit.md",
+        "rust-lang/lang-team/design-meeting-minutes/2022-03-30-lint-policy.md",
+        "rust-lang/lang-team/design-meeting-minutes/2022-03-30-lints.md",
+        "rust-lang/lang-team/design-meeting-minutes/2022-04-12-implied-bounds-and-perfect-derive.md",
+        "rust-lang/lang-team/design-meeting-minutes/2022-08-31-gat-stabilization.md",
+        "rust-lang/lang-team/design-meeting-minutes/2022-10-05-provenance.md",
+        "rust-lang/lang-team/design-meeting-minutes/2022-11-25-contracts.md",
+        "rust-lang/lang-team/design-meeting-minutes/2023-01-08-lang-team-questions-around-contracts.md",
+        "rust-lang/lang-team/design-meeting-minutes/2023-03-15-temporary-lifetimes.md",
+        "rust-lang/lang-team/design-meeting-minutes/2023-05-17-rpitit-stabilization-schedule.md",
+        "rust-lang/lang-team/design-meeting-minutes/2023-05-24-return-type-notation.md",
+        "rust-lang/lang-team/design-meeting-minutes/2023-05-31-TAIT-stabilization.md"
+      ],
+      "series_ids": [
+        "rust-lang/lang-team"
+      ]
+    },
+    "test": {
+      "sha256": "d2ee8e85753bac0ded7d2bd1f35e40c8d70d25222cadb48637876fa31367c7b0",
+      "cases": 12,
+      "questions": 120,
+      "source_ids": [
+        "tc39/notes/meetings/2024-10/october-08.md",
+        "tc39/notes/meetings/2024-12/december-02.md",
+        "tc39/notes/meetings/2025-02/february-18.md",
+        "tc39/notes/meetings/2025-04/april-14.md",
+        "tc39/notes/meetings/2025-05/may-28.md",
+        "tc39/notes/meetings/2025-07/july-28.md",
+        "tc39/notes/meetings/2025-09/september-22.md",
+        "tc39/notes/meetings/2025-11/november-18.md",
+        "tc39/notes/meetings/2026-01/january-20.md",
+        "tc39/notes/meetings/2026-03/march-10.md",
+        "tc39/notes/meetings/2026-05/may-19.md",
+        "tc39/notes/meetings/2026-07/july-20.md"
+      ],
+      "series_ids": [
+        "tc39/notes"
+      ]
+    }
+  }
+}

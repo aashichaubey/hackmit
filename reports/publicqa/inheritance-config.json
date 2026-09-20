@@ -1,0 +1,39 @@
+{
+  "grammar": {
+    "version": 1,
+    "policy": "consecutive_speaker_inheritance",
+    "continuation": "\u21b3",
+    "first_and_changed_speakers": "verbatim",
+    "utterance_policy": "all_characters_unchanged"
+  },
+  "case_ids": [
+    "MeeQA:88dc16909004c36cc438",
+    "MeeQA:4e92c19c3c0a66b07473",
+    "MeeQA:5ce50fb2d7e083d23017",
+    "MeeQA:449bd704fba5685849ec"
+  ],
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "compiler_sha256": "a1a66896f19da4554d435a6fd952d30092773481b32bc9fd67dfe3cce3cd6e5c",
+  "prompt_hash": "fcbdad710ac103125496b5a69f7cc7467406ca22d13bfdf308c1f418975dcd75",
+  "output_limit": 2048,
+  "purpose": "four-question development diagnostic, not qualification"
+}

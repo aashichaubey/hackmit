@@ -1,0 +1,253 @@
+{
+  "id": "test-08",
+  "split": "test",
+  "notes": "# 111th TC39 Meeting\n\nDay One—18 November 2025\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |----------------------|--------------|--------------------| | Waldemar Horwat | WH | Invited Expert | | Richard Gibson | RGN | Agoric | | Josh Goldberg | JKG | Invited Expert | | Ruben Bridgewater | RBR | Invited Expert | | Dmitry Makhnev | DJM | JetBrains | | Frank Yung-Fong Tang | FYT | Google | | Anthony Fu | AFU | Vercel | | James M Snell | JSL | Cloudflare | | Daniel Minor | DLM | Mozilla | | Jonathan Kuperman | JKP | Bloomberg | | Christian Ulbrich | CHU | Zalari | | Marina Aisa | AIS | Apple | | Martin Alvarez | MAE | Huawei | | Ashley Claymore | ACE | Bloomberg | | Andreu Botella | ABO | Igalia | | Devin Rousso | DRO | Invited Expert | | Jake Archibald | JAD | Mozilla | | Lea Verou | LVU | OpenJS | | Mathieu Hofman | MAH | Agoric | | Caio Lima | CLA | Igalia | | Yusuke Suzuki | YSZ | Apple | | Chip Morningstar | CM | Consensys | | Aki Rose Braun | AKI | Ecma International | | Philip Chimento | PFC | Igalia | | Eemeli Aro | EAO | Mozilla | | Mikhail Barash | MBH | Univ. of Bergen | | Keith Miller | KM | Apple | | Ross Kirsling | RKG | Sony | | Chris de Almeida | CDA | IBM | | Nicolò Ribaudo | NRO | Igalia | | Ron Buckton | RBN | F5 | | Shane F Carr | SFC | Google | | Istvan Sebestyen | IS | Ecma | | Daniel Rosenwasser | DRR | Microsoft | | Stephen Hicks | SHS | Google | | Ujjwal Sharma | USA | Igalia | | Guy Bedford | GB | Cloudflare | | Chengzhong Wu | CZW | Bloomberg | | Gus Caplan | GCL | Deno | | Jordan Harband | JHD | Socket | | Justin Ridgewell | JRL | Google | | Kevin Gibbons | KG | F5 | | Michael Ficarra | MF | F5 | | Mark S. Miller | MM | Agoric | | Olivier Flückiger | OFR | Google | | Rob Palmer | RPR | Bloomberg |\n\n## Opening & Welcome\n\nPresenter: Rob Palmer (RPR)\n\nRPR: All right, we’re about to begin. Logged in on the Zoom. Let me bring up my slides. Okay, let’s see, here we go. All right, welcome, everyone, to the 111th meeting of TC39 here at Bloomberg in Tokyo, yay! So a lot of energy in this room. And in particular, welcome to everyone who has flown here. I think people have come from far away, and in particular, I know we’ve got a number of first-time meeting participants, so special welcome to you all. So yeah, we’re here in Tokyo. It seems a particularly attractive destination, and I’ll say that because we were here two years ago, we had 25 people. This time we’ve had I think 43 sign-ups, so that is great, and being in person is a key part of having that as an element of the committee and is a key part for ensuring good relations and ensuring we all understand each other, so I have some fun facts here about Tokyo. Other than it being the largest metropolitan area on earth, the home of modern sushi, and there’s very good reasons for why the Tokyo tower is painted orange, to be safe. Where is the cat bus? It is—I’m guessing it will be related to the studio jibly park or museum. Chris is messing we many. He told me it was pronounced jibly, and I don’t know if gibly or jibly. It’s the ever ending… Okay, it is jibly, thank you. All right, so to help run these meetings, we have the chair group, so that consists of myself, I’m Rob. We have Chris here, and remotely we have Ujjwal. We’re assisted by our facilitators Justin, Daniel here, Dan Minor, and Daniel remotely. I should also say a few things about our facilities here today in Bloomberg for, if you need the restroom, the men’s is down the hallway and there’s a sign pointing to the left, and the women’s is here just by the meeting room exit there. If you do need to take a call or you’d like some audio privacy, the room over there is not technically reserved for us, but if you see it’s empty, please feel free to use it. And then in case of any kind of emergency, the fire exits you’ll see are lit up with green signs over there and over there. Yeah, I think that’s it. And please do take a look at the views out the window. It’s particularly good. Today everyone here obviously has signed in as registered to be in person, but please make sure you also sign in for the Zoom video feed as well. The reason is that that helps with all of our records. We have a code of conduct, which you can find links from the TC39.es repo. Please do have a read of it, and also remember it’s—we’re not trying to follow it to the letter. We’re also trying to respect the spirit of the code of conduct as well. Chris sums it up as be excellent to each other, which I think is a good way to live. Our daily schedule means that the meeting begins at 10, now, and will end at 5 p.m. each day, apart from Thursday, when we will end a little bit earlier at 4 p.m. One thing to note about this—our timings this week is that we have a significant amount of agenda overflow. People seem to have been very keen to bring a lot of work to this meeting, so I appreciate that. And the Chairs are going to try and make sure we get through as much of a as possible. Wherever we finish before the time box, that will always be appreciated, and one of the ways that you can help to think, when it comes to the discussion phase, to try and be mindful of how long your contribution to that is taking, and, for example, whether that level of discussion is the appropriate thing to be focusing on at this—at whatever stage a given proposal is. So we’re really going to do our best to keep to time. So that also means that possibility for continuations, as we have done in previous meetings, is unlikely. We shall see. But, yeah, there’s significantly more on the agenda than capacity we have. In terms of events, I guess a number of people have already been to prior events up to this, so we’ve had TPAC and JS con at the weekend and the TG5 meeting in this room yesterday, which was lent. For the coming week, on Wednesday, we have our social dinner. Everyone who has registered for—as an ECMA member, as a regular delegate here, is entitled to come. Invited experts and so on. I’m just making a differentiation between the observers as well. And please let me know if you are not coming, because the restaurant needs to be precise on numbers. So that will be on Wednesday from 6:30. And you can see there on the map it’s not too far away. In terms of meeting participation and how we work, we have various tools to ensure good communications. The main pool here is TCQ, and that tool has been recently refreshed by Christian here. Thank you so much. It’s one of our essential tools that we’re very proud of and helps us keep the discussion on track. So you’ll see once the agenda is running, when we’re participating, this is the view that you’ll see for the current topic. And you’ll see that there are four buttons you can use to participate in the discussion. Try to keep things linear and orderly, so one at a time. If you are speaking, if you are on the queue and it’s your turn, you’ll see this button, I’m done speaking. We—chairs normally ask people not to use the button. This is the button of do not push this. Oh, okay, all right. Well, there is—TCQ has been updated to remove the button, so temptation has been removed. Thank you, Christian. I assume that was you. And when it comes to those buttons, normally you want to prefer the buttons on the left, so new topic is the most natural and orderly way of adding new topics. If you do want to reply, then you can use discuss current topic. Likewise, with slightly more urgency like clarify something, we treat that with higher priority. And the highest priority one, the red, point of order, is for emergency situations such as note taking has broken, such as the internet is down or some kind of other high priority issue that you want to bring to the Chair’s attention. We also have Matrix for asynchronous and realtime chat. Links to this are on the reflector invite, and the main channel you will want to be joining is TC39 delegates. That is the primary place where work gets done. And then the secondary channel is the Temporal dead zone, which is where work does not get done, and you might see some off topic things. As part of ECMA, we have an IPR policy. If you’re part of an ECMA member company or member organization, and you are a delegate, you will have already signed the appropriate materials there. Likewise, people who have completed the invited expert process, you are equally covered by the forms that you will have signed as part of that. For anyone else, we ask that you do not speak. And please let us know if you’re not in that category and have not already signed the RTFG form, please do so. So that normally applies to observers. All right. We take notes of everything that happens in the meeting. This is transcribed live. We have a transcriptionist. I should check, is the transcriptionist on the call?\n\n>> Yes, I’m here.",
+  "facts": [
+    {
+      "kind": "agreement",
+      "text": "We have the chair group, so that consists of myself, I’m Rob. We have Chris here, and remotely we have Ujjwal.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "All right, so to help run these meetings, we have the chair group, so that consists of myself, I’m Rob."
+    },
+    {
+      "kind": "agreement",
+      "text": "We’re assisted by our facilitators Justin, Daniel here, Dan Minor, and Daniel remotely.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "We’re assisted by our facilitators Justin, Daniel here, Dan Minor, and Daniel remotely."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please make sure you also sign in for the Zoom video feed as well.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Today everyone here obviously has signed in as registered to be in person, but please make sure you also sign in for the Zoom video feed as well."
+    },
+    {
+      "kind": "agreement",
+      "text": "We have a code of conduct, which you can find links from the TC39.es repo.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "We have a code of conduct, which you can find links from the TC39.es repo."
+    },
+    {
+      "kind": "proposal",
+      "text": "Please do have a read of it, and also remember it’s—we’re not trying to follow it to the letter. We’re also trying to respect the spirit of the code of conduct as well.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Please do have a read of it, and also remember it’s—we’re not trying to follow it to the letter."
+    },
+    {
+      "kind": "agreement",
+      "text": "Chris sums it up as be excellent to each other.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Chris sums it up as be excellent to each other, which I think is a good way to live."
+    },
+    {
+      "kind": "agreement",
+      "text": "Our daily schedule means that the meeting begins at 10, now, and will end at 5 p.m. each day, apart from Thursday, when we will end a little bit earlier at 4 p.m.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Our daily schedule means that the meeting begins at 10, now, and will end at 5 p.m."
+    },
+    {
+      "kind": "agreement",
+      "text": "People seem to have been very keen to bring a lot of work to this meeting, so I appreciate that.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "People seem to have been very keen to bring a lot of work to this meeting, so I appreciate that."
+    },
+    {
+      "kind": "proposal",
+      "text": "Try to keep things linear and orderly, so one at a time.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Try to keep things linear and orderly, so one at a time."
+    },
+    {
+      "kind": "agreement",
+      "text": "TCQ has been updated to remove the button, so temptation has been removed.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "Well, there is—TCQ has been updated to remove the button, so temptation has been removed."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-08-q01",
+      "question": "Who consists of the chair group?",
+      "answers": [
+        "myself, I’m Rob. We have Chris here, and remotely we have Ujjwal"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 3107,
+          "end": 3210,
+          "quote": "All right, so to help run these meetings, we have the chair group, so that consists of myself, I’m Rob."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q02",
+      "question": "Who assists the chair group?",
+      "answers": [
+        "Justin, Daniel here, Dan Minor, and Daniel remotely"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 3260,
+          "end": 3347,
+          "quote": "We’re assisted by our facilitators Justin, Daniel here, Dan Minor, and Daniel remotely."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q03",
+      "question": "Are attendees required to sign in for the Zoom video feed?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 3990,
+          "end": 4135,
+          "quote": "Today everyone here obviously has signed in as registered to be in person, but please make sure you also sign in for the Zoom video feed as well."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q04",
+      "question": "Where can the code of conduct be found?",
+      "answers": [
+        "links from the TC39.es repo"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4191,
+          "end": 4265,
+          "quote": "We have a code of conduct, which you can find links from the TC39.es repo."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q05",
+      "question": "Is the code of conduct to be followed to the letter?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 4266,
+          "end": 4362,
+          "quote": "Please do have a read of it, and also remember it’s—we’re not trying to follow it to the letter."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q06",
+      "question": "What is the daily schedule for the meeting?",
+      "answers": [
+        "meeting begins at 10, now, and will end at 5 p.m. each day, apart from Thursday, when we will end a little bit earlier at 4 p.m."
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4520,
+          "end": 4603,
+          "quote": "Our daily schedule means that the meeting begins at 10, now, and will end at 5 p.m."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q07",
+      "question": "Is there a button in TCQ to indicate 'I’m done speaking'?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7047,
+          "end": 7136,
+          "quote": "Well, there is—TCQ has been updated to remove the button, so temptation has been removed."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q08",
+      "question": "Is the meeting expected to have agenda overflow?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4791,
+          "end": 4887,
+          "quote": "People seem to have been very keen to bring a lot of work to this meeting, so I appreciate that."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q09",
+      "question": "Is there a social dinner planned during the meeting week?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 5793,
+          "end": 5854,
+          "quote": "For the coming week, on Wednesday, we have our social dinner."
+        }
+      ]
+    },
+    {
+      "id": "test-08-q10",
+      "question": "Is there a mention of a transcriptionist being present?",
+      "answers": [
+        "Yes, I’m here."
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 8800,
+          "end": 8817,
+          "quote": ">> Yes, I’m here."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2025-11/november-18.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-11/november-18.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-11/november-18.md",
+    "source_sha256": "3e99ba110aabbc9c69f756ac7716b17e63d4d259ebd4b6096cf319ba08e00c9b",
+    "excerpt_sha256": "68771dee25463c13c36940e720b3cfdb61d92f88f20bf315f3811e6898961323",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "10cfca9a00c07db052724106a998fc60f78eb72f2169c3df4ee1ac196eaa0208",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

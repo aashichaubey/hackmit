@@ -1,0 +1,66 @@
+{
+  "study": "local_only_speaker_blocks",
+  "grammar": {
+    "version": 1,
+    "style": "consecutive_speaker_indented_list",
+    "speaker_headers": "verbatim",
+    "continuation": "  -",
+    "utterances": "all_characters_unchanged",
+    "legend": null
+  },
+  "grammar_id": "46613de0dd0a8babf81ac46d20eee91a655339b5a18bcb8f455a3fd3e60d26b9",
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "splits": [
+    "train"
+  ],
+  "qualified": false,
+  "model_calls": 0,
+  "scope": "All unique retained training contexts; adapter exclusions apply. No label, question, or model-outcome selection.",
+  "limitation": "Structural token savings only; comprehension untested. Named-speaker support has synthetic integrity tests only.",
+  "datasets": {
+    "meetingqa": {
+      "source_tokens": 1484349,
+      "encoded_tokens": 1484349,
+      "changed_contexts": 0,
+      "round_trip_failures": 0,
+      "unique_contexts": 2753,
+      "saved_tokens": 0,
+      "saved_fraction": 0.0,
+      "reason_counts": {
+        "not_cheaper": 2753
+      }
+    },
+    "MeeQA": {
+      "source_tokens": 12344503,
+      "encoded_tokens": 11947040,
+      "changed_contexts": 7346,
+      "round_trip_failures": 0,
+      "unique_contexts": 10308,
+      "saved_tokens": 397463,
+      "saved_fraction": 0.032197570043929646,
+      "reason_counts": {
+        "not_cheaper": 2962,
+        "reversible_indented_speaker_blocks": 7346
+      }
+    }
+  }
+}

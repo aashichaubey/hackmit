@@ -1,0 +1,139 @@
+{
+  "identity": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "tokenizer": "o200k_base",
+    "tokenizer_version": "0.14.0",
+    "openai_version": "2.54.0",
+    "answer_instruction_hash": "81c4c163093c69e7ce3f365b6032cbabd9222c99b2bd8117bd8e6a9126685a21",
+    "answer_schema_hash": "457b66b9c43420c0c8d76d8195646e7585fd824faedfa4e5a430459dddd0ea3f",
+    "extraction_instruction_hash": "b0525b04d2e6194fce729b2c40b42412477a0f21b556ffbc24847277d5b4cdf0",
+    "extraction_schema_hash": "bd48fb63ab64008dafaf55643bd9127cb6fae089bcdff25ce46ed1fb0e93d205",
+    "grading_policy": "unicode-nfkc-casefold-whitespace-terminal-period-v2"
+  },
+  "product_identity": {
+    "classifier_prompt_hash": "14dfba526ce7cd81224a3c0beadfae6561c3f5cd879c4bed0f335261212dc2c8",
+    "classifier_schema_hash": "3ea616dc68340070c471ea910128a4980b4d1a88bad916f999bde21b1feecbab",
+    "fallback_policy": "raw-on-unqualified-unsupported-ambiguous-invalid-empty-or-not-cheaper-v1"
+  },
+  "code_hashes": {
+    "evo_grammar.py": "a1f5369db592f585ea256348da9e2b19463b58b4a1fb93e914625c227035727b",
+    "evo_eval.py": "f23b632ac492d2c516cf593914c3044fe4aaab515c5fe0e39f040f54fb160bce",
+    "evo_memory.py": "d050b7e0bc881793fb653c7b4c3f9d5a0fdac8437d7bb0240ba5eb77c4960581",
+    "facts.py": "d09bf95a04ed9b88fcd52d87d8da140daeac8ff59e146b2291abaffe8312cf21",
+    "prompts.py": "d3990f8b37ebe9826f85e3e81404b3a3747cbdfc6556b1a294725b03dbf2f6ec"
+  },
+  "dataset_manifest": {
+    "version": 1,
+    "splits": {
+      "dev": {
+        "sha256": "1d29e9b557af7294b2ae58abb10f6c35d89e90d35cf5f49da2a458b14d3cacdb",
+        "cases": 12,
+        "questions": 120,
+        "source_ids": [
+          "python/steering-council/updates/2023-06-steering-council-update.md",
+          "python/steering-council/updates/2023-07-steering-council-update.md",
+          "python/steering-council/updates/2023-08-steering-council-update.md",
+          "python/steering-council/updates/2023-09-steering-council-update.md",
+          "python/steering-council/updates/2023-10-steering-council-update.md",
+          "python/steering-council/updates/2023-11,12-steering-council-update.md",
+          "python/steering-council/updates/2024-01,02,03-steering-council-update.md",
+          "python/steering-council/updates/2024-04,05,06-steering-council-update.md",
+          "python/steering-council/updates/2024-07-steering-council-update.md",
+          "python/steering-council/updates/2024-08-steering-council-update.md",
+          "python/steering-council/updates/2024-09-steering-council-update.md",
+          "python/steering-council/updates/2024-10-steering-council-update.md"
+        ],
+        "series_ids": [
+          "python/steering-council"
+        ]
+      },
+      "validation": {
+        "sha256": "8a8e87e15eaf9c9fd64c0d972c0635d46adc374755fe215d204ef8352e628206",
+        "cases": 12,
+        "questions": 120,
+        "source_ids": [
+          "rust-lang/lang-team/design-meeting-minutes/2022-03-23-async-fn-and-rpitit.md",
+          "rust-lang/lang-team/design-meeting-minutes/2022-03-30-lint-policy.md",
+          "rust-lang/lang-team/design-meeting-minutes/2022-03-30-lints.md",
+          "rust-lang/lang-team/design-meeting-minutes/2022-04-12-implied-bounds-and-perfect-derive.md",
+          "rust-lang/lang-team/design-meeting-minutes/2022-08-31-gat-stabilization.md",
+          "rust-lang/lang-team/design-meeting-minutes/2022-10-05-provenance.md",
+          "rust-lang/lang-team/design-meeting-minutes/2022-11-25-contracts.md",
+          "rust-lang/lang-team/design-meeting-minutes/2023-01-08-lang-team-questions-around-contracts.md",
+          "rust-lang/lang-team/design-meeting-minutes/2023-03-15-temporary-lifetimes.md",
+          "rust-lang/lang-team/design-meeting-minutes/2023-05-17-rpitit-stabilization-schedule.md",
+          "rust-lang/lang-team/design-meeting-minutes/2023-05-24-return-type-notation.md",
+          "rust-lang/lang-team/design-meeting-minutes/2023-05-31-TAIT-stabilization.md"
+        ],
+        "series_ids": [
+          "rust-lang/lang-team"
+        ]
+      },
+      "test": {
+        "sha256": "d2ee8e85753bac0ded7d2bd1f35e40c8d70d25222cadb48637876fa31367c7b0",
+        "cases": 12,
+        "questions": 120,
+        "source_ids": [
+          "tc39/notes/meetings/2024-10/october-08.md",
+          "tc39/notes/meetings/2024-12/december-02.md",
+          "tc39/notes/meetings/2025-02/february-18.md",
+          "tc39/notes/meetings/2025-04/april-14.md",
+          "tc39/notes/meetings/2025-05/may-28.md",
+          "tc39/notes/meetings/2025-07/july-28.md",
+          "tc39/notes/meetings/2025-09/september-22.md",
+          "tc39/notes/meetings/2025-11/november-18.md",
+          "tc39/notes/meetings/2026-01/january-20.md",
+          "tc39/notes/meetings/2026-03/march-10.md",
+          "tc39/notes/meetings/2026-05/may-19.md",
+          "tc39/notes/meetings/2026-07/july-20.md"
+        ],
+        "series_ids": [
+          "tc39/notes"
+        ]
+      }
+    }
+  },
+  "candidate_ids": [
+    "e74f92bbf304d74c",
+    "b9a0fe16dd344f8d"
+  ],
+  "search_hash": "9d945b9845a503419798fe8a2f2472e5f5618c5d695d246e237af573e0d13665",
+  "grammar": {
+    "kind_forms": [
+      "action",
+      "proposal",
+      "decision",
+      "agreement",
+      "disagreement"
+    ],
+    "layout": "kind",
+    "owner_marker": "",
+    "deadline_marker": "@",
+    "separator": ":",
+    "grouping": false,
+    "repairs": []
+  },
+  "grammar_id": "e74f92bbf304d74c",
+  "initial_seed": {
+    "kind_forms": [
+      "action",
+      "proposal",
+      "decision",
+      "agreement",
+      "disagreement"
+    ],
+    "layout": "kind",
+    "owner_marker": "",
+    "deadline_marker": "@",
+    "separator": ":",
+    "grouping": false,
+    "repairs": []
+  },
+  "language_status": "incomplete_evaluation",
+  "product_status": "incomplete_evaluation",
+  "validation_language_status": "incomplete_evaluation",
+  "validation_product_status": "incomplete_evaluation",
+  "diagnostic_only": true,
+  "accounting_status": "incomplete",
+  "freeze_hash": "20a1ee626ef53e3b4a0f3e424408780301c7dc289296d9a4632094dd760b4f1e"
+}

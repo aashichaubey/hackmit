@@ -1,0 +1,258 @@
+{
+  "id": "test-05",
+  "split": "test",
+  "notes": "# 108th TC39 Meeting\n\nDay One—28 May 2025\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |---------------------|--------------|---------------------| | Ujjwal Sharma | USA | Igalia | | Ross Kirsling | RKG | Sony | | Waldemar Horwat | WH | Invited Expert | | Rob Palmer | RPR | Bloomberg | | Daniel Minor | DLM | Mozilla | | Daniel Rosenwasser | DRR | Microsoft | | Gus Caplan | GCL | Deno Land Inc | | Duncan MacGregor | DMM | ServiceNow Inc | | Christian Ulbrich | CHU | Zalari | | Zbigniew Tenerowicz | ? | MetaMask | | Tom Kopp | TKP | Zalari | | Tooru Fujisawa | TFA | Mozilla | | Jack Works | JWK | Sujitech | | Jesse Alama | JMN | Igalia | | Dmitry Makhnev | DJM | JetBrains | | Oliver Medhurst | OMT | IE (Porffor) | | Tab Atkins-Bittner | TAB | Google | | Jonathan Kuperman | JKP | Bloomberg | | Eemeli Aro | EAO | Mozilla | | Richard Gibson | RGN | Agoric | | Chengzhong Wu | CZW | Bloomberg | | Steve Hicks | SHS | Google | | Mikhail Barash | MBH | Univ. of Bergen | | Yusuke Suzuki | YSZ | Apple | | Chip Morningstar | CM | MetaMask | | Yulia Startsev | YSV | Mozilla | | Istvan Sebestyen | IS | Ecma | | Philip Chimento | PFC | Igalia | | J. S. Choi | JSC | IE (Univ. of Utah ) | | Ron Buckton | RBN | IE | | Luca Casonato | LCA | Deno Land Inc | | Samina Husain | SHN | Ecma | | Andreu Botella | ABO | Igalia | | Jonas Haukenes | JHS | Univ. of Bergen | | Romulo Cintra | RCA | Igalia | | Jacob Smith | JSH | OpenJS |\n\n## Opening & Welcome\n\nPresenter: Ujjwal Sharma (USA)\n\nUSA: All right. Looks like my slides are up. I hope I am audible. I am audible in the room. Could I get a quick check from friends online.\n\nWH: Yes, I can hear you.\n\nUSA: Thank you, Waldemar. All right. Let’s start.\n\nUSA: Welcome. Everyone, in person and online to 108 meeting of TC39. Let’s go over a few details and start the meeting.\n\nUSA: First of all, to all of you here in person, welcome to Coruna. I hope you like our city. There’s three fun facts in know order about Coruna. First is the Torre that you might have seen from everywhere; it's the symbol of the city. TDZ was originally built by the Romans. It’s one of the oldest lighthouses in the world. And the oldest one in—still in operation. Deportivo, the following football team, it’s not impossible now, used to be a spanish football team once. I thought it was a fun fact. And Coruna has been the ancient capital of Galicia and something not locals know is that it was only formally replaced in 2002.\n\nUSA: This is a hybrid meeting which means that we have folks in person and online. And, you know, random details. I can actually fill in with some local logistics still. So if you are still on our network, there’s the access ID and passwords. There’s an accessible bathroom on the other side and kitchen where you can grab a snack. There’s also snacks along the way. And if you haven’t grabbed a tag or need a mask or a test, they’re on the desk outside and that’s it for the local logics. Feel free to tell us if you need help. My personal contact information is also on the reflector. So feel free.\n\nUSA: Yes. So regarding the masking policy. There’s a slide update. We continue with the COVID measures as expected from the previous meeting, we will follow them if you have any concerns regarding them, contact us we would like to do better. Regarding the mask policy specifically, this is the first meeting where we move to not mandatory masking. However, it is still encouraged.\n\nUSA: Let me get used to the chairs group. Here is me and Rob in person. Chris is going to join us online. And Daniel Minor is here—sorry, in person. As the facilitator as well as Justin and Daniel, joining us online as well.\n\nUSA: Make sure to sign in specifically for folks joining online. You should have seen a form like this and filled it in to get to this point. If you haven’t, please fill this out. This helps us keep track of delegates and while you’re at it, feel free to do the delegate survey. Okay.\n\nUSA: So about the code of conduct. This is, you know, a change to our usual policy and quite important. This event, like the previous one that we did, has a dual CoC policy. Both TC39 code of conduct which I believe you are all familiar with and Igalia code of conduct which you are not familiar with, are enforced here. In practice, this means that you have to abide by both of them and may report incidents to either or probably both. Igalia CoC is up in multiple places if you want to scan the code or read about it. And the TC39 CoC is up at the regular place. I do suggest reading these whenever you can, if you haven’t.\n\nUSA: Talking a little bit about the major events, we have one from yesterday, which had already happened. So on Tuesday, yesterday morning, at 10, we had the TG5 workshop, which was well, thank you, for organizing. Today we will have two things: so first at 6, we have the guided city to your. At the plaza in the centre of the city. If you don’t know where that is, ask. I would be happy to take you there. And later, at 9, we start with the social dinner. The location for all of these is shared on the reflector, but feel free to ask.\n\nUSA: Tomorrow, we have a really fun community event planned for you. If you signed up for it already, thank you so much. If you haven’t, and you are free around the time, please join us. I think it will be really interesting and insightful for the local community to meet us.\n\nUSA: Moving on, here is the daily schedule that we are going to abide by for the three days. The meeting is at 10, two above that, the doors open at 9. The breakfast starts around 9:30. We are going to break at 12, for lunch. For an hour. Until 13. And go for another two hours. Until the mid-afternoon break, and the meeting ends at 17. So 5 p.m. if you follow the 12 hour calendar and the building—well, the office closes at 6. So you may want to hang around, but if any of it falls outside of the schedule, please let us know.\n\nUSA: A quick overview of the comms tools for our meets for newcomers and reminder to the older delegates. We have TCQ this the entire meeting. We will have the entire schedule here soon. Then you have the participant view, which looks like this. You have the topic, who is speaking and a bunch of the buttons. They all do different things. And then the speaker view, which has one extra button. Going over the button, increasing from order of urgency, so basically saying, that you want to add a new topic. You want to discuss a new thing without any sense of urgency. It adds you to the bottom of the list. Discussing the current topic puts you at the top of the list. You want to discuss the current topic that’s being discussed at the moment. Clarifying question, at the top of the queue. This is a way to interrupt softly the ongoing discussion and ask a clarifying question that might help with the rest of the queue. Point the order, in red at the top of the queue and this is used only for, you know, stopping essentially and if you think that something is a miss, you have no notes, if you can’t—off-line, use this, but reframe from overusing. I am done speaking button. This is, you know, a terrible button. Please don’t use it. It’s tempting to press it. Please don’t press it.\n\nUSA: Then the matrix chat. You are not on matrix, join us. That’s where we discuss everything async and during the meeting, TC39 and TC39 delegates or official chat or technical chat and template dead zone for banter and everything offtopic and there’s more, more specific chats. Please join the TC39 space to check out all of them. A reminder to folks in person, if you are not part of matrix group for the in person considered nation, ask me for invite or join it. It’s on TC39 space. It’s a useful room for the next couple of days. Talking about the IPR policy. I am not a lawyer. But yours should have gone through it. But to reiterate a time by part of the meeting, in this room, we are all assumed to have signed this IPR policy. Either your employer signed this for you or you have signed it as an individual. If you haven’t or don’t believe they are—something applicable to you, please talk to us most immediately. And it doesn’t apply to observers. So observers are welcome to observe. But as a result of this, it should not be able to contribute anything to the meeting.\n\nUSA: Then we have notes. So I believe the notes are already online and being transcribed. We would ask you to help us out with them. But most importantly, after you finish with any of your topics, please summarize key points or give conclusions that help us make the notes more useful to the general public. And there is a blurb that I am speaking to say out loud at this point. A detailed transcript of the meeting is being prepared and on Github. You may edit this at any time during this meeting in Google Docs for accuracy, including deleting comments which you do not wish to appear. You may also get corrections or deletions after the fact by editing the Google Doc in the first weeks or making a PR in the notes for contacting the TC39 chairs correctly. Thank you.\n\nUSA: Talking briefly about the next meeting. It’s the 109th meeting remote. It’s going to be in exactly a month-endize from—two months from now. Pretty standard. 28 to 31 July. 4 days. Online and in the Pacific daylight time.\n\nUSA: Okay. Now, the—no. At the committee housekeeping part. First of all, we like to approve the previous minutes of, I believe, you might have gone through them, they have been merged. The notes from the last meeting. It’s been like a month since we had it. So yeah. Do any of you have comments? Either in person or online about the previous minutes? No. I assume we approve the previous minutes.\n\nUSA: Now, let’s give another minute to adopt the current agenda. Any concerns or late editions? No? All right. Then—all right. So we have time if there are any topics that you’ve been holding off on or, you know, think would be worth raising to the committee, a productive use of our time, especially, you know, during the afternoon we could do breakout sessions or something. Although, we could have that time for continuations. All right. Now, it’s time for us to do the uncomfortable thing. Ask for note-takers. Please. Thank you. So Christian, John, and Oliver. Right? Okay. Thank you. Three volunteers right away. We are doing great. Thank you, everyone.\n\nUSA: All right. Now, I hand it over to Samina.\n\n## Secretary’s Report\n\nPresenter: Samina Husain (SHN)\n\n- slides",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Please fill this out",
+      "person": "attendees joining online",
+      "deadline": "during meeting",
+      "source_quote": "If you haven’t, please fill this out."
+    },
+    {
+      "kind": "proposal",
+      "text": "We continue with the COVID measures as expected from the previous meeting",
+      "person": "USA",
+      "deadline": "ongoing",
+      "source_quote": "We continue with the COVID measures as expected from the previous meeting, we will follow them if you have any concerns regarding them, contact us we would like to do better."
+    },
+    {
+      "kind": "decision",
+      "text": "This is the first meeting where we move to not mandatory masking",
+      "person": "USA",
+      "deadline": "this meeting",
+      "source_quote": "Regarding the mask policy specifically, this is the first meeting where we move to not mandatory masking."
+    },
+    {
+      "kind": "agreement",
+      "text": "Masking is still encouraged",
+      "person": "USA",
+      "deadline": "this meeting",
+      "source_quote": "However, it is still encouraged."
+    },
+    {
+      "kind": "action",
+      "text": "Ask for note-takers",
+      "person": "USA",
+      "deadline": "now",
+      "source_quote": "Ask for note-takers."
+    },
+    {
+      "kind": "agreement",
+      "text": "Christian, John, and Oliver volunteer as note-takers",
+      "person": "Christian, John, Oliver",
+      "deadline": "now",
+      "source_quote": "So Christian, John, and Oliver."
+    },
+    {
+      "kind": "decision",
+      "text": "Approve the previous minutes",
+      "person": "committee",
+      "deadline": "now",
+      "source_quote": "I assume we approve the previous minutes."
+    },
+    {
+      "kind": "proposal",
+      "text": "Adopt the current agenda",
+      "person": "USA",
+      "deadline": "now",
+      "source_quote": "USA: Now, let’s give another minute to adopt the current agenda."
+    },
+    {
+      "kind": "action",
+      "text": "Join the TC39 matrix chat",
+      "person": "attendees",
+      "deadline": "during meeting",
+      "source_quote": "You are not on matrix, join us."
+    },
+    {
+      "kind": "decision",
+      "text": "Next meeting is the 109th meeting remote, 28 to 31 July, 4 days, online in Pacific daylight time",
+      "person": "USA",
+      "deadline": "28 to 31 July 2025",
+      "source_quote": "28 to 31 July."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-05-q01",
+      "question": "Who is the presenter of the opening and welcome?",
+      "answers": [
+        "Ujjwal Sharma (USA)"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 1463,
+          "end": 1493,
+          "quote": "Presenter: Ujjwal Sharma (USA)"
+        }
+      ]
+    },
+    {
+      "id": "test-05-q02",
+      "question": "Is masking mandatory at this meeting?",
+      "answers": [
+        "no",
+        "No",
+        "not mandatory"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3308,
+          "end": 3413,
+          "quote": "Regarding the mask policy specifically, this is the first meeting where we move to not mandatory masking."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q03",
+      "question": "Who volunteered as note-takers?",
+      "answers": [
+        "Christian, John, and Oliver"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 10238,
+          "end": 10269,
+          "quote": "So Christian, John, and Oliver."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q04",
+      "question": "When is the next TC39 meeting scheduled?",
+      "answers": [
+        "28 to 31 July",
+        "28 to 31 July 2025"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 9240,
+          "end": 9254,
+          "quote": "28 to 31 July."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q05",
+      "question": "Did the committee approve the previous minutes?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 9661,
+          "end": 9702,
+          "quote": "I assume we approve the previous minutes."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q06",
+      "question": "Who proposed continuing the COVID measures from the previous meeting?",
+      "answers": [
+        "USA"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 3133,
+          "end": 3307,
+          "quote": "We continue with the COVID measures as expected from the previous meeting, we will follow them if you have any concerns regarding them, contact us we would like to do better."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q07",
+      "question": "Is there a social dinner planned during this meeting?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4995,
+          "end": 5044,
+          "quote": "And later, at 9, we start with the social dinner."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q08",
+      "question": "Are attendees required to join the TC39 matrix chat?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 7250,
+          "end": 7281,
+          "quote": "You are not on matrix, join us."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q09",
+      "question": "Is there a disagreement about the mask policy in the excerpt?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 3308,
+          "end": 3413,
+          "quote": "Regarding the mask policy specifically, this is the first meeting where we move to not mandatory masking."
+        }
+      ]
+    },
+    {
+      "id": "test-05-q10",
+      "question": "Who is responsible for organizing the TG5 workshop?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 4693,
+          "end": 4801,
+          "quote": "So on Tuesday, yesterday morning, at 10, we had the TG5 workshop, which was well, thank you, for organizing."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2025-05/may-28.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-05/may-28.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-05/may-28.md",
+    "source_sha256": "097356de6568ee7926672997d0270bd8a3bf77ed8ba3ab213f21a8296dfd9270",
+    "excerpt_sha256": "d86cfd7bd715b84f2422d533b6adf55d1627277b2ab65feb38de1481127d2d3f",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "fe175b72a27de78bc225e7c2f826cb97b03bee0aebe5c3241276186ba3eef748",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

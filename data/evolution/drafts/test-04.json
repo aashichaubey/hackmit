@@ -1,0 +1,253 @@
+{
+  "id": "test-04",
+  "split": "test",
+  "notes": "# 107th TC39 Meeting\n\nDay One—14 April 2025\n\n## Attendees\n\n| Name | Abbreviation | Organization | |:-----------------------|:-------------|:-------------------| | Waldemar Horwat | WH | Invited Expert | | Daniel Ehrenberg | DE | Bloomberg | | Ashley Claymore | ACE | Bloomberg | | Jonathan Kuperman | JKP | Bloomberg | | Ben Lickly | BLY | Google | | Bradford C. Smith | BSH | Google | | Chris de Almeida | CDA | IBM | | Daniel Minor | DLM | Mozilla | | Jesse Alama | JMN | Igalia | | Chip Morningstar | CM | Consensys | | Michael Saboff | MLS | Apple | | Nicolò Ribaudo | NRO | Igalia | | Erik Marks | REK | Consensys | | Richard Gibson | RGN | Agoric | | Josh Goldberg | JKG | Invited Expert | | Luca Forstner | LFR | Sentry | | Philip Chimento | PFC | Igalia | | Christian Ulbrich | CHU | Zalari | | Mikhail Barash | MBH | Univ. of Bergen | | Eemeli Aro | EAO | Mozilla | | Chengzhong Wu | CZW | Bloomberg | | Dmitry Makhnev | DJM | JetBrains | | J. S. Choi | JSC | Invited Expert | | Keith Miller | KM | Apple Inc | | Aki Rose Braun | AKI | Ecma International | | Luca Casonato | LCA | Deno Land Inc | | Samina Husain | SHN | Ecma International | | Istvan Sebestyen | IS | Ecma International | | Duncan MacGregor | DMM | ServiceNow Inc | | Mathieu Hofman | MAH | Agoric | | Mark Miller | MM | Agoric | | Ron Buckton | RBN | Microsoft | | Andreas Woess | AWO | Oracle | | Romulo Cintra | RCA | Igalia | | Andreu Botella | ABO | Igalia | | Ruben Bridgewater | | Invited Expert | | Michael Ficarra | MF | F5 | | Ulises Gascon | UGN | Open JS | | Kevin Gibbons | KG | F5 | | Shu-yu Guo | SYG | Google | | Jordan Harband | JHD | HeroDevs | | John Hax | JHX | Invited Expert | | Stephen Hicks | | Google | | Tom Kopp | TKP | Zalari GmbH | | Veniamin Krol | | JetBrains | | Rezvan Mahdavi Hezaveh | RMH | Google | | Luis Pardo | LFP | Microsoft | | Justin Ridgewell | JRL | Google | | Ujjwal Sharma | USA | Igalia | | James Snell | JSL | Cloudflare | | Jack Works | JWK | Sujitech |\n\n## Opening & Welcome\n\nPresenter: Ujjwal Sharma (USA)\n\nUSA: Perfect, great. Thank you. Then I will start with this and property folks as we go. Hello and welcome to the 107th meeting. It’s the 14th of April. This is a fully remote meeting in the New York timezone. I’d like to introduce to you all to your chairs group you might remember from the last meeting, or if you missed the last meeting, here is some news for you. There’s me, RPR, and CDA, and the facilitators JRL, DLM and DRR. On behalf of all of us, I’d like to welcome you all and kick off this meeting. Make sure you’re signed in. If you’re here, I’m assuming you’re already signed in. It’s perfectly fine if you’re here already, please just go back and sign in. The responses to this forum are really helpful for us to track attendance. The TC39, as you mow, has a code of conduct, and please be mindful and follow it at all times. It applies to this meeting. Since it’s online, there’s not many mediums and chat rooms are governed by a code of conduct. Daily schedule is pretty straightforward for these daily meetings. We start now, which in this case is 10, in New York time, and we finish in go hours, and we have a two-hour session until the break, and then an hour break and another two hours until three in New York time.\n\nUSA: A quick rundown of our comms tools before we begin. There’s TCQ, which is by far one of the most unique and important tools that we use for communicating. You should have the link to the TCQ already. And as you can see, there’s the entire agenda there. This is how any individual agenda item looks. There’s a queue and a bunch of things. This side looks for a participant. If you’re a speaker, in is how is view looks for you. I’ll quickly discuss these different options you have. They go from right to left in order of sort of reducing priority, so point of order is the highest priority, that’s why it’s red color. But the important part here is that please use it sparingly, please use it for emergencies such as if the notes we don’t seem to update for you or if there’s some serious technical glitches or if in general, you believe that there’s something urgent enough that the meeting should halt for that to be resolved. Next you have the clarifying questions. These jump to the top of the queue apart from points of orderings, obviously, and in the case, you are basically interrupting the running tune of discussions to ask a clarifying question regarding the current point that’s being discussed. Next you have the discuss current topic, where you add another sort of item for discussing the current topic, so, you know, if there’s any topic that’s going on, you can add another point to that sort of list, so it doesn’t go to the bottom, but it goes to the end of this particular discussion, and then you can introduce a new topic, which puts you at the bottom of the list, so you can start a new topic after the most recent one has been finished. So that’s all for adding yourself on the queue. There’s another button that is only visible if you’re already speaking which says I’m done speaking. Please do not use it in this moment because the problem with this button at the moment is that sometimes we can double click it, so, for instance, if the Chairs are running the queue and you also press this button, you might just skip the next person to you. So because of TCQ’s technical glitches at this moment, we do not recommend using this button. That’s all for TCQ. We also have Matrix. You might enjoy any of these channels. Now, of course, delegates is supposed to be for the most technical discussions, Temporal, quite the opposite. So all these channels are different and have their own sort of vibe, but overall, there’s a group these channels that are dedicated to specific subjects and you might want to be on them. So join the TC39 space on Matrix, and ask us for joining details if you don’t have them. Next is the IPR policy. Basically, this is a quick reminder of ECMA’s IPR policy. Everybody who is a part of this meeting at this moment is supposed to be either a delegate from an ECMA member, or, which which case your organization collectively signed the—and approved the ECMA IPR policy and you’re an invited expert, in case of that, you have done it yourself. If you have not, please contact us or, you know, be aware that your contributions in this meeting are going to be used as part of this royalty-free teaching. So, yeah, I’m not a lawyer myself, but make sure that you have reviewed this and, yeah, observers, on the other hand, by not contributing anything to the meeting themselves, in terms of obviously, you know, spoken contributions are not subject to this. Notes are live. I believe we are being transcribed right now. And remember to summarize key points at the end of each topic. For instance, if you have a presentation and you think you have a pretty good idea what the conclusion is going to be or the summary going to be, feel free to include it in the presentation itself or take that few minutes at the end of to your presentation to go over a quick summary. Actually, I’m suppose odd the read this outtrade, so a detailed transcript of the meeting is being prepared and eventually post in GitHub. You may edit this at any time during the meeting in Google docs for accuracy, including deleted comments which you do not wish to appear. You may request corrections or deletions after the fact by editing the Google Doc in the first two weeks after the TC39 meeting or subsequently making a PR in the notes suppository or contacting the TC39 chairs. The next meeting, the 108th meeting is from the 28th to 30 of May in A Coruña, hosted by Igalia and in central European summertime. Yay for that. And let’s move on to the rest of the agenda.\n\nUSA: So first of all, let’s ask for note takers. Any volunteers? Let me switch.\n\nJMN: I can help out. This is Jesse alma.\n\nUSA: Thank you, Jesse. Anyone else would like to help out with the notes? The very first slot of the day. And if I may, this is probably one of the easiest ones really given how relaxed the topics seem to be, as opposed to later parts of the meeting where things can get quite complicated.\n\nACE: I’ll take an easy slot.\n\nUSA: Thank you, Ashley. So, yeah, let’s—noted down, yeah, perfect. And move on. Okay, so let’s approve the previous minutes. I’ll give a minute for—well, a few seconds for anyone to mention any thoughts on the previous minutes. a reminder that you can always edit them in the notes repo if you’d like. Anyone?\n\nCDA: Yeah, so the minutes are still not published. There’s a PR out, but the—there’s still a bunch of open, unresolved suggestions. We should direct those folks to just submit, like, just make those commits directly, because like this commonly happens where somebody’s waiting for, I guess, the PR author to approve the suggestions, but they should just feel free to make them, but we should make a point to get this done as soon as possible.\n\nUSA: Right. Yeah. Thank you, Chris. I guess in this case, then the previous minutes are part of the PR. We should merge it soon, but since it’s still not merged, you have a great moment to sort of go through it, approve it, if you’d like, or just post any corrections. All right, then let’s say with the previous minutes—that the previous minutes have been approved. Let’s make sure that we merge them in soon. Next let’s adopt the current agenda. So I’ll give a few seconds for folks to raise any concerns about the current agenda. Sounds like consensus, so we have adopted the current agenda. Next we have the secretary’s report. Hello, Samina.\n\n## Secretary's Report\n\nPresenter: Samina Husain (SHN)\n\nSHN: Thank you for the start of the meeting, and welcome to everybody. I have a relatively short slide since our last meeting with activities that have taken place. The opt out is open for the ECMA262 and 402 for the officials for the GA, and I’d like to give you a bit of an update on some new discussions we’re having with some new topics and work for ECMA. ECMA has a code of conduct and you can review the invited experts rules. And some of the documents that have been recently published, if you want access to those documents, you just have to ask your chair. Dates for the next Meetings are also noted, Ujjwal already mentioned the very next meeting for the plenary is going to be in May, the next important date for us to be aware of is the June GA, which is the 25th of—June coming up this year.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Jesse alma volunteered to help out with the notes",
+      "person": "Jesse alma",
+      "deadline": "Day One—14 April 2025",
+      "source_quote": "JMN: I can help out."
+    },
+    {
+      "kind": "action",
+      "text": "Ashley Claymore volunteered to take an easy slot for note taking",
+      "person": "Ashley Claymore",
+      "deadline": "Day One—14 April 2025",
+      "source_quote": "ACE: I’ll take an easy slot."
+    },
+    {
+      "kind": "proposal",
+      "text": "Direct folks to make commits directly to resolve open suggestions on the previous minutes PR",
+      "person": "Chris de Almeida",
+      "deadline": "as soon as possible",
+      "source_quote": "We should direct those folks to just submit, like, just make those commits directly, because like this commonly happens where somebody’s waiting for, I guess, the PR author to approve the suggestions, but they should just feel free to make them, but we should make a point to get this done as soon as possible."
+    },
+    {
+      "kind": "decision",
+      "text": "The previous minutes have been approved",
+      "person": "Ujjwal Sharma",
+      "deadline": "Day One—14 April 2025",
+      "source_quote": "All right, then let’s say with the previous minutes—that the previous minutes have been approved."
+    },
+    {
+      "kind": "agreement",
+      "text": "Consensus to adopt the current agenda",
+      "person": "Meeting attendees",
+      "deadline": "Day One—14 April 2025",
+      "source_quote": "Sounds like consensus, so we have adopted the current agenda."
+    },
+    {
+      "kind": "action",
+      "text": "Merge the previous minutes PR soon",
+      "person": "Meeting attendees",
+      "deadline": "soon",
+      "source_quote": "Let’s make sure that we merge them in soon."
+    },
+    {
+      "kind": "agreement",
+      "text": "ECMA has a code of conduct that applies to this meeting",
+      "person": "Ujjwal Sharma",
+      "deadline": "Day One—14 April 2025",
+      "source_quote": "The TC39, as you mow, has a code of conduct, and please be mindful and follow it at all times."
+    },
+    {
+      "kind": "agreement",
+      "text": "The meeting is fully remote in the New York timezone",
+      "person": "Ujjwal Sharma",
+      "deadline": "Day One—14 April 2025",
+      "source_quote": "This is a fully remote meeting in the New York timezone."
+    },
+    {
+      "kind": "agreement",
+      "text": "The next meeting, the 108th, is from 28 to 30 May in A Coruña hosted by Igalia",
+      "person": "Ujjwal Sharma",
+      "deadline": "28 to 30 May 2025",
+      "source_quote": "The next meeting, the 108th meeting is from the 28th to 30 of May in A Coruña, hosted by Igalia and in central European summertime."
+    },
+    {
+      "kind": "agreement",
+      "text": "The opt out is open for ECMA262 and 402 for the officials for the GA",
+      "person": "Samina Husain",
+      "deadline": "June 25, 2025",
+      "source_quote": "The opt out is open for the ECMA262 and 402 for the officials for the GA, and I’d like to give you a bit of an update on some new discussions we’re having with some new topics and work for ECMA."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-04-q01",
+      "question": "Who volunteered to help out with the notes?",
+      "answers": [
+        "Jesse alma"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 7855,
+          "end": 7875,
+          "quote": "JMN: I can help out."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q02",
+      "question": "Who took an easy slot for note taking?",
+      "answers": [
+        "Ashley Claymore"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 8188,
+          "end": 8216,
+          "quote": "ACE: I’ll take an easy slot."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q03",
+      "question": "Did the meeting attendees approve the previous minutes?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 9242,
+          "end": 9339,
+          "quote": "All right, then let’s say with the previous minutes—that the previous minutes have been approved."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q04",
+      "question": "Is the meeting fully remote in the New York timezone?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2188,
+          "end": 2244,
+          "quote": "This is a fully remote meeting in the New York timezone."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q05",
+      "question": "When is the next meeting scheduled?",
+      "answers": [
+        "28 to 30 May 2025"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 7582,
+          "end": 7713,
+          "quote": "The next meeting, the 108th meeting is from the 28th to 30 of May in A Coruña, hosted by Igalia and in central European summertime."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q06",
+      "question": "Who proposed that folks should make commits directly to resolve open suggestions on the previous minutes PR?",
+      "answers": [
+        "Chris de Almeida"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 8661,
+          "end": 8971,
+          "quote": "We should direct those folks to just submit, like, just make those commits directly, because like this commonly happens where somebody’s waiting for, I guess, the PR author to approve the suggestions, but they should just feel free to make them, but we should make a point to get this done as soon as possible."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q07",
+      "question": "Is there a code of conduct that applies to this meeting?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2782,
+          "end": 2876,
+          "quote": "The TC39, as you mow, has a code of conduct, and please be mindful and follow it at all times."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q08",
+      "question": "What is the deadline to merge the previous minutes PR?",
+      "answers": [
+        "soon"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 9340,
+          "end": 9383,
+          "quote": "Let’s make sure that we merge them in soon."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q09",
+      "question": "Is there any mention of a decision to change the meeting schedule?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3066,
+          "end": 3273,
+          "quote": "We start now, which in this case is 10, in New York time, and we finish in go hours, and we have a two-hour session until the break, and then an hour break and another two hours until three in New York time."
+        }
+      ]
+    },
+    {
+      "id": "test-04-q10",
+      "question": "Who is assigned to review the ECMA IPR policy?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 5990,
+          "end": 6271,
+          "quote": "Everybody who is a part of this meeting at this moment is supposed to be either a delegate from an ECMA member, or, which which case your organization collectively signed the—and approved the ECMA IPR policy and you’re an invited expert, in case of that, you have done it yourself."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2025-04/april-14.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-04/april-14.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-04/april-14.md",
+    "source_sha256": "51c22a2a014193db863e3565488173fee24414f12703364e3bad38c6e2ea745c",
+    "excerpt_sha256": "b75074c00c3eba3802b761ed008aa4a972cd681c67ba732947cb4d3ba1d10cda",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "76dc39d62c33141d25ce63ee6612f93199a140a92b9b6585561319fea7077a27",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

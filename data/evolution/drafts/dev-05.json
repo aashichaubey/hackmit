@@ -1,0 +1,253 @@
+{
+  "id": "dev-05",
+  "split": "dev",
+  "notes": "## 2023-10-02\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence interviews. - Ongoing work around `yield from` in generators, as well as PEPs 667/558. - Ongoing work around the buildbot master, individual buildbots and how to handle non-tier-1 configurations on tier-1 platforms like AddressSanitizer. - How to improve buildbot health and make people more aware of breakages they are causing on buildbots. - The SC discussed the ongoing search for mentorship training and support.\n\n## 2023-10-09\n\n- An abbreviated Steering Council (Thomas, Pablo, and Greg) met informally in-person at the Core Developer Sprint in Brno.\n\n## 2023-10-16\n\n- An abbreviated Steering Council (Pablo and Brett) met with Łukasz, the Developer-in-Residence, and discussed updates on the different topics that he worked on at the sprint: - Coverage reports. - Updates of Miss-islington. - Help Yury with a MemHive (sharing between multiple interpreters). - General summary of what other people worked on.\n\n## 2023-10-23\n\n- An abbreviated Steering Council (Thomas, Emily, and Brett) recapped the recent Core Developer Sprint. - The SC received a new proposal for mentorship support, which will be reviewed next week. - The SC discussed the final specifics for accepting PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The SC discussed the logistics of fitting tall people into small cars.\n\n## 2023-10-30\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - Setting up buildbots for upcoming free-threading work. - General buildbot statuses and updates to fix buildbot slowness. - The SC discussed their options and logistics for hiring an external person to take meeting minutes during weekly meetings and opted to defer this decision to the next SC. - The SC confirmed that the details for the upcoming SC election are approved. - The SC discussed requests for the breaking change in the Tkinter method `wm_attributes()` and decided that PEP-387 (Backwards Compatibility Policy) should apply and the change should follow a proper deprecation.",
+  "facts": [
+    {
+      "kind": "agreement",
+      "text": "The SC confirmed that the details for the upcoming SC election are approved.",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC confirmed that the details for the upcoming SC election are approved."
+    },
+    {
+      "kind": "proposal",
+      "text": "The SC received a new proposal for mentorship support, which will be reviewed next week.",
+      "person": "Steering Council",
+      "deadline": "next week",
+      "source_quote": "The SC received a new proposal for mentorship support, which will be reviewed next week."
+    },
+    {
+      "kind": "decision",
+      "text": "The SC discussed requests for the breaking change in the Tkinter method `wm_attributes()` and decided that PEP-387 (Backwards Compatibility Policy) should apply and the change should follow a proper deprecation.",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed requests for the breaking change in the Tkinter method `wm_attributes()` and decided that PEP-387 (Backwards Compatibility Policy) should apply and the change should follow a proper deprecation."
+    },
+    {
+      "kind": "action",
+      "text": "The SC discussed their options and logistics for hiring an external person to take meeting minutes during weekly meetings and opted to defer this decision to the next SC.",
+      "person": "Steering Council",
+      "deadline": "next SC",
+      "source_quote": "The SC discussed their options and logistics for hiring an external person to take meeting minutes during weekly meetings and opted to defer this decision to the next SC."
+    },
+    {
+      "kind": "proposal",
+      "text": "Ongoing work around `yield from` in generators, as well as PEPs 667/558.",
+      "person": "Łukasz, the Developer-in-Residence",
+      "deadline": "",
+      "source_quote": "Ongoing work around `yield from` in generators, as well as PEPs 667/558."
+    },
+    {
+      "kind": "proposal",
+      "text": "Ongoing work around the buildbot master, individual buildbots and how to handle non-tier-1 configurations on tier-1 platforms like AddressSanitizer.",
+      "person": "Łukasz, the Developer-in-Residence",
+      "deadline": "",
+      "source_quote": "Ongoing work around the buildbot master, individual buildbots and how to handle non-tier-1 configurations on tier-1 platforms like AddressSanitizer."
+    },
+    {
+      "kind": "proposal",
+      "text": "How to improve buildbot health and make people more aware of breakages they are causing on buildbots.",
+      "person": "Łukasz, the Developer-in-Residence",
+      "deadline": "",
+      "source_quote": "How to improve buildbot health and make people more aware of breakages they are causing on buildbots."
+    },
+    {
+      "kind": "proposal",
+      "text": "The SC discussed the ongoing search for mentorship training and support.",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed the ongoing search for mentorship training and support."
+    },
+    {
+      "kind": "proposal",
+      "text": "Updates of Miss-islington.",
+      "person": "Łukasz, the Developer-in-Residence",
+      "deadline": "",
+      "source_quote": "Updates of Miss-islington."
+    },
+    {
+      "kind": "proposal",
+      "text": "Help Yury with a MemHive (sharing between multiple interpreters).",
+      "person": "Łukasz, the Developer-in-Residence",
+      "deadline": "",
+      "source_quote": "Help Yury with a MemHive (sharing between multiple interpreters)."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-05-q01",
+      "question": "Who is working on ongoing work around `yield from` in generators?",
+      "answers": [
+        "Łukasz, the Developer-in-Residence"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 148,
+          "end": 220,
+          "quote": "Ongoing work around `yield from` in generators, as well as PEPs 667/558."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q02",
+      "question": "Did the SC approve the details for the upcoming SC election?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1849,
+          "end": 1925,
+          "quote": "The SC confirmed that the details for the upcoming SC election are approved."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q03",
+      "question": "What policy should apply to the breaking change in the Tkinter method `wm_attributes()`?",
+      "answers": [
+        "PEP-387 (Backwards Compatibility Policy)"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 2022,
+          "end": 2139,
+          "quote": "decided that PEP-387 (Backwards Compatibility Policy) should apply and the change should follow a proper deprecation."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q04",
+      "question": "Who is assigned to help Yury with a MemHive?",
+      "answers": [
+        "Łukasz, the Developer-in-Residence"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 933,
+          "end": 998,
+          "quote": "Help Yury with a MemHive (sharing between multiple interpreters)."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q05",
+      "question": "When will the new proposal for mentorship support be reviewed?",
+      "answers": [
+        "next week"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 1171,
+          "end": 1259,
+          "quote": "The SC received a new proposal for mentorship support, which will be reviewed next week."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q06",
+      "question": "Did the SC decide to hire an external person immediately for meeting minutes?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1802,
+          "end": 1846,
+          "quote": "opted to defer this decision to the next SC."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q07",
+      "question": "Did the SC discuss logistics for fitting tall people into small cars?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 1381,
+          "end": 1451,
+          "quote": "The SC discussed the logistics of fitting tall people into small cars."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q08",
+      "question": "Who proposed ongoing work around the buildbot master and non-tier-1 configurations?",
+      "answers": [
+        "Łukasz, the Developer-in-Residence"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 223,
+          "end": 371,
+          "quote": "Ongoing work around the buildbot master, individual buildbots and how to handle non-tier-1 configurations on tier-1 platforms like AddressSanitizer."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q09",
+      "question": "Was there a decision made about the Deputy Developer-in-Residence interviews?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 98,
+          "end": 145,
+          "quote": "- The Deputy Developer-in-Residence interviews."
+        }
+      ]
+    },
+    {
+      "id": "dev-05-q10",
+      "question": "Did the SC finalize the mentorship training and support program?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 478,
+          "end": 550,
+          "quote": "The SC discussed the ongoing search for mentorship training and support."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2023-10-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-10-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-10-steering-council-update.md",
+    "source_sha256": "e6d1f03531a4891165888c275ccba385cc91818acbe1ae3158c6117190850001",
+    "excerpt_sha256": "eaa4cfb179483f9b28f795e9c306f021dde66e701aa35a50dcfb78722016df9e",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "7e9ec446776a0cf482fcc28d6df1d3c69b35e4310ee529d4fb515a55664f16b3",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

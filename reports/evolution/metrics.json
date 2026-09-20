@@ -1,0 +1,238 @@
+{
+  "language_status": "incomplete_evaluation",
+  "product_status": "incomplete_evaluation",
+  "grammar_id": "e74f92bbf304d74c",
+  "test_language": {
+    "correct": 105,
+    "total": 120,
+    "accuracy": 0.875,
+    "wilson_95_interval_descriptive_only": [
+      0.8039690855177497,
+      0.9227657111903032
+    ],
+    "macro_meeting_accuracy": 0.8750000000000001,
+    "worst_category_accuracy": 0.7727272727272727,
+    "categories": {
+      "action": {
+        "correct": 11,
+        "total": 11,
+        "accuracy": 1.0
+      },
+      "agreement": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "deadline": {
+        "correct": 30,
+        "total": 38,
+        "accuracy": 0.7894736842105263
+      },
+      "decision": {
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      "disagreement": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "owner": {
+        "correct": 35,
+        "total": 36,
+        "accuracy": 0.9722222222222222
+      },
+      "proposal": {
+        "correct": 17,
+        "total": 22,
+        "accuracy": 0.7727272727272727
+      }
+    },
+    "meetings": {
+      "test-01": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "test-02": {
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "test-03": {
+        "correct": 8,
+        "total": 10,
+        "accuracy": 0.8
+      },
+      "test-04": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "test-05": {
+        "correct": 8,
+        "total": 10,
+        "accuracy": 0.8
+      },
+      "test-06": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "test-07": {
+        "correct": 7,
+        "total": 10,
+        "accuracy": 0.7
+      },
+      "test-08": {
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "test-09": {
+        "correct": 8,
+        "total": 10,
+        "accuracy": 0.8
+      },
+      "test-10": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "test-11": {
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "test-12": {
+        "correct": 8,
+        "total": 10,
+        "accuracy": 0.8
+      }
+    },
+    "unsupported_answers": 7,
+    "wrong_or_missing_abstentions": 6,
+    "unknown_questions": 35,
+    "answerable_questions": 85,
+    "invalid_or_failed": 0,
+    "actual_input_tokens": 45989,
+    "actual_output_tokens": 1316,
+    "provider_cached_input_tokens": 0,
+    "workflow_answer_usd": 0.02050120000000001,
+    "visible_prompt_tokens": 40229,
+    "context_tokens": 26740,
+    "replayed_rows": 0,
+    "usage_complete": true,
+    "caveat": "Questions within meetings are correlated; interval is descriptive, not a generalization guarantee."
+  },
+  "input_savings_fraction": {
+    "raw": 0.8555345088097908,
+    "english": 0.004330035289787593,
+    "prose": 0.27870575134490816
+  },
+  "context_savings_fraction": {
+    "raw": 0.9106104165273785,
+    "english": 0.007423904974016349,
+    "prose": 0.40031397174254313
+  },
+  "classifier": {
+    "precision": 0.047619047619047616,
+    "recall": 0.016666666666666666,
+    "f1": 0.024691358024691357,
+    "measured_cases": 12,
+    "total_cases": 12
+  },
+  "workflow": {
+    "1": {
+      "accounting_status": "complete",
+      "raw_input_tokens": 31681,
+      "product_input_tokens": 66182,
+      "raw_usd": 0.010848399999999998,
+      "product_usd": 0.03129520000000001,
+      "input_savings_fraction": -1.0890123417821407,
+      "cost_savings_fraction": -1.8847756351167009,
+      "raw_correct": 7,
+      "product_correct": 7,
+      "questions": 12
+    },
+    "4": {
+      "accounting_status": "complete",
+      "raw_input_tokens": 126765,
+      "product_input_tokens": 161266,
+      "raw_usd": 0.04028520000000001,
+      "product_usd": 0.06073199999999999,
+      "input_savings_fraction": -0.2721650297795133,
+      "cost_savings_fraction": -0.5075511602275768,
+      "raw_correct": 29,
+      "product_correct": 29,
+      "questions": 48
+    },
+    "10": {
+      "accounting_status": "complete",
+      "raw_input_tokens": 317043,
+      "product_input_tokens": 351544,
+      "raw_usd": 0.1064428,
+      "product_usd": 0.1268896,
+      "input_savings_fraction": -0.10882120090965586,
+      "cost_savings_fraction": -0.19209190288117184,
+      "raw_correct": 64,
+      "product_correct": 64,
+      "questions": 120
+    }
+  },
+  "ledger": {
+    "actual_calls": 2981,
+    "known_usd": 1.2001604000000006,
+    "reserved_or_spent_usd": 1.3655404000000007,
+    "unknown_usage_calls": 30,
+    "input_tokens": 2609893,
+    "cached_input_tokens": 230784,
+    "output_tokens": 140899,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 532,
+        "known_usd": 0.09414360000000002
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 837,
+        "known_usd": 0.36674880000000004
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 28,
+        "known_usd": 0.055404800000000004
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 120,
+        "known_usd": 0.02050120000000001
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "accounting_status": "incomplete"
+  },
+  "confirmed_development_repairs": 1
+}

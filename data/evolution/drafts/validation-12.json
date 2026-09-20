@@ -1,0 +1,253 @@
+{
+  "id": "validation-12",
+  "split": "validation",
+  "notes": "# Type Alias impl Trait (TAIT) Stabilization (design meeting)\n\nWe accepted [RFC 2515] in 2019. That RFC proposed that `impl Trait` syntax be allowed in type aliases and in associated types. This is a long-awaited feature. It helps API designers to not leak unwanted implementation details and it closes certain fundamental expressiveness gaps in Rust. We would like to stabilize this feature quickly if possible.\n\nThis meeting will be a success if everyone walks away with a clear understanding of the motivations for this feature and the key problems it addresses, the details of the proposed plan for stabilization, and how we can move forward.\n\nIn this document, TAIT stands for \"type alias `impl Trait`\", and ATPIT stands for \"associated type position `impl Trait`.\n\n[RFC 2515]: https://github.com/rust-lang/rfcs/blob/master/text/2515-type_alias_impl_trait.md\n\n## Motivation 1: Closing the expressiveness gap on unnameable types\n\nIn Rust, there are types that cannot be named directly such as the type for each closure and future. These types can only be described by the traits that they implement. Type alias `impl Trait` allows type aliases to contain these (and other) types by using type inference. This is similar to `impl Trait` in return position (RPIT), but unlocks new use cases by allowing hidden types to appear in more places.\n\n### Example: Sending futures down a channel\n\nConsider this example which might be part of a job queueing system:\n\n```rust use std::future::Future; use tokio::sync::mpsc;\n\ntype Iter = impl Iterator<Item = u8>;\n\ntype Fut = impl Future<Output = impl FnOnce() -> Iter>;\n\nstruct Job { id: u64, fut: Fut, }\n\nasync fn send_job(tx: mpsc::Sender<Job>) { let iter = std::iter::once(42u8); let k = move || iter; let fut = async move { k }; let job = Job { id: 0, fut }; let _ = tx.send(job).await; } ```\n\nIn this example, we can see that:\n\n- We can place a `Future` within a `struct` without boxing. - We can use this \"hidden type\" in argument position, which allows us to send this type down a channel. - `impl Trait` can appear multiple times within one type alias, which allows our `Future` to resolve to an unboxed closure.\n\nWithout TAIT, we would need to use boxing and trait objects to achieve a similar result.\n\n### Example: Replacing Tokio's `ReusableBoxFuture`\n\nIn async Rust, when implementing `Future::poll` for a type, we often want to update some inner future. For example:\n\n```rust struct RecvManager { inner: ??? // This is a `Future`, but without TAIT we can't name it. }\n\nasync fn make_inner(mut rx: Receiver<T>) -> (Option<T>, Receiver<T>) { let v = rx.recv().await; (v, rx) }\n\nimpl Future for RecvManager { type Output = ();\n\nfn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output> { let (v, rx) = ready!(self.inner.poll(cx)); self.inner = make_inner(rx); // ... } } ```\n\nIf we just naively box the `inner` future, then we would have to allocate a new `Box` every time the outer future is polled. Clearly that's undesirable.\n\nTo solve this problem, both internally and for its users, Tokio implements a [`ReusableBoxFuture`]. The implementation does a lot of `unsafe` magic. With TAIT, the future returned by `make_inner` can be named, so all this clever trickery can simply be avoided.\n\n[`ReusableBoxFuture`]: https://docs.rs/tokio-util/0.7.8/tokio_util/sync/struct.ReusableBoxFuture.html\n\n## Quick aside: Why it's important to close expressiveness gaps\n\nThe problem with an expressiveness gap in a language is that users often only hit it after having made a substantial commitment to an architecture or code factoring. The engineer has built an entire wall, and only upon trying to lay the last brick does it become apparent that, though the design is logically sound, it cannot be expressed in the language, so the whole wall has to be torn down and built some other way.\n\nWhat may be worse is the long-term effects of these expressiveness gaps on language experts. Because we've deeply internalized these expressiveness gaps, we *stop thinking* of architectures that would be better for the problem because we subconsciously know we'll run into the gap. The expressiveness gap can start to *stunt our thinking*.\n\n## Motivation 2: Closing the expressiveness gap on captured lifetimes\n\nRPIT captures the lifetimes of any generic type parameters that are in scope. This can cause the returned hidden type to have undesirably tight bounds. For example, this code does not work, even though the returned hidden type clearly does not capture any references:\n\n```rust fn foo<T>(_t: T) -> impl Sized { () // Returned hidden type captures lifetimes in T. }\n\nfn bar<'x>(x: &'x ()) -> impl Sized + 'static { foo(x) // Type captures 'x. } ``` ``` error: lifetime may not live long enough | | fn bar<'x>(x: &'x ()) -> impl Sized + 'static { | -- lifetime `'x` defined here | foo(x) // Type captures 'x. | ^^^^^^ returning this value requires that `'x` must outlive `'static` ```\n\nThere are no good ways to work around this in stable Rust today. As we'll see below, TAIT gives us a way to express the correct bounds for this hidden type.\n\n## Motivation 3: Cleaner APIs with `impl Trait`\n\nCurrently, using RPIT in a function exposed in an API is discouraged. This is because for callers of a function behind an API, it's painful to receive a return value whose type cannot be named. Such a type cannot be stored unboxed in any data structure. This reduces the usefulness of RPIT.\n\nTAIT fixes this problem. Because the type alias or other type (e.g. a `struct` or `enum`) containing the hidden type or types can be exposed via the API, callers to the API can name the types that the API returns. These types can be placed in data structures and used anywhere any other type may be used.\n\n## Motivation 4: Doing what we said we would do\n\nBack when [RFC 1951] was being debated, these very same problems and motivations were raised. The feeling was that these were important and should be addressed. Members of the lang-team and others raised serious concerns about the design in that RFC because of these issues. The RFC resolved these concerns and justified the expressiveness restrictions that it imposed by leaning heavily on the assumption that we would later stabilize a fully explicit syntax. It's now many years later. It's time that we take a step in the direction of fulfilling that assumption.\n\n[RFC 1951]: https://github.com/rust-lang/rfcs/blob/master/text/1951-expand-impl-trait.md\n\n## How it works: Desugaring\n\n### A hypothetical `existential type` syntax\n\nTo help with understanding `impl Trait`, let's suppose that Rust supported this explicit syntax (not part of this proposal):\n\n```rust existential type H: Default; // Not part of this proposal. ```\n\nThis would introduce a *type parameter* `H` and add a trait bound such that `H` must implement the trait `Default`. As with other type parameters in Rust, `H` may be used in places where we would expect to find a type, but the type is opaque. We can only assume that it implements the traits in the bound (with the exception of leaked auto traits, described below). We can say, e.g., `H::default()`.\n\nThis type parameter is *existential* in the sense that no monomorphization is performed as with type parameters in argument position. `H` must represent exactly one concrete hidden type.\n\nWe can extend this syntax to support type and lifetime parameters:\n\n```rust existential type H<'t, T>: Iterator<Item = &'t T>; // Demonstration only. ```\n\nThis means that, for each type `T`, there is *exactly one* concrete hidden type `H<'_, T>`. Formally:\n\n``` Ɐ T. Ǝ H. H: Iterator<Item = &'_ T> ```\n\nThis is read as: *\"for all `T` there exists an `H` such that `H` implements an `Iterator` that returns items of type `&'_ T`\"*.\n\n### `impl Trait` in type aliases\n\nThe TAIT proposal differs from the explicit syntax above in that the hidden type (`H` above) is anonymous and can not necessarily be named explicitly. Let's desugar the first example to show how this works:\n\n```rust type Iter = impl Iterator<Item = u8>; type Fut = impl Future<Output = impl FnOnce() -> Iter>;\n\n// Desugars to:\n\nexistential type _H0: Iterator<Item = u8>; existential type _H1: FnOnce() -> _H0; existential type _H2: Future<Output = _H1>;\n\ntype Iter = _H0; type Fut = _H2; ```\n\nWe can see that's there's actually nothing special about the *type alias*. The type alias is just a normal type alias. Each use of the `impl Trait` syntax simply causes a new anonymous type parameter to be introduced.\n\n### Quick aside: `impl Trait` everywhere\n\nWe can see from the above desugaring why it's normal and natural to want `impl Trait` everywhere. There's no conceptual distinction between a use of `impl Trait` in a type alias and in a struct or enum. I.e.:\n\n```rust type S = (impl Default, impl Default); // Is conceptually similar to: struct S(impl Default, impl Default); // Not part of this proposal. ```\n\nIn both cases, `S` is just a normal type that has \"holes punched in it\" that are later filled in with concrete types.\n\nThis is not part of the proposed stabilization.\n\n## How it works: Constraining the hidden type\n\nAs described above, each hidden type represents *exactly one* concrete type. The concrete hidden type is chosen by type inference within the scope of whatever item contains the `impl Trait`. Typically this is going to be a module, but it could also be a function or any other kind of item that may contain other items.\n\nWithin that scope the hidden type may be used in two different ways:\n\n1. It may be used only for the traits that it implements; or 2. It may be used in a way that constrains it to a particular hidden type.\n\nOutside of that scope, it may only be used for the traits that it implements.\n\nInside of that scope, the hidden type may be constrained more than once. But if it is, all of those uses must constrain it to the exact same concrete type. All items that constrain the hidden type must fully constrain that type. An item cannot partially constrain a type and rely on other items to fill in the gaps.\n\nFor a function to constrain the hidden type, the hidden type must appear in the signature of the function -- in the type of the function's return value, in the type of one or more of its arguments, or in a type within a bound.\n\nNote that we talk here about constraining the hidden type, *not* about constraining \"the TAIT\" or the type alias. It's important to remember the hidden types are anonymous, that there can be more than one of them in a single type alias, and that these hidden types can be constrained through encapsulating tuples, `struct`s, `enum`s, etc.\n\nLet's look at some examples of how these hidden types may be constrained.\n\n### Example: Return position\n\nA hidden type that appears in return position may be constrained by the function returning a value of some concrete type:\n\n```rust type Foo = impl Default; // Let's call the hidden type `_H`.\n\nfn foo() -> Foo { () } // Constrains _H to (). ```\n\nNote that if we simply pass through the hidden type, it has not been constrained:\n\n```rust type Foo = impl Default; // Let's call the hidden type `_H`.\n\nfn foo(x: Foo) -> Foo { x } // Does not constrain _H. ```\n\nTo preserve our ability to make backward compatible changes in the future, this and other non-constraining functions within the scope in which the hidden type was introduced nonetheless are treated by the implementation *as if* they could constrain the hidden type, with an error being thrown later if needed, as we detail in an appendix.\n\n### Example: Argument position\n\nA hidden type that appears in argument position may be constrained by the function using the hidden type in a way that coerces that hidden type to some concrete type. For example:\n\n```rust type Foo = impl Copy; // Let's call the hidden type `_H`.",
+  "facts": [
+    {
+      "kind": "decision",
+      "text": "We accepted [RFC 2515] in 2019.",
+      "person": "lang team",
+      "deadline": "2019",
+      "source_quote": "We accepted [RFC 2515] in 2019."
+    },
+    {
+      "kind": "proposal",
+      "text": "That RFC proposed that `impl Trait` syntax be allowed in type aliases and in associated types.",
+      "person": "RFC 2515 authors",
+      "deadline": "2019",
+      "source_quote": "That RFC proposed that `impl Trait` syntax be allowed in type aliases and in associated types."
+    },
+    {
+      "kind": "proposal",
+      "text": "We would like to stabilize this feature quickly if possible.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "We would like to stabilize this feature quickly if possible."
+    },
+    {
+      "kind": "agreement",
+      "text": "This is a long-awaited feature.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "This is a long-awaited feature."
+    },
+    {
+      "kind": "agreement",
+      "text": "It helps API designers to not leak unwanted implementation details and it closes certain fundamental expressiveness gaps in Rust.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "It helps API designers to not leak unwanted implementation details and it closes certain fundamental expressiveness gaps in Rust."
+    },
+    {
+      "kind": "proposal",
+      "text": "TAIT fixes the problem that RPIT is discouraged in APIs because callers cannot name the returned type.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "TAIT fixes this problem."
+    },
+    {
+      "kind": "agreement",
+      "text": "TAIT allows type aliases to contain unnameable types by using type inference, unlocking new use cases.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "Type alias `impl Trait` allows type aliases to contain these (and other) types by using type inference."
+    },
+    {
+      "kind": "agreement",
+      "text": "Without TAIT, boxing and trait objects are needed to place futures in structs or send them down channels.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "Without TAIT, we would need to use boxing and trait objects to achieve a similar result."
+    },
+    {
+      "kind": "agreement",
+      "text": "TAIT allows naming the future returned by `make_inner` to avoid unsafe magic and boxing in Tokio's `ReusableBoxFuture`.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "With TAIT, the future returned by `make_inner` can be named, so all this clever trickery can simply be avoided."
+    },
+    {
+      "kind": "agreement",
+      "text": "The expressiveness gap in Rust causes users to have to redesign architectures after substantial commitment.",
+      "person": "meeting participants",
+      "deadline": "not specified",
+      "source_quote": "The engineer has built an entire wall, and only upon trying to lay the last brick does it become apparent that, though the design is logically sound, it cannot be expressed in the language, so the whole wall has to be torn down and built some other way."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-12-q01",
+      "question": "When was RFC 2515 accepted?",
+      "answers": [
+        "2019"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 63,
+          "end": 94,
+          "quote": "We accepted [RFC 2515] in 2019."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q02",
+      "question": "What does RFC 2515 propose?",
+      "answers": [
+        "`impl Trait` syntax be allowed in type aliases and in associated types"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 95,
+          "end": 189,
+          "quote": "That RFC proposed that `impl Trait` syntax be allowed in type aliases and in associated types."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q03",
+      "question": "Do meeting participants want to stabilize TAIT quickly?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 352,
+          "end": 412,
+          "quote": "We would like to stabilize this feature quickly if possible."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q04",
+      "question": "Is TAIT considered a long-awaited feature?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 190,
+          "end": 221,
+          "quote": "This is a long-awaited feature."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q05",
+      "question": "Who benefits from TAIT by not leaking implementation details?",
+      "answers": [
+        "API designers"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 222,
+          "end": 351,
+          "quote": "It helps API designers to not leak unwanted implementation details and it closes certain fundamental expressiveness gaps in Rust."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q06",
+      "question": "Does TAIT fix the problem that RPIT is discouraged in APIs?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 5442,
+          "end": 5466,
+          "quote": "TAIT fixes this problem."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q07",
+      "question": "Is boxing required without TAIT to place futures in structs?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2163,
+          "end": 2251,
+          "quote": "Without TAIT, we would need to use boxing and trait objects to achieve a similar result."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q08",
+      "question": "Does TAIT allow naming the future returned by `make_inner` to avoid unsafe magic?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 3146,
+          "end": 3257,
+          "quote": "With TAIT, the future returned by `make_inner` can be named, so all this clever trickery can simply be avoided."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q09",
+      "question": "Is there an explicit deadline for stabilizing TAIT mentioned in the excerpt?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 352,
+          "end": 412,
+          "quote": "We would like to stabilize this feature quickly if possible."
+        }
+      ]
+    },
+    {
+      "id": "validation-12-q10",
+      "question": "Is there a disagreement about the usefulness of TAIT in the excerpt?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 190,
+          "end": 221,
+          "quote": "This is a long-awaited feature."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2023-05-31-TAIT-stabilization.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-05-31-TAIT-stabilization.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2023-05-31-TAIT-stabilization.md",
+    "source_sha256": "455f2bd64c875505e9a2a01b37ac5cd2dd2a2d586f8ad7aa7a88ae9387f24e34",
+    "excerpt_sha256": "3c2b8a1f6bb52dacd0a9ef3c4f187dba963920bdb40ec59a254c535ab5723255",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "9b8becdae4a541d0bc77e66922825d9166e81eeff4f903a3b7f0b531f0bb187c",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

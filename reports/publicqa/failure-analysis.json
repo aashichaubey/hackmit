@@ -1,0 +1,23 @@
+{
+  "study": "public_training_failure_analysis",
+  "reviewer_type": "independent_agent_qualitative_review_not_human_adjudication",
+  "labels_changed": false,
+  "native_scores_changed": false,
+  "paid_calls": 0,
+  "heldout_data_read": false,
+  "pilot_minimal_negative_pairs": 4,
+  "categories": {"substantive_answer_regression": 2, "quote_or_reference_sensitivity": 2},
+  "findings": [
+    {"id": "MeeQA:5ce50fb2d7e083d23017", "raw_f1": 0.8, "encoded_f1": 0.0, "category": "substantive_answer_regression", "mechanism": "Encoded abstains despite explicit opening agreement; raw retrieves it.", "also_inheritance_regression": true},
+    {"id": "MeeQA:13cb5a6a539e8c76484d", "raw_f1": 0.5669291338582677, "encoded_f1": 0.32894736842105265, "category": "substantive_answer_regression", "mechanism": "Encoded selects later demo anecdote instead of observation instructions.", "reference_caveat": "A suggestion within gold is later explicitly retracted; overlap is not final-state correctness."},
+    {"id": "MeeQA:75e2680271e43f214223", "raw_f1": 0.17073170731707318, "encoded_f1": 0.06451612903225806, "category": "quote_or_reference_sensitivity", "mechanism": "Gold describes physical components; encoded quotes a directly relevant colour limit.", "source_caveat": "Further design discussion is deferred, so do not infer final commitment."},
+    {"id": "MeeQA:cb0a8ae0d6644296a278", "raw_f1": 0.9032258064516129, "encoded_f1": 0.835820895522388, "category": "quote_or_reference_sensitivity", "mechanism": "Both retrieve the same core evidence; encoded adds an acknowledgement."}
+  ],
+  "inheritance_shared_failures": [
+    {"id": "MeeQA:4e92c19c3c0a66b07473", "published_found": false, "both_predicted_found": true, "assessment": "Individual confirmation does not necessarily establish collective staff opinion or resolve an antecedent."},
+    {"id": "MeeQA:449bd704fba5685849ec", "published_found": false, "both_predicted_found": true, "assessment": "Guessed screen functions are discussed, while requested purpose remains unspecified; epistemic-status ambiguity."},
+    {"id": "MeeQA:88dc16909004c36cc438", "published_found": true, "both_predicted_found": false, "assessment": "Shared abstention on elliptical disfluent question despite affirmative and longer contextual references."}
+  ],
+  "limitations": ["Single paired generations do not establish stable causal effects.", "Agent judgment cannot replace published labels or human adjudication.", "No transcript-character loss was identified; model-use differences remain possible."],
+  "next_experiment": "Balanced raw/encoded repeats of the two substantive regressions under authorized ledger, preserving all prompts and native scoring; display user-selected savings-quality tradeoffs without equivalence claims."
+}

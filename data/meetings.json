@@ -1,0 +1,1724 @@
+{
+  "version": "1",
+  "meetings": [
+    {
+      "id": "meeting-01",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "David will finish the API by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-02",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. John will finish the API by Thursday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "John",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "John will finish the API by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "John"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-03",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "David will finish the API by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-04",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. David will finish the API by Friday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Friday",
+          "source_quote": "David will finish the API by Friday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Friday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-05",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "David will finish the API by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-06",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. David will finish the API by Thursday. Maya disagreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "David will finish the API by Thursday."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya disagreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who disagreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-07",
+      "split": "dev",
+      "notes": "Sarah proposed the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Sarah",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah proposed the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "David will finish the API by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-08",
+      "split": "dev",
+      "notes": "Sarah decided the launch plan. David will finish the API by Thursday. Maya agreed with the launch plan.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Sarah decided the launch plan."
+        },
+        {
+          "kind": "action",
+          "person": "David",
+          "text": "finish the API",
+          "deadline": "Thursday",
+          "source_quote": "David will finish the API by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Maya",
+          "text": "the launch plan",
+          "deadline": "",
+          "source_quote": "Maya agreed with the launch plan."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the API?",
+          "answers": [
+            "David"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the API due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-09",
+      "split": "dev",
+      "notes": "Nina will review the budget. No deadline was set. Omar proposed the audit.",
+      "facts": [
+        {
+          "kind": "action",
+          "person": "Nina",
+          "text": "review the budget",
+          "deadline": "",
+          "source_quote": "Nina will review the budget."
+        },
+        {
+          "kind": "proposal",
+          "person": "Omar",
+          "text": "the audit",
+          "deadline": "",
+          "source_quote": "Omar proposed the audit."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who will review the budget?",
+          "answers": [
+            "Nina"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is the budget review due?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Was the audit decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who proposed the audit?",
+          "answers": [
+            "Omar"
+          ],
+          "kind": "proposal"
+        }
+      ]
+    },
+    {
+      "id": "meeting-10",
+      "split": "dev",
+      "notes": "Alex may take the migration, but nobody confirmed an owner. Priya decided to run the demo.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "run the demo",
+          "deadline": "",
+          "source_quote": "Priya decided to run the demo."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns the migration?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Was the demo decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "When is the demo due?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "What was decided?",
+          "answers": [
+            "run the demo"
+          ],
+          "kind": "decision"
+        }
+      ]
+    },
+    {
+      "id": "meeting-11",
+      "split": "dev",
+      "notes": "Ruth proposed the launch plan 11. Leo will audit the dashboard by Thursday. Zoe agreed with the launch plan 11.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Ruth",
+          "text": "the launch plan 11",
+          "deadline": "",
+          "source_quote": "Ruth proposed the launch plan 11."
+        },
+        {
+          "kind": "action",
+          "person": "Leo",
+          "text": "audit the dashboard",
+          "deadline": "Thursday",
+          "source_quote": "Leo will audit the dashboard by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Zoe",
+          "text": "the launch plan 11",
+          "deadline": "",
+          "source_quote": "Zoe agreed with the launch plan 11."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns audit the dashboard?",
+          "answers": [
+            "Leo"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is audit the dashboard due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 11 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 11?",
+          "answers": [
+            "Zoe"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-12",
+      "split": "dev",
+      "notes": "Jules decided the launch plan 12. Ana will plan the workshop by Friday. Paul agreed with the launch plan 12.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 12",
+          "deadline": "",
+          "source_quote": "Jules decided the launch plan 12."
+        },
+        {
+          "kind": "action",
+          "person": "Ana",
+          "text": "plan the workshop",
+          "deadline": "Friday",
+          "source_quote": "Ana will plan the workshop by Friday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Paul",
+          "text": "the launch plan 12",
+          "deadline": "",
+          "source_quote": "Paul agreed with the launch plan 12."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns plan the workshop?",
+          "answers": [
+            "Ana"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is plan the workshop due?",
+          "answers": [
+            "Friday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 12 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 12?",
+          "answers": [
+            "Paul"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-13",
+      "split": "dev",
+      "notes": "Amir proposed the launch plan 13. Ben will verify the metrics by Monday. Uma disagreed with the launch plan 13.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Amir",
+          "text": "the launch plan 13",
+          "deadline": "",
+          "source_quote": "Amir proposed the launch plan 13."
+        },
+        {
+          "kind": "action",
+          "person": "Ben",
+          "text": "verify the metrics",
+          "deadline": "Monday",
+          "source_quote": "Ben will verify the metrics by Monday."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Uma",
+          "text": "the launch plan 13",
+          "deadline": "",
+          "source_quote": "Uma disagreed with the launch plan 13."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns verify the metrics?",
+          "answers": [
+            "Ben"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is verify the metrics due?",
+          "answers": [
+            "Monday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 13 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who disagreed with the launch plan 13?",
+          "answers": [
+            "Uma"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-14",
+      "split": "dev",
+      "notes": "Kim decided the launch plan 14. Tara will design the landing page by Tuesday. Luis agreed with the launch plan 14.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 14",
+          "deadline": "",
+          "source_quote": "Kim decided the launch plan 14."
+        },
+        {
+          "kind": "action",
+          "person": "Tara",
+          "text": "design the landing page",
+          "deadline": "Tuesday",
+          "source_quote": "Tara will design the landing page by Tuesday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Luis",
+          "text": "the launch plan 14",
+          "deadline": "",
+          "source_quote": "Luis agreed with the launch plan 14."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns design the landing page?",
+          "answers": [
+            "Tara"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is design the landing page due?",
+          "answers": [
+            "Tuesday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 14 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 14?",
+          "answers": [
+            "Luis"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-15",
+      "split": "dev",
+      "notes": "Zoe proposed the launch plan 15. Noah will book the venue by Wednesday. Jo agreed with the launch plan 15.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Zoe",
+          "text": "the launch plan 15",
+          "deadline": "",
+          "source_quote": "Zoe proposed the launch plan 15."
+        },
+        {
+          "kind": "action",
+          "person": "Noah",
+          "text": "book the venue",
+          "deadline": "Wednesday",
+          "source_quote": "Noah will book the venue by Wednesday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Jo",
+          "text": "the launch plan 15",
+          "deadline": "",
+          "source_quote": "Jo agreed with the launch plan 15."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns book the venue?",
+          "answers": [
+            "Noah"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is book the venue due?",
+          "answers": [
+            "Wednesday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 15 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 15?",
+          "answers": [
+            "Jo"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-16",
+      "split": "dev",
+      "notes": "Paul decided the launch plan 16. Eva will ship the prototype by September 25. Mina disagreed with the launch plan 16.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 16",
+          "deadline": "",
+          "source_quote": "Paul decided the launch plan 16."
+        },
+        {
+          "kind": "action",
+          "person": "Eva",
+          "text": "ship the prototype",
+          "deadline": "September 25",
+          "source_quote": "Eva will ship the prototype by September 25."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Mina",
+          "text": "the launch plan 16",
+          "deadline": "",
+          "source_quote": "Mina disagreed with the launch plan 16."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns ship the prototype?",
+          "answers": [
+            "Eva"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is ship the prototype due?",
+          "answers": [
+            "September 25"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 16 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who disagreed with the launch plan 16?",
+          "answers": [
+            "Mina"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-17",
+      "split": "dev",
+      "notes": "Uma proposed the launch plan 17. Kai will clean the dataset by next Friday. Raj agreed with the launch plan 17.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Uma",
+          "text": "the launch plan 17",
+          "deadline": "",
+          "source_quote": "Uma proposed the launch plan 17."
+        },
+        {
+          "kind": "action",
+          "person": "Kai",
+          "text": "clean the dataset",
+          "deadline": "next Friday",
+          "source_quote": "Kai will clean the dataset by next Friday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Raj",
+          "text": "the launch plan 17",
+          "deadline": "",
+          "source_quote": "Raj agreed with the launch plan 17."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns clean the dataset?",
+          "answers": [
+            "Kai"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is clean the dataset due?",
+          "answers": [
+            "next Friday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 17 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 17?",
+          "answers": [
+            "Raj"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-18",
+      "split": "dev",
+      "notes": "Luis decided the launch plan 18. Ruth will run the survey by October 2. Ella agreed with the launch plan 18.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 18",
+          "deadline": "",
+          "source_quote": "Luis decided the launch plan 18."
+        },
+        {
+          "kind": "action",
+          "person": "Ruth",
+          "text": "run the survey",
+          "deadline": "October 2",
+          "source_quote": "Ruth will run the survey by October 2."
+        },
+        {
+          "kind": "agreement",
+          "person": "Ella",
+          "text": "the launch plan 18",
+          "deadline": "",
+          "source_quote": "Ella agreed with the launch plan 18."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns run the survey?",
+          "answers": [
+            "Ruth"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is run the survey due?",
+          "answers": [
+            "October 2"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 18 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 18?",
+          "answers": [
+            "Ella"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-19",
+      "split": "validation",
+      "notes": "Jo proposed the launch plan 19. Jules will approve the copy by tomorrow. Theo disagreed with the launch plan 19.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Jo",
+          "text": "the launch plan 19",
+          "deadline": "",
+          "source_quote": "Jo proposed the launch plan 19."
+        },
+        {
+          "kind": "action",
+          "person": "Jules",
+          "text": "approve the copy",
+          "deadline": "tomorrow",
+          "source_quote": "Jules will approve the copy by tomorrow."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Theo",
+          "text": "the launch plan 19",
+          "deadline": "",
+          "source_quote": "Theo disagreed with the launch plan 19."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns approve the copy?",
+          "answers": [
+            "Jules"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is approve the copy due?",
+          "answers": [
+            "tomorrow"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 19 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who disagreed with the launch plan 19?",
+          "answers": [
+            "Theo"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-20",
+      "split": "validation",
+      "notes": "Mina decided the launch plan 20. Amir will schedule the demo by end of month. David agreed with the launch plan 20.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 20",
+          "deadline": "",
+          "source_quote": "Mina decided the launch plan 20."
+        },
+        {
+          "kind": "action",
+          "person": "Amir",
+          "text": "schedule the demo",
+          "deadline": "end of month",
+          "source_quote": "Amir will schedule the demo by end of month."
+        },
+        {
+          "kind": "agreement",
+          "person": "David",
+          "text": "the launch plan 20",
+          "deadline": "",
+          "source_quote": "David agreed with the launch plan 20."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns schedule the demo?",
+          "answers": [
+            "Amir"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is schedule the demo due?",
+          "answers": [
+            "end of month"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 20 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 20?",
+          "answers": [
+            "David"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-21",
+      "split": "validation",
+      "notes": "Raj proposed the launch plan 21. Kim will review the contract by Thursday. John agreed with the launch plan 21.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Raj",
+          "text": "the launch plan 21",
+          "deadline": "",
+          "source_quote": "Raj proposed the launch plan 21."
+        },
+        {
+          "kind": "action",
+          "person": "Kim",
+          "text": "review the contract",
+          "deadline": "Thursday",
+          "source_quote": "Kim will review the contract by Thursday."
+        },
+        {
+          "kind": "agreement",
+          "person": "John",
+          "text": "the launch plan 21",
+          "deadline": "",
+          "source_quote": "John agreed with the launch plan 21."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns review the contract?",
+          "answers": [
+            "Kim"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is review the contract due?",
+          "answers": [
+            "Thursday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 21 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 21?",
+          "answers": [
+            "John"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-22",
+      "split": "validation",
+      "notes": "Ella decided the launch plan 22. Zoe will publish the guide by Friday. Maya disagreed with the launch plan 22.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 22",
+          "deadline": "",
+          "source_quote": "Ella decided the launch plan 22."
+        },
+        {
+          "kind": "action",
+          "person": "Zoe",
+          "text": "publish the guide",
+          "deadline": "Friday",
+          "source_quote": "Zoe will publish the guide by Friday."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Maya",
+          "text": "the launch plan 22",
+          "deadline": "",
+          "source_quote": "Maya disagreed with the launch plan 22."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns publish the guide?",
+          "answers": [
+            "Zoe"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is publish the guide due?",
+          "answers": [
+            "Friday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 22 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who disagreed with the launch plan 22?",
+          "answers": [
+            "Maya"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-23",
+      "split": "validation",
+      "notes": "Theo proposed the launch plan 23. Paul will test the payment flow by Monday. Lena agreed with the launch plan 23.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Theo",
+          "text": "the launch plan 23",
+          "deadline": "",
+          "source_quote": "Theo proposed the launch plan 23."
+        },
+        {
+          "kind": "action",
+          "person": "Paul",
+          "text": "test the payment flow",
+          "deadline": "Monday",
+          "source_quote": "Paul will test the payment flow by Monday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Lena",
+          "text": "the launch plan 23",
+          "deadline": "",
+          "source_quote": "Lena agreed with the launch plan 23."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns test the payment flow?",
+          "answers": [
+            "Paul"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is test the payment flow due?",
+          "answers": [
+            "Monday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 23 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 23?",
+          "answers": [
+            "Lena"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-24",
+      "split": "validation",
+      "notes": "David decided the launch plan 24. Uma will update the roadmap by Tuesday. Omar agreed with the launch plan 24.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 24",
+          "deadline": "",
+          "source_quote": "David decided the launch plan 24."
+        },
+        {
+          "kind": "action",
+          "person": "Uma",
+          "text": "update the roadmap",
+          "deadline": "Tuesday",
+          "source_quote": "Uma will update the roadmap by Tuesday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Omar",
+          "text": "the launch plan 24",
+          "deadline": "",
+          "source_quote": "Omar agreed with the launch plan 24."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns update the roadmap?",
+          "answers": [
+            "Uma"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is update the roadmap due?",
+          "answers": [
+            "Tuesday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 24 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 24?",
+          "answers": [
+            "Omar"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-25",
+      "split": "test",
+      "notes": "John proposed the launch plan 25. Luis will prepare the report by Wednesday. Priya disagreed with the launch plan 25.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "John",
+          "text": "the launch plan 25",
+          "deadline": "",
+          "source_quote": "John proposed the launch plan 25."
+        },
+        {
+          "kind": "action",
+          "person": "Luis",
+          "text": "prepare the report",
+          "deadline": "Wednesday",
+          "source_quote": "Luis will prepare the report by Wednesday."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Priya",
+          "text": "the launch plan 25",
+          "deadline": "",
+          "source_quote": "Priya disagreed with the launch plan 25."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns prepare the report?",
+          "answers": [
+            "Luis"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is prepare the report due?",
+          "answers": [
+            "Wednesday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 25 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who disagreed with the launch plan 25?",
+          "answers": [
+            "Priya"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-26",
+      "split": "test",
+      "notes": "Maya decided the launch plan 26. Jo will inspect the logs by September 25. Alex agreed with the launch plan 26.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 26",
+          "deadline": "",
+          "source_quote": "Maya decided the launch plan 26."
+        },
+        {
+          "kind": "action",
+          "person": "Jo",
+          "text": "inspect the logs",
+          "deadline": "September 25",
+          "source_quote": "Jo will inspect the logs by September 25."
+        },
+        {
+          "kind": "agreement",
+          "person": "Alex",
+          "text": "the launch plan 26",
+          "deadline": "",
+          "source_quote": "Alex agreed with the launch plan 26."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns inspect the logs?",
+          "answers": [
+            "Jo"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is inspect the logs due?",
+          "answers": [
+            "September 25"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 26 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 26?",
+          "answers": [
+            "Alex"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-27",
+      "split": "test",
+      "notes": "Lena proposed the launch plan 27. Mina will finish the integration by next Friday. Nina agreed with the launch plan 27.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Lena",
+          "text": "the launch plan 27",
+          "deadline": "",
+          "source_quote": "Lena proposed the launch plan 27."
+        },
+        {
+          "kind": "action",
+          "person": "Mina",
+          "text": "finish the integration",
+          "deadline": "next Friday",
+          "source_quote": "Mina will finish the integration by next Friday."
+        },
+        {
+          "kind": "agreement",
+          "person": "Nina",
+          "text": "the launch plan 27",
+          "deadline": "",
+          "source_quote": "Nina agreed with the launch plan 27."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns finish the integration?",
+          "answers": [
+            "Mina"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is finish the integration due?",
+          "answers": [
+            "next Friday"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 27 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 27?",
+          "answers": [
+            "Nina"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-28",
+      "split": "test",
+      "notes": "Omar decided the launch plan 28. Raj will draft the email by October 2. Sam disagreed with the launch plan 28.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 28",
+          "deadline": "",
+          "source_quote": "Omar decided the launch plan 28."
+        },
+        {
+          "kind": "action",
+          "person": "Raj",
+          "text": "draft the email",
+          "deadline": "October 2",
+          "source_quote": "Raj will draft the email by October 2."
+        },
+        {
+          "kind": "disagreement",
+          "person": "Sam",
+          "text": "the launch plan 28",
+          "deadline": "",
+          "source_quote": "Sam disagreed with the launch plan 28."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns draft the email?",
+          "answers": [
+            "Raj"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is draft the email due?",
+          "answers": [
+            "October 2"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 28 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who disagreed with the launch plan 28?",
+          "answers": [
+            "Sam"
+          ],
+          "kind": "disagreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-29",
+      "split": "test",
+      "notes": "Priya proposed the launch plan 29. Ella will review the mockups by tomorrow. Iris agreed with the launch plan 29.",
+      "facts": [
+        {
+          "kind": "proposal",
+          "person": "Priya",
+          "text": "the launch plan 29",
+          "deadline": "",
+          "source_quote": "Priya proposed the launch plan 29."
+        },
+        {
+          "kind": "action",
+          "person": "Ella",
+          "text": "review the mockups",
+          "deadline": "tomorrow",
+          "source_quote": "Ella will review the mockups by tomorrow."
+        },
+        {
+          "kind": "agreement",
+          "person": "Iris",
+          "text": "the launch plan 29",
+          "deadline": "",
+          "source_quote": "Iris agreed with the launch plan 29."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns review the mockups?",
+          "answers": [
+            "Ella"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is review the mockups due?",
+          "answers": [
+            "tomorrow"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 29 decided?",
+          "answers": [
+            "not found"
+          ],
+          "kind": "unknown"
+        },
+        {
+          "question": "Who agreed with the launch plan 29?",
+          "answers": [
+            "Iris"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    },
+    {
+      "id": "meeting-30",
+      "split": "test",
+      "notes": "Alex decided the launch plan 30. Theo will set up the server by end of month. Leo agreed with the launch plan 30.",
+      "facts": [
+        {
+          "kind": "decision",
+          "person": "",
+          "text": "the launch plan 30",
+          "deadline": "",
+          "source_quote": "Alex decided the launch plan 30."
+        },
+        {
+          "kind": "action",
+          "person": "Theo",
+          "text": "set up the server",
+          "deadline": "end of month",
+          "source_quote": "Theo will set up the server by end of month."
+        },
+        {
+          "kind": "agreement",
+          "person": "Leo",
+          "text": "the launch plan 30",
+          "deadline": "",
+          "source_quote": "Leo agreed with the launch plan 30."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who owns set up the server?",
+          "answers": [
+            "Theo"
+          ],
+          "kind": "owner"
+        },
+        {
+          "question": "When is set up the server due?",
+          "answers": [
+            "end of month"
+          ],
+          "kind": "deadline"
+        },
+        {
+          "question": "Was the launch plan 30 decided?",
+          "answers": [
+            "yes"
+          ],
+          "kind": "decision"
+        },
+        {
+          "question": "Who agreed with the launch plan 30?",
+          "answers": [
+            "Leo"
+          ],
+          "kind": "agreement"
+        }
+      ]
+    }
+  ]
+}

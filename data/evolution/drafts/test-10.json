@@ -1,0 +1,253 @@
+{
+  "id": "test-10",
+  "split": "test",
+  "notes": "# 113th TC39 Meeting\n\nDay One—10 March 2026\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |--------------------|--------------|--------------------| | Aki Rose Braun | AKI | Ecma International | | Ashley Claymore | ACE | Bloomberg | | Ben Allen | BAN | Igalia | | Chengzhong Wu | CZW | Bloomberg | | Chip Morningstar | CM | Consensys | | Chris de Almeida | CDA | IBM | | Dan Lapid | DLP | Cloudflare | | Daniel Minor | DLM | Mozilla | | Dmitry Makhnev | DJM | JetBrains | | Eemeli Aro | EAO | Mozilla | | Guy Bedford | GB | Cloudflare | | Istvan Sebestyen | IS | Ecma | | James Snell | JSL | Cloudflare | | Jason Williams | JWS | Bloomberg | | Jeffrey Posnick | JPO | Bloomberg | | Joe Sepi | JSI | Cloudflare | | Jonathan Kuperman | JKP | Bloomberg | | Jordan Harband | JHD | Socket | | Justin Ridgewell | JRL | Google | | J. S. Choi | JSC | Invited Expert | | Keith Miller | KM | Apple | | Lea Verou | LVU | OpenJS | | Linus Groh | LGH | Bloomberg | | Mikhail Barash | MBH | Univ. of Bergen | | Nicolò Ribaudo | NRO | Igalia | | Olivier Flückiger | OFR | Google | | Peter Klecha | PKA | Bloomberg | | Philip Chimento | PFC | Igalia | | Richard Gibson | RGN | Agoric | | Ron Buckton | RBN | F5 | | Ruben Bridgewater | RBR | Invited Expert | | Samina Husain | SHN | Ecma International | | Stephen Hicks | SHS | Google | | Waldemar Horwat | WH | Invited Expert | | Yagiz Nizipli | YNP | Cloudflare | | Daniel Rosenwasser | DRR | Microsoft | | Jesse Alama | JMN | Igalia | | Kevin Gibbons | KG | F5 | | Michael Ficarra | MF | F5 | | Mark S. Miller | MM | Agoric | | Rob Palmer | RPR | Bloomberg | | Shane Carr | SFC | Google | | Zibi Braniecki | ZB | |\n\n## Opening & Welcome\n\nPresenter: Rob Palmer (RPR)\n\nNow your video is just a video of the brick wall.\n\nRPR: That is the podium. I think. So CDA will appear. Can you view 2CQ whilst I'm doing this? Because I won't really have the best. Okay. So we're very nearly ready to go. We're one minute to go time. We think everything is set up except for the microphones, the I think the lapel microphones work, and you need to talk into the pointy end, the end of the stick. However, the regular microphones we've not yet confirmed work. Could someone have a go using one? Maybe Peter? Or Jeff?\n\nRPR: Testing, testing, testing.\n\nRPR: Testing. Okay. All right. Seems like the microphones do work. All right. And it is 10:00 AM in New York. So we'll officially say the 113th meeting of TC39 is beginning. Do we have our host, Justin, in the room? I guess he's probably downstairs helping people in. But nevertheless, we will begin. So welcome, everyone, to New York. It's been a while since we've been here last. I definitely remember coming here for the Masonic Lodge. That was a memorable one with Kanye. And it was at Kanye or yeah, it was? Okay. Good. So we're here back again. Today, I will reintroduce you to your chair group. It's remained the same for a while now. And also, we'll be reelecting. We have elections coming up for the chair group, the editors, and the conveners that Samina will handle. So in the room today, we have Rob, myself. We also have coming in from Chicago is Chris. And then on the call, we will have at times Ujjwal. I know Dan Minor is here. And we have as a facilitators, we also have Justin and Daniel Rosenwasser, who is here in the room as well. So this is an amazing turnout. All right. Everyone that's here, even if you're in the room, even if you've been allowed access to the building, please use the entry sign-up form on the reflector. You can find that in the matrix room. It's the headline post, the subject of the room to get to that. But just go to the reflector, and you'll see the main details. On there, scrolling down, I think we should probably make it a bit more prominent as Nicolo says, is the link to the video form. And it's always useful to be in that, particularly if you're presenting. You will need to be signed in in order to get your slides up. And AKI appreciates it too. We use this for attendance tracking, which is an important rule of ECMA meetings. We also have a code of conduct on our website, TC39.es. Please aim please read it. And please aim to behave in a way that respects the spirit of the document. We're not trying to litigate how close to the line you can go. And the summary is, as Bill and Ted put it well, be excellent to each other. Our daily schedule is a bit different to normal. There is a change. So please I heard an echo in the room. So please just recognize that lunch is an hour later than our normal schedule. And we've done previously. So lunch will be between 1:00 and 2:00 PM. We'll also be doing short breaks in the middle of the morning session and the middle of the afternoon session. Is Justin in the room? Does anyone from Google want to talk about the room logistics? What happens if there's a fire? I see a red exit. Please follow the signs. Okay. So Chris corrects me. The break is at 3:00 PM. Does anyone know where the bathrooms are here? Okay. They're left. And all the way around to the left, as you leave the room. Okay. We are using our regular comms tools with a small twist. So we as always, to manage our agenda, we have TCQ. Please use this. If you wish to speak, and also to see what's coming up next, the chairs do our best to reorder the queue dynamically as and when we see things. When you're using TCQ and you're participating, in the tab that shows the participants rather than the entire schedule, you will see these four buttons. When you're speaking, there is a button that says, \"I'm done speaking. Please don't use that.\" The chairs will move things on. And in terms of the buttons, generally, please prefer the buttons on the left because they are lightweight interventions, like a new topic or discussing the current. Please only use the ones on the right, or in particular, the point of order, if you need to stop the meeting. Such as if, for example, the notes have stopped or there's something that's highly pressing and needs to stop the show. We also have our matrix chat for real-time communications. So this is a little bit like Slack, a little bit like Discord. With encryption. Please make use of this. The primary channel for work is TC39 delegates. The primary channel for not work, so for off-topic, for jokes, for things the bot said, is temporal dead zone. TDZ. The mascot of which is an opossum. We have an IPR policy that hopefully everyone has read. The key thing is that the regular form of membership, where you will have already signed this, is being an ECMA member and being an employee or a delegate of an ECMA member company or entity. We also have invited experts. Which are those people who have gone through the process, who have signed the form, been approved by the ECMA secretariat, and then sometimes we also have observers I know that some of those have been listed on the ECMA invite. If in all cases, please make sure that you have signed the royalty-free task group form. And observers are expected to not speak. And to not make a legal contribution to the meeting. All right. I'm going to read out some special words about our notes. The twist with today's meeting is that we do not have our normal transcriptionist, as provided by the third-party company. So instead, we'll be using the built-in note-taking that is built into Google Meet Chris, can you confirm that that's been enabled?\n\nRPR: No.\n\nRPR: Okay. We will be asking our hosts who are also the authors of Google Meet or the company that has created it to turn on the transcription there as a backup. But for live notes, we'll be using Kevin Gibbons' Whisper transcription to make up for the lack of our human transcriptionist. I hope that is okay. So a detailed transcript of this meeting is being prepared and will be eventually posted on GitHub. You may edit this at any time during the meeting in Google Docs for accuracy, including any comments, which you do not wish to appear. You may also request corrections or deletions after the fact by editing the Google Doc in the first two weeks after the TC39 meeting or subsequently making the PR in the notes repository or contacting the TC39 chairs. One of the things that we rely on even with the official or the automated transcription is humans to provide attribution, to say who is speaking, to add the notes there. Plus, to make any corrections and so on. It's a fun activity. We always ask for volunteers. Can I ask for volunteers now to begin the morning session? We have a hand up from Jon Kuperman. We have one note-taker. Could we get one more, please?\n\nRPR: Uh-oh.\n\nRPR: And ACE as well. Thank you, JKP and ACE. The next meeting we have coming up is hosted by JetBrains. That is in May. It is in Amsterdam. So please fill out the interest survey for that. We have already the chairs have already established there is enough interest for this to go ahead. But it's always good to communicate your intents to other people because there may be people out there who will only go if they see your name on there. So be the attractive party maker that you can be. So very much looking forward to that. And I think AKI may have also done a reminder that it's worth booking up your accommodation travel soon. Because Amsterdam is just naturally a little bit expensive at that time of year. So yeah, strike soon. And we will be posting the invite on the reflector. All right. So let's get to the usual bits. We've done our ask the note-taker. We'll now seek approval for the previous meeting, which was held in January. Are there any objections to approving the notes from the previous meeting? I think I'm hearing no objections. So we can say that the previous meeting notes are approved. Next up, adoption of the current agenda. Are there any objections to adopting the current agenda?\n\nSHN: RPR?\n\nRPR: SHN?\n\nSHN: Can you hear me?\n\nRPR: I can hear you in the room. I don't know if you're coming through via the lapel. You may need to.\n\nSHN: I just want to point out that on the agenda, after Secretary's report, everybody should be aware we're going to be voting. It just was not highlighted.\n\nRPR: Thank you for that clarification. Yes. So after the Secretary's report, we'll be doing the elections for editors, chairs, and conveners. All right. So we've adopted the current agenda. And we will now move to the next item is SHN. With the Secretary's report.\n\n## Secretary's Report\n\nPresenter: Samina Husain (SHN)\n\n* slides",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Please use the entry sign-up form on the reflector for attendance tracking",
+      "person": "All attendees",
+      "deadline": "During the meeting",
+      "source_quote": "Everyone that's here, even if you're in the room, even if you've been allowed access to the building, please use the entry sign-up form on the reflector."
+    },
+    {
+      "kind": "action",
+      "text": "Please read the code of conduct on TC39.es and behave respectfully",
+      "person": "All attendees",
+      "deadline": "Ongoing",
+      "source_quote": "We also have a code of conduct on our website, TC39.es."
+    },
+    {
+      "kind": "action",
+      "text": "Please use TCQ to manage the agenda and request to speak",
+      "person": "All attendees",
+      "deadline": "During the meeting",
+      "source_quote": "So we as always, to manage our agenda, we have TCQ."
+    },
+    {
+      "kind": "action",
+      "text": "Please use the matrix chat for real-time communications",
+      "person": "All attendees",
+      "deadline": "During the meeting",
+      "source_quote": "We also have our matrix chat for real-time communications."
+    },
+    {
+      "kind": "action",
+      "text": "Please sign the royalty-free task group form",
+      "person": "All attendees",
+      "deadline": "Before participating fully",
+      "source_quote": "If in all cases, please make sure that you have signed the royalty-free task group form."
+    },
+    {
+      "kind": "action",
+      "text": "Volunteers requested for note-taking during the morning session",
+      "person": "Volunteers",
+      "deadline": "Immediately",
+      "source_quote": "We always ask for volunteers."
+    },
+    {
+      "kind": "agreement",
+      "text": "Previous meeting notes from January are approved",
+      "person": "Meeting attendees",
+      "deadline": "At meeting time",
+      "source_quote": "So we can say that the previous meeting notes are approved."
+    },
+    {
+      "kind": "proposal",
+      "text": "Adopt the current agenda for the meeting",
+      "person": "Rob Palmer (RPR)",
+      "deadline": "At meeting time",
+      "source_quote": "Next up, adoption of the current agenda."
+    },
+    {
+      "kind": "agreement",
+      "text": "The current agenda is adopted",
+      "person": "Meeting attendees",
+      "deadline": "At meeting time",
+      "source_quote": "So we've adopted the current agenda."
+    },
+    {
+      "kind": "proposal",
+      "text": "Elections for editors, chairs, and conveners will be held after the Secretary's report",
+      "person": "Samina Husain (SHN)",
+      "deadline": "After Secretary's report",
+      "source_quote": "So after the Secretary's report, we'll be doing the elections for editors, chairs, and conveners."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-10-q01",
+      "question": "Who requested volunteers for note-taking?",
+      "answers": [
+        "Rob Palmer (RPR)"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 8409,
+          "end": 8438,
+          "quote": "We always ask for volunteers."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q02",
+      "question": "Are the previous meeting notes from January approved?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 9658,
+          "end": 9717,
+          "quote": "So we can say that the previous meeting notes are approved."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q03",
+      "question": "Who will handle the elections for the chair group, editors, and conveners?",
+      "answers": [
+        "Samina Husain (SHN)"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 2954,
+          "end": 3058,
+          "quote": "We have elections coming up for the chair group, the editors, and the conveners that Samina will handle."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q04",
+      "question": "Is there a code of conduct for the meeting?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4069,
+          "end": 4124,
+          "quote": "We also have a code of conduct on our website, TC39.es."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q05",
+      "question": "When will lunch be held during this meeting?",
+      "answers": [
+        "Between 1:00 and 2:00 PM"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 4581,
+          "end": 4623,
+          "quote": "So lunch will be between 1:00 and 2:00 PM."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q06",
+      "question": "Is the transcriptionist service provided by a third-party company available for this meeting?",
+      "answers": [
+        "No"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 7148,
+          "end": 7270,
+          "quote": "The twist with today's meeting is that we do not have our normal transcriptionist, as provided by the third-party company."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q07",
+      "question": "Is Justin Ridgewell (JRL) present in the room?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 2455,
+          "end": 2548,
+          "quote": "Do we have our host, Justin, in the room? I guess he's probably downstairs helping people in."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q08",
+      "question": "Is there a disagreement about the microphone functionality?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 2127,
+          "end": 2189,
+          "quote": "However, the regular microphones we've not yet confirmed work."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q09",
+      "question": "Who is responsible for turning on the Google Meet transcription?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 7425,
+          "end": 7575,
+          "quote": "We will be asking our hosts who are also the authors of Google Meet or the company that has created it to turn on the transcription there as a backup."
+        }
+      ]
+    },
+    {
+      "id": "test-10-q10",
+      "question": "Is there a proposal to change the meeting location for the next meeting?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 8650,
+          "end": 8708,
+          "quote": "The next meeting we have coming up is hosted by JetBrains."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2026-03/march-10.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-03/march-10.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-03/march-10.md",
+    "source_sha256": "f70c517bc35dcab056deec34bc64db799cec2ef2b2b910e03cf6224ace4c3a7a",
+    "excerpt_sha256": "679efb699498f7342a839386459a9786eb9b41324cfd5d5b495c1ab7bfcf2551",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "6cb137ce4a655312467512791d24a96e526fe174335429124c415467111d4e3a",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

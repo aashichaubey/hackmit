@@ -1,0 +1,101 @@
+{"id": "MISeD:25bbf75fd53a4454927408a031c0c767:0", "response_f1": 0.4437869822485207, "attribution_f1": 0.3333333333333333, "error": null}
+{"id": "MISeD:60d0174156c54027bbcf5d9db6cc5ab4:0", "response_f1": 0.3116883116883117, "attribution_f1": 0.0468384074941452, "error": null}
+{"id": "MISeD:3099a878615a4cdaac122982f8da329a:0", "response_f1": 0.29333333333333333, "attribution_f1": 0.045454545454545456, "error": null}
+{"id": "MISeD:2489eaf0a3f74e37a294d17aa53e2299:0", "response_f1": 0.36947791164658633, "attribution_f1": 0.15432098765432098, "error": null}
+{"id": "MISeD:37f55ac4f9414d4c8ff48c9e13951402:1", "response_f1": 0.34375, "attribution_f1": 1.0, "error": null}
+{"id": "MISeD:340de89d60de43dfa82cd697cb4be476:4", "response_f1": 0.3333333333333333, "attribution_f1": 0.24242424242424243, "error": null}
+{"id": "MISeD:37d00b65e5784d88b2ff6bacdf4c8560:4", "response_f1": 0.3977272727272727, "attribution_f1": 0.11764705882352941, "error": null}
+{"id": "MISeD:961671f7186c4f1a94db1f4147afb1c4:2", "response_f1": 0.3568075117370892, "attribution_f1": 0.2, "error": null}
+{
+  "study": "MISeD_train_raw_reference_history_baseline",
+  "qualified": false,
+  "questions": 8,
+  "case_ids": [
+    "MISeD:60d0174156c54027bbcf5d9db6cc5ab4:0",
+    "MISeD:25bbf75fd53a4454927408a031c0c767:0",
+    "MISeD:3099a878615a4cdaac122982f8da329a:0",
+    "MISeD:2489eaf0a3f74e37a294d17aa53e2299:0",
+    "MISeD:37f55ac4f9414d4c8ff48c9e13951402:1",
+    "MISeD:340de89d60de43dfa82cd697cb4be476:4",
+    "MISeD:37d00b65e5784d88b2ff6bacdf4c8560:4",
+    "MISeD:961671f7186c4f1a94db1f4147afb1c4:2"
+  ],
+  "source": {
+    "repository": "google-research-datasets/MISeD",
+    "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+    "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+    "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+  },
+  "conditioning": "published reference history, not generated conversation",
+  "response_token_overlap_f1": 0.3562380820893059,
+  "attribution_f1": 0.2675023218980146,
+  "attribution_iou": 0.20529885187860739,
+  "invalid_citation_outputs": 0,
+  "errors": 0,
+  "actual_input_tokens": 100036,
+  "actual_output_tokens": 2837,
+  "actual_usd": 0.044553600000000006,
+  "limitations": [
+    "Lexical response overlap is not a faithfulness score.",
+    "Citation overlap measures reference attribution, not an entailment judgment.",
+    "Eight training turns do not qualify general-purpose dialogue.",
+    "No compressed dialogue candidate evaluated."
+  ],
+  "ledger": {
+    "actual_calls": 3317,
+    "known_usd": 1.3909703999999983,
+    "reserved_or_spent_usd": 1.5637771999999979,
+    "unknown_usage_calls": 33,
+    "input_tokens": 3014046,
+    "cached_input_tokens": 234624,
+    "output_tokens": 159837,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 667,
+        "known_usd": 0.1540676000000001
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 990,
+        "known_usd": 0.4850036000000002
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 120,
+        "known_usd": 0.02050120000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "accounting_status": "incomplete"
+  }
+}

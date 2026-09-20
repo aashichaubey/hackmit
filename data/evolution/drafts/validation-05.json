@@ -1,0 +1,253 @@
+{
+  "id": "validation-05",
+  "split": "validation",
+  "notes": "# 2022-08-31 Lang team GATs meeting\n\nThis is an interim report to bring folks up to date on GAT stabilization and summarize the questions and comments that have been raised.\n\n## History and links\n\nThe main stabilization report\n\n* Stabilization PR by jackh726 * Stabilization proposal by nikomatsakis\n\nSince the stabilization proposal there have been a number of comments. None of the comments have raised new issues that were not addressed in the stabilization proposal, but some folks have taken issue with the recommendations therein.\n\n## The major options\n\nUltimately there is a choice of various paths. We'll lay them out here and expand on some of these arguments in detail below. Those items that are covered in detail are marked with § and a link to the discussion.\n\n* Stabilize now and incrementally improve * Areas that need improvement: * Syntax is awkward (easy implementation, but it's syntax). * Implied bounds (lengthy implementation, but highly impactful). [§][IB] * Polonius (lengthy implementation, but impactful in a broad sense, needed for a filter method on lending iterator). * Tweaking the required where clauses rules. The current rules are too conservative. [§][RWC] * Arguments in favor: * Tons of people are using this today and getting a lot of value out of it (the GATs initiative has a list of examples and this comment also accumulated a few; there were also a few user stories written expressing their experiences). * In particular frameworks like bevy and embassy are asking for it to help build nicer user-facing abstractions (which often don't explicitly make use of GATs). * This makes sense: those frameworks need to be able to abstract over interfaces, and if those interfaces involve methods that borrow from self, generic methods, or methods where the return type depends on `Self`, they can easily require GATs. * For these use cases, having something stable that will improve is fine. * Delay stabilization until implied bounds are fixed (and possibly other specific improvements) * Arguments in favor: * The limits around implied bounds in particular causes a number of surprising errors [§][IB] and can make GATs less useful than the existing stable workarounds. We should fix them before we land. * Arguments against: * Jack has been exploring diagnostics and has a prototype that is able to pinpoint the use of GATs as a problem. * Stabilize lifetime-only GATs and explore alternatives to type GATs * Arguments in favor: * Lifetime-only GATs come up *very often* and are needed throughout the standard library. Type GATs come up less often, and often in more abstract \"framework-y\" code, such as the [many modes]() pattern. Many modes used GATs to author functions that could execute in different modes, such as \"check whether a grammar is met\" versus \"construct an AST\". The counterargument to many modes is that this pattern might be better left unsolved. * Arguments against: * Type-based GATs come up less often, but they still frequently arise. Whenever you are abstracting over an interface and the functions in that interface return different types that depend on Self, you need an associated type. That associated type may have to be generic if the return type *also* depends on a generic parameter of the method. [Many modes][mm] is one such example, but [generic scopes][gs] is another, and of course the desire to be abstract over [pointer types][pt] comes up a lot (though we've not elaborated that example). * In general, placing arbitrary limitations (this only works for lifetimes) doesn't actually help with learning. Rather, it introduces more edges that can make things more complex. On the other hand, the primary argument here is more about the second-order effects of enabling this sort of abstraction: that it will give rise to more and more complex crates that use traits in complex ways. To that point, many commenters have cited examples where they use GATs precisely so they can offer simpler interfaces to the users, who don't directly interact with GATs. * Rethink GATs entirely * We could abandon GATs and just offer sugar that makes use of them, like async fn in traits or return-position impl trait in traits. At this point, nobody is arguing this position, but it's worth pointing that there are a number of patterns (e.g., `LendingIterator`) where it is very natural to want to give a name to the associated typre (e.g., `Item<'_>`, in that case). Limiting ourselves to RPITIT doesn't support that very naturally, particularly since in that case the method is something like `fn next() -> Option<impl Sized + '_>`, so it's the return type of `next` is distinct from the `Item` type.\n\n[IB]: XXX [RWC]: XXX [gs]: https://rust-lang.github.io/generic-associated-types-initiative/design_patterns/generic_scopes.html [mm]: https://rust-lang.github.io/generic-associated-types-initiative/design_patterns/many_modes.html [pt]: https://rust-lang.github.io/generic-associated-types-initiative/design_patterns/pointer_types.html\n\n## Review of what is proposed for stabilization\n\nThis section is meant to convey the precise \"syntactical surface area\" that is being stabilized.\n\n### Associated types in traits/impls can have type parameters, where-clauses\n\nThe primary language feature stabilized here is the ability to have generics on associated types, as so. Additionally, where clauses on associated types will now be accepted, regardless if the associated type is generic or not. These where clauses must be proven whenever the associated type is used (e.g., `<T as NoGats<'b>>::Assoc` is legal if the where-clause `T: 'a` is satisfied).\n\n```rust trait LendingIterator { type Item<'a> where Self: 'a; }\n\ntrait NoGats<'a> { type Assoc where Self: 'a; } ```\n\nJust as with generic methods, when implementing the trait, you repeat the generic parameters that appeared in the trait.\n\n```rust struct MyIterator<T> { /* ... */ }\n\nimpl<T> LendingIterator for MyIterator<T> { // Recommended syntax appears after the value of the type. This scales better to more complex types. // // The where-clauses in the impl don't have to match the trait *exactly*, but they do have to be // implied by the trait. In this case, the trait has a where-clause `MyIterator<T>: 'a`, which implies // that `T: 'a` by Rust's existing rules, hence `T: 'a' is accepted. type Item<'a> = &'a T where T: 'a; } ```\n\n### Where-clauses in impl must be subset of those in trait (just as with generic methods)\n\nNote that where clauses are allowed both after the specified type and before the equals sign; however, the latter is a warn-by-default deprecation (decided in this issue):\n\n```rust struct MyIterator2<T> { /* ... */ } impl<T> LendingIterator for MyIterator2<T> { // Deprecated syntax (accepted but warns by default): type Item<'a> where T: 'a = &'a T } ```\n\nJust as with a method, when you implement a trait with a GAT, the where-clauses that appear in the impl must be implied by the where-clauses on the trait. Hence the following example is illegal:\n\n```rust struct MyIterator3<T> { /* ... */ } impl<T> LendingIterator for MyIterator3<T> { // Illegal because `T: 'static` is not required by the trait; // trait only requires `MyIterator<T>: 'a`: type Item<'a> = &'a T where T: 'static; } ```\n\n### Referencing GATs from where-clauses\n\nYou can use a where-clause to specify the value of a normal associated type like\n\n```rust fn iterate<T>( iterator: T ) where T: Iterator<Item = u32> ```\n\nThe syntax for GATs is similar. Here is an example one could use for a lending iterator:\n\n```rust fn iterate<T>( iterator: &mut T ) where T: for<'a> LendingIterator<Item<'a> = &'a [u32]>, { while let Some(d) = iterator.next() { println!(\"data: {d:?}\"); } } ```\n\nNote that we wrote `for<'a>` to say that, whatever lifetime `'a` is used, the item will be a `&'a [u32]`. This demonstrates that the generic parameters to the GATs (e.g., `'a` in `Item<'a>`) are *references* to names that are bound elsewhere. **This is a common source of confusion for people**, but it's consistent with other bits of Rust syntax (e.g., the need to write `impl<T> Foo for Bar<T>` instead of just `impl Foo for Bar<T>`). For example, the following function would give an error:\n\n```rust fn iterate<T>( iterator: &mut T ) where T: LendingIterator<Item<'a> = &'a Data> // ^^ Error: undeclared lifetime `'a` { while let Some(d) = iterator.next() { println!(\"data: {d:?}\"); } } ```\n\n## Known limitations\n\nThis section describes the known limitations of what is being stabilized with some notes on how we expect to address these problems over time.\n\n### Known suboptimal point: HRTB syntax\n\n**This syntax is known to be suboptimal in a few ways:**\n\n* It's verbose to write the `for`, and `for` is generally confusing. * People often get confused about when they are defining new things and when they are referencing existing things (e.g., around impls).\n\nnikomatsakis believes that a partial fix would be to extend and define the `'_` syntax in this position, so that one could write\n\n```rust T: LendingIterator<Item<'_> = &Data> ```\n\nas a shorthand for the `for` notation. However, that would require a more fully articulated proposal. Until now we have avoided stabilizing `'_` in where-clauses precisely to give ourselves room to figure out questions like this.\n\n### Known limitation: HRTB inference interactions can be unreliable\n\nAs we noted above, most consumers of GATs wish to use `for<'a>` syntax to specify the value of the GAT, as shown here. (You can view a complete running example of this syntax on this playground.)\n\n```rust fn iterate<T>( iterator: &mut T ) where T: for<'a> LendingIterator<Item<'a> = &'a [u32]>, { while let Some(d) = iterator.next() { println!(\"data: {d:?}\"); } } ```\n\nThe compiler however has a lot of known limitations around HRTB, and one of them interacts poorly with GATs. A reasonable variation on the `iterate` function might be to make it generic over the kind of item that is produced, requiring only that the `Item` be `Debug`:\n\n```rust fn iterate<T>( iterator: &mut T ) where T: LendingIterator, for<'a> for<'a> T::Item<'a>: std::fmt::Debug { while let Some(d) = iterator.next() { println!(\"data: {d:?}\"); } } ```\n\nBut if you try this, you'll find you get a mysterious error that seems to indicate the compiler is failing to do some basic type inference:",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "Stabilize now and incrementally improve",
+      "person": "jackh726, nikomatsakis",
+      "deadline": "",
+      "source_quote": "* Stabilize now and incrementally improve * Areas that need improvement: * Syntax is awkward (easy implementation, but it's syntax)."
+    },
+    {
+      "kind": "proposal",
+      "text": "Delay stabilization until implied bounds are fixed (and possibly other specific improvements)",
+      "person": "jackh726",
+      "deadline": "",
+      "source_quote": "* Delay stabilization until implied bounds are fixed (and possibly other specific improvements) * Arguments in favor: * The limits around implied bounds in particular causes a number of surprising errors [§][IB] and can make GATs less useful than the existing stable workarounds."
+    },
+    {
+      "kind": "proposal",
+      "text": "Stabilize lifetime-only GATs and explore alternatives to type GATs",
+      "person": "jackh726",
+      "deadline": "",
+      "source_quote": "* Stabilize lifetime-only GATs and explore alternatives to type GATs * Arguments in favor: * Lifetime-only GATs come up *very often* and are needed throughout the standard library."
+    },
+    {
+      "kind": "agreement",
+      "text": "Tons of people are using this today and getting a lot of value out of it",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "[§][RWC] * Arguments in favor: * Tons of people are using this today and getting a lot of value out of it (the GATs initiative has a list of examples and this comment also accumulated a few; there were also a few user stories written expressing their experiences)."
+    },
+    {
+      "kind": "agreement",
+      "text": "Frameworks like bevy and embassy are asking for it to help build nicer user-facing abstractions",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "* In particular frameworks like bevy and embassy are asking for it to help build nicer user-facing abstractions (which often don't explicitly make use of GATs)."
+    },
+    {
+      "kind": "disagreement",
+      "text": "Some folks have taken issue with the recommendations in the stabilization proposal",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "None of the comments have raised new issues that were not addressed in the stabilization proposal, but some folks have taken issue with the recommendations therein."
+    },
+    {
+      "kind": "decision",
+      "text": "Associated types in traits/impls can have type parameters, where-clauses are stabilized",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "### Associated types in traits/impls can have type parameters, where-clauses"
+    },
+    {
+      "kind": "action",
+      "text": "Jack has been exploring diagnostics and has a prototype that is able to pinpoint the use of GATs as a problem",
+      "person": "Jack",
+      "deadline": "",
+      "source_quote": "* Arguments against: * Jack has been exploring diagnostics and has a prototype that is able to pinpoint the use of GATs as a problem."
+    },
+    {
+      "kind": "agreement",
+      "text": "Lifetime-only GATs come up very often and are needed throughout the standard library",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "* Stabilize lifetime-only GATs and explore alternatives to type GATs * Arguments in favor: * Lifetime-only GATs come up *very often* and are needed throughout the standard library."
+    },
+    {
+      "kind": "disagreement",
+      "text": "Type-based GATs come up less often, but they still frequently arise",
+      "person": "unspecified",
+      "deadline": "",
+      "source_quote": "* Arguments against: * Type-based GATs come up less often, but they still frequently arise."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-05-q01",
+      "question": "Who proposed to stabilize now and incrementally improve?",
+      "answers": [
+        "jackh726, nikomatsakis"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 774,
+          "end": 906,
+          "quote": "* Stabilize now and incrementally improve * Areas that need improvement: * Syntax is awkward (easy implementation, but it's syntax)."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q02",
+      "question": "Is there a proposal to delay stabilization until implied bounds are fixed?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 1926,
+          "end": 2205,
+          "quote": "* Delay stabilization until implied bounds are fixed (and possibly other specific improvements) * Arguments in favor: * The limits around implied bounds in particular causes a number of surprising errors [§][IB] and can make GATs less useful than the existing stable workarounds."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q03",
+      "question": "Who is exploring diagnostics with a prototype to pinpoint GATs problems?",
+      "answers": [
+        "Jack"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 2241,
+          "end": 2374,
+          "quote": "* Arguments against: * Jack has been exploring diagnostics and has a prototype that is able to pinpoint the use of GATs as a problem."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q04",
+      "question": "Are lifetime-only GATs considered needed throughout the standard library?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2375,
+          "end": 2555,
+          "quote": "* Stabilize lifetime-only GATs and explore alternatives to type GATs * Arguments in favor: * Lifetime-only GATs come up *very often* and are needed throughout the standard library."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q05",
+      "question": "Have some folks taken issue with the recommendations in the stabilization proposal?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 372,
+          "end": 536,
+          "quote": "None of the comments have raised new issues that were not addressed in the stabilization proposal, but some folks have taken issue with the recommendations therein."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q06",
+      "question": "Are type-based GATs considered to come up less often?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 2903,
+          "end": 2994,
+          "quote": "* Arguments against: * Type-based GATs come up less often, but they still frequently arise."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q07",
+      "question": "What is stabilized regarding associated types in traits/impls?",
+      "answers": [
+        "Associated types in traits/impls can have type parameters, where-clauses"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5144,
+          "end": 5220,
+          "quote": "### Associated types in traits/impls can have type parameters, where-clauses"
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q08",
+      "question": "Do frameworks like bevy and embassy ask for GATs to help build user-facing abstractions?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 1447,
+          "end": 1607,
+          "quote": "* In particular frameworks like bevy and embassy are asking for it to help build nicer user-facing abstractions (which often don't explicitly make use of GATs)."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q09",
+      "question": "Is there a proposal to rethink GATs entirely?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 4028,
+          "end": 4185,
+          "quote": "* Rethink GATs entirely * We could abandon GATs and just offer sugar that makes use of them, like async fn in traits or return-position impl trait in traits."
+        }
+      ]
+    },
+    {
+      "id": "validation-05-q10",
+      "question": "Is there a decision to abandon GATs and only offer sugar like async fn in traits?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 4028,
+          "end": 4185,
+          "quote": "* Rethink GATs entirely * We could abandon GATs and just offer sugar that makes use of them, like async fn in traits or return-position impl trait in traits."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2022-08-31-gat-stabilization.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-08-31-gat-stabilization.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-08-31-gat-stabilization.md",
+    "source_sha256": "59eb37a02d3e690326f2dd5c1630ccc10b67915b25222e41698626fac80a32ed",
+    "excerpt_sha256": "3df532c1fbbccf7a1962573412b0dab35d49e67e709c6e892e78fcefc8db83c2",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "14ac07ca2b1e9193f5a2996a92fdfe23ce08312ad6e76b674fd94839989c012b",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

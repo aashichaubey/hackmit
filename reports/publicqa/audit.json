@@ -1,0 +1,90 @@
+{
+  "studies": {
+    "pilot": {
+      "reproduced": true,
+      "uncertainty": {
+        "unit": "meeting family, paired cluster bootstrap",
+        "families": 26,
+        "repetitions": 5000,
+        "seed": 20260920,
+        "mean_question_f1_delta": -0.018841858067038805,
+        "percentile_95_interval": [
+          -0.08828824250357738,
+          0.04486161141715796
+        ],
+        "improved": 3,
+        "regressed": 6,
+        "tied": 23,
+        "interpretation": "Exploratory training uncertainty, not proof of equivalence or a qualification gate."
+      },
+      "actual_input_reduction": null,
+      "actual_cost_reduction": null,
+      "advance": false
+    },
+    "pilot-readable": {
+      "reproduced": true,
+      "uncertainty": {
+        "unit": "meeting family, paired cluster bootstrap",
+        "families": 26,
+        "repetitions": 5000,
+        "seed": 20260920,
+        "mean_question_f1_delta": -0.04274265160296453,
+        "percentile_95_interval": [
+          -0.10431959162458893,
+          -0.0003571051294975006
+        ],
+        "improved": 1,
+        "regressed": 4,
+        "tied": 27,
+        "interpretation": "Exploratory training uncertainty, not proof of equivalence or a qualification gate."
+      },
+      "actual_input_reduction": null,
+      "actual_cost_reduction": null,
+      "advance": false
+    },
+    "pilot-minimal": {
+      "reproduced": true,
+      "uncertainty": {
+        "unit": "meeting family, paired cluster bootstrap",
+        "families": 26,
+        "repetitions": 5000,
+        "seed": 20260920,
+        "mean_question_f1_delta": -0.03757238482021444,
+        "percentile_95_interval": [
+          -0.09471912935249013,
+          -0.001982497380271319
+        ],
+        "improved": 1,
+        "regressed": 4,
+        "tied": 27,
+        "interpretation": "Exploratory training uncertainty, not proof of equivalence or a qualification gate."
+      },
+      "actual_input_reduction": 0.026887160658012665,
+      "actual_cost_reduction": 0.0373635859177508,
+      "advance": false
+    }
+  },
+  "all_reproduced": true,
+  "heldout_opened": false,
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "exclusions": 3233
+}

@@ -1,0 +1,71 @@
+Natalie Tran: Sorry—
+D Tran:  What's up?
+Natalie Tran:  But yeah.
+D Tran:  No, you're perfectly fine. And I think Anchini's also going to be headed home, so she may be running late as well. Like, this is just for full disclosure, this is for Natalie, for Vasu, and then eventually for Anchini.
+  -  Like, what Chris, Greg, and myself wanted to do was, like, thank you guys. Like, we did it as our internship, it was, you know—first of all, Vasu, you did a fantastic job in terms of kind of, like, taking lead.
+  -  You know, it's a combination of, like, wanting to thank you guys for the efforts in terms of the internship, and then secondly, maybe just generally giving kind of, you know, like, what did you guys work on, what do you guys want to work on, you know, what are potential next steps in terms of the current project if we decide we want to do more things. Just really high level.
+  -  It's—this is intended to be an informal conversation. And Vasu, you and I had some of the convers—you know, we talked a little bit about this, but I, um, you know, just high level.
+  -  So, actually, Natalie, let me ask you, so in terms of, like, you know, like, what did—hi. Like, what did—like, you know, I know you're back at school, but like, what did you work on, what did you enjoy, what do you want to learn more of?
+  -  Just high level.
+Natalie Tran:  Um, we didn't get—like, I think we were, like, doing things with AI on a very, like, surfaced level. So, like, one thing that I'd be more interested in doing is, like, doing stuff that's more, like, in-depth, or, like, just something more, like, not like casual way of using AI. Because I feel like everybody knows, like, you use a prompt and then you're able to, like, sort out some, like, businesses that you're able to, like, talk to.
+  -  Like, I feel like there's other ways that we could use AI, but that would be, like, cooler.
+D Tran:  Yeah, I think the next step was really to, like, look into creating our own agents to generate and prospect these leads and all that type of stuff. It's just we never got around to it. But yeah, like, I think—I mean, going into—I guess I can just jump into, like, whatever Dewey was just asking.
+  -  Like, in my personal experience, I think that, like, it went pretty great. If there was more time, yeah, I think the next step would be to quite literally build out some sort of, like, not Synapse, but like, you know, like a similar idea of some sort of multi-agent platform where, as Natalie was talking about, instead of being, like, on the surface level, we would go a little deeper, really build out a pipeline so we wouldn't have to do any of this prospecting stuff by hand.
+  -  Right now, everything that we did do over the summer was relatively elementary, but the reasoning was so that everyone, like, both Natalie and Anchini got a better idea of the business and what we're looking for. And then from there, I think we can pretty rapidly progress into making some sort of outbound system.
+  -  Gotcha. No, and again, you know, Vasu, you and I already had this conversation, so part of it is just kind of bringing it to—bringing it to the broader audiences.
+  -  So, you know, because Natalie, like, well, actually both Vasu, you, Natalie, and Anchini when she joins, you guys are now back at school, right? Everyone has expressed interest in potentially, you know, continuing an aspect of the internship.
+  -  Is it a situation where if the next step is to, you know, like, put the—like, put the basics in terms of the—of an agent for email outflow, you know, is it a situation where we want to do is maybe, like, you know, hold off? Like, you know, like Anchini started at school this week, maybe October 1st, do a bit of a revisit once everyone, like, gets a feel for their class schedules, and then basically start to frame it?
+  -  Like, what are your thoughts in terms of the next steps, two or next steps?
+  -  Does that make sense? Uh— Okay, I—hey, Anchini.
+  -  Oh, okay, let me—I'll do a quick summary. Hey, sorry, Anchini, hope school's going well for you.
+  -  Just high level, Greg, myself, and Chris wanted to really just kind of, like, first of all, thank you guys for the summer. You know, it was kind of an informal internship, and I give props to Vasu for doing a good job organizing it.
+  -  What we were talking about was, you know, Vasu was kind of giving us the summary of what was done over the summer and then what the potential next steps would be. And so, as stated, like, I've talked to you all somewhat separately or whatever, I think there's interest in everyone continuing the potential internship.
+  -  And so, but I also, like, you know, Greg, Chris, myself, and I, we want to be conscientious of your time. And what I mean by that is that you've got schoolwork first and, you know, whatever it may be.
+  -  And so, you know, anyway, that would kind of discuss that on a high level. The question I had for Vasu was, what is the next step to the next step, which we know at this point was to create the agents?
+  -  What should we consider doing? Should we, like, for example, Anchini, you started school pretty much this week, right?
+  -  And so do we want to, like, settle a little bit, let you guys get a feel for your workload, you know, and then maybe, like, revisit in a week or two with a potential, like, maybe it's something where Vasu and I do some planning, and then we revisit in about two weeks what potential next steps would be for you and Natalie in terms of the internship. Like, what—like, and actually, I think, Vasu, I want to, like, I wanted to hear your thoughts on potentially that, because
+  -  also your schedule is important too. Yeah, I think, like, we could honestly keep pushing forward from where we were, right? So currently we got to a good idea of, like, what the emails and stuff are going to look like, so now I think it's not crazy to say that we could start building out this entire agentic workflow about, like, prospecting and outbound and all this type of stuff and just getting a general idea of how something like this would look.
+  -  But yeah, if that's something that as a business we still do think we need, I know there were some talks, like, we talked earlier, like, an hour ago, about, like, there's, like, some slight pivoting and all going on. So that's why also leaving up this entire prospecting idea to me and, like, the interns wouldn't be crazy because it will take a slight bit longer because we all have school and in that much time, whatever pivoting or whatever needs to happen can happen and we can outbound accordingly.
+  -  So the one thing, Vasu, and I'll share this with all three of you guys because we haven't finalized it, so there's no point in sharing it. There is a designer by the name of Derek who has worked with Greg in the past and he's helped design our WordPress website.
+  -  He's put together kind of a marketing plan. And so we're going to be investing, I mean, significant dollars for us, probably, you know, up to in upwards of $20,000 in a scaled marketing plan where Chris and I aren't necessarily going out there and going door to door, knocking on doors and selling the product offering.
+  -  But it doesn't mean that email isn't a part of it. In fact, I think email would be an important part of it.
+  -  What we're going to do in terms of design of the marketing materials, etc., is still kind of in process. But I think this actual product that you're talking about, this is something that we're going to be pursuing.
+  -  So why wouldn't we? And.
+Greg Bryant:  So yes, this would definitely be part of that marketing plan. That marketing plan is primarily focused on social media, actually creating videos that we can release on social media, etc. That's where the cost is going to.
+  -  So supplementing that with additional emails would be awesome.
+D Tran:  Correct. And the other thing too, Natalie and Anchini, like, so for example, one of the products that Vasu, like, has kind of helped build is something called Project Synapse, right? And so we're in the, you know, like, we actually need to talk about this as a group, but we, like, we're looking to pursue a patent among other things.
+  -  We want to position both of you guys as you guys are applying for colleges to have something pretty, frankly, badass on your resume that says, "Hey, for this one company, we helped build A, B, C, and D." And so this is part of that process, right?
+  -  So the motivational aspect is this can actually enhance, you know, Anchini, your application to Georgia Tech, for example. Just kidding.
+  -  But, you know, I mean, actually, not joking, but, you know, or Natalie, you know, like, your attempts to pursue, like, school of math and science in the next year, whatever. This could be helpful in that regard.
+  -  And so, like, the motivation here is to be able to do something that's cool technologically wise, but also help the business. So does that make sense?
+  -  Oh, actually, now, Anchini, that you're here, I kind of opened it up with, you know, how did you generally feel with the internship? Like, you know, did you enjoy it or are there, you know, like, you know, like, what did you learn?
+  -  Are there things that you want to develop further? So I'll open up that question to you as well.
+  -  Sorry, a little late on that, but.
+Anshini Biswas:  Well, I really did like it, I think. I liked how flexible the scheduling was. And it was, like, my first internship too, so I think it was a really good experience, especially for my first time.
+  -  I did enjoy writing emails and kind of researching different businesses, and I think that, like, expanded my, like, worldview, I guess. But yeah, I did enjoy it overall.
+D Tran:  Gotcha. And for, well, actually, this is for Vasu as well. What I might start to do is, in this next semester, that's funny, it's a semester, I actually may do a bit of Marketing 101, where don't be surprised if we do, like, an hour team session where I'm actually teaching you about what's connected television, what is digital advertising, what are the different mechanics that are used in those realms by which marketers, you know, are leveraging for marketing purposes.
+  -  So again, part of this is also to help you guys learn something that you could use on a daily, like, usefulness for educational purposes as well. So, because you mentioned marketing, that's why.
+  -  All right. Trying to think.
+  -  Greg, you have anything else to add? Chris is tied up with an investor, so.
+Greg Bryant:  And so you know, when Dewey and I were working together at MaxPoint, what Dewey's talking about teaching you was always absolutely my favorite thing to listen to, Dewey talking about the advertising industry and all the parts and how it all fits together. He does an amazing job. I heard him do it twice.
+D Tran:  Wait, I agree. I don't think I've ever been to some sort of conversation that was.
+  -  We can't hear you, Vasu.
+Greg Bryant:  We lost you. We heard you for a little bit and you stopped.
+D Tran:  You were saying praises, but then you stopped, so I didn't catch it anymore. Wait, wait, sorry. My headphones have been so whack, I don't know what's going on.
+  -  But anyways, basically the point being, yeah, like, it's a great talk. So, and he can go on for hours about it, so I do highly recommend listening in.
+  -  Yeah, okay, thanks. But what I'm saying, we could do that in the interim as well.
+  -  All right, so, like, I didn't want to keep you guys. I think part of it is give you guys some time so that, you know, let's figure out a potential time.
+  -  As sad as it sounds, it could be a Sunday afternoon. You know, and I'm not asking for regular time, but let's just get a feel for things.
+  -  And then Vasu, you and I, let's touch base. Well, yeah, you and I touched base in terms of, like, the agentic next steps, so to speak.
+  -  You know, because I want to be, because there's a difference, remember, over the summer, you had that internship. Now you have school again.
+  -  So, you know, I'm going to be a dad and, you know, I want to make sure that you appropriately kind of assess your time, so.
+  -  Okay. Well, so cool.
+  -  So you guys are still cool with doing the internship. We'll keep it as is and look to hear from us in the coming weeks or so.
+  -  I think, Vasu, you and I will set up a call, like, sometime next week. Okay.
+  -  Sounds good.
+Natalie Tran:  Okay.
+D Tran:  Thank you, guys, and Natalie's picture.
+Natalie Tran:  Thank you. Thank you.
+D Tran:  You can wake up now, Natalie. All right, bye, guys.
+Natalie Tran:  Oh, okay. Bye.
+D Tran:  Bye.

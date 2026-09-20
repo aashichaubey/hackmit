@@ -1,0 +1,320 @@
+{
+  "id": "dev-03",
+  "split": "dev",
+  "notes": "## 2023-08-07\n\n- An abbreviated Steering Council (Emily and Thomas) met with Łukasz, the Developer-in-Residence, and discussed: - The process and requirements for enforcing PR reviews and decided to enforce reviews on PRs that are labeled as features. If you don’t want a review, add the `ci:skip-review` label. - The status of the Deputy DiR hiring and interview process. - Updates to the CLA bot, which are almost complete.\n\n## 2023-08-14\n\n- The Steering Council had an abbreviated meeting today, Pablo was traveling and Emily had jury duty. - The SC met with Łukasz, the Developer-in-Residence, and discussed: - Next steps from our discussions and external discussions regarding dtrace. - Requiring code review on PRs. The implementation for requiring code reviews seems doable. - Hiring for the Deputy DiR position. - The SC discussed budget and resources for mentoring support for core developers. - The SC discussed the Core Developer Sprint in Brno, including hotel bookings and financial support for attendance. - The SC discussed using Plausible for docs.python.org. The original test worked well and the WG would like to move forward with this. Costs for using the hosted version will be researched before a final decision is made, though hosted is preferred over self-hosted.\n\n## 2023-08-21\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The status of hiring for the Deputy DiR position. - Fixes for the CLA bot, which have been deployed. - The status of the 3.11 release; this is being held for the CVE in SSL. - The status of the code review requirement implementation for GitHub; this is next on his list. - The SC discussed the Core Developer Sprint in Brno to ensure that people can receive financial support if needed even if deadlines for responses are tight. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-08-28\n\n- The Steering Council discussed the status of hiring for the Deputy Developer in Residence position and began reviewing the final list of candidates. - The SC checked in on the status of 2FA for GitHub. There is still an outstanding bot that needs to be updated for compliance. Some organizations have had the 2FA requirement automatically rolled out with a 4-week notice, which should be plenty of time if it hits before we’re ready. - The SC discussed PEP 713 (Callable Modules) and decided to reject it, as the changes are not entirely net-positive.",
+  "facts": [
+    {
+      "kind": "decision",
+      "text": "decided to enforce reviews on PRs that are labeled as features",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "decided to enforce reviews on PRs that are labeled as features"
+    },
+    {
+      "kind": "proposal",
+      "text": "If you don’t want a review, add the `ci:skip-review` label",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "If you don’t want a review, add the `ci:skip-review` label"
+    },
+    {
+      "kind": "action",
+      "text": "Updates to the CLA bot, which are almost complete",
+      "person": "Łukasz",
+      "deadline": "",
+      "source_quote": "Updates to the CLA bot, which are almost complete"
+    },
+    {
+      "kind": "proposal",
+      "text": "Requiring code review on PRs",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Requiring code review on PRs"
+    },
+    {
+      "kind": "action",
+      "text": "Hiring for the Deputy DiR position",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Hiring for the Deputy DiR position"
+    },
+    {
+      "kind": "action",
+      "text": "discussed budget and resources for mentoring support for core developers",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed budget and resources for mentoring support for core developers"
+    },
+    {
+      "kind": "action",
+      "text": "discussed the Core Developer Sprint in Brno, including hotel bookings and financial support for attendance",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed the Core Developer Sprint in Brno, including hotel bookings and financial support for attendance"
+    },
+    {
+      "kind": "proposal",
+      "text": "move forward with using Plausible for docs.python.org",
+      "person": "Working Group",
+      "deadline": "",
+      "source_quote": "the WG would like to move forward with this"
+    },
+    {
+      "kind": "action",
+      "text": "Costs for using the hosted version will be researched before a final decision is made",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Costs for using the hosted version will be researched before a final decision is made"
+    },
+    {
+      "kind": "action",
+      "text": "Fixes for the CLA bot, which have been deployed",
+      "person": "Łukasz",
+      "deadline": "",
+      "source_quote": "Fixes for the CLA bot, which have been deployed"
+    },
+    {
+      "kind": "action",
+      "text": "The status of the 3.11 release; this is being held for the CVE in SSL",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The status of the 3.11 release; this is being held for the CVE in SSL"
+    },
+    {
+      "kind": "action",
+      "text": "The status of the code review requirement implementation for GitHub; this is next on his list",
+      "person": "Łukasz",
+      "deadline": "",
+      "source_quote": "The status of the code review requirement implementation for GitHub; this is next on his list"
+    },
+    {
+      "kind": "action",
+      "text": "The SC discussed the Core Developer Sprint in Brno to ensure that people can receive financial support if needed",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed the Core Developer Sprint in Brno to ensure that people can receive financial support if needed"
+    },
+    {
+      "kind": "action",
+      "text": "The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython)",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython)"
+    },
+    {
+      "kind": "action",
+      "text": "The Steering Council discussed the status of hiring for the Deputy Developer in Residence position and began reviewing the final list of candidates",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The Steering Council discussed the status of hiring for the Deputy Developer in Residence position and began reviewing the final list of candidates"
+    },
+    {
+      "kind": "action",
+      "text": "The SC checked in on the status of 2FA for GitHub",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC checked in on the status of 2FA for GitHub"
+    },
+    {
+      "kind": "action",
+      "text": "There is still an outstanding bot that needs to be updated for compliance",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "There is still an outstanding bot that needs to be updated for compliance"
+    },
+    {
+      "kind": "decision",
+      "text": "decided to reject PEP 713 (Callable Modules)",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "decided to reject it"
+    },
+    {
+      "kind": "proposal",
+      "text": "PEP 713 (Callable Modules)",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The SC discussed PEP 713 (Callable Modules)"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-03-q01",
+      "question": "Who decided to enforce reviews on PRs labeled as features?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 188,
+          "end": 250,
+          "quote": "decided to enforce reviews on PRs that are labeled as features"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q02",
+      "question": "What label should be added if a PR does not want a review?",
+      "answers": [
+        "ci:skip-review"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 252,
+          "end": 310,
+          "quote": "If you don’t want a review, add the `ci:skip-review` label"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q03",
+      "question": "Who is responsible for updates to the CLA bot?",
+      "answers": [
+        "Łukasz"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 375,
+          "end": 424,
+          "quote": "Updates to the CLA bot, which are almost complete"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q04",
+      "question": "Did the Steering Council decide to accept PEP 713?",
+      "answers": [
+        "no",
+        "No"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 2415,
+          "end": 2435,
+          "quote": "decided to reject it"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q05",
+      "question": "What is the status of the 3.11 release?",
+      "answers": [
+        "being held for the CVE in SSL"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 1491,
+          "end": 1560,
+          "quote": "The status of the 3.11 release; this is being held for the CVE in SSL"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q06",
+      "question": "Has the CLA bot fix been deployed?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1440,
+          "end": 1487,
+          "quote": "Fixes for the CLA bot, which have been deployed"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q07",
+      "question": "Has the Steering Council finalized the Deputy DiR hiring?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 1931,
+          "end": 2078,
+          "quote": "The Steering Council discussed the status of hiring for the Deputy Developer in Residence position and began reviewing the final list of candidates"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q08",
+      "question": "Is there a final decision on using Plausible for docs.python.org?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 1155,
+          "end": 1240,
+          "quote": "Costs for using the hosted version will be researched before a final decision is made"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q09",
+      "question": "Did the Steering Council discuss budget for mentoring support?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 822,
+          "end": 901,
+          "quote": "The SC discussed budget and resources for mentoring support for core developers"
+        }
+      ]
+    },
+    {
+      "id": "dev-03-q10",
+      "question": "Is there an outstanding bot needing update for 2FA compliance?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 2133,
+          "end": 2206,
+          "quote": "There is still an outstanding bot that needs to be updated for compliance"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2023-08-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-08-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-08-steering-council-update.md",
+    "source_sha256": "47ee3f48368dc28a299e8095ae650de458063403d10d215390c682eea920369a",
+    "excerpt_sha256": "be696c1b560932b154d64306c7b2b4af792fe8f333858258211200a0afb50dc1",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "5e5ca3993f80a9dadd1b3879e00fed1611d5fad536049978b86932316c62e303",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

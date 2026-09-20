@@ -1,0 +1,1176 @@
+{
+  "identity": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "tokenizer": "o200k_base",
+    "tokenizer_version": "0.14.0",
+    "openai_version": "2.54.0",
+    "answer_instruction_hash": "81c4c163093c69e7ce3f365b6032cbabd9222c99b2bd8117bd8e6a9126685a21",
+    "answer_schema_hash": "457b66b9c43420c0c8d76d8195646e7585fd824faedfa4e5a430459dddd0ea3f",
+    "extraction_instruction_hash": "b0525b04d2e6194fce729b2c40b42412477a0f21b556ffbc24847277d5b4cdf0",
+    "extraction_schema_hash": "bd48fb63ab64008dafaf55643bd9127cb6fae089bcdff25ce46ed1fb0e93d205",
+    "grading_policy": "unicode-nfkc-casefold-whitespace-terminal-period-v2",
+    "dataset_hash": "95c0818a0dc059de3ce3908fb5a09897765d7c745a07299f5cc99777f46772ee",
+    "seed": 42,
+    "repair": true,
+    "candidates_per_generation": 6,
+    "max_finalists": 4,
+    "probe_policy": "eight-public-anchors-eight-contrasts-v2",
+    "grammar_code_hash": "a1f5369db592f585ea256348da9e2b19463b58b4a1fb93e914625c227035727b"
+  },
+  "status": "local_only",
+  "generations": [],
+  "repairs": [],
+  "failure_archive": [],
+  "finalists": [],
+  "seed_population": [
+    {
+      "grammar_id": "e74f92bbf304d74c",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": ":",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3417,
+      "visible_input_tokens": 48102,
+      "output_hash": "1bb496d03498a4ed144fc4b2c7dfb53c18e3c1c05b4fca382d1b7a38c110d3d8"
+    },
+    {
+      "grammar_id": "b8dce6b86deebb81",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "prose",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": ";",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 4865,
+      "visible_input_tokens": 59338,
+      "output_hash": "6c7273300106280a0eebe7dac7281314eda08a25e91dfcc0df5a35cd04782fab"
+    },
+    {
+      "grammar_id": "08d9151286d68e0a",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3633,
+      "visible_input_tokens": 49866,
+      "output_hash": "b0760933a9b5200654de4e8f8c920e8479877fcebcc996a6d55737d7cf442974"
+    },
+    {
+      "grammar_id": "81b1e8f081e14cb3",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3532,
+      "visible_input_tokens": 49000,
+      "output_hash": "501bf08817bea0d492de2d90b30e63c232da8ab878593d278a632bce3e9edd5c"
+    },
+    {
+      "grammar_id": "32e906406e772472",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3297,
+      "visible_input_tokens": 46650,
+      "output_hash": "357ecbe4bcc52e85b4261753b3debc65097f00870dd416f482328aaf87be4396"
+    },
+    {
+      "grammar_id": "e20a861547e439dc",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3524,
+      "visible_input_tokens": 48920,
+      "output_hash": "93e5a059713a4329a46cecc2d5ab6d6db6cc57e94a492195c4ac434ebf27d5d3"
+    },
+    {
+      "grammar_id": "5c9778a496abe44e",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3291,
+      "visible_input_tokens": 46590,
+      "output_hash": "1e93a47d3415ff2f2009d6ac4457e0f831b8141914f3444cd894f1d14590685b"
+    },
+    {
+      "grammar_id": "b356d38c3289e160",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3524,
+      "visible_input_tokens": 48930,
+      "output_hash": "eeefd7c3e495c7423e042949649dba1af7c129f5fee20d89365363b1f52651ae"
+    },
+    {
+      "grammar_id": "dea0eb228a778870",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3291,
+      "visible_input_tokens": 46590,
+      "output_hash": "2054f4c7779b5e4af8d02a6fd2984335f90496cccd7afb9b47bed6ced8f80a41"
+    },
+    {
+      "grammar_id": "33d6c795d7e1356e",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3368,
+      "visible_input_tokens": 47216,
+      "output_hash": "a86176a8339352a0de00a6fcecfe13f62372b4c1c21ae693e6869ba6f14c5b2d"
+    },
+    {
+      "grammar_id": "f2b6ee127a008b4a",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3625,
+      "visible_input_tokens": 49786,
+      "output_hash": "5950f52c5024e6e0b7cccbcbab466536569d2ce83cce69057d5a938a99fdaa67"
+    },
+    {
+      "grammar_id": "d95f69cbfe7fb695",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3362,
+      "visible_input_tokens": 47156,
+      "output_hash": "b65306b57f81c7775c276b306dd1a1a876c9edcdf05ffacfa897327e8b7a120f"
+    },
+    {
+      "grammar_id": "49d6deda77463959",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3625,
+      "visible_input_tokens": 49796,
+      "output_hash": "35d2fa841c5fda1ee9ff07ad8b324cc5adb9dea748f6d0a24afb6b3eae7983ad"
+    },
+    {
+      "grammar_id": "f0f2a278f84211b2",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3362,
+      "visible_input_tokens": 47156,
+      "output_hash": "88fe2e65b0d78cee1472e941c8a0e914c4c89b650de5d77ab0324578a10f26e6"
+    },
+    {
+      "grammar_id": "72e3de8c5f13193d",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3484,
+      "visible_input_tokens": 48592,
+      "output_hash": "7ae6e47d73aa2ad8b9402b577b8131debddeba0ef84845bb0707bac87f744ae3"
+    },
+    {
+      "grammar_id": "83ce4bca18312c0b",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3265,
+      "visible_input_tokens": 46402,
+      "output_hash": "daedfe892d67a8972784f15c555f74ccc707e93c4290f82b34d26317bb72a263"
+    },
+    {
+      "grammar_id": "f418044f9e8b8313",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3479,
+      "visible_input_tokens": 48542,
+      "output_hash": "612076e6acdc44eb72c9a4e68a571b49b4ce432f4f8ccee31cef701b58589e7f"
+    },
+    {
+      "grammar_id": "8b869c9fe6d7c8d0",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3261,
+      "visible_input_tokens": 46362,
+      "output_hash": "d27255e58d4b7fabf7c2b72ef6649fda6ebd55041e938a08da6e7324d91db693"
+    },
+    {
+      "grammar_id": "382bbae6c53516b9",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3476,
+      "visible_input_tokens": 48522,
+      "output_hash": "d905ae5ff1be1a3e4a451de850be8e27ae23e333a4e2b1f0e983e70e49c10f0c"
+    },
+    {
+      "grammar_id": "7daf5018feca2239",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3259,
+      "visible_input_tokens": 46342,
+      "output_hash": "46c684e17c88c3018c030575432babe51a70e093c703197541db04c183b276be"
+    },
+    {
+      "grammar_id": "799321fa1c24b5cc",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3526,
+      "visible_input_tokens": 48976,
+      "output_hash": "ddcd76b3d0045b381ff60f4d8b541c7d9d37fa6cdad36e7ea537fd995cf582da"
+    },
+    {
+      "grammar_id": "8a1dec80713604af",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3291,
+      "visible_input_tokens": 46626,
+      "output_hash": "70d14acf688842e8e6fda0d4d0f9667d999cabd725f0ae2097c951add6e2d61c"
+    },
+    {
+      "grammar_id": "bf577b27caafb712",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3518,
+      "visible_input_tokens": 48896,
+      "output_hash": "d1e5fb6392fcd1ee7f8de08dd6a4d5de2d69c9eb2751ebe6a625e04a941f29dc"
+    },
+    {
+      "grammar_id": "93a37e512473eb10",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3285,
+      "visible_input_tokens": 46566,
+      "output_hash": "6381f540ec20771d5a76a8b03930f3b6e80443a1570795a4aaac19d555429ab7"
+    },
+    {
+      "grammar_id": "71f3332dbef76de0",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3518,
+      "visible_input_tokens": 48906,
+      "output_hash": "5b99e022a39497c7d0c5dd98a0331eb5ab6aad7f3c1a9990eea5b5db0f257e07"
+    },
+    {
+      "grammar_id": "393e81b51e2ac157",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3285,
+      "visible_input_tokens": 46566,
+      "output_hash": "1eb61148837cb4dcf0402287c3b3cce34e202faca9589b0d5b484bed053157c4"
+    }
+  ],
+  "loaded_splits": [
+    "dev"
+  ],
+  "local_frontier": [
+    {
+      "grammar_id": "7daf5018feca2239",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3259,
+      "visible_input_tokens": 46342,
+      "output_hash": "46c684e17c88c3018c030575432babe51a70e093c703197541db04c183b276be"
+    },
+    {
+      "grammar_id": "8b869c9fe6d7c8d0",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3261,
+      "visible_input_tokens": 46362,
+      "output_hash": "d27255e58d4b7fabf7c2b72ef6649fda6ebd55041e938a08da6e7324d91db693"
+    },
+    {
+      "grammar_id": "83ce4bca18312c0b",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3265,
+      "visible_input_tokens": 46402,
+      "output_hash": "daedfe892d67a8972784f15c555f74ccc707e93c4290f82b34d26317bb72a263"
+    },
+    {
+      "grammar_id": "393e81b51e2ac157",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3285,
+      "visible_input_tokens": 46566,
+      "output_hash": "1eb61148837cb4dcf0402287c3b3cce34e202faca9589b0d5b484bed053157c4"
+    },
+    {
+      "grammar_id": "93a37e512473eb10",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3285,
+      "visible_input_tokens": 46566,
+      "output_hash": "6381f540ec20771d5a76a8b03930f3b6e80443a1570795a4aaac19d555429ab7"
+    },
+    {
+      "grammar_id": "5c9778a496abe44e",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3291,
+      "visible_input_tokens": 46590,
+      "output_hash": "1e93a47d3415ff2f2009d6ac4457e0f831b8141914f3444cd894f1d14590685b"
+    },
+    {
+      "grammar_id": "dea0eb228a778870",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3291,
+      "visible_input_tokens": 46590,
+      "output_hash": "2054f4c7779b5e4af8d02a6fd2984335f90496cccd7afb9b47bed6ced8f80a41"
+    },
+    {
+      "grammar_id": "8a1dec80713604af",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3291,
+      "visible_input_tokens": 46626,
+      "output_hash": "70d14acf688842e8e6fda0d4d0f9667d999cabd725f0ae2097c951add6e2d61c"
+    },
+    {
+      "grammar_id": "32e906406e772472",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3297,
+      "visible_input_tokens": 46650,
+      "output_hash": "357ecbe4bcc52e85b4261753b3debc65097f00870dd416f482328aaf87be4396"
+    },
+    {
+      "grammar_id": "d95f69cbfe7fb695",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3362,
+      "visible_input_tokens": 47156,
+      "output_hash": "b65306b57f81c7775c276b306dd1a1a876c9edcdf05ffacfa897327e8b7a120f"
+    },
+    {
+      "grammar_id": "f0f2a278f84211b2",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3362,
+      "visible_input_tokens": 47156,
+      "output_hash": "88fe2e65b0d78cee1472e941c8a0e914c4c89b650de5d77ab0324578a10f26e6"
+    },
+    {
+      "grammar_id": "33d6c795d7e1356e",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": true,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3368,
+      "visible_input_tokens": 47216,
+      "output_hash": "a86176a8339352a0de00a6fcecfe13f62372b4c1c21ae693e6869ba6f14c5b2d"
+    },
+    {
+      "grammar_id": "e74f92bbf304d74c",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": ":",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3417,
+      "visible_input_tokens": 48102,
+      "output_hash": "1bb496d03498a4ed144fc4b2c7dfb53c18e3c1c05b4fca382d1b7a38c110d3d8"
+    },
+    {
+      "grammar_id": "382bbae6c53516b9",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3476,
+      "visible_input_tokens": 48522,
+      "output_hash": "d905ae5ff1be1a3e4a451de850be8e27ae23e333a4e2b1f0e983e70e49c10f0c"
+    },
+    {
+      "grammar_id": "f418044f9e8b8313",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3479,
+      "visible_input_tokens": 48542,
+      "output_hash": "612076e6acdc44eb72c9a4e68a571b49b4ce432f4f8ccee31cef701b58589e7f"
+    },
+    {
+      "grammar_id": "72e3de8c5f13193d",
+      "grammar": {
+        "kind_forms": [
+          "→",
+          "?",
+          "=",
+          "+",
+          "−"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3484,
+      "visible_input_tokens": 48592,
+      "output_hash": "7ae6e47d73aa2ad8b9402b577b8131debddeba0ef84845bb0707bac87f744ae3"
+    },
+    {
+      "grammar_id": "bf577b27caafb712",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3518,
+      "visible_input_tokens": 48896,
+      "output_hash": "d1e5fb6392fcd1ee7f8de08dd6a4d5de2d69c9eb2751ebe6a625e04a941f29dc"
+    },
+    {
+      "grammar_id": "71f3332dbef76de0",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3518,
+      "visible_input_tokens": 48906,
+      "output_hash": "5b99e022a39497c7d0c5dd98a0331eb5ab6aad7f3c1a9990eea5b5db0f257e07"
+    },
+    {
+      "grammar_id": "e20a861547e439dc",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3524,
+      "visible_input_tokens": 48920,
+      "output_hash": "93e5a059713a4329a46cecc2d5ab6d6db6cc57e94a492195c4ac434ebf27d5d3"
+    },
+    {
+      "grammar_id": "b356d38c3289e160",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3524,
+      "visible_input_tokens": 48930,
+      "output_hash": "eeefd7c3e495c7423e042949649dba1af7c129f5fee20d89365363b1f52651ae"
+    },
+    {
+      "grammar_id": "799321fa1c24b5cc",
+      "grammar": {
+        "kind_forms": [
+          "!",
+          "~",
+          "✓",
+          "yes",
+          "no"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3526,
+      "visible_input_tokens": 48976,
+      "output_hash": "ddcd76b3d0045b381ff60f4d8b541c7d9d37fa6cdad36e7ea537fd995cf582da"
+    },
+    {
+      "grammar_id": "81b1e8f081e14cb3",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3532,
+      "visible_input_tokens": 49000,
+      "output_hash": "501bf08817bea0d492de2d90b30e63c232da8ab878593d278a632bce3e9edd5c"
+    },
+    {
+      "grammar_id": "f2b6ee127a008b4a",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "kind",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3625,
+      "visible_input_tokens": 49786,
+      "output_hash": "5950f52c5024e6e0b7cccbcbab466536569d2ce83cce69057d5a938a99fdaa67"
+    },
+    {
+      "grammar_id": "49d6deda77463959",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "content",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3625,
+      "visible_input_tokens": 49796,
+      "output_hash": "35d2fa841c5fda1ee9ff07ad8b324cc5adb9dea748f6d0a24afb6b3eae7983ad"
+    },
+    {
+      "grammar_id": "08d9151286d68e0a",
+      "grammar": {
+        "kind_forms": [
+          "do",
+          "proposed",
+          "decided",
+          "agreed",
+          "disagreed"
+        ],
+        "layout": "actor",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": "|",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 3633,
+      "visible_input_tokens": 49866,
+      "output_hash": "b0760933a9b5200654de4e8f8c920e8479877fcebcc996a6d55737d7cf442974"
+    },
+    {
+      "grammar_id": "b8dce6b86deebb81",
+      "grammar": {
+        "kind_forms": [
+          "action",
+          "proposal",
+          "decision",
+          "agreement",
+          "disagreement"
+        ],
+        "layout": "prose",
+        "owner_marker": "",
+        "deadline_marker": "@",
+        "separator": ";",
+        "grouping": false,
+        "repairs": []
+      },
+      "integrity_errors": [],
+      "context_tokens": 4865,
+      "visible_input_tokens": 59338,
+      "output_hash": "6c7273300106280a0eebe7dac7281314eda08a25e91dfcc0df5a35cd04782fab"
+    }
+  ]
+}

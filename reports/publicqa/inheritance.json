@@ -1,0 +1,65 @@
+{
+  "study": "inheritance_four_question_development_diagnostic",
+  "qualified": false,
+  "advance": false,
+  "methods": {
+    "raw": {
+      "questions": 4,
+      "meetings": 4,
+      "macro_f1": 0.2,
+      "macro_meeting_f1": 0.2,
+      "macro_iou": 0.16666666666666666,
+      "exact_match": 0.0,
+      "answerable_f1": 0.4,
+      "unanswerable_accuracy": 0.0,
+      "answerability_precision": 0.3333333333333333,
+      "answerability_recall": 0.5,
+      "balanced_answerability": 0.25,
+      "ungrounded_answers": 0,
+      "invalid_answers": 0,
+      "actual_input_tokens": 4894,
+      "actual_output_tokens": 183,
+      "actual_usd": 0.0022504,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    },
+    "encoded": {
+      "questions": 4,
+      "meetings": 4,
+      "macro_f1": 0.0,
+      "macro_meeting_f1": 0.0,
+      "macro_iou": 0.0,
+      "exact_match": 0.0,
+      "answerable_f1": 0.0,
+      "unanswerable_accuracy": 0.0,
+      "answerability_precision": 0.0,
+      "answerability_recall": 0.0,
+      "balanced_answerability": 0.0,
+      "ungrounded_answers": 0,
+      "invalid_answers": 0,
+      "actual_input_tokens": 4430,
+      "actual_output_tokens": 243,
+      "actual_usd": 0.0021608,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    }
+  },
+  "recorded_inputs_reproduced": true,
+  "uncertainty": {
+    "unit": "meeting family, paired cluster bootstrap",
+    "families": 4,
+    "repetitions": 5000,
+    "seed": 20260920,
+    "mean_question_f1_delta": -0.2,
+    "percentile_95_interval": [
+      -0.6000000000000001,
+      0.0
+    ],
+    "improved": 0,
+    "regressed": 1,
+    "tied": 3,
+    "interpretation": "Exploratory training uncertainty, not proof of equivalence or a qualification gate."
+  },
+  "limitation": "Four development questions cannot satisfy the 32-question pilot advancement or release requirements.",
+  "quote_reconstruction_errors": 0
+}

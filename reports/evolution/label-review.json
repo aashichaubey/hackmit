@@ -1,0 +1,981 @@
+{
+  "status": "pending_independent_review",
+  "loaded_splits": [
+    "dev"
+  ],
+  "dataset_hash": "6327472b316da82ae91557984d0b6ae2d947297801dfcca85744a0d45ccaf89f",
+  "counts": {
+    "heading_as_deadline": 28,
+    "possible_missing_name_variant": 4,
+    "yesno_extra_variant": 1,
+    "yesno_answer_missing": 1
+  },
+  "issues": [
+    {
+      "id": "dev-01:fact-0:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "action",
+        "text": "Łukasz helping coordinate a core sprint there",
+        "person": "Łukasz",
+        "deadline": "2023-06-05",
+        "source_quote": "Łukasz helping coordinate a core sprint there."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-1:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "The new Deputy Developer-in-Residence job description draft",
+        "person": "Łukasz",
+        "deadline": "2023-06-05",
+        "source_quote": "The new Deputy Developer-in-Residence job description draft."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-2:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Establishing a process and criteria for evaluating and deciding on the PEP",
+        "person": "Steering Council",
+        "deadline": "2023-06-12",
+        "source_quote": "The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) extensively, with a focus on establishing a process and criteria for evaluating and deciding on the PEP."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-3:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "decision",
+        "text": "Find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org",
+        "person": "Steering Council",
+        "deadline": "2023-06-19",
+        "source_quote": "The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) and decided to find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-4:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "decision",
+        "text": "Schedule office hours a half hour before the weekly meeting, as an experiment",
+        "person": "Steering Council",
+        "deadline": "2023-06-19",
+        "source_quote": "The SC decided to schedule office hours a half hour before the weekly meeting, as an experiment."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-5:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "decision",
+        "text": "Approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy)",
+        "person": "Steering Council",
+        "deadline": "2023-06-19",
+        "source_quote": "The SC approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy)."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-6:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "action",
+        "text": "Seth Larson to improve the process behind the Python Security Response Team (PSRT)",
+        "person": "Seth Larson",
+        "deadline": "2023-06-26",
+        "source_quote": "One of Seth’s tasks is to improve the process behind the Python Security Response Team (PSRT)"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-7:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "action",
+        "text": "Seth Larson to investigate the PSRT or PSF becoming a MITRE Sub-CNA",
+        "person": "Seth Larson",
+        "deadline": "2023-06-26",
+        "source_quote": "and to investigate the PSRT or PSF becoming a MITRE Sub-CNA, so it has authority over the reporting and ranking of CVEs."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-8:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "action",
+        "text": "Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4",
+        "person": "Łukasz",
+        "deadline": "2023-06-26",
+        "source_quote": "Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-01:fact-9:deadline",
+      "case_id": "dev-01",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "decision",
+        "text": "Agreed with the rollback of json.AttrDict for now, at least until it can be discussed on discuss.python.org and a consensus is reached",
+        "person": "Steering Council",
+        "deadline": "2023-06-26",
+        "source_quote": "agreed with the rollback of it for now, at least until it can be discussed on discuss.python.org and a consensus is reached."
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-02:holistic_questions:dev-02-q04:alias",
+      "case_id": "dev-02",
+      "category": "possible_missing_name_variant",
+      "original": {
+        "id": "dev-02-q04",
+        "question": "Who is assigned to evaluate how to require code reviews for feature PRs?",
+        "answers": [
+          "Łukasz, the Developer-in-Residence",
+          "The DiR"
+        ],
+        "expected_found": true,
+        "category": "action",
+        "evidence": [
+          {
+            "start": 2990,
+            "end": 3073,
+            "quote": "The SC asked the DiR to evaluate how we could require code reviews for feature PRs."
+          }
+        ]
+      },
+      "reason": "A shorter name occurs in the source but is absent from accepted answers. Check that it uniquely identifies the same person.",
+      "suggestion_for_review": [
+        "Łukasz"
+      ],
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-05:holistic_questions:dev-05-q01:alias",
+      "case_id": "dev-05",
+      "category": "possible_missing_name_variant",
+      "original": {
+        "id": "dev-05-q01",
+        "question": "Who is working on ongoing work around `yield from` in generators?",
+        "answers": [
+          "Łukasz, the Developer-in-Residence"
+        ],
+        "expected_found": true,
+        "category": "owner",
+        "evidence": [
+          {
+            "start": 148,
+            "end": 220,
+            "quote": "Ongoing work around `yield from` in generators, as well as PEPs 667/558."
+          }
+        ]
+      },
+      "reason": "A shorter name occurs in the source but is absent from accepted answers. Check that it uniquely identifies the same person.",
+      "suggestion_for_review": [
+        "Łukasz"
+      ],
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-05:holistic_questions:dev-05-q04:alias",
+      "case_id": "dev-05",
+      "category": "possible_missing_name_variant",
+      "original": {
+        "id": "dev-05-q04",
+        "question": "Who is assigned to help Yury with a MemHive?",
+        "answers": [
+          "Łukasz, the Developer-in-Residence"
+        ],
+        "expected_found": true,
+        "category": "owner",
+        "evidence": [
+          {
+            "start": 933,
+            "end": 998,
+            "quote": "Help Yury with a MemHive (sharing between multiple interpreters)."
+          }
+        ]
+      },
+      "reason": "A shorter name occurs in the source but is absent from accepted answers. Check that it uniquely identifies the same person.",
+      "suggestion_for_review": [
+        "Łukasz"
+      ],
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-05:holistic_questions:dev-05-q08:alias",
+      "case_id": "dev-05",
+      "category": "possible_missing_name_variant",
+      "original": {
+        "id": "dev-05-q08",
+        "question": "Who proposed ongoing work around the buildbot master and non-tier-1 configurations?",
+        "answers": [
+          "Łukasz, the Developer-in-Residence"
+        ],
+        "expected_found": true,
+        "category": "proposal",
+        "evidence": [
+          {
+            "start": 223,
+            "end": 371,
+            "quote": "Ongoing work around the buildbot master, individual buildbots and how to handle non-tier-1 configurations on tier-1 platforms like AddressSanitizer."
+          }
+        ]
+      },
+      "reason": "A shorter name occurs in the source but is absent from accepted answers. Check that it uniquely identifies the same person.",
+      "suggestion_for_review": [
+        "Łukasz"
+      ],
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-07:holistic_questions:dev-07-q02:yesno-extra",
+      "case_id": "dev-07",
+      "category": "yesno_extra_variant",
+      "original": {
+        "id": "dev-07-q02",
+        "question": "Was the PEP 726 module accepted?",
+        "answers": [
+          "no",
+          "No",
+          "rejected"
+        ],
+        "expected_found": true,
+        "category": "decision",
+        "evidence": [
+          {
+            "start": 1094,
+            "end": 1199,
+            "quote": "Rejected PEP 726 module `__setattr__` and `__delattr__` after reviewing it and the resulting discussions."
+          }
+        ]
+      },
+      "reason": "A yes/no answer is accepted, but additional variants permit output outside the fixed format. This does not prevent a compliant answer from passing.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-0:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Review issues raised specifically in areas that are affecting the user, confirm it has tests, examples and implications mentioned",
+        "person": "Steering Council",
+        "deadline": "2024-07-03",
+        "source_quote": "PEP 667 discussion: Review issues raised specifically in areas that are affecting the user, confirm it has tests, examples and implications mentioned"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-1:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "EuroPython Sprints discussion on how to make it better, probability of coming up with a guide on how to hold successful sprints",
+        "person": "Steering Council",
+        "deadline": "2024-07-03",
+        "source_quote": "EuroPython Sprints discussion on how to make it better, probability of coming up with a guide on how to hold successful sprints"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-2:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one",
+        "person": "Steering Council",
+        "deadline": "2024-07-03",
+        "source_quote": "Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-3:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Drafting mentorship survey to help the SC make decisions based on the survey",
+        "person": "Steering Council",
+        "deadline": "2024-07-17",
+        "source_quote": "Drafting mentorship survey to help the SC make decisions based on the survey"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-4:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Discussion on how to get people to support mentorship",
+        "person": "Steering Council",
+        "deadline": "2024-07-17",
+        "source_quote": "Discussion on how to get people to support mentorship"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-5:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs",
+        "person": "Steering Council",
+        "deadline": "2024-07-17",
+        "source_quote": "Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-6:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "action",
+        "text": "Working on bugs presented by PyREPL during EuroPython",
+        "person": "Developer in Residence",
+        "deadline": "2024-07-24",
+        "source_quote": "PyREPL which presented some bugs during EuroPython which are being worked on"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-7:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Discussion on proposed semantics for PEP 667",
+        "person": "Steering Council",
+        "deadline": "2024-07-31",
+        "source_quote": "Discussion on proposed semantics for PEP 667"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-8:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Conversation on how to improve inclusivity in the Python community",
+        "person": "Steering Council",
+        "deadline": "2024-07-31",
+        "source_quote": "Conversation on how to improve inclusivity in the Python community"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-09:fact-9:deadline",
+      "case_id": "dev-09",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Discussion on the release of Python 3.13rc1",
+        "person": "Steering Council",
+        "deadline": "2024-07-31",
+        "source_quote": "Discussion on the release of Python 3.13rc1"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-0:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "decision",
+        "text": "Accepted PEP 741 - Python Configuration C API",
+        "person": "Steering Council",
+        "deadline": "2024-08-28",
+        "source_quote": "Accepted [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-1:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Suggesting a different body parallel with the Steering Council to deal with social matters",
+        "person": "Steering Council",
+        "deadline": "2024-08-14",
+        "source_quote": "suggesting a different body parallel with the Steering Council to deal with social matters"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-3:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "agreement",
+        "text": "Conclusion of the Code of Conduct violation",
+        "person": "Steering Council",
+        "deadline": "2024-08-07",
+        "source_quote": "Conclusion of the Code of Conduct violation"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-4:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "disagreement",
+        "text": "Discussion on resignation of a Core Python Developer",
+        "person": "Steering Council",
+        "deadline": "2024-08-14",
+        "source_quote": "Discussion on the resignation of a Core Python Developer"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-5:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Having overlapping Steering Council terms for continuity’s sake",
+        "person": "Steering Council",
+        "deadline": "2024-08-21",
+        "source_quote": "Discussion on having overlapping Steering Council terms for continuity’s sake"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-6:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "More explicit authority for the Release Manager’s role going forward",
+        "person": "Steering Council",
+        "deadline": "2024-08-28",
+        "source_quote": "Discussion on more explicit authority for the Release Manager’s role going forward"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-7:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "Whether there should be a PEP for PyREPL",
+        "person": "Steering Council",
+        "deadline": "2024-08-28",
+        "source_quote": "Discussion on whether there should be a PEP for PyREPL"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:fact-8:deadline",
+      "case_id": "dev-10",
+      "category": "heading_as_deadline",
+      "original": {
+        "kind": "proposal",
+        "text": "How to know when something needs a PEP or not and update PEP 2 – Procedure for Adding New Modules",
+        "person": "Steering Council",
+        "deadline": "2024-08-28",
+        "source_quote": "Discussion on how to know when something needs a PEP or not and update [PEP 2 – Procedure for Adding New Modules](https://peps.python.org/pep-0002/)"
+      },
+      "reason": "The deadline matches a section heading but is absent from the quoted fact. Check whether it is a meeting date rather than a task deadline.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "dev-10:holistic_questions:dev-10-q05:yesno",
+      "case_id": "dev-10",
+      "category": "yesno_answer_missing",
+      "original": {
+        "id": "dev-10-q05",
+        "question": "Was there a decision made about the Code of Conduct violation by August 7, 2024?",
+        "answers": [
+          "Conclusion of the Code of Conduct violation"
+        ],
+        "expected_found": true,
+        "category": "agreement",
+        "evidence": [
+          {
+            "start": 61,
+            "end": 104,
+            "quote": "Conclusion of the Code of Conduct violation"
+          }
+        ]
+      },
+      "reason": "The fixed instruction requires yes/no for explicit yes/no questions, but no such answer is accepted. Check question intent before editing.",
+      "suggestion_for_review": null,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "decision": null,
+        "rationale": null
+      }
+    }
+  ],
+  "selected_issue_ids": [
+    "dev-01:fact-0:deadline",
+    "dev-02:holistic_questions:dev-02-q04:alias",
+    "dev-10:holistic_questions:dev-10-q05:yesno"
+  ],
+  "sources": {
+    "dev-01": {
+      "notes": "## 2023-06-05\n\n- Three Steering Council members were available to meet today, Emily and Pablo were traveling. - The SC met with Łukasz, the Developer-in-Residence, and discussed: - The new Deputy Developer-in-Residence job description draft. - EuroPython coming up and Łukasz helping coordinate a core sprint there. - Discussed all our PEP 703 (Making the Global Interpreter Lock Optional in CPython) thoughts. - Discussed OpenSSL 3.x support backporting needs for older releases. - Discussed 3.12 and 3.13 release schedule planning with Thomas (release manager hat). - Discussed ongoing 3.12beta1 early findings as projects try it out. - Briefly discussed support for core developer mentorship with Deb.\n\n## 2023-06-12\n\n- The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) extensively, with a focus on establishing a process and criteria for evaluating and deciding on the PEP.\n\n## 2023-06-19\n\n- The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) and decided to find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org. - The SC decided to schedule office hours a half hour before the weekly meeting, as an experiment. - The SC approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy).\n\n## 2023-06-26\n\n- The Steering Council met with Seth Larson, the new Security Developer-in-Residence. One of Seth’s tasks is to improve the process behind the Python Security Response Team (PSRT), and to investigate the PSRT or PSF becoming a MITRE Sub-CNA, so it has authority over the reporting and ranking of CVEs. Seth will be working mostly with the PSRT team, only planning to have email discussions or ad-hoc meetings with the SC for now. - The SC met with Łukasz, the Developer-in-Residence, and discussed: - Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4. - His keynote at PyCon Colombia. - A new EdgeDB release that should alleviate CLA bot inefficiencies. - EuroPython, his planned talk, the Core Dev panel, and the sprints there. - The Deputy Developer-in-Residence job opening, which will be posted this week. - The SC discussed json.AttrDict, which was added without review or discussion, with previous proposals having been rejected, and agreed with the rollback of it for now, at least until it can be discussed on discuss.python.org and a consensus is reached. - The SC briefly discussed other open issues involving Python 3.12, leaving them to the Release Team to handle. - The SC officially invited Russel Keith-Magee to the Core Dev Sprint in Brno in October.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2023-06-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-06-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-06-steering-council-update.md",
+        "source_sha256": "f0535b2ab45b928c43d5bfc6b580d7e46378a3fac7ddd419b44e58c1484d430c",
+        "excerpt_sha256": "3a637839722b0b970f9df7c7246736092b45294e9643133dda8429a8f5d11ed8",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "1c6b8c832c883952973ff8639aaa92d45bdfe995e50aed7f9d607690873fea17",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "3a637839722b0b970f9df7c7246736092b45294e9643133dda8429a8f5d11ed8"
+    },
+    "dev-02": {
+      "notes": "## 2023-07-03\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC discussed an email that suggested an update to PEP 12 (Sample reStructuredText PEP Template) to formalize including acceptance and rejection rationale to PEPs once they have a decision. The SC thinks this is a good idea and will work on drafting this change. - The SC discussed dropping the python-committers mailing list. An email will be sent to gauge interest and usage of the mailing list.\n\n## 2023-07-10\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence job, which has been posted and started receiving applications. - The 3.12 final beta release, which has a few important bug fix PRs that are open. - EuroPython, which is happening next week. Łukasz will be giving a talk and running a panel along with sprints - The SC continued to discuss support for core developer mentorship with Deb. The distinction between supporting mentorship for new core developers and improving the process of becoming a core developer was raised – we are specifically looking for how to support existing core developers in mentoring contributors. The SC decided to pause the discussion to solidify what we are looking for in this arrangement. - The SC discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The poll results are in and indicate that 87% of respondents think we should be actively looking to make Python free-threaded and 63% want to accept and support the maintenance cost of PEP 703. - Proceeding with caution, the SC decided to formalize a statement on our intention to accept the PEP, along with requirements and expectations for doing so. - The SC discussed two C API changes in 3.12 that did not follow PEP 387 (Backwards Compatibility Policy) to decide how they should be handled, namely: - Type Object’s `tp_dict` can now be `NULL`. This has limited impact and is likely acceptable. - `PyLongObject` implementation and `ob_digits`. The SC decided to roll back changes only in 3.12, not main (3.13) for now. Overall, this change is okay. - The SC checked in on requiring PR reviews; a poll has been opened.\n\n## 2023-07-17\n\n- The Steering Council checked in on ongoing conduct issues and the steps to handle them. - The SC received feedback from the community on the lack of use for the python-committers email list and decided to close it. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython), with a focus on establishing a hard list of requirements for acceptance to be included in a forthcoming pre-announcement.\n\n## 2023-07-24\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - How EuroPython went (both the conference and the sprints). - dtrace and how to test the probes so they keep functioning. - Miss Islington needs porting to GitHub Actions before we can switch over to requiring 2FA. - The SC asked the DiR to evaluate how we could require code reviews for feature PRs. - The SC discussed support for core developer mentorship, namely the budget around a proposal to do an inventory of the current mentorship program. - The SC gave our approval to the Security Developer-in-Residence for their CNA proposal. - The SC discussed updating non-borrowing C APIs to match borrowing ones. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-07-31\n\n- The Steering Council confirmed that the python-committers email list has been closed. - The SC discussed the state of PEP 713 (Callable Modules) and PEP 702 (Marking deprecations using the type system). - The SC continued to discuss the hard requirements around PEP 703 (Making the Global Interpreter Lock Optional in CPython), now that the pre-acceptance has been pre-announced. - The SC discussed how to handle the interview process for the Deputy Developer-in-Residence position.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2023-07-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-07-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-07-steering-council-update.md",
+        "source_sha256": "b81ffc39bbd1dd21947bce0d6c25d847bea54e8a4d5c73b0cccfa9146afcdb65",
+        "excerpt_sha256": "74d9e2844ba364e41cac69706f5342b55879796b5fa76314bfd7d1b137994251",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "abcff63a2bcf49b01a6a5d1bd3f2afb0d109ce92a07e709d83527363835ab914",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "74d9e2844ba364e41cac69706f5342b55879796b5fa76314bfd7d1b137994251"
+    },
+    "dev-03": {
+      "notes": "## 2023-08-07\n\n- An abbreviated Steering Council (Emily and Thomas) met with Łukasz, the Developer-in-Residence, and discussed: - The process and requirements for enforcing PR reviews and decided to enforce reviews on PRs that are labeled as features. If you don’t want a review, add the `ci:skip-review` label. - The status of the Deputy DiR hiring and interview process. - Updates to the CLA bot, which are almost complete.\n\n## 2023-08-14\n\n- The Steering Council had an abbreviated meeting today, Pablo was traveling and Emily had jury duty. - The SC met with Łukasz, the Developer-in-Residence, and discussed: - Next steps from our discussions and external discussions regarding dtrace. - Requiring code review on PRs. The implementation for requiring code reviews seems doable. - Hiring for the Deputy DiR position. - The SC discussed budget and resources for mentoring support for core developers. - The SC discussed the Core Developer Sprint in Brno, including hotel bookings and financial support for attendance. - The SC discussed using Plausible for docs.python.org. The original test worked well and the WG would like to move forward with this. Costs for using the hosted version will be researched before a final decision is made, though hosted is preferred over self-hosted.\n\n## 2023-08-21\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The status of hiring for the Deputy DiR position. - Fixes for the CLA bot, which have been deployed. - The status of the 3.11 release; this is being held for the CVE in SSL. - The status of the code review requirement implementation for GitHub; this is next on his list. - The SC discussed the Core Developer Sprint in Brno to ensure that people can receive financial support if needed even if deadlines for responses are tight. - The SC continued to discuss PEP 703 (Making the Global Interpreter Lock Optional in CPython).\n\n## 2023-08-28\n\n- The Steering Council discussed the status of hiring for the Deputy Developer in Residence position and began reviewing the final list of candidates. - The SC checked in on the status of 2FA for GitHub. There is still an outstanding bot that needs to be updated for compliance. Some organizations have had the 2FA requirement automatically rolled out with a 4-week notice, which should be plenty of time if it hits before we’re ready. - The SC discussed PEP 713 (Callable Modules) and decided to reject it, as the changes are not entirely net-positive.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2023-08-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-08-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-08-steering-council-update.md",
+        "source_sha256": "47ee3f48368dc28a299e8095ae650de458063403d10d215390c682eea920369a",
+        "excerpt_sha256": "be696c1b560932b154d64306c7b2b4af792fe8f333858258211200a0afb50dc1",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "5e5ca3993f80a9dadd1b3879e00fed1611d5fad536049978b86932316c62e303",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "be696c1b560932b154d64306c7b2b4af792fe8f333858258211200a0afb50dc1"
+    },
+    "dev-04": {
+      "notes": "## 2023-09-04\n\n- An abbreviated Steering Council (Thomas, Pablo, and Greg; Brett and Emily were out on holiday) met with Łukasz, the Developer-in-Residence, and discussed: - The status of current work for PEP 703 (Making the Global Interpreter Lock Optional in CPython) and the plan to rebase current work for 3.13. - Changes to ctypes that involved pointer ownership was rolled back (in 3.12 as well). - Memory-safety in Python and ideas for getting funding to support this and related work. - The SC discussed next steps for PEP 703 (Making the Global Interpreter Lock Optional in CPython), including updates on the draft document for publishing.\n\n## 2023-09-11\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - Hiring for the Deputy Developer-In-Residence role, including takeaways and next steps from the final interviews that the SC conducted. - The SC worked on the list of acceptance criteria for PEP 703.\n\n## 2023-09-18\n\n- An abbreviated Steering Council (Pablo, Greg, Emily, and Brett) met with Łukasz, the Developer-in-Residence, and discussed: - Communications to candidates for the Deputy Developer in Residence role now that a final list has been selected. - Updates on the RFI from the US Government around memory-safe languages. - Next steps on mentorship support – we will be getting a more conservative estimate and scope. - A further abbreviated Steering Council (Pablo, Greg, and Emily) discussed: - Action items for PEP 703 (Making the Global Interpreter Lock Optional in CPython) and PEP 712 (Adding a “converter” parameter to dataclasses.field).\n\n## 2023-09-25\n\n- The Steering Council used their first “office hour” and talked to Jelle about a potential Typing Council. - The SC fleshed out the acceptance criteria for PEP 703 (Making the Global Interpreter Lock Optional in CPython).",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2023-09-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-09-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-09-steering-council-update.md",
+        "source_sha256": "5439e853d959268758a6dcf77e20284558970a47f1a0afacfe5fb4b1bc20293f",
+        "excerpt_sha256": "438d2aa76acee8b620edf6da586eda8a83331e54ad241c80a7844cf70ca0225c",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "a13d3a113b4f35d71cf940ac70eaffc7a9307ca1f8ec5d4c9bff74af1e1af0fd",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+      },
+      "notes_hash": "438d2aa76acee8b620edf6da586eda8a83331e54ad241c80a7844cf70ca0225c"
+    },
+    "dev-05": {
+      "notes": "## 2023-10-02\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - The Deputy Developer-in-Residence interviews. - Ongoing work around `yield from` in generators, as well as PEPs 667/558. - Ongoing work around the buildbot master, individual buildbots and how to handle non-tier-1 configurations on tier-1 platforms like AddressSanitizer. - How to improve buildbot health and make people more aware of breakages they are causing on buildbots. - The SC discussed the ongoing search for mentorship training and support.\n\n## 2023-10-09\n\n- An abbreviated Steering Council (Thomas, Pablo, and Greg) met informally in-person at the Core Developer Sprint in Brno.\n\n## 2023-10-16\n\n- An abbreviated Steering Council (Pablo and Brett) met with Łukasz, the Developer-in-Residence, and discussed updates on the different topics that he worked on at the sprint: - Coverage reports. - Updates of Miss-islington. - Help Yury with a MemHive (sharing between multiple interpreters). - General summary of what other people worked on.\n\n## 2023-10-23\n\n- An abbreviated Steering Council (Thomas, Emily, and Brett) recapped the recent Core Developer Sprint. - The SC received a new proposal for mentorship support, which will be reviewed next week. - The SC discussed the final specifics for accepting PEP 703 (Making the Global Interpreter Lock Optional in CPython). - The SC discussed the logistics of fitting tall people into small cars.\n\n## 2023-10-30\n\n- The Steering Council met with Łukasz, the Developer-in-Residence, and discussed: - Setting up buildbots for upcoming free-threading work. - General buildbot statuses and updates to fix buildbot slowness. - The SC discussed their options and logistics for hiring an external person to take meeting minutes during weekly meetings and opted to defer this decision to the next SC. - The SC confirmed that the details for the upcoming SC election are approved. - The SC discussed requests for the breaking change in the Tkinter method `wm_attributes()` and decided that PEP-387 (Backwards Compatibility Policy) should apply and the change should follow a proper deprecation.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2023-10-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-10-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-10-steering-council-update.md",
+        "source_sha256": "e6d1f03531a4891165888c275ccba385cc91818acbe1ae3158c6117190850001",
+        "excerpt_sha256": "eaa4cfb179483f9b28f795e9c306f021dde66e701aa35a50dcfb78722016df9e",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "7e9ec446776a0cf482fcc28d6df1d3c69b35e4310ee529d4fb515a55664f16b3",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "eaa4cfb179483f9b28f795e9c306f021dde66e701aa35a50dcfb78722016df9e"
+    },
+    "dev-06": {
+      "notes": "# November & December 2023 Steering Council update\n\n- Steering Council discussion topics:\n    - **PEPs**\n        - Confirmed our agreement to accept [PEP 702 deprecations in the type system](https://peps.python.org/pep-0702/).\n        - Discussed our first impressions of [PEP 712 dataclasses converters](https://peps.python.org/pep-0712/). Decided to seek more consensus. [We announced this PEP 712 feeling on discuss](https://discuss.python.org/t/pep-712-adding-a-converter-parameter-to-dataclasses-field/26126/57).\n        - Discussed, read up on, and accepted [PEP 729 Typing Governance](https://peps.python.org/pep-0729/).\n        - Discussed, read up on, and accepted [PEP 731 C API Working Group](https://peps.python.org/pep-0731/).\n        - Briefly discussed [PEP 726 module level `__setattr__` and `__delattr__`](https://peps.python.org/pep-0726/). We expect the 2024 SC to decide. *(editors note: It was rejected)*\n        - Discussed [PEP-703 making the global interpreter lock optional](https://peps.python.org/pep-0703/) naming and a desire to avoid putting negatives on the desired-to-be-legacy GIL term, thus \"free-threading\" rather than \"nogil\".\n        - Discussed and accepted [PEP 730 iOS platform support](https://peps.python.org/pep-0730/).\n        - Discussed and accepted [PEP 732 documentation editorial board](https://peps.python.org/pep-0732/).\n    - Accepting Meta’s offer to host the core dev sprints in Washington in September 2024.\n    - The proposal for mentoring resources and how to gauge interest. Coordinated with the PSF for budget and a contract to make it happen.\n    - C API issues regarding removal of some APIs and potential conflicting goals.\n    - The status of our Supporting Developer in Residence contract.\n    - The status of woefully delayed monthly updates.\n    - That we have varying workflows and communication levels of different Working Groups (WGs) and if there are potential issues arising from that.\n    - That we needed to draft an official policy around \"python\" and \"cpython\" organizations on PyPI.\n    - Establishing a communication channel with all of our Developer in Residences.\n    - The possibility of encouraging more devguide entries about how the Tier 2 interpreter in `ceval.c` works.\n    - Ongoing research into state of the world around an OS “Fetch URL” API and if those could simplify bundled `pip` requirements.\n    - The in progress SC election process.\n- Sync-ups with Łukasz (Senior Developer in Residence), topics covered included:\n    - Recent work on coverage mode and a multi-line REPL.\n    - If there are potential for alternatives to Buildbot.\n    - The status of [PEP 649 deferred evaluation of annotations,](https://peps.python.org/pep-0649/) implementation(s).\n    - The successful start of [our Supporting Developer in Residence, Serhiy Storchaka](https://discuss.python.org/t/welcoming-the-supporting-developer-in-residence/39702).\n    - The ongoing ARM performance benchmarking efforts with donated hardware. Including the renaming branch `master` to `main` while maintaining historical data requiring work.\n    - The status of two factor authentication (2FA) vs GitHub bots and the assurance that there won't be any issues with the current bots when 2FA is rolled out.\n    - The decision to drop running BigMem buildbot on 3.12 and only run on `main`. This allows Łukasz to use existing hardware.\n    - Łukasz's recent public appearances: Nokia C++ conference talk about async generators & a podcast episode about frame optimization.\n- End of term hand over meeting from [the 2023 SC](https://discuss.python.org/t/2023-term-python-steering-council-election-results/21951) to [the 2024 SC](https://discuss.python.org/t/steering-council-election-results-2024-term/40851):\n    - Goodbye Brett, Welcome Barry!\n    - Discussed our current processes.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2023-11,12-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-11%2C12-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-11%2C12-steering-council-update.md",
+        "source_sha256": "35f026fb4b24b3b80600d4a0c8253604a975cc61594033173ec455354dd6fc69",
+        "excerpt_sha256": "592a745cff77ae3d973e4335b060bccb47f6dbe8aa0598ce3f7b561f1eea0278",
+        "scope": "supplied excerpt only",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "8b65911491c7df0ebbaccc336c44d0608f67c65696c1c928d1c81afe66f3b05d",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "592a745cff77ae3d973e4335b060bccb47f6dbe8aa0598ce3f7b561f1eea0278"
+    },
+    "dev-07": {
+      "notes": "# January through March 2024 SC update\n\n- Steering Council (new 2024 edition) discussion topics: - Discussed our current meeting time, dev in res sync times, and office hours scheduling. - Hiring a part time person for note taking and what our expectations for this role should be. - Drafted and posted our official job description. - Collected job applications and reviewed resumes. - At least 20 people applied! - Interviewed N candidates, rejected the others. Made a choice and sent a job offer. - *Editors note: Our initial job. req. described this role as \"Secretary\". We all agreed that role title was not great and settled upon a much more appropriate title of \"Communications Liaison\" with the individual hired.* - Pablo coordinating with Edward for our core dev mentorship training sessions. - The first mentoring session happened in March. Observation: We *also* used the first one as experience sharing talk time. Note to future selves: We could set our own mini-sessions up just for that. - Lack of use of our SC Office Hours slot and the need to better promote those. - **PEPs** - Rejected PEP 726 module `__setattr__` and `__delattr__` after reviewing it and the resulting discussions. Drafted and posted the pronouncement. - Discussed Windows free-threaded PEP 703 installer design details. - Many discussions on PEP 712 dataclass converters. *(editors note: ultimately rejected)*. - Accepted PEP 737 C API to format a types fully qualified name after much discussion; including raising a concern about a name choice and overall scope. - Accepted PEP 705 TypedDict: Read-only items per the Typing Council's recommendation. - Accepted PEP 738 Adding Android as a supported platform, this spawned some discussions of CI and buildbot needs. - Discussed PEP 734 Multiple interpreters in the stdlib and decided to Defer it, seeking external maintenance as a PyPI module for starters. - Eric Snow joined us for office hours on this. - Accepted PEP 742 narrowing types with TypeIs after review based on the Typing Council's recommendation. - Discussions around PEP 741 Python Configuration C API. - Further discussions on PEP 667 Consistent views of namespaces. - Sync up meetings with Łukasz, the Developer-in-Residence: - Recent travels and work on the PyCon US program committee. - The start of our new Deputy Developer in Residence, Petr, and planning for the DiR team's focus areas. - How reporting of overall DiR activity, progress, and blockers should be done. - The status of two factor authentication requirements on GitHub. - Logistics of our ability to implement *required* code reviews on new-feature PRs. We have a long term desire to see this for all PRs, but need to prove to core devs that it can work on a smaller uncontroverisal scale first. - Future Release Manager (RM) role planning. - Buildbots and their maintenance issues. - The upgrade of speed.python.org. - Security releases and challenges with 3.8, 3.9, & 3.10. - Challenges and concerns around PyPI's account recovery process and the impact on sponsors and the community. *(editors note: The PSF has since hired someone to help with this!)* - The importance of transparency and good communication for the health of the community. - Ongoing PEP 541 Package Index Name Retention work. - The status of PEP 649 deferred eval of annotations. - Community misconceptions revealed when talking at a small conference about our upcoming Python 3.13. - The PyCon 2024 US language summit logistics. - The need to provide feedback to our DiRs. - More thoughts on what we want our PyPI org policy to be. - Chatting with Itamar regarding Meta's September 2024 core dev sprint logistics and PSF finance details. - Release Management automation and contingency plan ideas. - The potential formation of a Packaging Council. - Tier support for WASI or WASM and updating PEP 11 to reflect that. - Our desire to see the JIT have an informational PEP. - Brandt joined us for office hours to discuss this. - A desire for to explain what maintaining and testing entails for fellow core devs. - Result: PEP 744 JIT Compilation. - Discussions of where it could head in the future and the need to do those in public forums. - Experimental exit criteria, debugging, profiling, etc. - Started discussing what we should focus on in our PyCon US 2024 keynote slot. - A potential need to make role boundaries more clear between our different groups such as core devs, developers in residence, and release managers. Responsibility becomes more complex as we grow and mix volunteers with paid staff. - An update from the PSF on the status of sponsorships and future needs. - The desire for a better understanding of PyPI's operating costs (from the PSF) and a desire for a roadmap to facilitate better support and sponsorship. - Deb, PSF executive director, channelling the Python users' vibe from many angles around packaging ecosystem not being great on many fronts based on different needs and what could be done by whom. - Discussed a past banned Core Dev whose 1-year ban had expired and automatically reinstated some access (an identified process issue). We reinstated that ban after they unfortunately generated fresh conduct complaints and reached out directly seeking the required acknowledgement of the code of conduct and promise to abide by it if they wanted the ban lifted. - Ongoing discussions of some other observed and casually reported core developer behaviors and how to foster improvement. - Discussed needs for better communication between PyPI and the PyPA and how to foster that. - Discussed with current release managers who the next release manager should be. - Approved the creation of a /python/blurb/ GitHub repo.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2024-01,02,03-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-01%2C02%2C03-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-01%2C02%2C03-steering-council-update.md",
+        "source_sha256": "ad990336dae7cd354627f3fbe7b55fdb24af32d8292df5f4e1c35df110f0dcb5",
+        "excerpt_sha256": "0f3b8149cc0c32621465c66e1852bdfbfbc3876b84ed8f6421ef6c685258874f",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "6ca10894a77a60fd6f0c16237ad0b72d1e0c1963225fb08e170c1a17d2fbdff0",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "0f3b8149cc0c32621465c66e1852bdfbfbc3876b84ed8f6421ef6c685258874f"
+    },
+    "dev-08": {
+      "notes": "# April through June 19, 2024 Steering Council update\n\n- Steering Council discussion topics: - **PEPs** - Ongoing PEP 741, a Configuration C API discussions; seeking consensus and clarity and WG input. Ultimately decided to postpone this until 3.14. - Repeated check-ins on PEP 649, deferred evaluation of annotations using descriptors implementation. We're collectively okay if this slips into 3.14. - Finalized and posted our decision on PEP 734, subinterpreters in the stdlib. - Accepted PEP 667, Consistent views of namespaces after much discussion. The alternatives were considered worse in the long run. - Sync up meetings with Łukasz, the Developer-in-Residence: - The untangling of potential license and CLA issues on the infrastructure repositories. Not glamorous work, needs doing, will involve PSF counsel as appropriate. - Discussed the fall core dev sprint Meta and PSF sponsorship status. - PyCon US 2024 language summit signs up at capacity. - Ł is going to EuroPython: Landed a keynote slot. - Regarding the PyCon US Language Summit: Noted feedback on masking policy vs being able to hear presenters, present, and speak clearly. We follow the conference policy. Polite reminders are deemed useful. - Ł and Pablo discussed encouraging people to make useful contributions to open source. - Discussed buildbot config issues & speed.python.org updates. - Discussed a growing TODO list of things desiring work and which of those should be delegated. - Observations of potential (mis)uses of discuss.python.org as a symptom of people seeking attention on filed issues. - 3.13 Beta 1 draws near (feature freeze). Preparing a last minute new REPL to land, based on PyPy's. Many edge case bugs revealed on many platforms by this. - Happy to hear that PSF infrastructure hiring is in progress. - Discussed Łukasz' potential mentoring of someone. - Discussed too many hats being worn on interrupt driven roles leading to burnout. - Discussed feedback about the the language summit and whether or not there is anything we could do in the future that wouldn't just be alternately perceived poorly as a burden. - Discussed a conduct issue reported at our PyCon US 2024 core dev sprint and what we can do to make a proper welcoming environment at future events. Popularity, limited space, lack of organization, differing unaligned expectations, and biased invalid assumptions culminated in problems this year. :( - Recommendation letters needed for some core dev travel Visas; being drafted. Can come from the PSF if helpful. - Discussions around our Communications Liaison hiring. PSF working out the contract. Our initial offer fell through, we extended an offer to our alternate equally qualified candidate, as we had discussed might happen with them during our initial rejection communication. The title was renamed from Secretary to Communications Liaison to better reflect the role. - Discussed how it'd be nice if our monthly SC update summaries were actually created, reviewed, and published before PyCon US 2024. *(editors note: LOL... given the backlog this is being posted as part of, volunteer time is precious, thus hiring)* - Discussed new 3.13 REPL platform implementation woes. \"At least it is not using readline\" also means \"people who rely on obscure readline featureitis frown\". - Discussions of type annotations in the stdlib. More community discussions needed before any proposal can be made. Annotations in `Tools/` have found actual bugs. - Discussed capacity issues at the upcoming September core dev sprint; space limitations are real and lead to hard choices. - Discussed logistics of the remaining two core dev mentorship sessions that Edward is holding this quarter. *(editors note: held)* - Discussed further ongoing core dev mentorship needs and the utility of a possible Mentorship WG. One theme has always been lack of volunteer time availability. - Discussed how it'd be good if release managers wrote up retrospectives. That requires extra time commitment on their part. We'd all benefit, not just future RMs. - Discussed our recent core dev promotion votes. No vetoes (all approved). We're noticing that our process feels a bit odd, the SC represents the community thus a veto of any form would not be well received. Nor would a vote itself failing. So this means anyone proposing someone effectively needs to do homework and talk via backchannels to a slew of core devs and SC first to ensure that neither negative outcome is likely. Maybe this is working as intended? But we don't state it as such anywhere... But what would be meaningfully better to propose? - Discussed and announced who would be our next Release Manager (RM) and related logistical issues. - Continual brainstorming on what to include in what form for our PyCon US 2024 keynote address. In classic PyCon fashion our collective presentation was congealing up until the day we gave it. - Discussed a PR brought to our attention that we believe should not have been merged as is, regardless of intent, and whether or not we can do anything about it right now. - More discussions on community friction regarding Packaging and PyPI, the Packaging WG, and PyPA with the PSF. - Noticing how we have misaligned cadences among many of our collective core dev working styles. It leads to a strain on decision making. Perhaps a discussion topic for the core dev sprint at Meta? - Greg and Barry employer changes; no PEP 13 conflicts. - Office hours visit from Carol Willing to discuss inclusion in our community. Rationale behind the impacts, challenges, differing burdens, and ideas for possible next steps. Some of which also align with ideas the PSF has been pondering. Lots of food for thought. Nothing is simple or quick. - Started discussing a proposed PSF grant that could potentially be used to help grow early-career folks? Information being gathered.",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2024-04,05,06-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-04%2C05%2C06-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-04%2C05%2C06-steering-council-update.md",
+        "source_sha256": "7dbedfb7a4d17380a73b3735600f27b563f9d7def6397356ebaa18814e700ffe",
+        "excerpt_sha256": "a59fca2db4071f3243c843272732eedb20dc05d54d8332ab7842c31d56b06975",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "c4cc99dd76ff324145ad12f32bb0763157999d6d3c21000ee83f511fed496b26",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+      },
+      "notes_hash": "a59fca2db4071f3243c843272732eedb20dc05d54d8332ab7842c31d56b06975"
+    },
+    "dev-09": {
+      "notes": "# Steering Council Updates for July 2024\n\n## 2024-06-26\n\n- Discussion on Code of Conduct violation\n\n## 2024-07-03\n\n- PEP 667 discussion: Review issues raised specifically in areas that are affecting the user, confirm it has tests, examples and implications mentioned - EuroPython Sprints discussion on how to make it better, probability of coming up with a guide on how to hold successful sprints - Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one\n\n## 2024-07-10\n\n- Discussion on Code of Conduct violation\n\n## 2024-07-17\n\n- Re-review of PEP 667 - Drafting mentorship survey to help the SC make decisions based on the survey - Discussion on how to get people to support mentorship - Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs.\n\n## 2024-07-24\n\nSteering Council and Developer in Residence Meeting\n\n- Report on EuroPython 2024 - Discussion on PyREPL which presented some bugs during EuroPython which are being worked on.\n\nSteering Council Meeting\n\n- 3.13rc1 vs PEP 667 - Discussion on code of conduct violation\n\n## 2024-07-31\n\n- Discussion on the release of Python 3.13rc1 - Discussion on proposed semantics for PEP 667 - Discussion on Code of Conduct violation - Conversation on how to improve inclusivity in the Python community\n\n---\n\nThis past month's updates (July) are brought to you by Velda Kiara, the Communications Liaison for the Python Steering Council. Velda bridges the gap between the Python community and the Steering Council. A software developer (Django dev) and technical writer, Velda's articles have been featured on freeCodeCamp and Daily.dev. Her contributions extend to various Python projects like Django Debug Toolbar, Beeware, and the Novu Python SDK. Currently, she serves as the Vice Chair for Black Python Devs and a director on the Django Events Foundation North America. Velda's dedication was recently recognised with a Microsoft Most Valuable Professional award for Developer Technologies (Python and Web Development).",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2024-07-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-07-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-07-steering-council-update.md",
+        "source_sha256": "81634a7378a231e6fdae44d6558e871b88e7fe9a84182830ad0ab933a041c6b6",
+        "excerpt_sha256": "c3de76b0e44d57e30ca32fd82886224ca055e4507a58cac6c98cd1b4662a6969",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "9b448f8f8127161c1d1443a7751f32cd4fe4beabf12d94e827a1178f3993a744",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "c3de76b0e44d57e30ca32fd82886224ca055e4507a58cac6c98cd1b4662a6969"
+    },
+    "dev-10": {
+      "notes": "# Steering Council Updates for August 2024\n\n## 2024-08-07\n\n- Conclusion of the Code of Conduct violation\n- Discussion on [PEP 667 - Consistent views of namespaces](https://peps.python.org/pep-0667/) semantic changes\n\n## 2024-08-14\n\n- Deliberation of the decision regarding the Code of Conduct violation\n- Discussion on how to make the Steering Council more effective by suggesting a different body parallel with the Steering Council to deal with social matters\n- Highlight on the need to make clarification on the following different bodies: Code of Conduct Working Group, Steering Council and Python Software Foundation\n- Discussion on the resignation of a Core Python Developer\n- Mentoring survey: still to be released\n- Discussion on [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)\n\n## 2024-08-21\n\n- Discussion on [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)\n- Discussion on having overlapping Steering Council terms for continuity’s sake\n- Discussion on mentorship, its role and how the Steering Council can improve mentorship for some at-risk packages/libraries\n\n## 2024-08-28\n\n- Cleared out pending tasks and re-evaluated the priority tasks\n- Accepted [PEP 741 - Python Configuration C API](https://peps.python.org/pep-0741/)\n- Tabled discussion of [PEP 12 – Sample reStructuredText PEP Template](https://peps.python.org/pep-0012/) changes (regrouping rejection rationale, and adding a discussion of  publishing new modules to PyPI) for the Core Dev sprint\n- Discussion on publishing to PyPI, specifically:\n  - Getting approval\n  - Process or flow of release\n- Re-review of [PEP 667 - Consistent views of namespaces](https://peps.python.org/pep-0667/)\n- Discussion on more explicit authority for the Release Manager’s role going forward\n- Highlight on the ongoing [PEP 13 – Python Language Governance](https://peps.python.org/pep-0013/) discussion on potential changes\n- Discussion on whether there should be a PEP for PyREPL\n- Discussion on how to know when something needs a PEP or not and update [PEP 2 – Procedure for Adding New Modules](https://peps.python.org/pep-0002/)",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2024-08-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-08-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-08-steering-council-update.md",
+        "source_sha256": "280cd3b6b3841e6b20a948b42e6a038ec1e50f6fbbe717afda858f5308e3fcd3",
+        "excerpt_sha256": "280cd3b6b3841e6b20a948b42e6a038ec1e50f6fbbe717afda858f5308e3fcd3",
+        "scope": "supplied excerpt only",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "ef458659501fdc5b61fd9f3cd31b5dfe023ba3c1dacbbb967ac7f0f887d18b7f",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "280cd3b6b3841e6b20a948b42e6a038ec1e50f6fbbe717afda858f5308e3fcd3"
+    },
+    "dev-11": {
+      "notes": "# Steering Council Updates for September 2024\n\n## 2024-09-04\n\nDeveloper in Residence Update:\n\n- Release of [Python 3.13rc2](https://www.python.org/downloads/release/python-3130rc2/) with resolved blockers\n- PyREPL fixes nearing completion\n- Security releases pending due to ongoing fixes\n\nCode Review on PRs:\n\n- Discussion on implementing mandatory core developers PR code reviews (starting with new features only)\n\nFunding for Developers in Residence:\n\n- Ongoing discussions about retaining current developers\n- Budget planning for 2024 and 2025\n- Funding for developers in residence appears secure for the near future\n\nCore Developer Sprint in 2025:\n\n- Venue selection dependent on sponsorship\n- Considering reaching out to potential sponsors for additional costs outside of venue\n\nGrants Discussion:\n\n- Proposal to sponsor a developer for specific work\n- Emphasis on clear communication and defining grant parameters\n- Concerns about transparency and community perception if we started a grants program.\n\nCommunity and Governance:\n\n- Discussions on separating technical and community direction roles\n- Need for clarification on Python Software Foundation and core developer responsibilities\n- Consideration of updating [PEP 13](https://peps.python.org/pep-0013/) to reflect evolving governance structure (this must come from the community, not the Steering Council)\n\nDiversity and Inclusion:\n\n- Acknowledgment of frustrations regarding the pace of Diversity, Equity and Inclusion (DEI) initiatives\n- Need to balance technical contributions with community dynamics\n\nNext Steps:\n\n- Continue discussions on grant processes and parameters\n- Follow up on potential sponsorships for core developer sprint\n\n## 2024-09-11\n\nMeeting with Guido and Steering Council (office hours!)\n\nGuido's Focus:\n\n- Guido has been working extensively on [asyncio](https://docs.python.org/3/library/asyncio.html)\n- His priority remains Python contributions\n\nA core dev ban Incident:\n\n- The developer received a 3-month ban, which was unexpected by some\n- The ban was not solely based on a single discussion but considered other factors.\n- Concerns raised about how this affects the reputation of core developers, and the impact on the inclusion and outreach efforts.\n- The Steering Council is following procedures recommended by the Code of Conduct Working Group\n\nDiversity in Hiring:\n\n- Feedback received on a desire to see balanced hiring practices\n- Considering a grants program as an alternative to direct hiring for specific CPython maintenance needs\n- Discussing the legal requirements and ethical considerations around targeted hiring practices\n\nDiscourse Moderation:\n\n- Issues with automatic moderation on Discourse have been identified\n- There's a need to improve communication about moderation actions\n- The Steering Council is considering ways to improve the situation and clarify areas of responsibility\n\nGovernance and Responsibilities:\n\n- Discussions about re-examining areas of authority and responsibility within the Python community\n- Considering separating Code of Conduct responsibilities from the Steering Council. Community must drive this change\n- Exploring ways to improve the feedback mechanism for moderators\n\nVoting Procedures:\n\n- Considering changes to the voting system, potentially moving to [STAR voting](https://discuss.python.org/t/adopting-star-voting/63637)\n- Discussing the process for changing [PEP 13](https://peps.python.org/pep-0013/) and the required support from core developers\n\nNext Steps based on this discussion:\n\n- Propose a plan to improve voting organization\n- Consider changes to [PEP 13](https://peps.python.org/pep-0013/)\n- Clarify which matters require voting and how to conduct votes effectively\n\nMeeting among the Steering Council Members\n\nCode of Conduct (CoC) Issues:\n\n- Questions raised about the ban of a core dev and the responsibility for this action\n- Concerns about harassment related to the CoC decisions\n\nPEP-related Discussions:\n\n- Steering Council to consider [PEP 2](https://peps.python.org/pep-0002/) and inclusion matters, with a focus on PyPI integration\n- Ongoing discussions about adding to the PyPI library and involving more people in the process\n- No updates on [PEP 667](https://peps.python.org/pep-0667/) at this time\n\nCommunity Engagement:\n\n- Suggestions for moderating panel discussions to maintain focus among core developers\n- Discussions on requiring code review during sprints\n\nMentoring and Resources:\n\n- Acknowledgment of the need to develop mentoring resources\n- Plans to determine how to implement mentoring effectively\n\nPyPI Policy:\n\n- Ongoing discussions about PyPI policies\n\nPyREPL:\n\n- Request for an informational PEP for PyREPL\n\n## 2024-09-18\n\nCore Developer Promotion:\n\n- The Steering Council unanimously accepts the community vote to promote Kirill Podoprigora to Core Developer\n- Steering Council to follow up on the promotion process\n\nCore Developer Sprint 2025:\n\n- Considering Arm's proposal to host in Cambridge, UK\n- Pablo to discuss expectations and needs with Diego\n- Visa considerations to be clarified with Arm and PSF\n- Six months advance notice required for invitees\n\nPython 3.13 Release:\n\n- Proceeding with 3.13.0 release as planned, no RC3\n- Two potential blockers under consideration\n- The exec+compile double traceback issue not considered a blocker\n\nPyPI and Packaging Discussions:\n\n- Ongoing conversations about decision-making processes for PyPI and packaging\n- Consideration of creating a working group for cross-cutting concerns\n\nCommunity Concerns:\n\n- Discussions around recent community concerns and responses\n- Acknowledgment of community division and the need for careful communication\n- Consideration of proposing changes to PEP-13 to clarify Steering Council roles\n\nUpcoming Sprint:\n\n- Plans for in-person discussions at the Bellevue sprint\n- Suggestion to have separate rooms for sensitive topics to accommodate all participants\n\n## 2024-09-23\n\nSteering Council met informally at the Core Dev Sprint in Bellevue, WA (USA)",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2024-09-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-09-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-09-steering-council-update.md",
+        "source_sha256": "db1074f2ccba2b0985b385889d0813d0cda6dacd4b153258c42a900c06095631",
+        "excerpt_sha256": "53b0ab61c7990a1b6732e611313d37564d1ae27a6be15bec21d7db1e10d0d12f",
+        "scope": "supplied excerpt only",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "7e095509555198a12aba5816df6620fe6c67c60587070ecb73037773683345d7",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "53b0ab61c7990a1b6732e611313d37564d1ae27a6be15bec21d7db1e10d0d12f"
+    },
+    "dev-12": {
+      "notes": "# Steering Council Updates for October 2024\n\n## 2024-10-02\n\nRelease Management:\n\n- Preparations for next week's release underway - Python 3.13 RC3 released with Windows installer updates and the Incremental GC rolled back - Some concerns about RC3, mostly cosmetic issues to be addressed in 3.13.1 - Performance discussions: mixed reports on speed compared to 3.12\n\nCore Developer Updates:\n\n- Someone nominated for triaging, open vote on Discourse - Increase in core developer numbers noted\n\nProcess Improvements:\n\n- Discussion on requiring reviews for features in 3.13 and 3.14 - Acknowledgment of trust issues within the community - Considering changes to discussion processes and decision-making - Concerns about workload and response times for working groups\n\nCommunity Engagement:\n\n- Łukasz invited for Python 3.13 celebrations - Upcoming Discord event with Pablo and Łukasz\n\nPyREPL and Windows Issues:\n\n- Functionality issues noted for Windows and shell support - Discussions on function key behavior and documentation\n\nFuture Planning:\n\n- New PEP 2026 for calendar version to be reviewed next week - PEP 667 re-review closed - Mentorship survey responses to be checked\n\nCore Developer Sprints:\n\n- Discussions about 2025 sprint location (Cambridge UK proposal) - Considerations for accessibility and travel logistics - Suggestion to create a document outlining sprint hosting requirements and costs\n\nMiscellaneous:\n\n- Office hours with another developer in residence scheduled for next week - PEP 2026 to be discussed next week - Łukasz's requirement review process discussed\n\n## 2024-10-09\n\nDeveloper in Residence Discussion:\n\n- Addressed concerns about a core developer's behavior and communication - Discussed workload distribution and priorities - Mentioned potential improvements for buildbots and test result tracking - Explored ideas for better utilization of developer in residence role\n\nCommunity Communication:\n\n- Acknowledged concerns about transparency and fear within the community - Discussed need for clearer communication about processes and decisions - Considered ways to address misconceptions about Steering Council responsibilities\n\nCore Developer Promotion:\n\n- The Steering Council unanimously accepts the community vote to promote Matt Page to Core Developer\n\nElection Process:\n\n- Discussed implementation of STAR voting for upcoming term - Noted need for Python Software Foundation to have 4 weeks to implement new voting tools - Considered conducting mock elections to test new system\n\nPython 3.13 Release:\n\n- Announced release of Python 3.13\n\nCore Developer Sprints:\n\n- Discussed potential Arm-hosted sprint in Cambridge UK - Considered logistics, including hotel bookings and travel arrangements - Explored sponsorship possibilities, including potential separate corporate sponsorship for 2026\n\nFinancial Considerations:\n\n- Discussed need for responsible budgeting aligned with non-profit status - Mentioned adherence to US State Department guidelines for per diem and expenses - Emphasized importance of Python Software Foundation involvement in financial decisions\n\nProcedural Matters:\n\n- Considered need for Call for Proposals (CFP) for future sprints - Discussed community satisfaction and transparency in decision-making\n\n## 2024-10-16\n\nDeveloper in Residence Discussion:\n\n- Concerns raised about collaboration and communication within the active asyncio developers - Discussed the need for multiple experts in asyncio due to its complexity - Emphasized the importance of aligning grant work with larger project goals\n\nCore Developer Management:\n\n- Discussed process for removing commit bits from inactive core devs - Agreed to defer this discussion to the next Steering Council to avoid confusion with upcoming elections\n\nCore Developer Sprint:\n\n- Proceeding with Arm's offer to host in Cambridge UK - Exploring additional sponsorship opportunities - Clarified need to set expectations with sponsors regarding exclusivity\n\nPEP 2026 (Calendar Versioning):\n\n- Mixed opinions among SC members, ranging from slightly positive to slightly negative - Noted lack of community consensus on the proposal - Decided to defer decision to the next Steering Council\n\nElection Process:\n\n- Discussed need for clear timeline for upcoming Steering Council elections - Considered using Notion Calendar for scheduling office hours. Decided to defer decision to the next Steering Council\n\nPEP Delegation:\n\n- Discussed process for delegating PEPs to working groups (e.g., C API working group) - Considered whether to fully delegate decisions or just seek recommendations\n\nCommunity Engagement:\n\n- Discussed need for clearer communication about Steering Council's focus in coming months - Considered public announcement about deferring certain PEPs to next Steering Council. Decided to respond to all PEPs that will be deferred\n\n## 2024-10-23\n\nCore Developer Sprint:\n\n- Discussion about possible locations and timing for next year - Need to open a poll for dates - Location has good facilities including breakout rooms and cafeteria - Host site has experience with similar events like Linux mini conference\n\nAdministrative Updates:\n\n- Standing delegation docs PR needs review - Need to formalize mentorship resources and working group - Discussion about type annotations standardization - Need to document code of conduct violation handling process\n\nCore Developer Promotion Process:\n\n- Need for more transparent criteria and process - Concerns about pushing mentors too hard on promotions - Need to balance mentor discretion with transparency\n\nPEP Decisions:\n\n- Decision to defer PEPs 2026 and 661 to next steering council - Discussion about handling PEP 761 - Need for clarity on PEP decision timing relative to steering council election\n\nTechnical Discussions on JIT\n\n- Concerns raised about debugging and profiling capabilities - Discussion about JIT implementation impacts - Need for balance between performance improvements and debugging capabilities - Suggestion for informational PEP to lay out debugging/profiling issues\n\n## 2024-10-30\n\nDeveloper in Residence Update:\n\n- Required reviews for PRs are now implemented, though not disruptive as no PRs are currently automatically marked as features - Small disruption occurred due to changing required checks on main, requiring some PRs to update their branches - \"Do not merge\" check was renamed for clarity - ARM runners are being added for GitHub for Linux and Windows: - Windows runner temporarily on hold due to compiler issues - Using paid runners with ARM sponsorship arrangement - Cost expected to be lower than MacOS runners ($500/week) - ARM will reimburse costs through GitHub sponsorship\n\n- New episode of the core.py podcast released - Work ongoing on asyncio debugging changes - Making changes so borrowed reference to task isn't needed on every generator - _asynciomodule.c now holds list of pointers to root tasks for each interpreter\n\n- Increased moderation challenges on Python Discourse forums recently - Dealing with controversial discussions about moderation - Some users potentially trying to provoke bans\n\n- Another core developer was accepted into the Python Software Foundation Code of Conduct Working Group\n\nMeeting among the Steering Council Members\n\n- Discussion on PEP 744 (JIT PEP): - Potential change from informational to standards track PEP - Need to set clearer expectations and requirements - Concerns about debugging/profiling support\n\n- Issues with CPython development complexity: - Performance-focused work making contribution harder - Challenge for community contributors to keep up\n\n- Discussion of full-time developer impact: - Faster CPython team and Meta employees' (free-threading work) pace of changes - Balance between progress and community involvement - Review process challenges - Discussing if we could require non-affiliated or cross-discipline core dev reviews for a broader perspective on changes - Timing and responsiveness concerns - Community involvement challenges: - Review workload distribution - Election planning: - Timeline discussion - Encouraging nominations - Approved August monthly notes for publishing - Concerns about maintaining community accessibility - Documentation challenges - Onboarding new contributors - Balance between corporate and community contributions",
+      "provenance": {
+        "source_id": "python/steering-council/updates/2024-10-steering-council-update.md",
+        "series_id": "python/steering-council",
+        "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-10-steering-council-update.md",
+        "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-10-steering-council-update.md",
+        "source_sha256": "3ff2eb28f8324a81254f4edbf420d863d5dca677cd9bd053bb87832d1d642ae9",
+        "excerpt_sha256": "f25819964a8cdc2695f98469cc50b47194b7dd54ee25d13f70606800c8283029",
+        "scope": "supplied excerpt only",
+        "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+        "annotation_status": "model_drafted_unreviewed",
+        "annotation_request_hash": "ee2f782805497748398040c55449fd4ea4092d1a88bc292ce86d76d5836b965e",
+        "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+        "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+      },
+      "notes_hash": "f25819964a8cdc2695f98469cc50b47194b7dd54ee25d13f70606800c8283029"
+    }
+  },
+  "caveat": "These are mechanical review candidates, not confirmed annotation errors. No label changes, regrading, semantic certification or qualification occurs."
+}

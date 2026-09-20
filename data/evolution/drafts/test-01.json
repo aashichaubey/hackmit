@@ -1,0 +1,253 @@
+{
+  "id": "test-01",
+  "split": "test",
+  "notes": "# 104th TC39 Meeting | 8th October 2024\n\n-----\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |-------------------|--------------|-----------------| | Linus Groh | LGH | Bloomberg | | Oliver Medhurst | OMT | IE (Porffor) | | Waldemar Horwat | WH | Invited Expert | | Chengzhong Wu | CZW | Bloomberg | | Ron Buckton | RBN | Microsoft | | Daniel Minor | DLM | Mozilla | | Ashley Claymore | ACE | Bloomberg | | Andreu Botella | ABO | Igalia | | Ross Kirsling | RKG | Sony | | Devin Rousso | DRO | Invited Expert | | Ujjwal Sharma | USA | Igalia | | Dmitry Makhnev | DJM | JetBrains | | Bradford Smith | BSH | Google | | Chip Morningstar | CM | Consensys | | Daniel Ehrenberg | DE | Bloomberg | | Chris de Almeida | CDA | IBM | | Mikhail Barash | MBH | Univ. of Bergen | | Nicolò Ribaudo | NRO | Igalia | | Philip Chimento | PFC | Igalia | | Mark Miller | MM | Agoric | | Tom Kopp | TKP | Zalari | | Ben Allen | BAN | Igalia | | Jordan Harband | JHD | HeroDevs | | Sergey Rubanov | SRV | Invited Expert | | Istvan Sebestyen | IS | Ecma | | Yulia Startsev | YSV | Mozilla | | Marja Hölttä | MHA | Google | | Yusuke Suzuki | YSZ | Apple | | Keith Miller | KM | Apple | | Michael Saboff | MLS | Apple | | Justin Ridgewell | JRL | Google | | Andrew Paprocki | API | Bloomberg | | Jesse Alama | JMN | | | Jonathan Kuperman | JKP | Bloomberg | | Shu-yu Guo | SYG | Google | | Yilong Li | LYL | Alibaba | | Jack Works | JWK | Sujitech |\n\n## Approval of previous minutes and adoption of current agenda\n\nPresenter: Rob Palmer (RPR)\n\nRPR: Can I check, do we have—check the consensus appraisal for the previous minutes? No objections.\n\nRPR: The previous minutes are approved.\n\nRPR: Okay. And then for our upcoming meeting. So we have the current agenda published. So do we have consensus to adopt the current agenda?\n\nYSV: We have added extra time to this meeting. Is that right?\n\nYSV: I have a concern about the agenda and how much we have in it. As well as, the fact that a few things were added quite close to the deadline, which resulted in us being unable to fully review everything. So we will have to hold back on consensus on a couple of items because we weren’t able to appropriately review. I would like to highlight this: so that maybe we can discuss how to do this in the future in terms of ahead of time, recognizing that a meeting is too full, rather than extending the time.\n\nRPR: Okay. Thank you, YSV.\n\nRPR: All right. So I believe that we are adopting the current agenda and we will have those conversations later.\n\nRPR: So for now, let’s move ahead to the secretary’s report. Given today by Aki\n\n## Secretary's Report\n\nPresenter: Aki Braun (AKI)\n\n- slides\n\nAKI: SHN had planned to be here, something came up that prevented her attendance and she’s heartbroken. She really likes attending these meetings. I am presenting the secretary's report, but only because SHN is unable to.\n\nAKI: Quickly, we will go through new ECMA projects, exe-com what is coming up there and I will chat with you about TPAC. We have a few things to review of the annex slides to make sure we are aware of.\n\nAKI: If anybody has heard anything about WinterCG or TC55, this is super exciting. The Web Interoperable Runtimes Community Group from W3C, Luca and Oliver and a handful of TG delegates along with some other people, discovered that they were not able to publish a standard as a community group. And trying to figure out the best way to move forward, the group decided that it made sense to move to ECMA. So we have a scope to describe the group will be standardizing and maintaining a minimum API for web servers to support APIs that allow JavaScript developers to write basically isomorphic JavaScript, write once, use in client, use on server. And there’s more to it than this. I think this is a very reductive description, but it’s a different type… They will be presenting to the ExeCom in a few weeks or SHN will be presenting the next ExeCom and we look forward to moving forward and publishing standards or technical reports.\n\nAKI: We have a TC56 proposal. A high-level shading language. HLSL which is currently in a—in the perfect place for standardization is what it is. So we are looking at using the royalty free patent policy that ECMA developed to create this technical committee and publish both the standard and a standard library for HLSL and also do a lot of liaison with other bodies to make sure as adopted and distributed and used. I don’t know how close that is to being concrete. I think—it seems very promising.\n\nAKI: All right. The ExeCom. This is in a couple of weeks. The 22 and 23 October in Geneva. The TC39 chairs will be preparing a report for the ExeCom that they go through every time. They are—there will be the confirmation of chairs and all of the different leadership throughout ECMA. And there will be elections for the ExeCom. So if you work for an ordinary member and you want to go for president or vice-president, consider doing that. ECMA needs leadership to understand the breadth that we do and a TC39 delegate is the perfect person for that. If you don’t work for an ordinary member, you can still participate in the ECMA ExeCom, there are 4 positions available. I strongly encourage everyone to throw their name in for the ExeCom. It’s good to see how ECMA works and that your dues money is invested responsibly.\n\nAKI: A week before last I went to W3C TPAC 2024. Went on a massive charm offensive. Talked to a lot of different working groups about all sorts of things we can be collaborating on as standards bodies without competing or stepping on toes. There’s a lot of that—we have a Venn diagram for us to be make to talk to each other. The obvious one is the i18n working group and TG2. There’s not enough overlapping participants. Right now, we are seeing how we can get together and make sure that we are communicating and we are sorting plans together and not trying to standardize something that maybe gets in the way of the other group’s plans or understanding. That may look like joint meetings. It may look like some sort of regular communication. I am not sure. It is something that I am actively working on. If anybody has opinions on that, I would love to hear them. Beyond just the I18N working group and the TG2, there’s also other sorts of impacts we could be having on W3C. They want to hear about security, work with us, on security concerns. They want to hear from us on our opinions on sustainability, environmental sustainability. Think, preventing E waste and power consumption and sort of all sorts of stuff we have the able to influence, at our level. There’s a lot of people who are really curious and excited by TG5. Every time I mentioned it to somebody, they said tell me more. So I look forward to seeing what TG5 does and finding ways for us to get there successes and projects back to W3C and see if there’s collaboration we should be doing there\n\nAKI: One last thing that I am going to save talking longer about for a future plenary is that W3C would like very, very much for us to consider horizontal reviews. That means, when they are publishing a standard that has any potential overlap with ECMA’s work, they want us to take a look at it and say, \"that doesn't make sense\" or \"I have a concern here.\" They will reserve the right to say, \"I am glad you said that, but that is something we can’t change\". They would love the opportunity to review our standards before we publish them as well. And if they bring up a concern they have, we may wish to integrate their technical contributions (after signing the appropriate RFTG paperwork), or we may wish to say \"thank you very much. We will be moving forward\". Horizontal reviews would contain no obligations, contractual or otherwise. Basically, we don’t want or need to conflict with the web platform. We can discuss this further in a future plenary.\n\nAKI: Some reminders: the invited expert policy is pretty clear, but I want to make sure that everyone knows what we want the process to look like in the future. It’s very important to us that we are able to invite experts when appropriate, and it is something we’re timeboxing. Timeboxing so we don’t forget and end up with an IE representing a company that should be a full member. So there’s no reason to think that we are actually going to change allowing invited experts in any sense. But it’s going to start being an annual thing, where at the end of the year, Samina will just chat with people and say, hey. Are you still active? Yeah? Is your company interested in being a member? No. All right. Having those conversations. It will be an annual review, but only in the sense of making sure that people are actually still engaged.\n\nAKI: RPR touched on this, but a reminder of the code of conduct. I think really importantly, when we disagree, try to understand why. Code of conduct exists for when things go wrong. Right? I don’t doubt anybody’s desire to make sure that we have a professional and pleasant experience. Sometimes—sometimes disagreements happen. Let’s make sure we are not afraid to bring in the code of conduct committee to work things out.\n\nAKI: There’s some updates to the list of ECMA documents that you all may share about. If there’s a GA document that you want to access, we should be able to get it for you. We are looking at finding ways to make access a little bit more smooth, a little bit more fluid.\n\nAKI: TC39 specific documents that have been published recently, there’s the secretary report from the last meeting. Some contributor license agreement responses. We have minutes and slides from the last meeting and the venue and agenda from this meeting\n\nAKI: In the GA documents, there are the results from the postal vote on clarifying bylaws and approving TC55. The initial vote was a no. The TC55 has updated their scope and updated the program of work, and I think that—I am pretty sure we have resolved any concerns that were there. There’s also highlights to—if you want to see how ECMA works with our standards bodies and especially beyond W3C, which a lot of you understand, you want to check that out, and the next GA is going to be in New York at Bloomberg.\n\nAKI: I think that’s probably all I want to chat with you. RPR already covered the next slide, which is the next TC39 meeting. And the slide after, the upcoming GA, which is in New York in December and the upcoming ExeCom meeting in Geneva. Any questions for ECMA?\n\n### Speaker's Summary of Key Points\n\n1. New ECMA Projects:\n\n- A collaboration with the W3C Web Interoperable Runtimes Community Group WinterCG is underway. - Proposal for a TC56 to establish standards for a high-level shading language (HLSL) has been initiated\n\n1. Upcoming ExeCom Meeting:\n\n- Scheduled for 22-23 October in Geneva\n\n1. Collaboration with W3C:\n\n- Ongoing efforts to build cooperative relationships with various W3C working groups. - Consider \"horizontal reviews\" where ECMA and W3C review each other's standards to prevent conflicts and promote sustainability in technology.\n\n1. Invited Experts Policy:\n\n- Annual review to confirm engagement and membership interest of invited experts.",
+  "facts": [
+    {
+      "kind": "decision",
+      "text": "The previous minutes are approved.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "RPR: The previous minutes are approved."
+    },
+    {
+      "kind": "agreement",
+      "text": "We have consensus to adopt the current agenda.",
+      "person": "Rob Palmer",
+      "deadline": "",
+      "source_quote": "So I believe that we are adopting the current agenda and we will have those conversations later."
+    },
+    {
+      "kind": "disagreement",
+      "text": "YSV has a concern about the agenda and how much we have in it and that a few things were added close to the deadline resulting in inability to fully review everything.",
+      "person": "Yulia Startsev",
+      "deadline": "",
+      "source_quote": "YSV: I have a concern about the agenda and how much we have in it."
+    },
+    {
+      "kind": "proposal",
+      "text": "YSV proposes to discuss how to handle agenda items ahead of time recognizing a meeting is too full rather than extending the time.",
+      "person": "Yulia Startsev",
+      "deadline": "",
+      "source_quote": "I would like to highlight this: so that maybe we can discuss how to do this in the future in terms of ahead of time, recognizing that a meeting is too full, rather than extending the time."
+    },
+    {
+      "kind": "proposal",
+      "text": "The Web Interoperable Runtimes Community Group decided to move to ECMA to publish a standard.",
+      "person": "Aki Braun",
+      "deadline": "",
+      "source_quote": "And trying to figure out the best way to move forward, the group decided that it made sense to move to ECMA."
+    },
+    {
+      "kind": "proposal",
+      "text": "A TC56 proposal for a high-level shading language (HLSL) standardization using royalty free patent policy.",
+      "person": "Aki Braun",
+      "deadline": "",
+      "source_quote": "AKI: We have a TC56 proposal."
+    },
+    {
+      "kind": "proposal",
+      "text": "Encouragement for members to throw their name in for ECMA ExeCom elections happening 22-23 October in Geneva.",
+      "person": "Aki Braun",
+      "deadline": "22-23 October 2024",
+      "source_quote": "I strongly encourage everyone to throw their name in for the ExeCom."
+    },
+    {
+      "kind": "proposal",
+      "text": "W3C would like ECMA to consider horizontal reviews of standards to prevent conflicts and promote collaboration.",
+      "person": "Aki Braun",
+      "deadline": "",
+      "source_quote": "AKI: One last thing that I am going to save talking longer about for a future plenary is that W3C would like very, very much for us to consider horizontal reviews."
+    },
+    {
+      "kind": "agreement",
+      "text": "Invited experts policy will be an annual review to confirm engagement and membership interest.",
+      "person": "Aki Braun",
+      "deadline": "annually",
+      "source_quote": "But it’s going to start being an annual thing, where at the end of the year, Samina will just chat with people and say, hey."
+    },
+    {
+      "kind": "agreement",
+      "text": "Code of conduct exists to ensure professional and pleasant experience and to handle disagreements appropriately.",
+      "person": "Aki Braun",
+      "deadline": "",
+      "source_quote": "AKI: RPR touched on this, but a reminder of the code of conduct."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-01-q01",
+      "question": "Who approved the previous minutes?",
+      "answers": [
+        "Rob Palmer"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1630,
+          "end": 1669,
+          "quote": "RPR: The previous minutes are approved."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q02",
+      "question": "Was there consensus to adopt the current agenda?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2429,
+          "end": 2525,
+          "quote": "So I believe that we are adopting the current agenda and we will have those conversations later."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q03",
+      "question": "Who expressed concern about the agenda being too full?",
+      "answers": [
+        "Yulia Startsev"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 1875,
+          "end": 1941,
+          "quote": "YSV: I have a concern about the agenda and how much we have in it."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q04",
+      "question": "What did Yulia Startsev propose regarding agenda management?",
+      "answers": [
+        "discuss how to handle agenda items ahead of time recognizing a meeting is too full rather than extending the time"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 2195,
+          "end": 2383,
+          "quote": "I would like to highlight this: so that maybe we can discuss how to do this in the future in terms of ahead of time, recognizing that a meeting is too full, rather than extending the time."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q05",
+      "question": "What is the purpose of the TC56 proposal mentioned?",
+      "answers": [
+        "standardization of a high-level shading language (HLSL)"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 4029,
+          "end": 4058,
+          "quote": "AKI: We have a TC56 proposal."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q06",
+      "question": "When is the upcoming ECMA ExeCom meeting scheduled?",
+      "answers": [
+        "22-23 October 2024"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 5203,
+          "end": 5271,
+          "quote": "I strongly encourage everyone to throw their name in for the ExeCom."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q07",
+      "question": "Does W3C want ECMA to consider horizontal reviews of standards?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 6921,
+          "end": 7084,
+          "quote": "AKI: One last thing that I am going to save talking longer about for a future plenary is that W3C would like very, very much for us to consider horizontal reviews."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q08",
+      "question": "Is the invited experts policy going to be reviewed annually?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 8368,
+          "end": 8492,
+          "quote": "But it’s going to start being an annual thing, where at the end of the year, Samina will just chat with people and say, hey."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q09",
+      "question": "Is there any mention of changing the invited experts policy to disallow invited experts?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 8262,
+          "end": 8367,
+          "quote": "So there’s no reason to think that we are actually going to change allowing invited experts in any sense."
+        }
+      ]
+    },
+    {
+      "id": "test-01-q10",
+      "question": "Is there any mention of a decision to extend the meeting time permanently?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 2195,
+          "end": 2383,
+          "quote": "I would like to highlight this: so that maybe we can discuss how to do this in the future in terms of ahead of time, recognizing that a meeting is too full, rather than extending the time."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2024-10/october-08.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2024-10/october-08.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2024-10/october-08.md",
+    "source_sha256": "f07ddaded4f1e77ec320180ad0e7f7f075bfe659032f92df866004328b24042e",
+    "excerpt_sha256": "30bbec6079376f45aeb033b98cf41e39db6c8e659977c08b4ee93a91ced63083",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "fe03b0495a5edba7d6514a44deefff15817930a8b55dd20943ca9ecb02751651",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

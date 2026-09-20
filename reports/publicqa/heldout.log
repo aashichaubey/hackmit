@@ -1,0 +1,374 @@
+{"id": "MeeQA:bd4189777d1203cc69b6", "method": "raw", "f1": 0.9473684210526315, "error": null}
+{"id": "MeeQA:727c2655f2d9e46cb9f7", "method": "raw", "f1": 0.3076923076923077, "error": null}
+{"id": "MeeQA:95aa2db2b78380769ca9", "method": "raw", "f1": 0.2692307692307692, "error": null}
+{"id": "MeeQA:df3f917deb22296d5c6f", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:3a76a296a20c4cd580bc", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:5e1680628514b4147262", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:e68c5b46431fcf86dbe4", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:0e3d0e7e421e8ae483b0", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:b54d531c1aa62f21da0d", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:e637afff5597caf03d37", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:f8ce06d2bd0e5db3c23b", "method": "raw", "f1": 0.8, "error": null}
+{"id": "MeeQA:315a8e805dd6300880fb", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:084b26d8b1e43c6edae7", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:00d8fe2abfb2f254a54a", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:67fdcf628b0b206d5455", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:61458fce16a1a5f323bc", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:51c4de88f54c83319beb", "method": "raw", "f1": 0.12435233160621761, "error": null}
+{"id": "MeeQA:8c7ff91ad937c2275262", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:f8f8b6d4ae0562674efb", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:f2cd277e70c395e41e20", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:1639e33e509892bab6d1", "method": "raw", "f1": 0.6666666666666666, "error": null}
+{"id": "MeeQA:800e36be9bf177f23b79", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:ef21dbef5a71a49f4fd6", "method": "raw", "f1": 0.2, "error": null}
+{"id": "MeeQA:2c02b53fdcc5c6cdf604", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:30a395373f9cd1c687a1", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:dc09a83ec30277412c50", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:32b64ec5351f281b44dd", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:01005e4d0c27ebd1fdaf", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:15860442020f39b3964c", "method": "raw", "f1": 0.9844559585492227, "error": null}
+{"id": "MeeQA:5aa624ae5ba8421f0d45", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:6a73d8c292e6979ad4e9", "method": "raw", "f1": 0.547486033519553, "error": null}
+{"id": "MeeQA:337796f13e8a869ec46a", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:b28be75e915edde467c6", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:58a31fe476a0ad99df59", "method": "raw", "f1": 0.37755102040816324, "error": null}
+{"id": "MeeQA:df0dcbee467e7d11c7a8", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:d0dbfa60dc77422701be", "method": "raw", "f1": 0.9032258064516129, "error": null}
+{"id": "MeeQA:38c3e6daa41d83a5c689", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:6e5b8f8eb86b1973df33", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:5f440ad28c435f770965", "method": "raw", "f1": 0.9620253164556962, "error": null}
+{"id": "MeeQA:bbc5f4eb9685db78d2d4", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:c176b596566110c9c356", "method": "raw", "f1": 0.11627906976744186, "error": null}
+{"id": "MeeQA:61a86f6e2e8360ae783f", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:c3e0a5a83dd912884acf", "method": "raw", "f1": 0.9172932330827067, "error": null}
+{"id": "MeeQA:26f27e7b41fd4f71c770", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:a1be48057f835294eb70", "method": "raw", "f1": 0.8235294117647058, "error": null}
+{"id": "MeeQA:b18b36e4088f50c37429", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:ae8663158c9bc653a4e8", "method": "raw", "f1": 0.14634146341463414, "error": null}
+{"id": "MeeQA:5a61c18ce27180178f65", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:eb2f2552c58f480d5a1c", "method": "raw", "f1": 0.08333333333333333, "error": null}
+{"id": "MeeQA:196aa73450f6f89e2e0d", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:572bb171a739de357917", "method": "raw", "f1": 0.25, "error": null}
+{"id": "MeeQA:e3e761ab298d84dcc902", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:a4a4536b17870bb0443b", "method": "raw", "f1": 0.9885057471264368, "error": null}
+{"id": "MeeQA:865cae8f00f65e1f7f10", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:7606979ed312e65d0a6f", "method": "raw", "f1": 0.8571428571428571, "error": null}
+{"id": "MeeQA:4856e91199708c6d7596", "method": "raw", "f1": 1.0, "error": null}
+{"id": "MeeQA:63de69b69070e66bfcac", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:bffd0e555f2d1856a721", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:f8b706aac1dbe7a8aa27", "method": "raw", "f1": 0.9333333333333333, "error": null}
+{"id": "MeeQA:86de132cfaebb7307822", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:92cea20b31b1ca5c515c", "method": "raw", "f1": 0.6758620689655173, "error": null}
+{"id": "MeeQA:3dca6cfc03cd2ecbe471", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:b6e64303525f92e60bf5", "method": "raw", "f1": 0.5952380952380952, "error": null}
+{"id": "MeeQA:0c99a89e7eccd450427a", "method": "raw", "f1": 0.0, "error": null}
+{"id": "MeeQA:95aa2db2b78380769ca9", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:bd4189777d1203cc69b6", "method": "encoded", "f1": 0.9473684210526315, "error": null}
+{"id": "MeeQA:3a76a296a20c4cd580bc", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:5e1680628514b4147262", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:727c2655f2d9e46cb9f7", "method": "encoded", "f1": 0.5714285714285714, "error": null}
+{"id": "MeeQA:df3f917deb22296d5c6f", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:e68c5b46431fcf86dbe4", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:0e3d0e7e421e8ae483b0", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:b54d531c1aa62f21da0d", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:e637afff5597caf03d37", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:f8ce06d2bd0e5db3c23b", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:315a8e805dd6300880fb", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:084b26d8b1e43c6edae7", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:00d8fe2abfb2f254a54a", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:67fdcf628b0b206d5455", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:8c7ff91ad937c2275262", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:f8f8b6d4ae0562674efb", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:61458fce16a1a5f323bc", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:51c4de88f54c83319beb", "method": "encoded", "f1": 0.3281733746130031, "error": null}
+{"id": "MeeQA:f2cd277e70c395e41e20", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:1639e33e509892bab6d1", "method": "encoded", "f1": 0.6666666666666666, "error": null}
+{"id": "MeeQA:800e36be9bf177f23b79", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:ef21dbef5a71a49f4fd6", "method": "encoded", "f1": 0.2, "error": null}
+{"id": "MeeQA:2c02b53fdcc5c6cdf604", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:30a395373f9cd1c687a1", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:dc09a83ec30277412c50", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:32b64ec5351f281b44dd", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:01005e4d0c27ebd1fdaf", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:15860442020f39b3964c", "method": "encoded", "f1": 0.9844559585492227, "error": null}
+{"id": "MeeQA:5aa624ae5ba8421f0d45", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:6a73d8c292e6979ad4e9", "method": "encoded", "f1": 0.547486033519553, "error": null}
+{"id": "MeeQA:337796f13e8a869ec46a", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:58a31fe476a0ad99df59", "method": "encoded", "f1": 0.21176470588235294, "error": null}
+{"id": "MeeQA:b28be75e915edde467c6", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:df0dcbee467e7d11c7a8", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:38c3e6daa41d83a5c689", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:d0dbfa60dc77422701be", "method": "encoded", "f1": 0.9032258064516129, "error": null}
+{"id": "MeeQA:6e5b8f8eb86b1973df33", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:5f440ad28c435f770965", "method": "encoded", "f1": 0.9620253164556962, "error": null}
+{"id": "MeeQA:bbc5f4eb9685db78d2d4", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:c176b596566110c9c356", "method": "encoded", "f1": 0.10619469026548672, "error": null}
+{"id": "MeeQA:c3e0a5a83dd912884acf", "method": "encoded", "f1": 0.9896907216494846, "error": null}
+{"id": "MeeQA:26f27e7b41fd4f71c770", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:a1be48057f835294eb70", "method": "encoded", "f1": 0.1917808219178082, "error": null}
+{"id": "MeeQA:61a86f6e2e8360ae783f", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:b18b36e4088f50c37429", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:ae8663158c9bc653a4e8", "method": "encoded", "f1": 0.14634146341463414, "error": null}
+{"id": "MeeQA:5a61c18ce27180178f65", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:eb2f2552c58f480d5a1c", "method": "encoded", "f1": 0.08333333333333333, "error": null}
+{"id": "MeeQA:e3e761ab298d84dcc902", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:572bb171a739de357917", "method": "encoded", "f1": 0.25, "error": null}
+{"id": "MeeQA:196aa73450f6f89e2e0d", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:a4a4536b17870bb0443b", "method": "encoded", "f1": 0.9885057471264368, "error": null}
+{"id": "MeeQA:865cae8f00f65e1f7f10", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:7606979ed312e65d0a6f", "method": "encoded", "f1": 0.8571428571428571, "error": null}
+{"id": "MeeQA:4856e91199708c6d7596", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:63de69b69070e66bfcac", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:bffd0e555f2d1856a721", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:f8b706aac1dbe7a8aa27", "method": "encoded", "f1": 0.9333333333333333, "error": null}
+{"id": "MeeQA:86de132cfaebb7307822", "method": "encoded", "f1": 1.0, "error": null}
+{"id": "MeeQA:92cea20b31b1ca5c515c", "method": "encoded", "f1": 0.9278350515463918, "error": null}
+{"id": "MeeQA:b6e64303525f92e60bf5", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:0c99a89e7eccd450427a", "method": "encoded", "f1": 0.0, "error": null}
+{"id": "MeeQA:3dca6cfc03cd2ecbe471", "method": "encoded", "f1": 0.0, "error": null}
+{
+  "study": "frozen_family_disjoint_MeeQA_test",
+  "manifest_hash": "58f22f9f3e702584d640324a8d27bdd13ccb8edcd881f71868b96376294e003d",
+  "provenance": {
+    "source_sha256": {
+      "Data/original/test_data.json.zip": "ce151ef0f574e7254e630f113260449f998444183a7eb45f563b941cef596b05",
+      "Data/test_meetings.csv": "384966ee7f436a88812b60b81b2f7d3a22dae2892b2ae3aeed1a100a5b964680"
+    },
+    "adapted_questions": 2133,
+    "excluded_annotation_records": 688,
+    "family_disjoint_questions": 1610,
+    "family_overlap_questions_removed": 523,
+    "selected_ids": [
+      "MeeQA:95aa2db2b78380769ca9",
+      "MeeQA:3a76a296a20c4cd580bc",
+      "MeeQA:bd4189777d1203cc69b6",
+      "MeeQA:df3f917deb22296d5c6f",
+      "MeeQA:727c2655f2d9e46cb9f7",
+      "MeeQA:5e1680628514b4147262",
+      "MeeQA:e68c5b46431fcf86dbe4",
+      "MeeQA:0e3d0e7e421e8ae483b0",
+      "MeeQA:b54d531c1aa62f21da0d",
+      "MeeQA:e637afff5597caf03d37",
+      "MeeQA:f8ce06d2bd0e5db3c23b",
+      "MeeQA:315a8e805dd6300880fb",
+      "MeeQA:084b26d8b1e43c6edae7",
+      "MeeQA:00d8fe2abfb2f254a54a",
+      "MeeQA:67fdcf628b0b206d5455",
+      "MeeQA:61458fce16a1a5f323bc",
+      "MeeQA:51c4de88f54c83319beb",
+      "MeeQA:8c7ff91ad937c2275262",
+      "MeeQA:f8f8b6d4ae0562674efb",
+      "MeeQA:f2cd277e70c395e41e20",
+      "MeeQA:1639e33e509892bab6d1",
+      "MeeQA:800e36be9bf177f23b79",
+      "MeeQA:ef21dbef5a71a49f4fd6",
+      "MeeQA:2c02b53fdcc5c6cdf604",
+      "MeeQA:30a395373f9cd1c687a1",
+      "MeeQA:dc09a83ec30277412c50",
+      "MeeQA:32b64ec5351f281b44dd",
+      "MeeQA:01005e4d0c27ebd1fdaf",
+      "MeeQA:15860442020f39b3964c",
+      "MeeQA:5aa624ae5ba8421f0d45",
+      "MeeQA:6a73d8c292e6979ad4e9",
+      "MeeQA:337796f13e8a869ec46a",
+      "MeeQA:58a31fe476a0ad99df59",
+      "MeeQA:b28be75e915edde467c6",
+      "MeeQA:df0dcbee467e7d11c7a8",
+      "MeeQA:38c3e6daa41d83a5c689",
+      "MeeQA:d0dbfa60dc77422701be",
+      "MeeQA:6e5b8f8eb86b1973df33",
+      "MeeQA:5f440ad28c435f770965",
+      "MeeQA:bbc5f4eb9685db78d2d4",
+      "MeeQA:c176b596566110c9c356",
+      "MeeQA:26f27e7b41fd4f71c770",
+      "MeeQA:c3e0a5a83dd912884acf",
+      "MeeQA:61a86f6e2e8360ae783f",
+      "MeeQA:a1be48057f835294eb70",
+      "MeeQA:b18b36e4088f50c37429",
+      "MeeQA:ae8663158c9bc653a4e8",
+      "MeeQA:5a61c18ce27180178f65",
+      "MeeQA:eb2f2552c58f480d5a1c",
+      "MeeQA:196aa73450f6f89e2e0d",
+      "MeeQA:572bb171a739de357917",
+      "MeeQA:e3e761ab298d84dcc902",
+      "MeeQA:a4a4536b17870bb0443b",
+      "MeeQA:865cae8f00f65e1f7f10",
+      "MeeQA:7606979ed312e65d0a6f",
+      "MeeQA:4856e91199708c6d7596",
+      "MeeQA:63de69b69070e66bfcac",
+      "MeeQA:bffd0e555f2d1856a721",
+      "MeeQA:f8b706aac1dbe7a8aa27",
+      "MeeQA:86de132cfaebb7307822",
+      "MeeQA:92cea20b31b1ca5c515c",
+      "MeeQA:3dca6cfc03cd2ecbe471",
+      "MeeQA:b6e64303525f92e60bf5",
+      "MeeQA:0c99a89e7eccd450427a"
+    ],
+    "selected_families": [
+      "icsi:bmr026",
+      "meeting:04-29-06financeopen.pdf",
+      "meeting:05020401.pdf",
+      "meeting:05040101.pdf",
+      "meeting:05053101.pdf",
+      "meeting:07-29-06-board-open.pdf",
+      "meeting:07_27_2007provisions_open.pdf",
+      "meeting:08_02_2008financeopensessiontranscript.pdf",
+      "meeting:09-18-06boardopensession.pdf",
+      "meeting:09-18-06financeopen.pdf",
+      "meeting:10-14-2008_finance_meeting_open_transcript.pdf",
+      "meeting:10-28-06financecomtteeopen.pdf",
+      "meeting:10-28-06opsregscommitteeopensessionaa.pdf",
+      "meeting:102805opsregopen.pdf",
+      "meeting:10_27_07performancereviewsmeetingopen.pdf",
+      "meeting:april 12, 2015 opers. & regs. committee.pdf",
+      "meeting:bns001",
+      "meeting:bsr001",
+      "meeting:fomc-transcript-19770816",
+      "meeting:fomc-transcript-19780321",
+      "meeting:fomc-transcript-19780815",
+      "meeting:fomc-transcript-19780919",
+      "meeting:fomc-transcript-19790206",
+      "meeting:fomc-transcript-19790711",
+      "meeting:fomc-transcript-19790814",
+      "meeting:fomc-transcript-19821005",
+      "meeting:fomc-transcript-19951115",
+      "meeting:fomc-transcript-20010320",
+      "meeting:fomc-transcript-20060328",
+      "meeting:ib4011",
+      "meeting:meetingtranscript565.pdf"
+    ]
+  },
+  "methods": {
+    "raw": {
+      "questions": 64,
+      "meetings": 31,
+      "macro_f1": 0.41370176945002973,
+      "macro_meeting_f1": 0.4305426866423741,
+      "macro_iou": 0.38002305264408764,
+      "exact_match": 0.203125,
+      "answerable_f1": 0.42115353890005947,
+      "unanswerable_accuracy": 0.40625,
+      "answerability_precision": 0.5476190476190477,
+      "answerability_recall": 0.71875,
+      "balanced_answerability": 0.5625,
+      "ungrounded_answers": 2,
+      "invalid_answers": 0,
+      "actual_input_tokens": 115639,
+      "actual_output_tokens": 4408,
+      "actual_usd": 0.05330840000000001,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    },
+    "encoded": {
+      "questions": 64,
+      "meetings": 31,
+      "macro_f1": 0.43432426366170435,
+      "macro_meeting_f1": 0.4832258623816628,
+      "macro_iou": 0.40933070775120367,
+      "exact_match": 0.25,
+      "answerable_f1": 0.36864852732340864,
+      "unanswerable_accuracy": 0.5,
+      "answerability_precision": 0.5555555555555556,
+      "answerability_recall": 0.625,
+      "balanced_answerability": 0.5625,
+      "ungrounded_answers": 5,
+      "invalid_answers": 0,
+      "actual_input_tokens": 112222,
+      "actual_output_tokens": 5458,
+      "actual_usd": 0.053621600000000005,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    }
+  },
+  "uncertainty": {
+    "unit": "meeting family, paired cluster bootstrap",
+    "families": 31,
+    "repetitions": 5000,
+    "seed": 20260920,
+    "mean_question_f1_delta": 0.020622494211674593,
+    "percentile_95_interval": [
+      -0.06436280674023868,
+      0.10423568714752118
+    ],
+    "improved": 8,
+    "regressed": 7,
+    "tied": 49,
+    "interpretation": "Exploratory training uncertainty, not proof of equivalence or a qualification gate."
+  },
+  "input_savings_fraction": 0.029548854625169763,
+  "cost_savings_fraction": -0.005875246677821799,
+  "f1_loss_percentage_points": -2.0622494211674613,
+  "answerability_loss_percentage_points": 0.0,
+  "equal_quality_claim": false,
+  "ledger": {
+    "actual_calls": 3462,
+    "known_usd": 1.5091867999999986,
+    "reserved_or_spent_usd": 1.6819935999999982,
+    "unknown_usage_calls": 33,
+    "input_tokens": 3265755,
+    "cached_input_tokens": 234624,
+    "output_tokens": 170795,
+    "by_purpose": {
+      "annotation": {
+        "calls": 84,
+        "known_usd": 0.24840920000000002
+      },
+      "probe": {
+        "calls": 671,
+        "known_usd": 0.15622840000000013
+      },
+      "finalist": {
+        "calls": 545,
+        "known_usd": 0.09138319999999994
+      },
+      "baseline": {
+        "calls": 990,
+        "known_usd": 0.4850036000000002
+      },
+      "product_qualification": {
+        "calls": 583,
+        "known_usd": 0.2743007999999999
+      },
+      "extraction": {
+        "calls": 32,
+        "known_usd": 0.0575456
+      },
+      "batch_ablation": {
+        "calls": 12,
+        "known_usd": 0.004020000000000001
+      },
+      "validation": {
+        "calls": 240,
+        "known_usd": 0.04524879999999998
+      },
+      "qualification": {
+        "calls": 248,
+        "known_usd": 0.1274312000000001
+      },
+      "classifier_development": {
+        "calls": 44,
+        "known_usd": 0.010490400000000002
+      },
+      "successor_discovery:publicqa-blocks": {
+        "calls": 13,
+        "known_usd": 0.0091256
+      }
+    },
+    "limits": {
+      "id": 1,
+      "max_calls": 3500,
+      "max_usd": 10.0
+    },
+    "successor_discovery_allocations": [
+      {
+        "purpose": "successor_discovery:publicqa-blocks",
+        "max_calls": 48,
+        "reserve_calls": 128,
+        "reason": "User-directed public QA exploration; allocate existing global capacity, retain paired final-evaluation reserve.",
+        "created": 1789908394.5765288
+      }
+    ],
+    "accounting_status": "incomplete"
+  },
+  "within_exploratory_tolerance": true
+}

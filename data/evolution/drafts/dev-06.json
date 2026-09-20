@@ -1,0 +1,256 @@
+{
+  "id": "dev-06",
+  "split": "dev",
+  "notes": "# November & December 2023 Steering Council update\n\n- Steering Council discussion topics:\n    - **PEPs**\n        - Confirmed our agreement to accept [PEP 702 deprecations in the type system](https://peps.python.org/pep-0702/).\n        - Discussed our first impressions of [PEP 712 dataclasses converters](https://peps.python.org/pep-0712/). Decided to seek more consensus. [We announced this PEP 712 feeling on discuss](https://discuss.python.org/t/pep-712-adding-a-converter-parameter-to-dataclasses-field/26126/57).\n        - Discussed, read up on, and accepted [PEP 729 Typing Governance](https://peps.python.org/pep-0729/).\n        - Discussed, read up on, and accepted [PEP 731 C API Working Group](https://peps.python.org/pep-0731/).\n        - Briefly discussed [PEP 726 module level `__setattr__` and `__delattr__`](https://peps.python.org/pep-0726/). We expect the 2024 SC to decide. *(editors note: It was rejected)*\n        - Discussed [PEP-703 making the global interpreter lock optional](https://peps.python.org/pep-0703/) naming and a desire to avoid putting negatives on the desired-to-be-legacy GIL term, thus \"free-threading\" rather than \"nogil\".\n        - Discussed and accepted [PEP 730 iOS platform support](https://peps.python.org/pep-0730/).\n        - Discussed and accepted [PEP 732 documentation editorial board](https://peps.python.org/pep-0732/).\n    - Accepting Meta’s offer to host the core dev sprints in Washington in September 2024.\n    - The proposal for mentoring resources and how to gauge interest. Coordinated with the PSF for budget and a contract to make it happen.\n    - C API issues regarding removal of some APIs and potential conflicting goals.\n    - The status of our Supporting Developer in Residence contract.\n    - The status of woefully delayed monthly updates.\n    - That we have varying workflows and communication levels of different Working Groups (WGs) and if there are potential issues arising from that.\n    - That we needed to draft an official policy around \"python\" and \"cpython\" organizations on PyPI.\n    - Establishing a communication channel with all of our Developer in Residences.\n    - The possibility of encouraging more devguide entries about how the Tier 2 interpreter in `ceval.c` works.\n    - Ongoing research into state of the world around an OS “Fetch URL” API and if those could simplify bundled `pip` requirements.\n    - The in progress SC election process.\n- Sync-ups with Łukasz (Senior Developer in Residence), topics covered included:\n    - Recent work on coverage mode and a multi-line REPL.\n    - If there are potential for alternatives to Buildbot.\n    - The status of [PEP 649 deferred evaluation of annotations,](https://peps.python.org/pep-0649/) implementation(s).\n    - The successful start of [our Supporting Developer in Residence, Serhiy Storchaka](https://discuss.python.org/t/welcoming-the-supporting-developer-in-residence/39702).\n    - The ongoing ARM performance benchmarking efforts with donated hardware. Including the renaming branch `master` to `main` while maintaining historical data requiring work.\n    - The status of two factor authentication (2FA) vs GitHub bots and the assurance that there won't be any issues with the current bots when 2FA is rolled out.\n    - The decision to drop running BigMem buildbot on 3.12 and only run on `main`. This allows Łukasz to use existing hardware.\n    - Łukasz's recent public appearances: Nokia C++ conference talk about async generators & a podcast episode about frame optimization.\n- End of term hand over meeting from [the 2023 SC](https://discuss.python.org/t/2023-term-python-steering-council-election-results/21951) to [the 2024 SC](https://discuss.python.org/t/steering-council-election-results-2024-term/40851):\n    - Goodbye Brett, Welcome Barry!\n    - Discussed our current processes.",
+  "facts": [
+    {
+      "kind": "agreement",
+      "text": "Confirmed our agreement to accept PEP 702 deprecations in the type system",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Confirmed our agreement to accept [PEP 702 deprecations in the type system](https://peps.python.org/pep-0702/)."
+    },
+    {
+      "kind": "decision",
+      "text": "Decided to seek more consensus on PEP 712 dataclasses converters",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Decided to seek more consensus. [We announced this PEP 712 feeling on discuss](https://discuss.python.org/t/pep-712-adding-a-converter-parameter-to-dataclasses-field/26126/57)."
+    },
+    {
+      "kind": "agreement",
+      "text": "Accepted PEP 729 Typing Governance",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Discussed, read up on, and accepted [PEP 729 Typing Governance](https://peps.python.org/pep-0729/)."
+    },
+    {
+      "kind": "agreement",
+      "text": "Accepted PEP 731 C API Working Group",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Discussed, read up on, and accepted [PEP 731 C API Working Group](https://peps.python.org/pep-0731/)."
+    },
+    {
+      "kind": "proposal",
+      "text": "Expect the 2024 SC to decide on PEP 726 module level __setattr__ and __delattr__",
+      "person": "Steering Council",
+      "deadline": "2024",
+      "source_quote": "We expect the 2024 SC to decide. *(editors note: It was rejected)*"
+    },
+    {
+      "kind": "agreement",
+      "text": "Accepted PEP 730 iOS platform support",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Discussed and accepted [PEP 730 iOS platform support](https://peps.python.org/pep-0730/)."
+    },
+    {
+      "kind": "agreement",
+      "text": "Accepted PEP 732 documentation editorial board",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "Discussed and accepted [PEP 732 documentation editorial board](https://peps.python.org/pep-0732/)."
+    },
+    {
+      "kind": "agreement",
+      "text": "Accepted Meta’s offer to host the core dev sprints in Washington in September 2024",
+      "person": "Steering Council",
+      "deadline": "September 2024",
+      "source_quote": "Accepting Meta’s offer to host the core dev sprints in Washington in September 2024."
+    },
+    {
+      "kind": "action",
+      "text": "Coordinated with the PSF for budget and a contract to make mentoring resources happen",
+      "person": "Steering Council",
+      "deadline": "",
+      "source_quote": "The proposal for mentoring resources and how to gauge interest. Coordinated with the PSF for budget and a contract to make it happen."
+    },
+    {
+      "kind": "decision",
+      "text": "Dropped running BigMem buildbot on 3.12 and only run on main",
+      "person": "Łukasz",
+      "deadline": "",
+      "source_quote": "The decision to drop running BigMem buildbot on 3.12 and only run on `main`. This allows Łukasz to use existing hardware."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-06-q01",
+      "question": "Did the Steering Council accept PEP 702 deprecations in the type system?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 115,
+          "end": 226,
+          "quote": "Confirmed our agreement to accept [PEP 702 deprecations in the type system](https://peps.python.org/pep-0702/)."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q02",
+      "question": "Who decided to seek more consensus on PEP 712 dataclasses converters?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 341,
+          "end": 517,
+          "quote": "Decided to seek more consensus. [We announced this PEP 712 feeling on discuss](https://discuss.python.org/t/pep-712-adding-a-converter-parameter-to-dataclasses-field/26126/57)."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q03",
+      "question": "When will the 2024 Steering Council decide on PEP 726 module level __setattr__ and __delattr__?",
+      "answers": [
+        "2024"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 859,
+          "end": 925,
+          "quote": "We expect the 2024 SC to decide. *(editors note: It was rejected)*"
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q04",
+      "question": "Did the Steering Council accept PEP 730 iOS platform support?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1173,
+          "end": 1262,
+          "quote": "Discussed and accepted [PEP 730 iOS platform support](https://peps.python.org/pep-0730/)."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q05",
+      "question": "Who coordinated with the PSF for budget and a contract to make mentoring resources happen?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1469,
+          "end": 1602,
+          "quote": "The proposal for mentoring resources and how to gauge interest. Coordinated with the PSF for budget and a contract to make it happen."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q06",
+      "question": "Did the Steering Council accept Meta’s offer to host the core dev sprints in Washington in September 2024?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 1378,
+          "end": 1462,
+          "quote": "Accepting Meta’s offer to host the core dev sprints in Washington in September 2024."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q07",
+      "question": "Who decided to drop running BigMem buildbot on 3.12 and only run on main?",
+      "answers": [
+        "Łukasz"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 3266,
+          "end": 3387,
+          "quote": "The decision to drop running BigMem buildbot on 3.12 and only run on `main`. This allows Łukasz to use existing hardware."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q08",
+      "question": "Was PEP 726 module level __setattr__ and __delattr__ accepted by the 2023 Steering Council?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 859,
+          "end": 925,
+          "quote": "We expect the 2024 SC to decide. *(editors note: It was rejected)*"
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q09",
+      "question": "Did the Steering Council discuss the status of the Supporting Developer in Residence contract?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 1692,
+          "end": 1753,
+          "quote": "The status of our Supporting Developer in Residence contract."
+        }
+      ]
+    },
+    {
+      "id": "dev-06-q10",
+      "question": "Is there a finalized official policy around \"python\" and \"cpython\" organizations on PyPI?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 1963,
+          "end": 2058,
+          "quote": "That we needed to draft an official policy around \"python\" and \"cpython\" organizations on PyPI."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2023-11,12-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-11%2C12-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-11%2C12-steering-council-update.md",
+    "source_sha256": "35f026fb4b24b3b80600d4a0c8253604a975cc61594033173ec455354dd6fc69",
+    "excerpt_sha256": "592a745cff77ae3d973e4335b060bccb47f6dbe8aa0598ce3f7b561f1eea0278",
+    "scope": "supplied excerpt only",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "8b65911491c7df0ebbaccc336c44d0608f67c65696c1c928d1c81afe66f3b05d",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

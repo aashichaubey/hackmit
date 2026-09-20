@@ -1,0 +1,253 @@
+{
+  "id": "validation-02",
+  "split": "validation",
+  "notes": "--- title: \"Design meeting 2022-03-30: Lint Policy\" tags: \"design meeting\" ---\n\n# Lang Team: Lint Policy for Project, Language, and Compiler\n\ntl;dr: Let's revise our thinking about what lints we, as the lang team, put into the language and compiler.\n\nIt is healthy for the *Rust Project* (including specifically tools like Clippy) to be opinionated and make subjective choices on behalf of its developers, but Rust the language should be more conservative in its choices here.\n\n## Introduction\n\nToday, part of the Rust development experience is getting regular feedback from \"lints\". Lints are static analyses that 1. can be enabled or disabled in a scoped manner, and 2. detect questionable coding patterns and issue diagnostics informing the developer of the presence of those patterns.\n\nWhy do we lint?\n\nIn particular: Rust treats violations of its static semantics as *errors* that cannot be ignored. So, playing devil's advocate: If lints are not soundness bugs, then why report them to the user?\n\nOne answer: While the divide between program acceptance and rejection should be tied to a well-defined static semantics, the Rust project also holds opinions about \"good\" and \"bad\" code, even though these notions are based on heuristics or subjective criteria.\n\nNonetheless, I decided to dig in a little deeper.\n\n----\n\nI identified four reasons tools like `rustc` and `clippy` issue lints today, and put them into the following categories.\n\n1. [future-proofing][]: flagging code that a future release of Rust will reject (potentially tied to an edition), 2. [error-heuristic][]: flagging *sound code* that is nonetheless correlated with *programmer error*, 3. [uniformly-clean][]: enforcement of uniform coding style, and 4. [expressly-clean][]: educating the user about Rust features.\n\nI elaborate on these categories a bit more below.\n\n## Lint Categories\n\n### future-proofing [future-proofing]: #future-proofing\n\nThese lints flag code that we plan to start rejecting in the future, but have opted to not yet *start* rejecting, either because such rejection would break too much of the current ecosystem, or because such rejection would violate Rust's stability promise.\n\nThere are essentially two kinds of future-proofing lints: * edition-compatibility lints for code patterns that stopped being supported in edition 20xx. * future-incompat lints for code patterns that are deprecated and will eventually be removed, for all editions, in a future version of the compiler. * *in principle* all of these cases should be instances of either outright unsound[^abstract] coding patterns, or constructs that the language team thinks were never meant to be assigned a runtime semantics (even if the currently assigned semantics is \"sound\"), or syntax that are being \"repurposed\", where we \"keep the general purpose of the syntax, but correct cases where users aren't getting the meaning expected or wanted\". * in practice there have been (a few?) exceptions; see e.g. issues [#42326], [#48919].\n\n#### Edition Linting\n\nFelix believes the future-proofing category of lints covers most of the cases that Niko laid out in their lints and editions doc.\n\nThis is the table from that document that lists those five cases and how they are to be handled with respect to linting and migrations:\n\nname | Edition N | Edition N+1 | Migrations? -----|-----------|-------------|----------- repurposed syntax | opt-in warning | new meaning | mandatory edition error | opt-in warning | error | recommended soft deprecations | warn | warn | recommended hard deprecations | warn then deny-by-default | deny-by-default | mandatory bug fix | warn then error | warn then error | recommended\n\n:::warning Felix is not clear on the distinction between \"edition error\" and \"hard deprecation\". Obviously the two are supposed to be handled differently according to the above table, but Felix does not know how to know if a proposed lint falls into one category or the other. To be frank though, it seems like Niko did not know either. :smile: :::\n\nThe main exception is \"soft deprecations\", which cover things like the `rust-2018-idioms` group. Those seem like they are more tightly associated with either the [error-heuristic][] or the [expressly-clean][] categories, each of which are described below.\n\n[^abstract]: (at least in terms of violating our abstract memory model, even if there is no concrete witness of a segmentation fault or other runtime failure; see e.g. issue [#59159][])\n\n[#42326]: https://github.com/rust-lang/rust/issues/42326 [#48919]: https://github.com/rust-lang/rust/issues/48919 [#59159]: https://github.com/rust-lang/rust/issues/59159\n\n### error-heuristic [error-heuristic]: #error-heuristic\n\nThese lints are for things that we believe to be correlated with programmer error, even if they are in principle sound coding patterns.\n\nOne can imagine some subcategories here.\n\nProgramming errors such a passing the wrong argument to a function can sometimes be signalled by the `unused_variable` lint; likewise, an assignment to the wrong item can be signalled by the `unused_assignments` lint.\n\nClippy's `absurd_extreme_comparisons` lint catches cases like `min <= x` and `x > max` that are likely to represent bugs, because their boolean values never vary (regardless of the value of `x`).\n\nInefficient code can sometimes be detected by things like the compiler's `large_assignments` lint, or Clippy's `cyclomatic_complexity` lint.\n\n:::info The [error-heuristic][] category seems like it overlaps with Niko's \"hard and soft deprecations\" cases of edition lints. The distinction I am trying to draw is that the [error-heuristic][] lints detect code that is nonetheless sound, or at least the chance of outright unsoundness is low enough that we are not outlawing the syntax in the language itself (potentially via an edition change), but rather just trying to provide a \"helping hand\" to the user (which might *also* be tied to an edition change).\n\nThus, the \"hard deprecations\" remain under the [future-proofing][] category above, while the \"soft deprecations\" belong under [error-heuristic][]. :::\n\n### uniformly-clean [uniformly-clean]: #uniformly-clean\n\nA *uniform* coding style can ease collaboration between multiple developers on a single code base, by reducing the noise caused by shifts in style between different developers. Reducing such noise can make it easier for reviewers to notice bugs.[^dogma]\n\n[^dogma]: I cannot resist pointing out that dogmatic adherence to a coding style can, in some circumstances, make one's code *less readable*. I'm thinking specifically of cases where a programmer lays out their code in tabular or column format, to make it more apparent to the reader which parts of the code are entirely uniform and which parts are varying. Arguably this special case is just *another kind of uniformity*, one that automated style checks are often not well-equipped to handle without human intervention.\n\nThe nonstandard syle lints are an example of this.\n\nAnother example of this is the `unused_parens` lint. (At least, to my knowledge, extra parens is not positively correlated with programming error.)\n\nUnfortunately, the categorization within the compiler itself does not follow the breakdown proposed in this document: some elements of the `unused` group fall under this [uniformly-clean][] lint category, while others fall under the [error-heuristic][] lint category.\n\n### expressly-clean [expressly-clean]: #expressly-clean\n\nAn area that Rust takes very seriously is having *empathy* for its developers. We invest a lot of effort into making great diagnostics that do not presume the reader is already a Rust expert.\n\nOne corollary of that is that lints can be a great avenue to *educate* the developer about Rust features that they may not be familiar with, and advertise their use.\n\nOne example is the `while_true` lint, which detects instances of `while true { ... }` and suggests the developer replace it with `loop { ... }`. The former is probably more well-known to users of other languages, but the latter is more idiomatic Rust and also enables more features, such as the `loop_break_value` feature.\n\nThe edition idiom lints (e.g. `rust-2018-idioms`) are also examples of this.\n\n:::warning Question: Is this \"just\" a special case of the [uniformly-clean][] category? :::\n\n## Opinion Time\n\nAfter reflecting on the above categorization, Felix has an opinion, which he will state in three different ways.\n\n* The T-lang design team is already over-extended, and should delegate whatever work it can. Many of these lints represent a rich opportunity for such delegation. * The Rust lang design team should not be in the business of deciding what lints should be provided for *all* the categories above. * We should not continue with our tradition of shipping all of the four above kinds of lints with the Rust compiler. We should narrow our focus, either to just the categories that are most strongly correlated with unsoundness, or to the categories that are correlated with both unsoundness and high chance of programmer error.\n\nSpecifically:\n\nAll of the [future-proofing][] lints (\"flagging code that a future release of Rust will reject\") remain a T-lang concern: they tie directly into what code is accepted/rejected, and *need* to be part of the compiler.\n\nAll three of the other categories seem a bit more \"squishy.\"\n\n\n\nThe [expressly-clean][] lints (\"educating the user about Rust features\") serve an important purpose for pedagogy. But: Felix worries that we do not have bandwidth on our team to properly handle pedagogical concerns. Would these lints would be better handled via Clippy? Or via a different subteam with pedagogy as their core focus? * The main reason I can identify to add such lints to the Rust compiler itself, rather than Clippy, is simply because \"its easy enough to do it.\"[^larger-audience] But that argument does not account for ongoing maintance costs, or language design costs.\n\n[^larger-audience]: To be fair, there is also the argument that putting it pedagogical lints into the compiler inherently means it gets a larger audience than if they are deployed to Clippy alone.\n\nThe [uniformly-clean][] lints (\"enforcement of uniform coding style\") represent an inherently subjective matter. It is okay for the Rust Project as whole to present its own (informed) opinion on subjective matters such as coding style, via tools like Clippy or `rustfmt`. But deciding such opinions should not be part of the *language design* team's workload. Arguably style choices should not be embedded into rustc at all[^pretty], and should all be migrated to Clippy and `rustfmt`.\n\n[^pretty]: I can hear you cry: \"But what about the rustc pretty-printer? Style choices have to be made there!\" I have no counter-argument to that.\n\nThe [error-heuristic][] lints (\"flagging sound code correlated with programmer error\") do sound like they are under T-lang domain. But: I do worry this is just as subjective as coding style issues: *why* do we think these patterns are correlated with errors?\n\nOne might argue that if the signal-to-noise ratio is high, then an [error-heuristic][] lint is doing its job. * But are we doing anything to confirm that the signal-to-noise ratio *is* high and *remains* high? * We have no compiler telemetry, so what are we relying on? Absence of bug reports ? Angry or happy tweets from our users (i.e. anecdotes)?",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "Let's revise our thinking about what lints we, as the lang team, put into the language and compiler.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "tl;dr: Let's revise our thinking about what lints we, as the lang team, put into the language and compiler."
+    },
+    {
+      "kind": "agreement",
+      "text": "It is healthy for the Rust Project (including specifically tools like Clippy) to be opinionated and make subjective choices on behalf of its developers, but Rust the language should be more conservative in its choices here.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "It is healthy for the *Rust Project* (including specifically tools like Clippy) to be opinionated and make subjective choices on behalf of its developers, but Rust the language should be more conservative in its choices here."
+    },
+    {
+      "kind": "proposal",
+      "text": "We should narrow our focus, either to just the categories that are most strongly correlated with unsoundness, or to the categories that are correlated with both unsoundness and high chance of programmer error.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "We should narrow our focus, either to just the categories that are most strongly correlated with unsoundness, or to the categories that are correlated with both unsoundness and high chance of programmer error."
+    },
+    {
+      "kind": "decision",
+      "text": "All of the future-proofing lints remain a T-lang concern: they tie directly into what code is accepted/rejected, and need to be part of the compiler.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "All of the [future-proofing][] lints (\"flagging code that a future release of Rust will reject\") remain a T-lang concern: they tie directly into what code is accepted/rejected, and *need* to be part of the compiler."
+    },
+    {
+      "kind": "proposal",
+      "text": "The expressly-clean lints would be better handled via Clippy or via a different subteam with pedagogy as their core focus.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "But: Felix worries that we do not have bandwidth on our team to properly handle pedagogical concerns."
+    },
+    {
+      "kind": "proposal",
+      "text": "Style choices should not be embedded into rustc at all, and should all be migrated to Clippy and rustfmt.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "Arguably style choices should not be embedded into rustc at all[^pretty], and should all be migrated to Clippy and `rustfmt`."
+    },
+    {
+      "kind": "agreement",
+      "text": "The error-heuristic lints do sound like they are under T-lang domain.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "The [error-heuristic][] lints (\"flagging sound code correlated with programmer error\") do sound like they are under T-lang domain."
+    },
+    {
+      "kind": "disagreement",
+      "text": "Felix worries that we do not have bandwidth on our team to properly handle pedagogical concerns.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": "But: Felix worries that we do not have bandwidth on our team to properly handle pedagogical concerns."
+    },
+    {
+      "kind": "action",
+      "text": "Delegate work on lints that represent a rich opportunity for delegation.",
+      "person": "T-lang design team",
+      "deadline": "",
+      "source_quote": "* The T-lang design team is already over-extended, and should delegate whatever work it can."
+    },
+    {
+      "kind": "disagreement",
+      "text": "Felix is not clear on the distinction between \"edition error\" and \"hard deprecation\" and notes that Niko did not know either.",
+      "person": "Felix",
+      "deadline": "",
+      "source_quote": ":::warning Felix is not clear on the distinction between \"edition error\" and \"hard deprecation\"."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-02-q01",
+      "question": "Who proposed revising the thinking about what lints the lang team puts into the language and compiler?",
+      "answers": [
+        "Felix"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 142,
+          "end": 249,
+          "quote": "tl;dr: Let's revise our thinking about what lints we, as the lang team, put into the language and compiler."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q02",
+      "question": "Is it agreed that Rust the language should be more conservative in its lint choices?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 251,
+          "end": 476,
+          "quote": "It is healthy for the *Rust Project* (including specifically tools like Clippy) to be opinionated and make subjective choices on behalf of its developers, but Rust the language should be more conservative in its choices here."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q03",
+      "question": "Which category of lints remains a T-lang concern and must be part of the compiler?",
+      "answers": [
+        "future-proofing"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 9080,
+          "end": 9295,
+          "quote": "All of the [future-proofing][] lints (\"flagging code that a future release of Rust will reject\") remain a T-lang concern: they tie directly into what code is accepted/rejected, and *need* to be part of the compiler."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q04",
+      "question": "Who is proposed to handle expressly-clean lints instead of the Rust lang design team?",
+      "answers": [
+        "Clippy or a different subteam with pedagogy as their core focus"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 9475,
+          "end": 9576,
+          "quote": "But: Felix worries that we do not have bandwidth on our team to properly handle pedagogical concerns."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q05",
+      "question": "Does Felix believe the Rust lang design team has enough bandwidth to handle pedagogical concerns?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 9475,
+          "end": 9576,
+          "quote": "But: Felix worries that we do not have bandwidth on our team to properly handle pedagogical concerns."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q06",
+      "question": "What is proposed to be done with style choices currently embedded in rustc?",
+      "answers": [
+        "migrated to Clippy and rustfmt"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 10506,
+          "end": 10631,
+          "quote": "Arguably style choices should not be embedded into rustc at all[^pretty], and should all be migrated to Clippy and `rustfmt`."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q07",
+      "question": "Who is assigned to delegate work on lints representing a rich opportunity for delegation?",
+      "answers": [
+        "T-lang design team"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 8442,
+          "end": 8534,
+          "quote": "* The T-lang design team is already over-extended, and should delegate whatever work it can."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q08",
+      "question": "Is there clarity on the distinction between \"edition error\" and \"hard deprecation\"?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 3668,
+          "end": 3764,
+          "quote": ":::warning Felix is not clear on the distinction between \"edition error\" and \"hard deprecation\"."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q09",
+      "question": "When will the Rust lang design team stop shipping all four kinds of lints with the Rust compiler?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 142,
+          "end": 249,
+          "quote": "tl;dr: Let's revise our thinking about what lints we, as the lang team, put into the language and compiler."
+        }
+      ]
+    },
+    {
+      "id": "validation-02-q10",
+      "question": "Is there telemetry data confirming the signal-to-noise ratio of error-heuristic lints?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 11379,
+          "end": 11390,
+          "quote": "anecdotes)?"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2022-03-30-lint-policy.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-03-30-lint-policy.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-03-30-lint-policy.md",
+    "source_sha256": "248807583b896d918c49f6f6d0caa48d2b544689c41cf91a6837654650d5df80",
+    "excerpt_sha256": "1ddbd725e3948339b0a247118244ba75bad00a7e70a28b898e2a53176bedf76d",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "bd323118632405682bd3e083a897ba9867988abdb79935fc6fc6e94ab200d7b1",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

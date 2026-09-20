@@ -1,0 +1,10 @@
+{
+  "version": "1",
+  "reviews": [
+    {"meeting": "meeting-10", "question": "What was decided?", "human_verdict": "correct", "reason": "The longer answers retain the decision to run the demo."},
+    {"meeting": "meeting-17", "question": "When is clean the dataset due?", "human_verdict": "incorrect", "reason": "Friday omits the next modifier."},
+    {"meeting": "meeting-20", "question": "When is schedule the demo due?", "human_verdict": "incorrect", "reason": "The benchmark requires the meeting's literal deadline wording, end of month."},
+    {"meeting": "meeting-27", "question": "When is finish the integration due?", "human_verdict": "incorrect", "reason": "Friday omits the next modifier."},
+    {"meeting": "meeting-30", "question": "When is set up the server due?", "human_verdict": "incorrect", "reason": "The benchmark requires the meeting's literal deadline wording, end of month."}
+  ]
+}

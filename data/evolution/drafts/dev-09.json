@@ -1,0 +1,253 @@
+{
+  "id": "dev-09",
+  "split": "dev",
+  "notes": "# Steering Council Updates for July 2024\n\n## 2024-06-26\n\n- Discussion on Code of Conduct violation\n\n## 2024-07-03\n\n- PEP 667 discussion: Review issues raised specifically in areas that are affecting the user, confirm it has tests, examples and implications mentioned - EuroPython Sprints discussion on how to make it better, probability of coming up with a guide on how to hold successful sprints - Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one\n\n## 2024-07-10\n\n- Discussion on Code of Conduct violation\n\n## 2024-07-17\n\n- Re-review of PEP 667 - Drafting mentorship survey to help the SC make decisions based on the survey - Discussion on how to get people to support mentorship - Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs.\n\n## 2024-07-24\n\nSteering Council and Developer in Residence Meeting\n\n- Report on EuroPython 2024 - Discussion on PyREPL which presented some bugs during EuroPython which are being worked on.\n\nSteering Council Meeting\n\n- 3.13rc1 vs PEP 667 - Discussion on code of conduct violation\n\n## 2024-07-31\n\n- Discussion on the release of Python 3.13rc1 - Discussion on proposed semantics for PEP 667 - Discussion on Code of Conduct violation - Conversation on how to improve inclusivity in the Python community\n\n---\n\nThis past month's updates (July) are brought to you by Velda Kiara, the Communications Liaison for the Python Steering Council. Velda bridges the gap between the Python community and the Steering Council. A software developer (Django dev) and technical writer, Velda's articles have been featured on freeCodeCamp and Daily.dev. Her contributions extend to various Python projects like Django Debug Toolbar, Beeware, and the Novu Python SDK. Currently, she serves as the Vice Chair for Black Python Devs and a director on the Django Events Foundation North America. Velda's dedication was recently recognised with a Microsoft Most Valuable Professional award for Developer Technologies (Python and Web Development).",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "Review issues raised specifically in areas that are affecting the user, confirm it has tests, examples and implications mentioned",
+      "person": "Steering Council",
+      "deadline": "2024-07-03",
+      "source_quote": "PEP 667 discussion: Review issues raised specifically in areas that are affecting the user, confirm it has tests, examples and implications mentioned"
+    },
+    {
+      "kind": "proposal",
+      "text": "EuroPython Sprints discussion on how to make it better, probability of coming up with a guide on how to hold successful sprints",
+      "person": "Steering Council",
+      "deadline": "2024-07-03",
+      "source_quote": "EuroPython Sprints discussion on how to make it better, probability of coming up with a guide on how to hold successful sprints"
+    },
+    {
+      "kind": "proposal",
+      "text": "Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one",
+      "person": "Steering Council",
+      "deadline": "2024-07-03",
+      "source_quote": "Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one"
+    },
+    {
+      "kind": "proposal",
+      "text": "Drafting mentorship survey to help the SC make decisions based on the survey",
+      "person": "Steering Council",
+      "deadline": "2024-07-17",
+      "source_quote": "Drafting mentorship survey to help the SC make decisions based on the survey"
+    },
+    {
+      "kind": "proposal",
+      "text": "Discussion on how to get people to support mentorship",
+      "person": "Steering Council",
+      "deadline": "2024-07-17",
+      "source_quote": "Discussion on how to get people to support mentorship"
+    },
+    {
+      "kind": "proposal",
+      "text": "Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs",
+      "person": "Steering Council",
+      "deadline": "2024-07-17",
+      "source_quote": "Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs"
+    },
+    {
+      "kind": "action",
+      "text": "Working on bugs presented by PyREPL during EuroPython",
+      "person": "Developer in Residence",
+      "deadline": "2024-07-24",
+      "source_quote": "PyREPL which presented some bugs during EuroPython which are being worked on"
+    },
+    {
+      "kind": "proposal",
+      "text": "Discussion on proposed semantics for PEP 667",
+      "person": "Steering Council",
+      "deadline": "2024-07-31",
+      "source_quote": "Discussion on proposed semantics for PEP 667"
+    },
+    {
+      "kind": "proposal",
+      "text": "Conversation on how to improve inclusivity in the Python community",
+      "person": "Steering Council",
+      "deadline": "2024-07-31",
+      "source_quote": "Conversation on how to improve inclusivity in the Python community"
+    },
+    {
+      "kind": "proposal",
+      "text": "Discussion on the release of Python 3.13rc1",
+      "person": "Steering Council",
+      "deadline": "2024-07-31",
+      "source_quote": "Discussion on the release of Python 3.13rc1"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-09-q01",
+      "question": "Who is drafting the mentorship survey?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 607,
+          "end": 683,
+          "quote": "Drafting mentorship survey to help the SC make decisions based on the survey"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q02",
+      "question": "Was there a discussion on Code of Conduct violation on 2024-07-10?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 59,
+          "end": 98,
+          "quote": "Discussion on Code of Conduct violation"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q03",
+      "question": "What is being worked on from bugs presented during EuroPython?",
+      "answers": [
+        "PyREPL"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 968,
+          "end": 1044,
+          "quote": "PyREPL which presented some bugs during EuroPython which are being worked on"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q04",
+      "question": "Is there a decision recorded about PEP 667 semantics?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1200,
+          "end": 1244,
+          "quote": "Discussion on proposed semantics for PEP 667"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q05",
+      "question": "Who is responsible for improving the one stop shop for all working groups?",
+      "answers": [
+        "Steering Council"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 399,
+          "end": 507,
+          "quote": "Discussed on ways to have a one stop shop for all the working groups in one page, improve on the current one"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q06",
+      "question": "Did the Steering Council discuss how to improve inclusivity in July 2024?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 1289,
+          "end": 1355,
+          "quote": "Conversation on how to improve inclusivity in the Python community"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q07",
+      "question": "Is there an agreement on the timeline to start triaging CPython Bugs?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 742,
+          "end": 854,
+          "quote": "Discussion on creating a contributor guide to help new contributors and timeline to start triaging CPython Bugs."
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q08",
+      "question": "Was the release of Python 3.13rc1 decided in the meeting?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1154,
+          "end": 1197,
+          "quote": "Discussion on the release of Python 3.13rc1"
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q09",
+      "question": "Who is the Communications Liaison for the Python Steering Council?",
+      "answers": [
+        "Velda Kiara"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 1362,
+          "end": 1489,
+          "quote": "This past month's updates (July) are brought to you by Velda Kiara, the Communications Liaison for the Python Steering Council."
+        }
+      ]
+    },
+    {
+      "id": "dev-09-q10",
+      "question": "Did the Steering Council discuss Code of Conduct violation on 2024-06-26?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 59,
+          "end": 98,
+          "quote": "Discussion on Code of Conduct violation"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2024-07-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-07-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2024-07-steering-council-update.md",
+    "source_sha256": "81634a7378a231e6fdae44d6558e871b88e7fe9a84182830ad0ab933a041c6b6",
+    "excerpt_sha256": "c3de76b0e44d57e30ca32fd82886224ca055e4507a58cac6c98cd1b4662a6969",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "9b448f8f8127161c1d1443a7751f32cd4fe4beabf12d94e827a1178f3993a744",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

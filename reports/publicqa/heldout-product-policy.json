@@ -1,0 +1,254 @@
+{
+  "study": "same_frozen_test_workspace_grounding_policy",
+  "methods": {
+    "raw": {
+      "questions": 64,
+      "meetings": 31,
+      "macro_f1": 0.41370176945002973,
+      "macro_meeting_f1": 0.4305426866423741,
+      "macro_iou": 0.38002305264408764,
+      "exact_match": 0.203125,
+      "answerable_f1": 0.42115353890005947,
+      "unanswerable_accuracy": 0.40625,
+      "answerability_precision": 0.575,
+      "answerability_recall": 0.71875,
+      "balanced_answerability": 0.5625,
+      "ungrounded_answers": 0,
+      "invalid_answers": 2,
+      "actual_input_tokens": 115639,
+      "actual_output_tokens": 4408,
+      "actual_usd": 0.05330840000000001,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    },
+    "encoded": {
+      "questions": 64,
+      "meetings": 31,
+      "macro_f1": 0.43548029499610474,
+      "macro_meeting_f1": 0.48871788955043555,
+      "macro_iou": 0.41293919522269906,
+      "exact_match": 0.25,
+      "answerable_f1": 0.3709605899922095,
+      "unanswerable_accuracy": 0.5,
+      "answerability_precision": 0.6129032258064516,
+      "answerability_recall": 0.59375,
+      "balanced_answerability": 0.546875,
+      "ungrounded_answers": 0,
+      "invalid_answers": 5,
+      "actual_input_tokens": 112222,
+      "actual_output_tokens": 5458,
+      "actual_usd": 0.053621600000000005,
+      "unknown_usage_calls": 0,
+      "extraction_calls": 0
+    }
+  },
+  "amendment": {
+    "reason": "Independent code review found that unconditional minimal-label decoding can double an ampersand when the model already expands a correct source speaker label. The interactive workspace uses source-first grounding.",
+    "registered_stage": "Raw arm running; no encoded test outputs inspected or used to identify this defect.",
+    "change": "Keep the frozen runner, original scorer, requests, grammar, references and report unchanged. Add a separate offline audit restoring source-valid quotes directly and decoding other quotations, matching the workspace policy.",
+    "reporting": "Show original frozen metrics and corrected product-policy metrics separately, including the number of affected outputs. Do not choose whichever score is more favorable.",
+    "no_additional_model_calls": true,
+    "candidate_tuning_from_test": false,
+    "registered_at_utc": "2026-09-20T12:50:18.642839+00:00"
+  },
+  "policy_sha256": "9f34c143548b9fc88cd09e8e4c91933526e20d3e12512e5704dcf5cb970e7c06",
+  "score_changes": [
+    {
+      "id": "MeeQA:3a76a296a20c4cd580bc",
+      "method": "raw",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:315a8e805dd6300880fb",
+      "method": "raw",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:3a76a296a20c4cd580bc",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:bd4189777d1203cc69b6",
+      "method": "encoded",
+      "original_f1": 0.9473684210526315,
+      "product_f1": 0.9642857142857143,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:df3f917deb22296d5c6f",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:727c2655f2d9e46cb9f7",
+      "method": "encoded",
+      "original_f1": 0.5714285714285714,
+      "product_f1": 0.6666666666666666,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:e637afff5597caf03d37",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:61458fce16a1a5f323bc",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:1639e33e509892bab6d1",
+      "method": "encoded",
+      "original_f1": 0.6666666666666666,
+      "product_f1": 0.75,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:800e36be9bf177f23b79",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:ef21dbef5a71a49f4fd6",
+      "method": "encoded",
+      "original_f1": 0.2,
+      "product_f1": 0.21052631578947367,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:6a73d8c292e6979ad4e9",
+      "method": "encoded",
+      "original_f1": 0.547486033519553,
+      "product_f1": 0.5568181818181818,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:337796f13e8a869ec46a",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:58a31fe476a0ad99df59",
+      "method": "encoded",
+      "original_f1": 0.21176470588235294,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:38c3e6daa41d83a5c689",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": "Quote restoration: quotation_not_in_source"
+    },
+    {
+      "id": "MeeQA:d0dbfa60dc77422701be",
+      "method": "encoded",
+      "original_f1": 0.9032258064516129,
+      "product_f1": 0.9333333333333333,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:5f440ad28c435f770965",
+      "method": "encoded",
+      "original_f1": 0.9620253164556962,
+      "product_f1": 0.9743589743589743,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:61a86f6e2e8360ae783f",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:a1be48057f835294eb70",
+      "method": "encoded",
+      "original_f1": 0.1917808219178082,
+      "product_f1": 0.2028985507246377,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:ae8663158c9bc653a4e8",
+      "method": "encoded",
+      "original_f1": 0.14634146341463414,
+      "product_f1": 0.15,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:196aa73450f6f89e2e0d",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:572bb171a739de357917",
+      "method": "encoded",
+      "original_f1": 0.25,
+      "product_f1": 0.2535211267605634,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:bffd0e555f2d1856a721",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:92cea20b31b1ca5c515c",
+      "method": "encoded",
+      "original_f1": 0.9278350515463918,
+      "product_f1": 0.9375,
+      "product_error": null
+    },
+    {
+      "id": "MeeQA:0c99a89e7eccd450427a",
+      "method": "encoded",
+      "original_f1": 0.0,
+      "product_f1": 0.0,
+      "product_error": null
+    }
+  ],
+  "uncertainty": {
+    "unit": "meeting family, paired cluster bootstrap",
+    "families": 31,
+    "repetitions": 5000,
+    "seed": 20260920,
+    "mean_question_f1_delta": 0.021778525546075005,
+    "percentile_95_interval": [
+      -0.06322959064455767,
+      0.10635645253441808
+    ],
+    "improved": 16,
+    "regressed": 7,
+    "tied": 41,
+    "interpretation": "Paired meeting-family test uncertainty; not proof of equivalence or a general-purpose accuracy guarantee."
+  },
+  "no_new_model_calls": true,
+  "input_savings_fraction": 0.029548854625169763,
+  "cost_savings_fraction": -0.005875246677821799,
+  "f1_loss_percentage_points": -2.177852554607501,
+  "answerability_loss_percentage_points": 1.5625,
+  "total_token_savings_fraction": 0.019717277399685096,
+  "within_exploratory_tolerance": true
+}

@@ -1,0 +1,253 @@
+{
+  "id": "validation-04",
+  "split": "validation",
+  "notes": "--- tags: design-meeting ---\n\n# 2022-04-13: Implied bounds, perfect derive\n\n(Text is from a Niko blog post)\n\nThere are two ergonomic features that have been discussed for quite some time in Rust land: *perfect derive* and *expanded implied bounds*. Until recently, we were a bit stuck on the best way to implement them. Recently though I’ve been working on a new formulation of the Rust trait checker that gives us a bunch of new capabilities — among them, it resolved a soundness formulation that would have prevented these two features from being combined. I’m not going to describe my fix in detail in this post, though; instead, I want to ask a different question. Now that we *can* implement these features, should we?\n\nBoth of these features fit nicely into the *less rigamarole* part of the [lang team Rust 2024 roadmap][2024]. That is, they allow the compiler to be smarter and require less annotation from you to figure out what code should be legal. Interestingly, as a direct result of that, they both *also* carry the same downside: semver hazards.\n\n[2024]: https://blog.rust-lang.org/inside-rust/2022/04/04/lang-roadmap-2024.html\n\n## What is a semver hazard?\n\nA **semver hazard** occurs when you have a change which *feels* innocuous but which, in fact, can break clients of your library. Whenever you try to automatically figure out some part of a crate’s public interface, you risk some kind of semver hazard. This doesn’t necessarily mean that you shouldn’t do the auto-detection: the convenience may be worth it. But it’s usually worth asking yourself if there is some way to lessen the semver hazard while still getting similar or the same benefits.\n\nRust has a number of semver hazards today.[^hazards] The most common example is around thread-safety. In Rust, a struct `MyStruct` is automatically deemed to implement the trait `Send` so long as all the fields of `MyStruct` are `Send` (this is why we call `Send` an [auto trait]: it is *automatically* implemented). This is very convenient, but an implication of it is that adding a private field to your struct whose type is not thread-safe (e.g., a `Rc<T>`) is potentially a breaking change: if someone was using your library and sending `MyStruct` to run in another thread, they would no longer be able to do so.\n\n[^hazards]: Rules regarding semver are documented here, by the way.\n\n[auto trait]: https://doc.rust-lang.org/reference/special-types-and-traits.html#auto-traits\n\n## What is “perfect derive”?\n\nSo what is the *perfect derive* feature? Currently, when you derive a trait (e.g., `Clone`) on a generic type, the derive just assumes that *all* the generic parameters must be `Clone`. This is sometimes necessary, but not always; the idea of *perfect derive* is to change how derive works so that it instead figures out *exactly* the bounds that are needed.\n\nLet’s see an example. Consider this `List<T>` type, which creates a linked list of `T` elements. Suppose that `List<T>` can be deref’d to yield its `&T` value. However, lists are immutable once created, and we also want them to be cheaply cloneable, so we use `Rc<T>` to store the data itself:\n\n```rust #[derive(Clone)] struct List<T> { data: Rc<T>, next: Option<Rc<List<T>>>, }\n\nimpl<T> Deref for List<T> { type Target = T;\n\nfn deref(&self) -> &T { &self.data } } ```\n\nCurrently, derive is going to generate an impl that requires `T: Clone`, like this…\n\n```rust impl<T> Clone for List<T> where T: Clone, { fn clone(&self) { List { value: self.value.clone(), next: self.next.clone(), } } } ```\n\nIf you look closely at this impl, though, you will see that the `T: Clone` requirement is not actually necessary. This is because the only `T` in this struct is inside of an `Rc`, and hence is reference counted. Cloning the `Rc` only increments the reference count, it doesn’t actually create a new `T`.\n\nWith *perfect derive*, we would change the derive to generate an impl with one where clause per field, instead. The idea is that what we *really* need to know is that every field is cloneable (which may in turn require that `T` be cloneable):\n\n```rust impl<T> Clone for List<T> where Rc<T>: Clone, // type of the `value` field Option<Rc<List<T>>: Clone, // type of the `next` field { fn clone(&self) { /* as before */ } } ```\n\n## Making perfect derive sound was tricky, but we can do it now\n\nThis idea is quite old, but there were a few problems that have blocked us from doing it. First, it requires changing all trait matching to permit cycles (currently, cycles are only permitted for auto traits like `Send`). This is because checking whether `List<T>` is `Send` would not require checking whether `Option<Rc<List<T>>>` is `Send`. If you work that through, you’ll find that a cycle arises. I’m not going to talk much about this in this post, but it is not a trivial thing to do: if we are not careful, it would make Rust quite unsound indeed. For now, though, let’s just assume we can do it soundly.\n\n## The semver hazard with perfect derive\n\nThe other problem is that it introduces a new semver hazard: just as Rust currently commits you to being `Send` so long as you don’t have any non-`Send` types, `derive` would now commit `List<T>` to being cloneable even when `T: Clone` does not hold.\n\nFor example, perhaps we decide that storing a `Rc<T>` for each list wasn’t really necessary. Therefore, we might refactor `List<T>` to store `T` directly, like so:\n\n```rust #[derive(Clone)] struct List<T> { data: T, next: Option<Rc<List<T>>>, } ```\n\nWe might expect that, since we are only changing the type of a private field, this change could not cause any clients of the library to stop compiling. **With perfect derive, we would be wrong.**[^other] This change means that we now own a `T` directly, and so `List<T>: Clone` is only true if `T: Clone`.\n\n[^other]: Actually, you were wrong before: changing the types of private fields in Rust can already be a breaking change, as we discussed earlier (e.g., by introducing a `Rc`, which makes the type no longer implement `Send`).\n\n## Expanded implied bounds\n\nAn *implied bound* is a where clause that you don’t have to write explicitly. For example, if you have a struct that declares `T: Ord`, like this one…\n\n```rust struct RedBlackTree<T: Ord> { … }\n\nimpl<T: Ord> RedBlackTree<T> { fn insert(&mut self, value: T) { … } } ```\n\n…it would be nice if functions that worked with a red-black tree didn’t have to redeclare those same bounds:\n\n```rust fn insert_smaller<T>(red_black_tree: &mut RedBlackTree<T>, item1: T, item2: T) { // Today, this function would require `where T: Ord`: if item1 < item2 { red_black_tree.insert(item); } else { red_black_tree.insert(item2); } }\\ ```\n\nI am saying *expanded* implied bounds because Rust already has two notions of implied bounds: expanding supertraits (`T: Ord` implies `T: PartialOrd`, for example, which is why the fn above can contain `item1 < item2`) and outlives relations (an argument of type `&’a T`, for example, implies that `T: ‘a`). The most maximal version of this proposal would expand those implied bounds from supertraits and lifetimes to **any where-clause at all**.\n\n## Implied bounds and semver\n\nExpanding the set of implied bounds will also introduce a new semver hazard — or perhaps it would be better to say that is expands an existing semver hazard. It’s already the case that removing a supertrait from a trait is a breaking change: if the stdlib were to change `trait Ord` so that it no longer extended `Eq`, then Rust programs that just wrote `T: Ord` would no longer be able to assume that `T: Eq`, for example.\n\nSimilarly, at least with a maximal version of expanded implied bounds, removing the `T: Ord` from `BinaryTree<T>` would potentially stop client code from compiling. Making changes like that is not that uncommon. For example, we might want to introduce new methods on `BinaryTree` that work even without ordering. To do that, we would remove the `T: Ord` bound from the struct and just keep it on the impl:\n\n```rust struct RedBlackTree<T> { … }\n\nimpl<T> RedBlackTree<T> { fn len(&self) -> usize { /* doesn’t need to compare `T` values, so no bound */ } }\n\nimpl<T: Ord> RedBlackTree<T> { fn insert(&mut self, value: T) { … } } ```\n\nBut, if we had a maximal expansion of implied bounds, this could cause crates that depend on your library to stop compiling, because they would no longer be able to assume that `RedBlackTree<X>` being valid implies `X: Ord`. As a general rule, I think we want it to be clear what parts of your interface you are committing to and which you are not.\n\n## PSA: Removing bounds not always semver compliant\n\nInterestingly, while it is true that you can remove bounds from a struct (today, at least) and be at semver complaint[^maybe], this is not the case for impls. For example if I have\n\n```rust impl<T: Copy> MyTrait for Vec<T> { } ```\n\nand I change it to `impl<T> MyTrait for Vec<T>`, this is effectively introducing a new blanket impl, and that is not a semver compliant change (see [RFC 2451] for more details).\n\n[^maybe]: Uh, no promises — there may be some edge cases, particularly involving regions, where this is not true today. I should experiment.\n\n[RFC 2451]: https://rust-lang.github.io/rfcs/2451-re-rebalancing-coherence.html\n\n## Summarize\n\nSo, to summarize:\n\n* Perfect derive is great, but it reveals details about your fields—- sure, you can clone your `List<T>` for any type `T` now, but maybe you want the right to require `T: Clone` in the future? * Expanded implied bounds are great, but they prevent you from “relaxing” your requirements in the future— sure, you only ever have a `RedBlackTree<T>` for `T: Ord` now, but maybe you want to support more types in the future? * But also: the rules around semver compliance are rather subtle and quick to anger.\n\n## How can we fix these features?\n\nI see a few options. The most obvious of course is to just accept the semver hazards. It’s not clear to me whether they will be a problem in practice, and Rust already has a number of similar hazards (e.g., adding a `Box<dyn Write>` makes your type no longer `Send`).\n\n## Another extreme alternative: crate-local implied bounds\n\nAnother option for implied bounds would be to expand implied bounds, but only on a *crate-local* basis. Imagine that the `RedBlackTree` type is declared in some crate `rbtree`, like so…\n\n```rust // The crate rbtree struct RedBlackTree<T: Ord> { .. } … impl<T> RedBlackTree<T> { fn insert(&mut self, value: T) { … } } ```\n\nThis impl, because it lives in the same crate as `RedBlackTree`, would be able to benefit from expanded implied bounds. Therefore, code inside the impl could assume that `T: Ord`. That’s nice. If I later remove the `T: Ord` bound from `RedBlackTree`, I can move it to the impl, and that’s fine.\n\nBut if I’m in some downstream crate, then I don’t benefit from implied bounds. If I were going to, say, implement some trait for `RedBlackTree`, I’d have to repeat `T: Ord`…\n\n```rust trait MyTrait { }\n\nimpl<T> MyTrait for rbtrait::RedBlackTree<T> where T: Ord, // required { } ```\n\n## A middle ground: declaring “how public” your bounds are\n\nAnother variation would be to add a *visibility* to your bounds. The default would be that where clauses on structs are “private”, i.e., implied only within your module. But you could declare where clauses as “public”, in which case you would be committing to them as part of your semver guarantee:\n\n```rust struct RedBlackTree<T: pub Ord> { .. } ```\n\nIn principle, we could also support `pub(crate)` and other visibility modifiers.\n\n## Explicit perfect derive",
+  "facts": [
+    {
+      "kind": "proposal",
+      "text": "should we implement perfect derive and expanded implied bounds?",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "Now that we *can* implement these features, should we?"
+    },
+    {
+      "kind": "proposal",
+      "text": "change derive to generate an impl with one where clause per field",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "With *perfect derive*, we would change the derive to generate an impl with one where clause per field, instead."
+    },
+    {
+      "kind": "decision",
+      "text": "perfect derive requires changing all trait matching to permit cycles",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "First, it requires changing all trait matching to permit cycles (currently, cycles are only permitted for auto traits like `Send`)."
+    },
+    {
+      "kind": "agreement",
+      "text": "perfect derive can be done soundly now",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "For now, though, let’s just assume we can do it soundly."
+    },
+    {
+      "kind": "disagreement",
+      "text": "perfect derive introduces a new semver hazard",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "The other problem is that it introduces a new semver hazard"
+    },
+    {
+      "kind": "proposal",
+      "text": "expand implied bounds to any where-clause at all",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "The most maximal version of this proposal would expand those implied bounds from supertraits and lifetimes to **any where-clause at all**."
+    },
+    {
+      "kind": "disagreement",
+      "text": "expanded implied bounds introduce or expand semver hazards",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "Expanding the set of implied bounds will also introduce a new semver hazard — or perhaps it would be better to say that is expands an existing semver hazard."
+    },
+    {
+      "kind": "proposal",
+      "text": "expand implied bounds only on a crate-local basis",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "Another option for implied bounds would be to expand implied bounds, but only on a *crate-local* basis."
+    },
+    {
+      "kind": "proposal",
+      "text": "add visibility to where clauses to declare how public bounds are",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "Another variation would be to add a *visibility* to your bounds."
+    },
+    {
+      "kind": "agreement",
+      "text": "Rust already has a number of semver hazards",
+      "person": "Niko",
+      "deadline": "",
+      "source_quote": "Rust already has a number of similar hazards (e.g., adding a `Box<dyn Write>` makes your type no longer `Send`)."
+    }
+  ],
+  "questions": [
+    {
+      "id": "validation-04-q01",
+      "question": "Who asked if perfect derive and expanded implied bounds should be implemented?",
+      "answers": [
+        "Niko"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 669,
+          "end": 723,
+          "quote": "Now that we *can* implement these features, should we?"
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q02",
+      "question": "What does perfect derive change about trait derive?",
+      "answers": [
+        "change derive to generate an impl with one where clause per field"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 3839,
+          "end": 3950,
+          "quote": "With *perfect derive*, we would change the derive to generate an impl with one where clause per field, instead."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q03",
+      "question": "Does perfect derive require changing trait matching to permit cycles?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 4421,
+          "end": 4552,
+          "quote": "First, it requires changing all trait matching to permit cycles (currently, cycles are only permitted for auto traits like `Send`)."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q04",
+      "question": "Is perfect derive currently sound?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 4886,
+          "end": 4942,
+          "quote": "For now, though, let’s just assume we can do it soundly."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q05",
+      "question": "Does perfect derive introduce a new semver hazard?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 4986,
+          "end": 5045,
+          "quote": "The other problem is that it introduces a new semver hazard"
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q06",
+      "question": "What is the maximal proposal for expanded implied bounds?",
+      "answers": [
+        "expand implied bounds to any where-clause at all"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 6978,
+          "end": 7116,
+          "quote": "The most maximal version of this proposal would expand those implied bounds from supertraits and lifetimes to **any where-clause at all**."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q07",
+      "question": "Do expanded implied bounds introduce or expand semver hazards?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "disagreement",
+      "evidence": [
+        {
+          "start": 7148,
+          "end": 7305,
+          "quote": "Expanding the set of implied bounds will also introduce a new semver hazard — or perhaps it would be better to say that is expands an existing semver hazard."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q08",
+      "question": "Is expanding implied bounds only on a crate-local basis proposed?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 10142,
+          "end": 10245,
+          "quote": "Another option for implied bounds would be to expand implied bounds, but only on a *crate-local* basis."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q09",
+      "question": "Is adding visibility to where clauses to declare how public bounds are proposed?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 11102,
+          "end": 11166,
+          "quote": "Another variation would be to add a *visibility* to your bounds."
+        }
+      ]
+    },
+    {
+      "id": "validation-04-q10",
+      "question": "Is there a mention of a plan to remove bounds from impls being semver compliant?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 8606,
+          "end": 8764,
+          "quote": "Interestingly, while it is true that you can remove bounds from a struct (today, at least) and be at semver complaint[^maybe], this is not the case for impls."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "rust-lang/lang-team/design-meeting-minutes/2022-04-12-implied-bounds-and-perfect-derive.md",
+    "series_id": "rust-lang/lang-team",
+    "url": "https://github.com/rust-lang/lang-team/blob/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-04-12-implied-bounds-and-perfect-derive.md",
+    "raw_url": "https://raw.githubusercontent.com/rust-lang/lang-team/cf7fec8b0fb6b9ad85b0cb3d50566f0b0847f8f9/design-meeting-minutes/2022-04-12-implied-bounds-and-perfect-derive.md",
+    "source_sha256": "c314d506125dfb2e20d769c58a3d8f671ecafc5f8e3cd8bd60e01e5be21fc731",
+    "excerpt_sha256": "aa47cc362259654f438f75d03273ff81caf7bdc384e403e52ebc7ad3118ec88a",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "e0c7bcf9776f96a6f3a8bc13f06d2be346c4b28bc13cac4f7b61e52762f938fd",
+    "attribution": "rust-lang/lang-team meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

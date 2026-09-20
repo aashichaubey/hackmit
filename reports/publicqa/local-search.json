@@ -1,0 +1,65 @@
+{
+  "study": "local_only_consecutive_speaker_screen",
+  "grammar": {
+    "version": 1,
+    "policy": "consecutive_speaker_inheritance",
+    "continuation": "\u21b3",
+    "first_and_changed_speakers": "verbatim",
+    "utterance_policy": "all_characters_unchanged"
+  },
+  "grammar_id": "2e2984d02faa3177944ce7c620381d90c6b5a768a7d3cc37fe8da918b5ce9070",
+  "sources": {
+    "meetingqa": {
+      "repository": "adobe-research/meetingqa",
+      "commit": "5e3d1fbf4fefb60790d2445ce6721085b274024b",
+      "file_sha256": "e91d731f16ddbc0ec2cb7c755fb7a1887eff3199d30f2398d0f5864c6c290ff0",
+      "path": "data/publicqa/sources/meetingqa/AllData/Dataset/final-AMI-train.json"
+    },
+    "MeeQA": {
+      "repository": "reutapel/MeeQA",
+      "commit": "7b9a6c43eef4e0830336862ffc19b48ff52615a6",
+      "file_sha256": "4ee4819986c665a0b3266254cfe659f2a4da6f90cc2e554b1f4291ba40be93b2",
+      "path": "data/publicqa/sources/MeeQA/Data/original/train_data.json.zip"
+    },
+    "MISeD": {
+      "repository": "google-research-datasets/MISeD",
+      "commit": "870d1aaf1063193d508e0224b86e011f921fd262",
+      "file_sha256": "4ca51848965e56beaba1809d12f0556a2db95db55759ea86c8531ac20d396c11",
+      "path": "data/publicqa/sources/MISeD/mised/train.jsonl"
+    }
+  },
+  "splits": [
+    "train"
+  ],
+  "model_calls": 0,
+  "qualified": false,
+  "context_scope": "Unique contexts retained by the published-label adapter; invalid offsets and answerability-disagreement groups are excluded upstream. No model-outcome filtering.",
+  "limitation": "Serialization savings only. Continuation comprehension is untested; no quality improvement claim.",
+  "datasets": {
+    "meetingqa": {
+      "unique_contexts": 2753,
+      "changed_contexts": 0,
+      "source_tokens": 1484349,
+      "encoded_tokens": 1484349,
+      "saved_tokens": 0,
+      "saved_fraction": 0.0,
+      "round_trip_failures": 0,
+      "reason_counts": {
+        "not_cheaper": 2753
+      }
+    },
+    "MeeQA": {
+      "unique_contexts": 10308,
+      "changed_contexts": 10255,
+      "source_tokens": 12344503,
+      "encoded_tokens": 11448083,
+      "saved_tokens": 896420,
+      "saved_fraction": 0.07261693727159368,
+      "round_trip_failures": 0,
+      "reason_counts": {
+        "reversible_consecutive_speaker_inheritance": 10255,
+        "not_cheaper": 53
+      }
+    }
+  }
+}

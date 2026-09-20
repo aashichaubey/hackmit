@@ -1,0 +1,253 @@
+{
+  "id": "test-09",
+  "split": "test",
+  "notes": "# 112th TC39 Meeting\n\nDay One—20 January 2026\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |-------------------|--------------|--------------------| | Chris de Almeida | CDA | IBM | | Waldemar Horwat | WH | Invited Expert | | Duncan MacGregor | DMM | ServiceNow Inc | | Dmitry Makhnev | DJM | JetBrains | | Ruben Bridgewater | RBR | Datadog | | Keith Miller | KM | Apple | | Ujjwal Sharma | USA | Igalia | | Ben Allen | BAN | Igalia | | Nicolò Ribaudo | NRO | Igalia | | Caio Lima | CLA | Igalia | | Josh Goldberg | JKG | Invited Expert | | Shane F Carr | SFC | Google | | Samina Husain | SHN | Ecma International | | Steve Hicks | SHS | Google | | Olivier Flückiger | OFR | Google | | Linus Groh | LGH | Bloomberg | | Mikhail Barash | MBH | Univ. of Bergen | | Philip Chimento | PFC | Igalia | | Ioanna Dimitriou | IOA | Igalia | | Chip Morningstar | CM | Consensys | | Daniel Minor | DLM | Mozilla | | Aki Braun | AKI | Ecma International | | Lea Verou | LVU | OpenJS | | Richard Gibson | RGN | Agoric | | Jonas Haukenes | JHS | Univ. of Bergen | | Istvan Sebestyen | IS | Ecma | | Guy Bedford | GB | Cloudflare | | Jack Works | JWK | Sujitech | | Chengzhong Wu | CZW | Bloomberg | | Jordan Harband | JHD | Socket | | Kevin Gibbons | KG | F5 | | Michael Ficarra | MF | F5 | | Mark S. Miller | MM | Agoric | | Rob Palmer | RPR | Bloomberg |\n\n## Opening & Welcome\n\nPresenter: Rob Palmer (RPR)\n\nRPR: All right, welcome, everyone. There is—it is 10 a.m. in Port-au-Prince, if I’m saying that correctly. Remote heating today on our time zone. I will present these slides. Sorry, I’m just getting the presenter view ready. And there we go. Can you see the slides?\n\nRPR: Yeah. We are all good. All right. So as has been if the case for the last year, we have the full chair group here, so that’s RPR, USA, Rob, me, Rob and CDA, who are also online, as well as our facilitators, Justin, DLM and Daniel, and let’s continue. Hopefully everyone that’s here has come via the regular entry form and is not just been handed a URL to Google Meet. On a note, please do not share that URL preliminary outside, and that includes the delegates chat, which is very public to read. The delegates chat is also logged as well, so please no private URLs in there. And, sorry, here we go. And a reminder to everyone that we have a code of conduct. That is available on the TC39.es website. Please read it, and please do your best to abide by or to live by the spirit of the document, not just the very specific rules in there, and as I think CDA has summed up, we can describe it as being excellent to each other, if you’ve ever seen the Bill and Ted fill from 1900, highly recommend it. Our schedule for remote meetings is we have a two hour block, polled by a one hour break and followed by another two hour block. As it stands, our schedule is relatively light. It is only a three-day meeting this week, and at the moment, it’s looking like we have 1.5 days worth of content, though that may expand. So, yeah, up to two days. We have already declared we shall not be going into a third day, so please be considerate if you wish to schedule overflow topics. All right, on to our regular comes tools. Hopefully in your on boarding guide from TC39 chairs, will you have seen that we use TCQ. The link to this is in the reflector post, the maybe meeting invite. This is where you’ll see the agenda of upcoming topics. And if you switch to the tab that says queue, from the agenda to queue, you’ll see what we have currently discussing, which is the opening and welcome by me, and on here, you’ll see some buttons, if you wish to interact. This is how we control the conversation and make sure that we speak in an orderly queue, one at a time. So if you want to speak and you are speaking, such as entering a new topic, you’ll see this button, I’m done speaking. Maybe that’s actually been erased now that we are using the new version of TCQ, TCQ reload, but if you see it, please don’t press this button that the Chairs normally advance. This is jumping ahead a bit. This is not—I’m not showing the buttons, but anyway, those buttons at the bottom allow you to enter the queue. Normally you prefer the buttons on the left, that’s the new topic, that’s the normal way of putting something on the queue. If you want to talk about the current one, then the lighter blue. If you want to intervene with higher priority, and as we go right, we get into clarifying questions that can come almost any time, and then point of orders are for the most intrusive, most interruptive interventions such as emergencies or our comm system is failing or perhaps let’s say that we’ve fallen behind with the transcription or something has gone wrong with that. That would be appropriate to stop the meeting and allow us to get that back in place. So the red button is there if you need to use it. We also have our async written comes in the Matrix. IRC-like messaging service or I guess I should probably say Slack-like messaging service. All open source. And the channels that you really want to be on are TC39 delegates for work and Temporal dead zone for the non-work, such as jokes and anything off topic, really. All right. Moving on, we have an IPR policy. Everyone here, in general, should have gone through or been subjected to this policy, either you are part of an ECMA member, so a company or institution that has signed up as a member of ECMA, or perhaps you are here as an invited expert, in which case will you have signed this form as part of process to be on boarded. Anyone else is deemed to be owner. If you’re here as an observer, normally that gets noted on the main invite, but we expect you not to speak or contribute into the meeting itself. Likewise, we collect notes. In fact, very detailed notes. And so just be aware that these will be going public. I shall read out the disclaim that are a detailed transcript of this meeting is being prepared and eventually be posted on GitHub. You may Ed out in at any time for accuracy including deleting comments that you do not wish to appear. And you may Ed out in the first two weeks after 2 meeting and making notes in the repository or contacting TC39 chairs. And we would love you to help with the notes. This is the fun exercise of fixing up the notes, because the majority of the content is there but we need help with attribution and small corrections that can be very humorous. If you wish to have fun with that, we shall take a show of hands now. Who would like to be our first volunteer for helping with the notes? Okay, BAN, straight in there. Thank you, Ben. Could we get one more person to help with the notes? We would love one more person. We’re inviting anyone who could help us just for, you know, if you can only do an hour, that’s fine. We can tag in, tag out. Anyone to help Ben?\n\nBAN: Just to say, I will need to tag out for the era month code presentation, so we’ll get someone in there then.\n\nRPR: Understandable. I wonder who could help us out? Let’s see, is there anyone here who has never taken notes before? That would be appropriate. Save the day right now. Okay, so I think we’re getting—\n\nSFC: I can help for the first hour.\n\nRPR: Okay, thank you so much, Shane. All right. A reminder that the next meeting, the 113th, is coming up in a couple of months, so that is in March. It’s hosted by Google. Thanks to Justin for arranging this. That’s in the Chelsea market office in New York. And so hopefully see you there. We are also trying to arrange a TG5 workshop on either the Monday or the Friday. That has not been specified yet. And please sign up on the sign-up form for that. It’s on reflector. We have done the ask for notetakers. We have BAN and SFC. I’d like to ask for approval of the previous meeting, so that’s the November meeting. Are there any objections to approving the notes from that meeting? Nothing on the queue. That is approved. And for the agenda, we have forthcoming, so for this upcoming—the meeting we’re in now, are there any objections to the agenda? No comments on the agenda, so we consider that adopted. And so next up is, is it SHN? Are you presenting the secretary’s report?\n\nSHN: Yes, Rob. Could I please share my screen?\n\nRPR: I will tell you when we see your screen.\n\nSHN: Okay. Just give me a moment.\n\nRPR: Something’s coming up. Yeah. We can see your entire desk top.\n\nSHN: Can you see the slide show?\n\nRPR: Yes. It would be better if you were—yeah. Now it’s full screen. Looks great.\n\n## Secretary's Report\n\nPresenter: Samina Husain (SHN)\n\n* slides\n\nSHN: Thank you so much. Okay, happy new year to everybody, and hope you’ve had a good start to the year. It’s already well into January.\n\nSHN: Thank you. All right. Just a few things I’ll go over today. We approved a number of standards at the last GA. I just want to run through that. We also have some ideas of a new work item I wanted to bring to everybody’s attention. It’s more informative to give you an idea of what’s coming if you or your organization would like to participate. The new ECMA management. I’ve listed the TC39 chairs and editors. You can tell me if I was correct in my information, and of course the approval for the next June GA. First off, you see right there on the bottom on the page, if you’re attending FOSDEM in Brussels next week, we will be having an event to toast TC54 and the second edition of CycloneDX. You see the details there. Please register if you can. If you are already there, that would be great. It will be after the AboutCode workshop who are working on PURL. December GA, which just passed a month ago, we approved 13 standards, and some technical reports. It’s been a busy time for a number of TCs. I just want to highlight those for your awareness. Quite a few on the AI side, which is very good for ECMA. It’s the first ones we’ve done, and we will continue with more. you can access all these standards as per usual on our website. I also want to highlight that at the last GA, we approved the HLSL new TC. We talked about for many months, perhaps almost a year, and finally happened. We’re just setting up the final participation and delegates. Some of you may have been reached out by Chris from Microsoft to make you aware of where we’re starting and the meeting schedule. We hope by February, this will start, and Aki will be supporting together with myself the new technical committee as they form. This is also very good for ECMA that we have a new Project.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Ben Allen to help with the notes",
+      "person": "Ben Allen",
+      "deadline": "not specified",
+      "source_quote": "Who would like to be our first volunteer for helping with the notes? Okay, BAN, straight in there."
+    },
+    {
+      "kind": "action",
+      "text": "Shane F Carr to help with the notes for the first hour",
+      "person": "Shane F Carr",
+      "deadline": "not specified",
+      "source_quote": "SFC: I can help for the first hour."
+    },
+    {
+      "kind": "proposal",
+      "text": "Trying to arrange a TG5 workshop on either the Monday or the Friday",
+      "person": "Rob Palmer",
+      "deadline": "not specified",
+      "source_quote": "We are also trying to arrange a TG5 workshop on either the Monday or the Friday."
+    },
+    {
+      "kind": "decision",
+      "text": "The next meeting, the 113th, is in March hosted by Google at Chelsea market office in New York",
+      "person": "Rob Palmer",
+      "deadline": "March 2026",
+      "source_quote": "A reminder that the next meeting, the 113th, is coming up in a couple of months, so that is in March."
+    },
+    {
+      "kind": "decision",
+      "text": "The previous meeting notes from November are approved",
+      "person": "Rob Palmer",
+      "deadline": "not specified",
+      "source_quote": "That is approved."
+    },
+    {
+      "kind": "decision",
+      "text": "The agenda for the current meeting is adopted with no objections",
+      "person": "Rob Palmer",
+      "deadline": "not specified",
+      "source_quote": "And for the agenda, we have forthcoming, so for this upcoming—the meeting we’re in now, are there any objections to the agenda? No comments on the agenda, so we consider that adopted."
+    },
+    {
+      "kind": "agreement",
+      "text": "Everyone should have gone through or been subjected to the IPR policy",
+      "person": "Rob Palmer",
+      "deadline": "not specified",
+      "source_quote": "Moving on, we have an IPR policy."
+    },
+    {
+      "kind": "agreement",
+      "text": "The meeting notes will be public and a detailed transcript will be posted on GitHub",
+      "person": "Rob Palmer",
+      "deadline": "not specified",
+      "source_quote": "I shall read out the disclaim that are a detailed transcript of this meeting is being prepared and eventually be posted on GitHub."
+    },
+    {
+      "kind": "agreement",
+      "text": "Volunteers are welcome to help with fixing up the notes for attribution and corrections",
+      "person": "Rob Palmer",
+      "deadline": "not specified",
+      "source_quote": "And we would love you to help with the notes."
+    },
+    {
+      "kind": "proposal",
+      "text": "New work item ideas to be brought to attention for participation",
+      "person": "Samina Husain",
+      "deadline": "not specified",
+      "source_quote": "We also have some ideas of a new work item I wanted to bring to everybody’s attention."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-09-q01",
+      "question": "Who volunteered to help with the notes first?",
+      "answers": [
+        "Ben Allen"
+      ],
+      "expected_found": true,
+      "category": "owner",
+      "evidence": [
+        {
+          "start": 6492,
+          "end": 6590,
+          "quote": "Who would like to be our first volunteer for helping with the notes? Okay, BAN, straight in there."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q02",
+      "question": "Did Shane F Carr agree to help with the notes?",
+      "answers": [
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 7155,
+          "end": 7190,
+          "quote": "SFC: I can help for the first hour."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q03",
+      "question": "Is the TG5 workshop date finalized?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 7564,
+          "end": 7596,
+          "quote": "That has not been specified yet."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q04",
+      "question": "When is the next TC39 meeting scheduled?",
+      "answers": [
+        "March"
+      ],
+      "expected_found": true,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 7240,
+          "end": 7341,
+          "quote": "A reminder that the next meeting, the 113th, is coming up in a couple of months, so that is in March."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q05",
+      "question": "Was there any objection to approving the previous meeting notes?",
+      "answers": [
+        "No"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 7809,
+          "end": 7897,
+          "quote": "Are there any objections to approving the notes from that meeting? Nothing on the queue."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q06",
+      "question": "Who is the presenter of the secretary's report?",
+      "answers": [
+        "Samina Husain"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 8512,
+          "end": 8542,
+          "quote": "Presenter: Samina Husain (SHN)"
+        }
+      ]
+    },
+    {
+      "id": "test-09-q07",
+      "question": "Is the IPR policy applicable to all attendees?",
+      "answers": [
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 5197,
+          "end": 5230,
+          "quote": "Moving on, we have an IPR policy."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q08",
+      "question": "Are the meeting notes going to be made public?",
+      "answers": [
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 5845,
+          "end": 5975,
+          "quote": "I shall read out the disclaim that are a detailed transcript of this meeting is being prepared and eventually be posted on GitHub."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q09",
+      "question": "Has the new HLSL TC been approved?",
+      "answers": [
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 9938,
+          "end": 10012,
+          "quote": "I also want to highlight that at the last GA, we approved the HLSL new TC."
+        }
+      ]
+    },
+    {
+      "id": "test-09-q10",
+      "question": "Is there a detailed transcript of the meeting being prepared?",
+      "answers": [
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 5845,
+          "end": 5975,
+          "quote": "I shall read out the disclaim that are a detailed transcript of this meeting is being prepared and eventually be posted on GitHub."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2026-01/january-20.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-01/january-20.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2026-01/january-20.md",
+    "source_sha256": "66c96bba8459d1681096885f9eabde145c9a7abd7c2ed5c604df0da4c33690ef",
+    "excerpt_sha256": "c16fce4a1dee0dd20eeda05f16a706518d8ae8bc68b9d1cff4b7f9a01c393b80",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "a4f1484fc46d8fe5e1af8aef153f600ddcf83bc3f1107a7a469279b5c40d66ba",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}

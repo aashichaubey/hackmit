@@ -1,0 +1,256 @@
+{
+  "id": "dev-01",
+  "split": "dev",
+  "notes": "## 2023-06-05\n\n- Three Steering Council members were available to meet today, Emily and Pablo were traveling. - The SC met with Łukasz, the Developer-in-Residence, and discussed: - The new Deputy Developer-in-Residence job description draft. - EuroPython coming up and Łukasz helping coordinate a core sprint there. - Discussed all our PEP 703 (Making the Global Interpreter Lock Optional in CPython) thoughts. - Discussed OpenSSL 3.x support backporting needs for older releases. - Discussed 3.12 and 3.13 release schedule planning with Thomas (release manager hat). - Discussed ongoing 3.12beta1 early findings as projects try it out. - Briefly discussed support for core developer mentorship with Deb.\n\n## 2023-06-12\n\n- The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) extensively, with a focus on establishing a process and criteria for evaluating and deciding on the PEP.\n\n## 2023-06-19\n\n- The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) and decided to find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org. - The SC decided to schedule office hours a half hour before the weekly meeting, as an experiment. - The SC approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy).\n\n## 2023-06-26\n\n- The Steering Council met with Seth Larson, the new Security Developer-in-Residence. One of Seth’s tasks is to improve the process behind the Python Security Response Team (PSRT), and to investigate the PSRT or PSF becoming a MITRE Sub-CNA, so it has authority over the reporting and ranking of CVEs. Seth will be working mostly with the PSRT team, only planning to have email discussions or ad-hoc meetings with the SC for now. - The SC met with Łukasz, the Developer-in-Residence, and discussed: - Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4. - His keynote at PyCon Colombia. - A new EdgeDB release that should alleviate CLA bot inefficiencies. - EuroPython, his planned talk, the Core Dev panel, and the sprints there. - The Deputy Developer-in-Residence job opening, which will be posted this week. - The SC discussed json.AttrDict, which was added without review or discussion, with previous proposals having been rejected, and agreed with the rollback of it for now, at least until it can be discussed on discuss.python.org and a consensus is reached. - The SC briefly discussed other open issues involving Python 3.12, leaving them to the Release Team to handle. - The SC officially invited Russel Keith-Magee to the Core Dev Sprint in Brno in October.",
+  "facts": [
+    {
+      "kind": "action",
+      "text": "Łukasz helping coordinate a core sprint there",
+      "person": "Łukasz",
+      "deadline": "2023-06-05",
+      "source_quote": "Łukasz helping coordinate a core sprint there."
+    },
+    {
+      "kind": "proposal",
+      "text": "The new Deputy Developer-in-Residence job description draft",
+      "person": "Łukasz",
+      "deadline": "2023-06-05",
+      "source_quote": "The new Deputy Developer-in-Residence job description draft."
+    },
+    {
+      "kind": "proposal",
+      "text": "Establishing a process and criteria for evaluating and deciding on the PEP",
+      "person": "Steering Council",
+      "deadline": "2023-06-12",
+      "source_quote": "The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) extensively, with a focus on establishing a process and criteria for evaluating and deciding on the PEP."
+    },
+    {
+      "kind": "decision",
+      "text": "Find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org",
+      "person": "Steering Council",
+      "deadline": "2023-06-19",
+      "source_quote": "The Steering Council discussed PEP 703 (Making the Global Interpreter Lock Optional in CPython) and decided to find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org."
+    },
+    {
+      "kind": "decision",
+      "text": "Schedule office hours a half hour before the weekly meeting, as an experiment",
+      "person": "Steering Council",
+      "deadline": "2023-06-19",
+      "source_quote": "The SC decided to schedule office hours a half hour before the weekly meeting, as an experiment."
+    },
+    {
+      "kind": "decision",
+      "text": "Approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy)",
+      "person": "Steering Council",
+      "deadline": "2023-06-19",
+      "source_quote": "The SC approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy)."
+    },
+    {
+      "kind": "action",
+      "text": "Seth Larson to improve the process behind the Python Security Response Team (PSRT)",
+      "person": "Seth Larson",
+      "deadline": "2023-06-26",
+      "source_quote": "One of Seth’s tasks is to improve the process behind the Python Security Response Team (PSRT)"
+    },
+    {
+      "kind": "action",
+      "text": "Seth Larson to investigate the PSRT or PSF becoming a MITRE Sub-CNA",
+      "person": "Seth Larson",
+      "deadline": "2023-06-26",
+      "source_quote": "and to investigate the PSRT or PSF becoming a MITRE Sub-CNA, so it has authority over the reporting and ranking of CVEs."
+    },
+    {
+      "kind": "action",
+      "text": "Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4",
+      "person": "Łukasz",
+      "deadline": "2023-06-26",
+      "source_quote": "Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4."
+    },
+    {
+      "kind": "decision",
+      "text": "Agreed with the rollback of json.AttrDict for now, at least until it can be discussed on discuss.python.org and a consensus is reached",
+      "person": "Steering Council",
+      "deadline": "2023-06-26",
+      "source_quote": "agreed with the rollback of it for now, at least until it can be discussed on discuss.python.org and a consensus is reached."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dev-01-q01",
+      "question": "Who is helping coordinate a core sprint at EuroPython?",
+      "answers": [
+        "Łukasz"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 269,
+          "end": 315,
+          "quote": "Łukasz helping coordinate a core sprint there."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q02",
+      "question": "What job description draft was discussed on 2023-06-05?",
+      "answers": [
+        "Deputy Developer-in-Residence"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 181,
+          "end": 241,
+          "quote": "The new Deputy Developer-in-Residence job description draft."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q03",
+      "question": "Did the Steering Council decide to find consensus on PEP 703 via a poll?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1042,
+          "end": 1171,
+          "quote": "decided to find out if there’s consensus among Core Devs for the idea and the specific PEP, through a poll on discuss.python.org."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q04",
+      "question": "Who is assigned to improve the Python Security Response Team process?",
+      "answers": [
+        "Seth Larson"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1460,
+          "end": 1553,
+          "quote": "One of Seth’s tasks is to improve the process behind the Python Security Response Team (PSRT)"
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q05",
+      "question": "When was the decision made to schedule office hours before the weekly meeting?",
+      "answers": [
+        "2023-06-19"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1174,
+          "end": 1270,
+          "quote": "The SC decided to schedule office hours a half hour before the weekly meeting, as an experiment."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q06",
+      "question": "Did the Steering Council approve changes to PEP 387?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 1273,
+          "end": 1357,
+          "quote": "The SC approved Petr’s proposed changes to PEP 387 (Backwards Compatibility Policy)."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q07",
+      "question": "Who is handling the macOS installer build for 3.12 beta 4?",
+      "answers": [
+        "Łukasz"
+      ],
+      "expected_found": true,
+      "category": "action",
+      "evidence": [
+        {
+          "start": 1875,
+          "end": 1962,
+          "quote": "Łukasz handling the macOS installer build as well as the Windows build for 3.12 beta 4."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q08",
+      "question": "Was json.AttrDict accepted without review?",
+      "answers": [
+        "yes",
+        "Yes"
+      ],
+      "expected_found": true,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 2240,
+          "end": 2300,
+          "quote": "json.AttrDict, which was added without review or discussion,"
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q09",
+      "question": "Is there a decision recorded about the Deputy Developer-in-Residence job opening posting date?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "deadline",
+      "evidence": [
+        {
+          "start": 2142,
+          "end": 2220,
+          "quote": "The Deputy Developer-in-Residence job opening, which will be posted this week."
+        }
+      ]
+    },
+    {
+      "id": "dev-01-q10",
+      "question": "Did the Steering Council discuss the Python 3.12 release schedule with Thomas on 2023-06-19?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "content",
+      "evidence": [
+        {
+          "start": 483,
+          "end": 567,
+          "quote": "Discussed 3.12 and 3.13 release schedule planning with Thomas (release manager hat)."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "python/steering-council/updates/2023-06-steering-council-update.md",
+    "series_id": "python/steering-council",
+    "url": "https://github.com/python/steering-council/blob/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-06-steering-council-update.md",
+    "raw_url": "https://raw.githubusercontent.com/python/steering-council/11c75e79836dcfe21a0f3feb15a8f3215c18e8be/updates/2023-06-steering-council-update.md",
+    "source_sha256": "f0535b2ab45b928c43d5bfc6b580d7e46378a3fac7ddd419b44e58c1484d430c",
+    "excerpt_sha256": "3a637839722b0b970f9df7c7246736092b45294e9643133dda8429a8f5d11ed8",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "1c6b8c832c883952973ff8639aaa92d45bdfe995e50aed7f9d607690873fea17",
+    "attribution": "python/steering-council meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; no independent semantic review claimed."
+  }
+}

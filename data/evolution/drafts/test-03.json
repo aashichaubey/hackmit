@@ -1,0 +1,253 @@
+{
+  "id": "test-03",
+  "split": "test",
+  "notes": "# 106th TC39 Meeting | 18 February 2025\n\n**Attendees:**\n\n| Name | Abbreviation | Organization | |------------------|--------------|--------------------| | Kevin Gibbons | KG | F5 | | Keith Miller | KM | Apple Inc | | Oliver Medhurst | OMT | Invited Expert | | Dmitry Makhnev | DJM | JetBrains | | Gus Caplan | GCL | Deno Land Inc | | Daniel Ehrenberg | DE | Bloomberg | | Jesse Alama | JMN | Igalia | | Michael Saboff | MLS | Apple Inc | | Ujjwal Sharma | USA | Igalia | | Ashley Claymore | ACE | Bloomberg | | Nicolò Ribaudo | NRO | Igalia | | Philip Chimento | PFC | Igalia | | Michael Ficarra | MF | F5 | | Linus Groh | LGH | Bloomberg | | Samina Husain | SHN | Ecma | | Ron Buckton | RBN | Microsoft | | Kris Kowal | KKL | Agoric | | Mikhail Barash | MBH | Univ. of Bergen | | Daniel Minor | DLM | Mozilla | | Aki Rose Braun | AKI | Ecma International | | Luis Pardo | LFP | Microsoft | | Chip Morningstar | CM | Consensys | | Eemeli Aro | EAO | Mozilla | | Ben Lickly | BLY | Google | | Mathieu Hofman | MAH | Agoric | | Sergey Rubanov | SRV | Invited Expert | | Chris de Almeida | CDA | IBM | | Luca Casonato | LCA | Deno | | Istvan Sebestyen | IS | Ecma International | | Waldemar Horwat | WH | Invited Expert | | Richard Gibson | RGN | Agoric | | Shane F Carr | SFC | Google | | Erik Marks | REK | Consensys | | Justin Grant | JGT | Invited Expert |\n\n## Opening & Welcome\n\nPresenter: Rob Palmer (RPR)\n\nRPR: Thanks everyone for coming to Seattle, we’re ready to begin the 106th meeting at TC39.\n\n## Secretariat comments\n\nPresenter: Samina Husain (SHN)\n\n* slides\n\nSHN: I was not able to attend your in-person meeting in Tokyo. It’s nice to see everybody again. A lot has happened within Ecma in the last couple of months. So let me just give you a short report. This is the overview of what we have done within the secretariat and different activities and just going to highlight some things on source map and new TCs we have and just a reminder on the executive committee meeting date and deadlines that you should all be aware of and then some general collaborations that we continue to have.\n\nSHN: So first congratulations for the first addition of source maps. Yes, there you are NRO. Congratulations. Good work. Really hard work. I mean, it was brilliant that you did this in the year. So we’re looking forward to the next edition. It is published and was approved at the December GA and want to bring that to everybody’s attention if you were not already aware.\n\nRPR: Round of applause.\n\nSHN: Also want to highlight TC55, a lot of work has gone into that. I want to thank everybody for that work. The chairs are Luca and Andreu, and Aki is supporting you and I think you will have the official meetings. I know there’s some things that need to be taken care of administratively from Ecma perspective. This is brilliant. Last year 2024 was the year that we had two new TCs and this is one of them. We’re very happy for that. That was approved at the December GA. If there are individuals that want to be involved and organizations that would be great.\n\nSHN: The other TC that is TC56 is the first that touches on artificial intelligence, I think this is very good for ECMA to come into a new space. The members are involved here not only IBM but ServiceNow has shown interest and Microsoft shown interest and Hitachi shown interest that are current members and university that are active not for profit members and we have a couple of invited experts and looking to have them transition to be membered and mainly Cisco being one of them. I think that is excellent. This also enables us to be more visible in the AI space. The AI Alliance has a number of individuals involved in the meeting. Hopefully this grows not as this particular TC but other TCs in the area of AI which of course as everyone knows is a dynamic and constantly changing topic. So thank you for the committee that worked on this also. It was approved in December.\n\nSHN: Also from the Ecma new management for 2025, we had the final votes in December and first I want to thank all of the people who did nominate and were nominated for this. We had seven members who are nominated for non-ordinary member positions. We had only four positions. It’s excellent to see the interest. I hope your interest still remains and that you are still active and want to consider to submit your name as we do these elections every year. This is the final slate that was selected. So DE who is sitting right here in the room is our new President of Ecma. And Jochen Friedrich was previous president and vice president and treasurer is Luoming Zhang and important to note that management roles are for ordinary members. We only have six ordinary members. We are looking forward to their support and driving Ecma.\n\nSHN: From the Executive Committee (ExeCom), this is really exciting and we have new members and many are sitting here. Jochen will chair and we have Theresa O’Connor from Apple and Chris Wilson from Google and Mikhail Barash (University of Bergen) and Patrick Dwyer (ServiceNow) and I don’t know if some are online. It’s great that we have new thoughts and new discussions. Peter Hoddie (Moddable) has been on it before and also important to remember all of the relevance and the past information and leverage on that. So it’s great that Peter is on. And Ross Kirsling (Sony) is also on it. Maybe Ross is also online. This is very new and dynamic executive committee. We will have our first meeting coming up in March. So again thank you everybody for your interest. And congratulations to everyone that was appointed. You may applaud since Daniel was here.\n\nSHN: Just a few general items and the important one, this year ExeCom is earlier usually it is middle or end of April. It is in March. If you are, as I assume, going to have addition 16 and 12, the different standards, I need to have an indication of that. We need to bring that to the attention of the ExeCom that is actually in two weeks. I can make that update immediately. But I just want to get information from the committee that both those two additions are your intentions for the GA in June. You have plenty of time for the opt-out, but I do need indication that you want it. And then maybe the editors can let me know that. The committee can let me know that before this meeting is over. Perhaps if you can by the end of the day, I would appreciate that.\n\nSHN: We have talked about liaisons before. Ecma has a number of liaisons that we keep active like the JTC 1 and W3C and we have had historical with IETF and in the past there were people of IETF coming to Ecma and TC39 meetings. Over time, there hasn’t been a lot of cross-contribution. I would not want to see the liaison disappear. To build a new liaison is always more complicated. I would like to keep it going. I’m asking if there’s somebody on the committee that could be the point of contact between TC39 and IETF, I would appreciate that. If there is no topic or nobody of interest, I also need to know. I need to figure out how to maintain that from the secretariat. I don’t want to drop this. I suspect as we move forward with new topic and areas of IETF is doing we should have visibility of what is going on to make sure it’s not impacted any of the work that the committee is doing. Please give it thought and approach me with who the individual can be.\n\nSHN: We have a strong invited experts list together with AKI and the chairs we’re always reviewing them. We had an extremely busy end of last year. I have had an extremely busy last few months of the end of the year were a bit of a blur if I look back with the activities. I have been very flexible. So the invited experts that typically would have ended their term at the end of 2024, I have not stopped and they will continue on and because we appreciate everybody’s contribution and would like to review them at the end of the year. Sometime in the next little while I will be approaching organizations and members that are related to the organization that are invited experts if they are considered to join. Please be aware to get an email from me. It is a touch base just to inquire and see how your organization is looking at Ecma and if they would like to join because ideally that is the way we want to move forward. So continue on with your work and together with AKI we will work with the chairs to make sure that the list remains accurate.\n\nSHN: With W3C we have done the transition of Winter CG to the generally used term WinterTC and new TC55 that is formed at Ecma. In doing so, I had a number of conversation with W3C leadership and also have met with their CEO Seth Dobbs and they’re keen to see how Ecma can be more engaged with W3C and I know there are already members representative here that are active in different spaces of W3C. Those are the four bullets I brought up in a previous meeting. I would like indication on the **horizontal review** is the one that is the lowest hanging fruit. Does it in any way impact us? I would like guidance. It is important. I want feedback on that. I’m looking at Shane right cross from me. If there are other topics that are important, reach out to me and AKI and the relationship with W3C after the moving of TC55 opens up more opportunities for more collaboration. There may be other projects going on in W3C to come to Ecma. There are common members and eventual invited experts. W3C has a broad scope and a certain focus. Ecma has a value it can bring. If there are topics, we have the opportunity to continue the strong relationship here. We have the liaison contact Michael Smith. I and AKI are active with W3C and have a strong relationship and make sure we are active with W3C and TC55.\n\nDE: Great presentation. A couple comments that I wanted to add. Just to emphasize Winter TC or TC55 the significance of this it’s about standardizing an initially a subset of the web platform that’s supported on web interoperable server environments such as hopefully Node.js and Deno and complementary of TC39 work and scope of things and certain things we thought about in committee that ended up getting web specs for. Hopefully this can help regularize in the ecosystem some of the core concepts. I hope more TC39 members will be interested in joining this group. Development has switched completely to Ecma unlike previous plans where the CG and the TC would live side by side. And thanks LCA and ABO and OMT for the leadership. For the IETF leadership, role, although the IETF have a broad scope and it can be intimidating to be liaison for the whole organization, there’s starter tasks that people could work on. For example, we have certain line types with Ecma that are through registered through IETF such as CycloneDX and small tasks and coordinate to register to the cycle NDX types to point to the new version of the standard. There’s been successful interaction of IETF and TC39 such as making the new version of the datetime format standardized and I hope people consider taking on this extra role.",
+  "facts": [
+    {
+      "kind": "agreement",
+      "text": "It is published and was approved at the December GA",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "It is published and was approved at the December GA and want to bring that to everybody’s attention if you were not already aware."
+    },
+    {
+      "kind": "agreement",
+      "text": "That was approved at the December GA",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "That was approved at the December GA."
+    },
+    {
+      "kind": "agreement",
+      "text": "It was approved in December",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "It was approved in December."
+    },
+    {
+      "kind": "decision",
+      "text": "DE who is sitting right here in the room is our new President of Ecma",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "So DE who is sitting right here in the room is our new President of Ecma."
+    },
+    {
+      "kind": "decision",
+      "text": "We will have our first meeting coming up in March",
+      "person": "SHN",
+      "deadline": "March 2025",
+      "source_quote": "We will have our first meeting coming up in March."
+    },
+    {
+      "kind": "proposal",
+      "text": "I need to have an indication of that",
+      "person": "SHN",
+      "deadline": "before this meeting is over, perhaps by the end of the day",
+      "source_quote": "If you are, as I assume, going to have addition 16 and 12, the different standards, I need to have an indication of that."
+    },
+    {
+      "kind": "proposal",
+      "text": "I’m asking if there’s somebody on the committee that could be the point of contact between TC39 and IETF",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "I’m asking if there’s somebody on the committee that could be the point of contact between TC39 and IETF, I would appreciate that."
+    },
+    {
+      "kind": "action",
+      "text": "Please give it thought and approach me with who the individual can be",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "Please give it thought and approach me with who the individual can be."
+    },
+    {
+      "kind": "proposal",
+      "text": "I will be approaching organizations and members that are related to the organization that are invited experts if they are considered to join",
+      "person": "SHN",
+      "deadline": "Sometime in the next little while",
+      "source_quote": "Sometime in the next little while I will be approaching organizations and members that are related to the organization that are invited experts if they are considered to join."
+    },
+    {
+      "kind": "agreement",
+      "text": "We have done the transition of Winter CG to the generally used term WinterTC and new TC55 that is formed at Ecma",
+      "person": "SHN",
+      "deadline": "",
+      "source_quote": "SHN: With W3C we have done the transition of Winter CG to the generally used term WinterTC and new TC55 that is formed at Ecma."
+    }
+  ],
+  "questions": [
+    {
+      "id": "test-03-q01",
+      "question": "Who is the new President of Ecma?",
+      "answers": [
+        "DE"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 4444,
+          "end": 4517,
+          "quote": "So DE who is sitting right here in the room is our new President of Ecma."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q02",
+      "question": "When will the first Executive Committee meeting take place?",
+      "answers": [
+        "March"
+      ],
+      "expected_found": true,
+      "category": "decision",
+      "evidence": [
+        {
+          "start": 5444,
+          "end": 5494,
+          "quote": "We will have our first meeting coming up in March."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q03",
+      "question": "Was the first edition of source maps approved at the December GA?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 2343,
+          "end": 2473,
+          "quote": "It is published and was approved at the December GA and want to bring that to everybody’s attention if you were not already aware."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q04",
+      "question": "Did SHN attend the in-person meeting in Tokyo?",
+      "answers": [
+        "no"
+      ],
+      "expected_found": true,
+      "category": "negation",
+      "evidence": [
+        {
+          "start": 1570,
+          "end": 1632,
+          "quote": "SHN: I was not able to attend your in-person meeting in Tokyo."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q05",
+      "question": "Is there a proposal to find a liaison between TC39 and IETF?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 6817,
+          "end": 6947,
+          "quote": "I’m asking if there’s somebody on the committee that could be the point of contact between TC39 and IETF, I would appreciate that."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q06",
+      "question": "Who is asked to provide an indication about additions 16 and 12?",
+      "answers": [
+        "the committee"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 5770,
+          "end": 5891,
+          "quote": "If you are, as I assume, going to have addition 16 and 12, the different standards, I need to have an indication of that."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q07",
+      "question": "Has the transition from Winter CG to WinterTC been completed?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "agreement",
+      "evidence": [
+        {
+          "start": 8421,
+          "end": 8548,
+          "quote": "SHN: With W3C we have done the transition of Winter CG to the generally used term WinterTC and new TC55 that is formed at Ecma."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q08",
+      "question": "Is there a plan to approach invited experts to consider joining as members?",
+      "answers": [
+        "yes"
+      ],
+      "expected_found": true,
+      "category": "proposal",
+      "evidence": [
+        {
+          "start": 7905,
+          "end": 8080,
+          "quote": "Sometime in the next little while I will be approaching organizations and members that are related to the organization that are invited experts if they are considered to join."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q09",
+      "question": "Is there any mention of a deadline for the invited experts review?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 7669,
+          "end": 7904,
+          "quote": "So the invited experts that typically would have ended their term at the end of 2024, I have not stopped and they will continue on and because we appreciate everybody’s contribution and would like to review them at the end of the year."
+        }
+      ]
+    },
+    {
+      "id": "test-03-q10",
+      "question": "Is there a disagreement about the timing of the Executive Committee meeting?",
+      "answers": [
+        "not found"
+      ],
+      "expected_found": false,
+      "category": "unknown",
+      "evidence": [
+        {
+          "start": 5635,
+          "end": 5753,
+          "quote": "SHN: Just a few general items and the important one, this year ExeCom is earlier usually it is middle or end of April."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_id": "tc39/notes/meetings/2025-02/february-18.md",
+    "series_id": "tc39/notes",
+    "url": "https://github.com/tc39/notes/blob/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-02/february-18.md",
+    "raw_url": "https://raw.githubusercontent.com/tc39/notes/e8015bc18c938be9ceaea5c49618a9f21158df48/meetings/2025-02/february-18.md",
+    "source_sha256": "08c4e0eb3b970e223d27642acf038f1f25fd2cd197925457e23ce29d0489de89",
+    "excerpt_sha256": "434dfeb76912e7398932865c67a74b7db306b2b391e5d57743157b090f343873",
+    "scope": "supplied excerpt only",
+    "text_preprocessing": "Markdown link labels retained; wrapped paragraph whitespace collapsed; complete leading paragraphs capped at 12000 source characters",
+    "annotation_status": "model_drafted_unreviewed",
+    "annotation_request_hash": "80326573e53b1e94f224e692c332bf23de95c9cc565f0a6979193fc43fd443ab",
+    "attribution": "tc39/notes meeting participants; upstream repository terms apply",
+    "review": "Exact evidence membership checked automatically; unique capitalization/terminal-period quote alignment allowed; no independent semantic review claimed."
+  }
+}
