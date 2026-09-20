@@ -1,0 +1,39 @@
+# --- secrets (NEVER commit) ---
+.env
+.env.local
+*.key
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+
+# --- eval run artifacts (regenerable; may contain full prompts) ---
+evals/**/runs/
+
+# --- data & artifacts (large / regenerable) ---
+data/raw/
+data/processed/
+data/cache/
+experiments/results/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!experiments/results/.gitkeep
+
+# keep small committed example dictionaries
+!data/dictionaries/
+
+# --- models / hf cache ---
+.hf_cache/
+*.safetensors
+*.bin
+
+# --- os ---
+.DS_Store

@@ -1,0 +1,37 @@
+{
+  "_README": [
+    "ILLUSTRATIVE AND DISABLED BY DEFAULT. This is a template, not an approved release standard.",
+    "'enabled' is false: the gate returns NOT_CONFIGURED until someone deliberately chooses thresholds.",
+    "The two example numbers below (20% net savings, 1pp accuracy decline) come from the task brief",
+    "as illustrations. Meeting them does NOT constitute release certification.",
+    "Application-specific floors, sample requirements, and critical-category limits are left unset",
+    "on purpose - choose them explicitly for your workload before enabling this file."
+  ],
+
+  "enabled": false,
+  "policy_version": "illustrative-0.1.0",
+
+  "min_net_input_savings": 0.20,
+  "max_accuracy_decline_pp": 1.0,
+
+  "_unset_on_purpose": [
+    "min_compressed_accuracy",
+    "max_regression_rate",
+    "max_expansion_rate",
+    "min_cases",
+    "min_source_clusters",
+    "max_category_regressions",
+    "required_slices"
+  ],
+
+  "min_case_coverage": 1.0,
+  "min_token_measurement_coverage": 1.0,
+  "require_heldout_split": true,
+
+  "_notes": {
+    "non_inferiority": "max_accuracy_decline_pp is checked against the LOWER bound of the bootstrap 95% interval for the accuracy delta, not the point estimate.",
+    "token_exactness": "min_net_input_savings requires token_count_source in {provider_usage, exact_local_tokenizer}. Approximate local-template counts force INCONCLUSIVE.",
+    "no_composite_score": "Checks are never combined into a single weighted score.",
+    "critical_categories": "Populate max_category_regressions with e.g. {\"negation\": 0, \"literal_fidelity\": 0} once you decide which failures are unacceptable."
+  }
+}

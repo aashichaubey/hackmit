@@ -1,0 +1,23 @@
+{
+  "mode": "mock",
+  "experiment_mode": "first_attempt",
+  "fixtures": "eval_cases.jsonl",
+  "compressor": "mock",
+  "compressor_options": {"scope": "user_only", "include_dictionary": true},
+  "target": "mock",
+  "target_options": {},
+  "token_counter": "deepseek_local",
+  "token_counter_options": {"model": "deepseek-v4-flash"},
+  "generation": {"temperature": 0.0, "max_tokens": 256},
+  "compression_config": {"scope": "user_only"},
+  "compression_scope": "user_only",
+  "repeats": 1,
+  "seed": 17,
+  "timeout_s": 60.0,
+  "max_live_calls": null,
+  "retry": {"max_retries": 0, "fallback_to_original": false},
+  "out_root": "runs",
+  "experiment_id": null,
+  "pricing": null,
+  "notes": "Offline mock smoke configuration. Results are SYNTHETIC: the mock compressor and mock target are not models. Use config.live.example.json for real measurements."
+}

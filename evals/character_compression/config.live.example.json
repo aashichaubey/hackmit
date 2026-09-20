@@ -1,0 +1,41 @@
+{
+  "mode": "live",
+  "experiment_mode": "first_attempt",
+  "fixtures": "eval_cases.jsonl",
+
+  "_comment_compressor": "'repo' wires this project's real hybrid encoder. It currently raises NotImplementedError because src/token_language/encoder/ is empty -- see README 'Missing integration'. A live run cannot use the mock compressor; the runner refuses it.",
+  "compressor": "repo",
+  "compressor_options": {"dictionary_path": "../../data/dictionaries/phrases.jsonl"},
+
+  "target": "openrouter",
+  "target_options": {
+    "model": "deepseek/deepseek-v4-flash",
+    "timeout": 60.0,
+    "api_key_env": "OPENROUTER_API_KEY"
+  },
+
+  "token_counter": "deepseek_local",
+  "token_counter_options": {"model": "deepseek-v4-flash"},
+
+  "_comment_generation": "max_tokens must cover REASONING tokens plus the answer. deepseek-v4-flash is a reasoning model: with a small budget it returns content=null and finish_reason=length, which the adapter reports as a truncated_before_answer error rather than grading it as a wrong answer. Both arms use the identical budget.",
+  "generation": {"temperature": 0.0, "max_tokens": 2048, "seed": 17},
+  "compression_config": {"scope": "user_only"},
+  "compression_scope": "user_only",
+  "repeats": 3,
+  "seed": 17,
+  "timeout_s": 60.0,
+  "max_live_calls": 240,
+  "retry": {"max_retries": 0, "fallback_to_original": false},
+  "out_root": "runs",
+  "experiment_id": null,
+
+  "_comment_pricing": "Versioned, operator-supplied pricing in USD per token. Never fetched or assumed; leave null to report cost as unknown. Values below are from the OpenRouter model listing observed 2026-09-19 and MUST be re-verified before use.",
+  "pricing": {
+    "input_per_token": 0.00000003752,
+    "output_per_token": 0.00000007504,
+    "source": "openrouter model listing",
+    "observed_at": "2026-09-19"
+  },
+
+  "notes": "Live first-attempt quality experiment. Credentials come from OPENROUTER_API_KEY in the environment, never from this file."
+}
