@@ -1,0 +1,19 @@
+{
+  "description": "Original repository DeepSeek generation configuration, retained for reproducibility. Benchmark code uses a 1024-token output limit equally for both arms.",
+  "generation": {
+    "model": "deepseek/deepseek-v4-flash",
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 128,
+    "reasoning": {
+      "enabled": false
+    },
+    "provider": {
+      "only": [
+        "streamlake/fp8"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    }
+  }
+}

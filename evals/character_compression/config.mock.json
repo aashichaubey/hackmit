@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "mode": "mock",
+  "fixture_path": "starter/eval_cases.jsonl",
+  "results_dir": "../../runs/character_compression",
+  "dataset": {
+    "version": "supplied-development-smoke-40-v1",
+    "held_out": false,
+    "split_before_dictionary": false,
+    "provenance": "Supplied starter kit, preserved byte-for-byte; synthetic development fixtures"
+  },
+  "target": {
+    "adapter": "mock",
+    "version": "mock-static-v1"
+  },
+  "generation": {
+    "model": "mock/static-v1",
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 128
+  },
+  "compression": {
+    "adapter": "mock",
+    "version": "explicit-identity-mock-v1",
+    "dictionary_version": null,
+    "optimization_encoding": "o200k_base",
+    "domain": "general",
+    "protect": [],
+    "max_changes": 100,
+    "requested_level": null,
+    "scope": "user_messages",
+    "delimiters": [
+      "<source>",
+      "</source>"
+    ],
+    "decoding": {
+      "strategy": "natural_bilingual",
+      "dictionary": "none",
+      "instruction": "",
+      "examples": [],
+      "version": "natural-bilingual-v1"
+    }
+  },
+  "scorer": {
+    "adapter": "starter",
+    "path": "starter/score_evals.py",
+    "version": "supplied-v1"
+  },
+  "experiment": "original_vs_compressed",
+  "repeats": 1,
+  "random_seed": 17,
+  "timeout_seconds": 45,
+  "concurrency": 1,
+  "pipeline": {
+    "mode": "first_attempt",
+    "max_retries": 0,
+    "fallback_to_original": false
+  },
+  "max_live_calls": 0,
+  "max_cases": null,
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 29
+  },
+  "policy_path": "release_policy.example.json",
+  "boundary_instruction": ""
+}

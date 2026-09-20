@@ -11,3 +11,10 @@ __pycache__/
 # Local resumability caches contain raw API responses and are not needed to
 # inspect the published experiment artifacts.
 results/**/cache/
+*.egg-info/
+dist/
+.env.*
+!.env.example
+runs/
+data/raw/
+data/imported/

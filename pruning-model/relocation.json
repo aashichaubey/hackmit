@@ -1,0 +1,675 @@
+{
+  "from": "/Users/kaisong/code/hackmit",
+  "to": "/Users/kaisong/code/hackmit/pruning-model",
+  "moves": {
+    "src/tokenmix/meeting_pruner": "src/pruning_model",
+    "tests/meeting_pruner": "tests",
+    "docs/meeting-pruner.md": "README.md",
+    "configs/meeting_pruner": "configs",
+    "evals/meeting_pruner": "evals",
+    "reports/meeting-pruner-pilot": "reports/pilot",
+    "runs/meeting_pruner": "runs",
+    "data/imported/meeting_pruner": "data/imported",
+    "data/raw/meetings": "data/raw/meetings"
+  },
+  "integrity_before": [
+    {
+      "path": "evals/adversarial.jsonl",
+      "sha256": "18f214a22befe8b498f5c9a4a1e7792afea3aca6a587efd4c0cdafe50caca5b1"
+    },
+    {
+      "path": "evals/benchmark-parasail-grading-review.json",
+      "sha256": "2bf360f967b9f6dbf1e2269b402536e095c453bed6a9db554450fa4ac1cd5ced"
+    },
+    {
+      "path": "evals/benchmark-sweep-parasail-grading-review.json",
+      "sha256": "bb3398a2700f5ed897562ad70bc908aabf4444e63942009e26c5d6c1d5413876"
+    },
+    {
+      "path": "evals/curated-questions.json",
+      "sha256": "a6c2e24f271b42339ae77944be2cdc4c17cf8ea635291ce8c1210729e70aea71"
+    },
+    {
+      "path": "evals/pilot-review.json",
+      "sha256": "fec6a2bd484aba861b338eab9dd98f4a31926e52d4b471a42146b46db3f7ec7f"
+    },
+    {
+      "path": "reports/pilot/calibration.json",
+      "sha256": "cc1fe12b63c66382a53b0ab0a0b75d8cf9b0f09f22caace8702ebab008f2426a"
+    },
+    {
+      "path": "reports/pilot/grading_review.json",
+      "sha256": "bb3398a2700f5ed897562ad70bc908aabf4444e63942009e26c5d6c1d5413876"
+    },
+    {
+      "path": "reports/pilot/per_call.csv",
+      "sha256": "441ac2f0889950d598a6b19673314b77852377d0f9c0146f1557277bea5a2476"
+    },
+    {
+      "path": "reports/pilot/per_call.json",
+      "sha256": "c8984931c24070ab4157a520e76418b413f21673bd7f45f94d518d63252a0868"
+    },
+    {
+      "path": "reports/pilot/raw_report.json",
+      "sha256": "0ed2c0a1642f328d16ba846928740b630e19242633d630ede4bf590ffeb8264d"
+    },
+    {
+      "path": "reports/pilot/regressions.json",
+      "sha256": "485bc8d70ca8b45f4356d5bbb7d96defad48cccf19c0b01acee9edaeeb98a197"
+    },
+    {
+      "path": "reports/pilot/report.json",
+      "sha256": "ad069447f25cfc68b97f383ca39bb387d99c1d941d3d8ec5780620917ef9113f"
+    },
+    {
+      "path": "runs/benchmark-parasail/api.jsonl",
+      "sha256": "01c49f8cfd8af8d1271b8a5686d4c93381f06e8654da0bf63054284916850667"
+    },
+    {
+      "path": "runs/benchmark-parasail/incomplete_cases.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/benchmark-parasail/manifest.json",
+      "sha256": "31d9f2ac72060b6dc5cc8c38bf9a0751269c5b74e72e7d3373aa796476c30501"
+    },
+    {
+      "path": "runs/benchmark-parasail/per_call.csv",
+      "sha256": "0f57073d5be1650a9dd2f02b7074f44251f47b6a2bef34825e08c50c302feee2"
+    },
+    {
+      "path": "runs/benchmark-parasail/per_call.json",
+      "sha256": "42f4c372a6dbf6d520c6b0972fbc6d45fc4a0b139e0a983f483974fc1fb01602"
+    },
+    {
+      "path": "runs/benchmark-parasail/per_call.jsonl",
+      "sha256": "35e2b24d1310ebae3aa6d2b789f0965da1635166717a41f9a1918353b942fd1b"
+    },
+    {
+      "path": "runs/benchmark-parasail/regressions.json",
+      "sha256": "cb152bbbd1f68228ad93a65c41a0fbbcd9d7371a4a7b41d642fceeaaa4f0b51e"
+    },
+    {
+      "path": "runs/benchmark-parasail/report.json",
+      "sha256": "083a0d01cb9cc89e6b599ae3c48580395ee7fc9f8f26349982c919cef9af212b"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/grading_review.json",
+      "sha256": "2bf360f967b9f6dbf1e2269b402536e095c453bed6a9db554450fa4ac1cd5ced"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/manifest.json",
+      "sha256": "360317eaf50e136da843b32e80c2363c241d8d4d610ee1439523b7c64384e4d0"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/per_call.csv",
+      "sha256": "f2ffaa443924a30bed3abea8ac9c6c75eec4b0e466403baabd23ab75ae0897f4"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/per_call.json",
+      "sha256": "5b66454af87732dece1d359b562dbc8383f47ad1fc2ce8e64e569dc6a56075d3"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/per_call.jsonl",
+      "sha256": "871992fb8817d0a220e48c7f004a91f24adaccf5574aae6ea1e757dca9fdd92b"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/regressions.json",
+      "sha256": "dc3e50f1a92a879bc0aed484fe677054946ab2505b015c9084006cc6b99f775f"
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/report.json",
+      "sha256": "afcdc416a83ec8c5b7834a53f5ee1ce082e65ea9448b0955c762d1b4331e5aba"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/api.jsonl",
+      "sha256": "19e0582e09600105cd44654049c8bb4d839855c75363e2c7852d07a5b76dc15b"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/incomplete_cases.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/lineage.json",
+      "sha256": "caf11b4b15e395734ba8fe4428672097875d275cd1081e29cad5b7c11b8bdc75"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/manifest.json",
+      "sha256": "6044d44fc8765d847ee2267ad4baa2e605aa69f500c628a735918c1b85476624"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/per_call.csv",
+      "sha256": "d0e204140f2194c390753ed39781fcc589bf54b664a6144683c141d349a0b7a5"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/per_call.json",
+      "sha256": "06cfd1e72ebf0ededbea4c243ebcdaa3f27dfd3e7e024bd9f71543e790ebb90c"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/per_call.jsonl",
+      "sha256": "079fc34f37a95ab7e71d6a5338775745f4d73e149087dd510d9768881f29284c"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/regressions.json",
+      "sha256": "6d217e75310ec6234f6b5bcfb2db54aa4c998f8102e83c091d2f3bd37b549e8c"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/report.json",
+      "sha256": "0ed2c0a1642f328d16ba846928740b630e19242633d630ede4bf590ffeb8264d"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/grading_review.json",
+      "sha256": "bb3398a2700f5ed897562ad70bc908aabf4444e63942009e26c5d6c1d5413876"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/manifest.json",
+      "sha256": "d637238745db9d206ca45d0c483333fffb2e708a817d115fee9dd90a0da9e5af"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/per_call.csv",
+      "sha256": "441ac2f0889950d598a6b19673314b77852377d0f9c0146f1557277bea5a2476"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/per_call.json",
+      "sha256": "c8984931c24070ab4157a520e76418b413f21673bd7f45f94d518d63252a0868"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/per_call.jsonl",
+      "sha256": "f1368b893ee00ffdf6e4a8d68883f9cbfe09a2fe4b6d2326a5950a975bcecee7"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/regressions.json",
+      "sha256": "485bc8d70ca8b45f4356d5bbb7d96defad48cccf19c0b01acee9edaeeb98a197"
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/report.json",
+      "sha256": "ad069447f25cfc68b97f383ca39bb387d99c1d941d3d8ec5780620917ef9113f"
+    },
+    {
+      "path": "runs/data-preparation/api.jsonl",
+      "sha256": "f9d9c433745d4e8f154b7b417fd272336c787c3940c884dca51354004388eeb7"
+    },
+    {
+      "path": "runs/diagnostics-parasail/api.jsonl",
+      "sha256": "50917d03bce123b12be22aa335350fbed6018d3f67713ca2ebbfffcc7ed14e20"
+    },
+    {
+      "path": "runs/diagnostics-parasail/incomplete_cases.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/diagnostics-parasail/manifest.json",
+      "sha256": "b7bc878ac75d70e2b2bc99625c0b5d23d13fe694a6b75e985caedd18aa321dc5"
+    },
+    {
+      "path": "runs/diagnostics-parasail/per_call.csv",
+      "sha256": "401bcefbe695a420c113badccc19141d6457bf0cbd7efabbed82fd3e1f73227c"
+    },
+    {
+      "path": "runs/diagnostics-parasail/per_call.json",
+      "sha256": "e1141c91f8a33eb2e4c210366b7b707e26fbf1f6589bd128ab546b98315bdeec"
+    },
+    {
+      "path": "runs/diagnostics-parasail/per_call.jsonl",
+      "sha256": "3d4d03a4456d1fff43db96c7a5506cd7f483ab2b3ce054a42d147d5e66e8a1df"
+    },
+    {
+      "path": "runs/diagnostics-parasail/regressions.json",
+      "sha256": "8aa65e286e4ad1b25537661d8692a2f9a1f8df2c40c48d91a9e390839eedbdd4"
+    },
+    {
+      "path": "runs/diagnostics-parasail/report.json",
+      "sha256": "56ed1b6aa12089bfdd03c90c39c41b709276170f7f683a3c9776a7510f721146"
+    },
+    {
+      "path": "runs/model/calibration.json",
+      "sha256": "03a04ad808edaea48b628d2ac9a36fc0b2d4cf9de03b3431a3ce3f1484861f2e"
+    },
+    {
+      "path": "runs/model/classifier.safetensors",
+      "sha256": "2edb4ee6844df170520984a5c8d5eacc64ac2911245878597a68ade5187f1b09"
+    },
+    {
+      "path": "runs/model/encoder/config.json",
+      "sha256": "f295786e36cabd2023fd17bbf048f355926bb80a9ced63d22826f3310f70a9dd"
+    },
+    {
+      "path": "runs/model/encoder/model.safetensors",
+      "sha256": "64cbb71d663350fe647743b34a53418cdbbad1b354410f4aa1e852e0dc6def47"
+    },
+    {
+      "path": "runs/model/encoder/special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049"
+    },
+    {
+      "path": "runs/model/encoder/tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+    },
+    {
+      "path": "runs/model/encoder/tokenizer_config.json",
+      "sha256": "2966a59b9e9cf122279aec1249e22e5bc7ad8430c754e95031b13fd128d4e560"
+    },
+    {
+      "path": "runs/model/pruner.json",
+      "sha256": "b002a4307b6e7f07442b028a2d7bf6d92628e7b29c36a626813edd919ea3c8f2"
+    },
+    {
+      "path": "runs/model/training.jsonl",
+      "sha256": "3ed0d3f10aca27ba8fc54c0364b4c7e3b683b77d9e13b9bf7c7cea3c9f417b73"
+    },
+    {
+      "path": "runs/model/training_manifest.json",
+      "sha256": "6346f7735f51d67bfcb6c409720bfd4314c544a9c4798fa338e7702a9252ce14"
+    },
+    {
+      "path": "runs/model-sweep/calibration.json",
+      "sha256": "cc1fe12b63c66382a53b0ab0a0b75d8cf9b0f09f22caace8702ebab008f2426a"
+    },
+    {
+      "path": "runs/model-sweep/classifier.safetensors",
+      "sha256": "2edb4ee6844df170520984a5c8d5eacc64ac2911245878597a68ade5187f1b09"
+    },
+    {
+      "path": "runs/model-sweep/encoder/config.json",
+      "sha256": "f295786e36cabd2023fd17bbf048f355926bb80a9ced63d22826f3310f70a9dd"
+    },
+    {
+      "path": "runs/model-sweep/encoder/model.safetensors",
+      "sha256": "64cbb71d663350fe647743b34a53418cdbbad1b354410f4aa1e852e0dc6def47"
+    },
+    {
+      "path": "runs/model-sweep/encoder/special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049"
+    },
+    {
+      "path": "runs/model-sweep/encoder/tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+    },
+    {
+      "path": "runs/model-sweep/encoder/tokenizer_config.json",
+      "sha256": "2966a59b9e9cf122279aec1249e22e5bc7ad8430c754e95031b13fd128d4e560"
+    },
+    {
+      "path": "runs/model-sweep/pruner.json",
+      "sha256": "52e0eb777527c90e7576b3484965e4b2b909a818838657d7cc772b557432eece"
+    },
+    {
+      "path": "runs/model-sweep/training.jsonl",
+      "sha256": "3ed0d3f10aca27ba8fc54c0364b4c7e3b683b77d9e13b9bf7c7cea3c9f417b73"
+    },
+    {
+      "path": "runs/model-sweep/training_manifest.json",
+      "sha256": "6346f7735f51d67bfcb6c409720bfd4314c544a9c4798fa338e7702a9252ce14"
+    },
+    {
+      "path": "runs/provider-check/api.jsonl",
+      "sha256": "525eb6477bb788cf39ae0e3372447781430f376e61f84100463da7ba40388efb"
+    },
+    {
+      "path": "runs/provider-check-deepinfra/api.jsonl",
+      "sha256": "ab10448981123707c53c97d36e90afcbd4d81370f1a55820ee693f433db192e5"
+    },
+    {
+      "path": "runs/provider-checks/digitalocean/api.jsonl",
+      "sha256": "7275e1faaaee30408f41f05f2df9fcd37e1fc870f6ff9e36c8dd8797fc1410e9"
+    },
+    {
+      "path": "runs/provider-checks/digitalocean/config.json",
+      "sha256": "afc785c352995721ba3021a9c8e091a018b2aa540d0325476fc4522a7a93333f"
+    },
+    {
+      "path": "runs/provider-checks/parasail-fp8/api.jsonl",
+      "sha256": "e4f976faaff64ec68cd0c13180dcbc8b6f16d57e0c4f28448f54b20facc3e582"
+    },
+    {
+      "path": "runs/provider-checks/parasail-fp8/config.json",
+      "sha256": "39039cf0e32d1b45d65a960116781a156ed7df1207ff61143e4655e34ca52a3e"
+    },
+    {
+      "path": "runs/provider-checks/siliconflow-fp8/api.jsonl",
+      "sha256": "538113ec7c8fbeb98d5153b3a2d77697e1e94c682f0ed0123181856a3c034ba2"
+    },
+    {
+      "path": "runs/provider-checks/siliconflow-fp8/config.json",
+      "sha256": "4a0a0525a8b350e7fb11798d01520c8db626359941a2a65363852efaa39fa1a2"
+    },
+    {
+      "path": "runs/smoke-model/calibration.json",
+      "sha256": "8b2e638ddbbd8d7521b98b6dc602e82180e714bbcd2c3a210f87e226455df0c6"
+    },
+    {
+      "path": "runs/smoke-model/classifier.safetensors",
+      "sha256": "a3f308e7f22b63e38e6e52dca6bf1bf8ea2105e56522d729aed1bdadd45acb61"
+    },
+    {
+      "path": "runs/smoke-model/encoder/config.json",
+      "sha256": "f295786e36cabd2023fd17bbf048f355926bb80a9ced63d22826f3310f70a9dd"
+    },
+    {
+      "path": "runs/smoke-model/encoder/model.safetensors",
+      "sha256": "8b429c22c980a60bca53b6dd18fc7536aad2893d6bec51062bdf591e1933270e"
+    },
+    {
+      "path": "runs/smoke-model/encoder/special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049"
+    },
+    {
+      "path": "runs/smoke-model/encoder/tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+    },
+    {
+      "path": "runs/smoke-model/encoder/tokenizer_config.json",
+      "sha256": "2966a59b9e9cf122279aec1249e22e5bc7ad8430c754e95031b13fd128d4e560"
+    },
+    {
+      "path": "runs/smoke-model/pruner.json",
+      "sha256": "3ea54b64c32020dfad3929c17fa6340e166b128e49b849f5cb21875ede8b1543"
+    },
+    {
+      "path": "runs/smoke-model/training.jsonl",
+      "sha256": "679c41edf60ce60ee835d2deb4b1e5b8ffde10083086693a458d2a5c4c856b4c"
+    },
+    {
+      "path": "runs/smoke-model/training_manifest.json",
+      "sha256": "d4c3422364406d0e5c3709d241b6956f702c66d4134fb96196a1789095384e07"
+    },
+    {
+      "path": "data/imported/notes_sources.jsonl",
+      "sha256": "e59a39dcea48d113fc9edea347080e89de2db2e7c0a53bd6ab236ffeb524b16e"
+    },
+    {
+      "path": "data/imported/pilot/annotation_audit.json",
+      "sha256": "26c236d0026fbc6c83e7bd7469f2d59e6c22bd454b2c343e4975dac9c7ffae9b"
+    },
+    {
+      "path": "data/imported/pilot/notes_test.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/imported/pilot/notes_train.jsonl",
+      "sha256": "c6a081c090d598f145ee35ac30e08b128e46b1baa07c0771b3924b83bfcee7a9"
+    },
+    {
+      "path": "data/imported/pilot/notes_val.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/imported/reviewed/dataset.json",
+      "sha256": "e7ca401b4c6861727c866225f93a696f4835826f885c61f04759df5107c3fc42"
+    },
+    {
+      "path": "data/imported/reviewed/notes_test.jsonl",
+      "sha256": "b10f1b5d8cf78d9d48ed65626dd0f61c0bffbb8585b0bec8e58aaa97037a0b0e"
+    },
+    {
+      "path": "data/imported/reviewed/notes_train.jsonl",
+      "sha256": "bf0a36a1702cb7672b5872e7b90cc3db296e2841e66efc989479928a4df1da13"
+    },
+    {
+      "path": "data/imported/reviewed/notes_val.jsonl",
+      "sha256": "f116f80d295ca5cd78ca46c9ecd27188a1e7cd6a4cb1e5544bf4620b118e949c"
+    },
+    {
+      "path": "data/imported/reviewed-train/notes_test.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/imported/reviewed-train/notes_train.jsonl",
+      "sha256": "bf0a36a1702cb7672b5872e7b90cc3db296e2841e66efc989479928a4df1da13"
+    },
+    {
+      "path": "data/imported/reviewed-train/notes_val.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/imported/reviewed-train/review_manifest.json",
+      "sha256": "48666e6f9e1cd25dc187a3d31d5abc43b4b146e40beacb2206e1ab196dd1b7b5"
+    },
+    {
+      "path": "data/imported/sources.json",
+      "sha256": "ac1d4d05d3b028f98439551c54a985641eafa7ad307d7a9cc25b10649c6c581e"
+    },
+    {
+      "path": "data/imported/transcript_test.jsonl",
+      "sha256": "06e6d97d289672669ca5a503061b10f4cf609366454dd4f1a5dc06c6298c5c0b"
+    },
+    {
+      "path": "data/imported/transcript_train.jsonl",
+      "sha256": "08ac0b0038e6e0cfe1e60d64e72f218bd1320fd8c78d687af1a4b0434dc282a2"
+    },
+    {
+      "path": "data/imported/transcript_val.jsonl",
+      "sha256": "1f4358dcf30644d88d70e42e17bcc131fd9edbeccfdb57776444724cc0541ab6"
+    }
+  ],
+  "location_updates": [
+    {
+      "path": "runs/diagnostics-parasail/manifest.json",
+      "sha256_before": "b7bc878ac75d70e2b2bc99625c0b5d23d13fe694a6b75e985caedd18aa321dc5",
+      "sha256_after": "c5791f2d7abb4da4d00ecd091faa92bf9f6850539f9fa80a14690d97a9528e00",
+      "changes": [
+        {
+          "field": [
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/diagnostics-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/diagnostics-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/manifest.json",
+      "sha256_before": "d637238745db9d206ca45d0c483333fffb2e708a817d115fee9dd90a0da9e5af",
+      "sha256_after": "b39cb2b8e87b814d3c3c53bad931c959cb9a0c80784a5b042307db971e20d7d3",
+      "changes": [
+        {
+          "field": [
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl"
+        },
+        {
+          "field": [
+            "raw_results"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/manifest.json",
+      "sha256_before": "360317eaf50e136da843b32e80c2363c241d8d4d610ee1439523b7c64384e4d0",
+      "sha256_after": "8dbeb67bc96ad535b40719a91d550d2b5ea30afca6ed175eae348c86c3951df6",
+      "changes": [
+        {
+          "field": [
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-parasail/api.jsonl"
+        },
+        {
+          "field": [
+            "raw_results"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-parasail",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-parasail"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/manifest.json",
+      "sha256_before": "6044d44fc8765d847ee2267ad4baa2e605aa69f500c628a735918c1b85476624",
+      "sha256_after": "dd556e1768174a538bb8bab556e5f0f50d6e20c421cc75af4ca473471f410bb8",
+      "changes": [
+        {
+          "field": [
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-parasail/manifest.json",
+      "sha256_before": "31d9f2ac72060b6dc5cc8c38bf9a0751269c5b74e72e7d3373aa796476c30501",
+      "sha256_after": "e3334960b994223ba1e392c487a20cd7a31cf625895bf00235ee56516d21adac",
+      "changes": [
+        {
+          "field": [
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "runs/diagnostics-parasail/report.json",
+      "sha256_before": "56ed1b6aa12089bfdd03c90c39c41b709276170f7f683a3c9776a7510f721146",
+      "sha256_after": "6dc28c283ed0338ebafaeed7b32cfa6d3d60b7e6e7cbea7eeb665290505c7d60",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/diagnostics-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/diagnostics-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail-reviewed/report.json",
+      "sha256_before": "ad069447f25cfc68b97f383ca39bb387d99c1d941d3d8ec5780620917ef9113f",
+      "sha256_after": "61a1ee6ee7c7c790ce6d8dbcbc6838a4a8e5c9c358bbd7c510b5d86e2261a485",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl"
+        },
+        {
+          "field": [
+            "manifest",
+            "raw_results"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-parasail-reviewed/report.json",
+      "sha256_before": "afcdc416a83ec8c5b7834a53f5ee1ce082e65ea9448b0955c762d1b4331e5aba",
+      "sha256_after": "cf21d2e59d2f14999fa19178e54b4c757f2e9d47efa5a150c78fc9aa962e5250",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-parasail/api.jsonl"
+        },
+        {
+          "field": [
+            "manifest",
+            "raw_results"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-parasail",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-parasail"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/report.json",
+      "sha256_before": "0ed2c0a1642f328d16ba846928740b630e19242633d630ede4bf590ffeb8264d",
+      "sha256_after": "656c18e059eab508669a7a47cdfa6653388532885dd07390001abd7a32791683",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-parasail/report.json",
+      "sha256_before": "083a0d01cb9cc89e6b599ae3c48580395ee7fc9f8f26349982c919cef9af212b",
+      "sha256_after": "a8b790c34b619e7c3b1994fdccedce57a8918d5d5e636a27a9cce4ff4dbe0116",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "runs/benchmark-sweep-parasail/lineage.json",
+      "sha256_before": "caf11b4b15e395734ba8fe4428672097875d275cd1081e29cad5b7c11b8bdc75",
+      "sha256_after": "1d63646d90bedc55a093e07ff5c5ed94e735ad99c59d3d3628896c05d26b9533",
+      "changes": [
+        {
+          "field": [
+            "prior_journal"
+          ],
+          "before": "runs/meeting_pruner/benchmark-parasail/api.jsonl",
+          "after": "runs/benchmark-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "reports/pilot/raw_report.json",
+      "sha256_before": "0ed2c0a1642f328d16ba846928740b630e19242633d630ede4bf590ffeb8264d",
+      "sha256_after": "656c18e059eab508669a7a47cdfa6653388532885dd07390001abd7a32791683",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl"
+        }
+      ]
+    },
+    {
+      "path": "reports/pilot/report.json",
+      "sha256_before": "ad069447f25cfc68b97f383ca39bb387d99c1d941d3d8ec5780620917ef9113f",
+      "sha256_after": "61a1ee6ee7c7c790ce6d8dbcbc6838a4a8e5c9c358bbd7c510b5d86e2261a485",
+      "changes": [
+        {
+          "field": [
+            "manifest",
+            "api_journal"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail/api.jsonl",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl"
+        },
+        {
+          "field": [
+            "manifest",
+            "raw_results"
+          ],
+          "before": "/Users/kaisong/code/hackmit/runs/meeting_pruner/benchmark-sweep-parasail",
+          "after": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail"
+        }
+      ]
+    }
+  ],
+  "note": "Only source layout, imports, configuration/dependency placement, documentation, and metadata location pointers changed. Data, weights, paid request journals, per-call results, and grading hashes are preserved. Historical training file keys retain original run-relative paths."
+}

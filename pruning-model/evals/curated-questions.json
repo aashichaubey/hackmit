@@ -1,0 +1,696 @@
+{
+  "sources_sha256": "e59a39dcea48d113fc9edea347080e89de2db2e7c0a53bd6ab236ffeb524b16e",
+  "author": "Codex agent source-authored evaluation (not independent human certification)",
+  "questions": [
+    {
+      "meeting_id": "ES2009d",
+      "question": "Which two remote-control design issues were mentioned?",
+      "reference_answer": "Energy source and budget control.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Energy source was mentioned.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "Budget control was mentioned.",
+          "evidence_ids": [
+            2
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "ES2009d",
+      "question": "What did the group plan after discussing their ideal remote control?",
+      "reference_answer": "Their group presentation.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They moved on to plan their group presentation.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "ES2009d",
+      "question": "What presentation-related matters and comparison did they discuss?",
+      "reference_answer": "PPT content, what to mention or omit, and comparison with competitors.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They discussed what the PPT should include.",
+          "evidence_ids": [
+            4
+          ]
+        },
+        {
+          "claim": "They discussed what they should and should not mention.",
+          "evidence_ids": [
+            4
+          ]
+        },
+        {
+          "claim": "They compared their work with competitors.",
+          "evidence_ids": [
+            4
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "ES2009d",
+      "question": "Was this the first or last meeting of their work?",
+      "reference_answer": "The last meeting.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "This was the last meeting of their work.",
+          "evidence_ids": [
+            1
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "ES2009d",
+      "question": "Which design issues were reviewed, and what did they plan after discussing the ideal remote control?",
+      "reference_answer": "Energy source and budget control were reviewed; they then planned the group presentation.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Energy source and budget control were reviewed.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "They planned their group presentation after discussing the ideal remote control.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": [
+        "multiple_passages"
+      ]
+    },
+    {
+      "meeting_id": "ES2009d",
+      "question": "What exact monetary budget was agreed for the remote control?",
+      "reference_answer": "Not stated.",
+      "answerable": false,
+      "facts": [],
+      "tags": [
+        "unanswerable"
+      ]
+    },
+    {
+      "meeting_id": "IS1006d",
+      "question": "Who showed the product appearance and texture using a working prototype?",
+      "reference_answer": "The user interface designer.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The user interface designer showed appearance and texture with a working prototype.",
+          "evidence_ids": [
+            2
+          ]
+        }
+      ],
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "IS1006d",
+      "question": "Who presented technical specifications after the prototype demonstration?",
+      "reference_answer": "The industrial designer.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The industrial designer presented technical specifications.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "IS1006d",
+      "question": "What average evaluation score did the controller receive, and what did it imply?",
+      "reference_answer": "2.17, implying it was good.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The average score was 2.17.",
+          "evidence_ids": [
+            4
+          ]
+        },
+        {
+          "claim": "The score implied it was good.",
+          "evidence_ids": [
+            4
+          ]
+        }
+      ],
+      "tags": [
+        "exact_value"
+      ]
+    },
+    {
+      "meeting_id": "IS1006d",
+      "question": "How did the quoted cost change, and why did it need to change?",
+      "reference_answer": "The original $17.80 quotation was over budget; it was reduced to under $12.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The original quotation was $17.80 and over budget.",
+          "evidence_ids": [
+            5
+          ]
+        },
+        {
+          "claim": "The final cost was reduced to under $12.",
+          "evidence_ids": [
+            6
+          ]
+        }
+      ],
+      "tags": [
+        "correction",
+        "multiple_passages",
+        "exact_value"
+      ]
+    },
+    {
+      "meeting_id": "IS1006d",
+      "question": "What did the group do at the end of the meeting?",
+      "reference_answer": "Self-assessment and celebration of project completion.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They did self-assessment.",
+          "evidence_ids": [
+            7
+          ]
+        },
+        {
+          "claim": "They celebrated project completion.",
+          "evidence_ids": [
+            7
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "IS1006d",
+      "question": "What was the exact final cost in dollars, rather than its upper bound?",
+      "reference_answer": "The exact final cost is not stated; only under $12 is given.",
+      "answerable": false,
+      "facts": [],
+      "tags": [
+        "unanswerable"
+      ]
+    },
+    {
+      "meeting_id": "TS3009b",
+      "question": "What new requirements did the Project Manager mention?",
+      "reference_answer": "One recognizable middle button, a handy design, rubber materials, and no teletext.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "One recognizable button in the middle was required.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "A handy design and rubber materials were required.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "They would not use teletext.",
+          "evidence_ids": [
+            2
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "TS3009b",
+      "question": "What functional requirements did Marketing present?",
+      "reference_answer": "A fancy look, ease of use, LCD, and speech recognition.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Marketing presented a fancy look and ease of use.",
+          "evidence_ids": [
+            3
+          ]
+        },
+        {
+          "claim": "Marketing presented LCD and speech recognition.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "TS3009b",
+      "question": "What did the Industrial Designer introduce?",
+      "reference_answer": "Technical design and working design on remote interfaces.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The Industrial Designer introduced technical and working design on remote interfaces.",
+          "evidence_ids": [
+            4
+          ]
+        }
+      ],
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "TS3009b",
+      "question": "What final approach and main button arrangement did the group adopt?",
+      "reference_answer": "A user-centered approach, fewer main buttons, and a big middle circle with power, channel, and volume buttons.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The group adopted a user-centered approach to reduce the main buttons.",
+          "evidence_ids": [
+            5
+          ]
+        },
+        {
+          "claim": "A big middle circle would contain power, channel, and volume buttons.",
+          "evidence_ids": [
+            5
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "TS3009b",
+      "question": "Did the requirements include teletext, and did Marketing mention speech recognition?",
+      "reference_answer": "Teletext would not be used; Marketing did mention speech recognition.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They would not use teletext.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "Marketing included speech recognition.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": [
+        "negation",
+        "multiple_passages"
+      ]
+    },
+    {
+      "meeting_id": "TS3009b",
+      "question": "What was the scheduled launch date?",
+      "reference_answer": "Not stated.",
+      "answerable": false,
+      "facts": [],
+      "tags": [
+        "unanswerable"
+      ]
+    },
+    {
+      "meeting_id": "ES2011c",
+      "question": "Which roles presented component design, current trend, and interface design, respectively?",
+      "reference_answer": "Industrial Designer, Marketing, and User Interface, respectively.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Industrial Designer presented component design.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "Marketing presented the current trend.",
+          "evidence_ids": [
+            2
+          ]
+        },
+        {
+          "claim": "User Interface presented interface design.",
+          "evidence_ids": [
+            2
+          ]
+        }
+      ],
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "ES2011c",
+      "question": "What theme was identified as the current marketing trend?",
+      "reference_answer": "A fruit and vegetable theme.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The current marketing trend was the fruit and vegetable theme.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "ES2011c",
+      "question": "What did the group decide about a screen and its replacement?",
+      "reference_answer": "A screen was unnecessary; the TV could serve as the screen.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "A separate screen was considered unnecessary.",
+          "evidence_ids": [
+            5
+          ]
+        },
+        {
+          "claim": "The TV could be used as the screen instead.",
+          "evidence_ids": [
+            5
+          ]
+        }
+      ],
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "meeting_id": "ES2011c",
+      "question": "What became the preferred energy according to these notes?",
+      "reference_answer": "Kryptonite.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Kryptonite became the preferred energy.",
+          "evidence_ids": [
+            6
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "ES2011c",
+      "question": "What screen decision and energy preference did the group reach?",
+      "reference_answer": "No separate screen was needed because TV could be used instead; Kryptonite became preferred energy.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "A screen was unnecessary and the TV could be used instead.",
+          "evidence_ids": [
+            5
+          ]
+        },
+        {
+          "claim": "Kryptonite became the preferred energy.",
+          "evidence_ids": [
+            6
+          ]
+        }
+      ],
+      "tags": [
+        "multiple_passages"
+      ]
+    },
+    {
+      "meeting_id": "ES2011c",
+      "question": "What manufacturing budget was agreed?",
+      "reference_answer": "Not stated.",
+      "answerable": false,
+      "facts": [],
+      "tags": [
+        "unanswerable"
+      ]
+    },
+    {
+      "meeting_id": "IS1003c",
+      "question": "Which three user-interface concepts were introduced?",
+      "reference_answer": "Google controller, fancy controller, and intelligent controller.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The concepts were Google controller, fancy controller, and intelligent controller.",
+          "evidence_ids": [
+            2
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "IS1003c",
+      "question": "Which concepts did the project manager approve, and which was seriously questioned?",
+      "reference_answer": "Google controller and fancy controller were approved; intelligent controller was seriously questioned.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Google controller and fancy controller were approved.",
+          "evidence_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "claim": "Intelligent controller was seriously questioned.",
+          "evidence_ids": [
+            2,
+            3
+          ]
+        }
+      ],
+      "tags": [
+        "multiple_passages",
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "IS1003c",
+      "question": "What controller combination did the group finally select?",
+      "reference_answer": "A mix of Google controller and fancy controller, with some simple vocal commands.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They decided to mix Google controller and fancy controller.",
+          "evidence_ids": [
+            4
+          ]
+        },
+        {
+          "claim": "The combination included some simple vocal commands.",
+          "evidence_ids": [
+            4
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "IS1003c",
+      "question": "What material, button, power, and chip suggestions did the group agree to?",
+      "reference_answer": "Wood, buttons with LCD, classical battery and solar energy, and low-level chips.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Wood and buttons with LCD were suggested and agreed.",
+          "evidence_ids": [
+            6
+          ]
+        },
+        {
+          "claim": "Classical battery and solar energy alimentation were suggested and agreed.",
+          "evidence_ids": [
+            6
+          ]
+        },
+        {
+          "claim": "Low-level chips were suggested and agreed.",
+          "evidence_ids": [
+            6
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "IS1003c",
+      "question": "What three user-facing requirements came from the market analysis?",
+      "reference_answer": "A fancy look and feel, technological innovation, and user-friendliness.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "Users wanted a fancy look and feel.",
+          "evidence_ids": [
+            8
+          ]
+        },
+        {
+          "claim": "The product should be technologically innovative.",
+          "evidence_ids": [
+            8
+          ]
+        },
+        {
+          "claim": "Being user-friendly was important.",
+          "evidence_ids": [
+            9
+          ]
+        }
+      ],
+      "tags": [
+        "multiple_passages"
+      ]
+    },
+    {
+      "meeting_id": "IS1003c",
+      "question": "What exact final selling price was selected?",
+      "reference_answer": "Not stated.",
+      "answerable": false,
+      "facts": [],
+      "tags": [
+        "unanswerable"
+      ]
+    },
+    {
+      "meeting_id": "TS3004a",
+      "question": "Who announced the task and agenda at the start?",
+      "reference_answer": "The Project Manager.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The Project Manager announced the task and agenda.",
+          "evidence_ids": [
+            1
+          ]
+        }
+      ],
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "meeting_id": "TS3004a",
+      "question": "What qualities should the remote control have?",
+      "reference_answer": "It should be original, trendy, and user-friendly.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The remote control should be original, trendy, and user-friendly.",
+          "evidence_ids": [
+            2
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "TS3004a",
+      "question": "What equipment did the group test and why?",
+      "reference_answer": "Laptops, pens, and whiteboard, to ensure they would work.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They tested laptops, pens, and the whiteboard.",
+          "evidence_ids": [
+            3
+          ]
+        },
+        {
+          "claim": "Testing was to ensure the equipment would work.",
+          "evidence_ids": [
+            3
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "TS3004a",
+      "question": "What did the group agree about the remote control after discussing its budget?",
+      "reference_answer": "With such a high price, it had to be a universal remote control.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "The group agreed it had to be a universal remote control with such a high price.",
+          "evidence_ids": [
+            4
+          ]
+        }
+      ],
+      "tags": [
+        "condition"
+      ]
+    },
+    {
+      "meeting_id": "TS3004a",
+      "question": "What design aspects did the group discuss and how did they record them?",
+      "reference_answer": "Functions, shape, and other external design, drawn as a conceptual draft.",
+      "answerable": true,
+      "facts": [
+        {
+          "claim": "They discussed functions, shape, and other external design.",
+          "evidence_ids": [
+            5
+          ]
+        },
+        {
+          "claim": "They drew them as a conceptual draft.",
+          "evidence_ids": [
+            5
+          ]
+        }
+      ],
+      "tags": []
+    },
+    {
+      "meeting_id": "TS3004a",
+      "question": "What exact price or budget amount was stated?",
+      "reference_answer": "Not stated.",
+      "answerable": false,
+      "facts": [],
+      "tags": [
+        "unanswerable"
+      ]
+    }
+  ]
+}

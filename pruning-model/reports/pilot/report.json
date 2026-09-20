@@ -1,0 +1,296 @@
+{
+  "complete": true,
+  "manifest": {
+    "dataset_sha256": "b10f1b5d8cf78d9d48ed65626dd0f61c0bffbb8585b0bec8e58aaa97037a0b0e",
+    "checkpoint_metadata_sha256": "52e0eb777527c90e7576b3484965e4b2b909a818838657d7cc772b557432eece",
+    "api_journal": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail/api.jsonl",
+    "encoder_sha256": "64cbb71d663350fe647743b34a53418cdbbad1b354410f4aa1e852e0dc6def47",
+    "head_sha256": "2edb4ee6844df170520984a5c8d5eacc64ac2911245878597a68ade5187f1b09",
+    "split": "test",
+    "generation": {
+      "model": "deepseek/deepseek-v4-flash",
+      "temperature": 0,
+      "top_p": 1,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "provider": {
+        "only": [
+          "parasail/fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      }
+    },
+    "variants": {
+      "lexical_50": null,
+      "llmlingua2_50": null,
+      "modernbert_conservative": 0.48,
+      "modernbert_balanced": 0.49,
+      "modernbert_aggressive": 0.5
+    },
+    "cases": [
+      "ES2011c:curated:18",
+      "ES2011c:curated:19",
+      "ES2011c:curated:20",
+      "ES2011c:curated:21",
+      "ES2011c:curated:22",
+      "ES2011c:curated:23",
+      "IS1003c:curated:24",
+      "IS1003c:curated:25",
+      "IS1003c:curated:26",
+      "IS1003c:curated:27",
+      "IS1003c:curated:28",
+      "IS1003c:curated:29",
+      "TS3004a:curated:30",
+      "TS3004a:curated:31",
+      "TS3004a:curated:32",
+      "TS3004a:curated:33",
+      "TS3004a:curated:34",
+      "TS3004a:curated:35"
+    ],
+    "expected_pairs": 93,
+    "control_cases": [
+      "ES2011c:curated:18",
+      "ES2011c:curated:19",
+      "ES2011c:curated:20"
+    ],
+    "thresholds_from": "validation only",
+    "grader": "DeepSeek anonymous-answer reference-fact evaluator; same pinned provider as answers",
+    "raw_results": "/Users/kaisong/code/hackmit/pruning-model/runs/benchmark-sweep-parasail",
+    "grade_review_sha256": "bb3398a2700f5ed897562ad70bc908aabf4444e63942009e26c5d6c1d5413876",
+    "scoring": "Model judge with explicit grade review by Codex agent (source audit; arm identities visible); raw grades preserved separately; not independent human certification."
+  },
+  "variants": {
+    "lexical_50": {
+      "pairs": 18,
+      "meetings": 3,
+      "original_accuracy": 1.0,
+      "compressed_accuracy": 0.8888888888888888,
+      "accuracy_loss_pp": 11.11111111111111,
+      "regressions": 2,
+      "improvements": 0,
+      "regression_rate_given_original_correct": 0.1111111111111111,
+      "mean_completeness_loss_pp": 5.555555555555555,
+      "mean_original_completeness": 1.0,
+      "mean_compressed_completeness": 0.9444444444444444,
+      "completeness_measurement_coverage": 1.0,
+      "evidence_recall": 0.9444444444444444,
+      "token_measurement_coverage": 1.0,
+      "total_original_input_tokens": 4323,
+      "total_compressed_input_tokens": 2869,
+      "total_tokens_saved": 1454,
+      "overall_percent_saved": 33.634050427943556,
+      "mean_tokens_saved_per_call": 80.77777777777777,
+      "median_tokens_saved_per_call": 90.5,
+      "mean_percent_saved_per_call": 33.714009881280006,
+      "median_percent_saved_per_call": 34.61657275603005,
+      "error_pairs": 0,
+      "uncertainty": {
+        "method": "paired meeting-cluster percentile bootstrap",
+        "resamples": 2000,
+        "accuracy_loss_pp_95ci": [
+          0.0,
+          16.666666666666668
+        ],
+        "percent_saved_95ci": [
+          30.19287833827893,
+          37.38244514106583
+        ],
+        "caution": "Exploratory uncertainty; a small number of meetings cannot establish generalization."
+      }
+    },
+    "llmlingua2_50": {
+      "pairs": 18,
+      "meetings": 3,
+      "original_accuracy": 1.0,
+      "compressed_accuracy": 0.8888888888888888,
+      "accuracy_loss_pp": 11.11111111111111,
+      "regressions": 2,
+      "improvements": 0,
+      "regression_rate_given_original_correct": 0.1111111111111111,
+      "mean_completeness_loss_pp": 2.7777777777777777,
+      "mean_original_completeness": 1.0,
+      "mean_compressed_completeness": 0.9722222222222222,
+      "completeness_measurement_coverage": 1.0,
+      "evidence_recall": 0.0,
+      "token_measurement_coverage": 1.0,
+      "total_original_input_tokens": 4323,
+      "total_compressed_input_tokens": 2979,
+      "total_tokens_saved": 1344,
+      "overall_percent_saved": 31.089521165857043,
+      "mean_tokens_saved_per_call": 74.66666666666667,
+      "median_tokens_saved_per_call": 69.0,
+      "mean_percent_saved_per_call": 30.71158571797726,
+      "median_percent_saved_per_call": 30.872637732222934,
+      "error_pairs": 0,
+      "uncertainty": {
+        "method": "paired meeting-cluster percentile bootstrap",
+        "resamples": 2000,
+        "accuracy_loss_pp_95ci": [
+          0.0,
+          16.666666666666668
+        ],
+        "percent_saved_95ci": [
+          26.802507836990596,
+          34.60859329017069
+        ],
+        "caution": "Exploratory uncertainty; a small number of meetings cannot establish generalization."
+      }
+    },
+    "modernbert_aggressive": {
+      "pairs": 18,
+      "meetings": 3,
+      "original_accuracy": 1.0,
+      "compressed_accuracy": 0.7222222222222222,
+      "accuracy_loss_pp": 27.77777777777778,
+      "regressions": 5,
+      "improvements": 0,
+      "regression_rate_given_original_correct": 0.2777777777777778,
+      "mean_completeness_loss_pp": 16.666666666666664,
+      "mean_original_completeness": 1.0,
+      "mean_compressed_completeness": 0.8333333333333334,
+      "completeness_measurement_coverage": 1.0,
+      "evidence_recall": 0.7222222222222222,
+      "token_measurement_coverage": 1.0,
+      "total_original_input_tokens": 4323,
+      "total_compressed_input_tokens": 2898,
+      "total_tokens_saved": 1425,
+      "overall_percent_saved": 32.96321998612075,
+      "mean_tokens_saved_per_call": 79.16666666666667,
+      "median_tokens_saved_per_call": 69.0,
+      "mean_percent_saved_per_call": 31.420874907072797,
+      "median_percent_saved_per_call": 32.39508023276318,
+      "error_pairs": 0,
+      "uncertainty": {
+        "method": "paired meeting-cluster percentile bootstrap",
+        "resamples": 2000,
+        "accuracy_loss_pp_95ci": [
+          0.0,
+          66.66666666666667
+        ],
+        "percent_saved_95ci": [
+          8.753709198813056,
+          51.030017657445555
+        ],
+        "caution": "Exploratory uncertainty; a small number of meetings cannot establish generalization."
+      }
+    },
+    "modernbert_balanced": {
+      "pairs": 18,
+      "meetings": 3,
+      "original_accuracy": 1.0,
+      "compressed_accuracy": 0.7777777777777778,
+      "accuracy_loss_pp": 22.22222222222222,
+      "regressions": 4,
+      "improvements": 0,
+      "regression_rate_given_original_correct": 0.2222222222222222,
+      "mean_completeness_loss_pp": 11.11111111111111,
+      "mean_original_completeness": 1.0,
+      "mean_compressed_completeness": 0.8888888888888888,
+      "completeness_measurement_coverage": 1.0,
+      "evidence_recall": 0.7777777777777778,
+      "token_measurement_coverage": 1.0,
+      "total_original_input_tokens": 4323,
+      "total_compressed_input_tokens": 3125,
+      "total_tokens_saved": 1198,
+      "overall_percent_saved": 27.712236872542217,
+      "mean_tokens_saved_per_call": 66.55555555555556,
+      "median_tokens_saved_per_call": 53.0,
+      "mean_percent_saved_per_call": 26.052583949890074,
+      "median_percent_saved_per_call": 24.889790160465527,
+      "error_pairs": 0,
+      "uncertainty": {
+        "method": "paired meeting-cluster percentile bootstrap",
+        "resamples": 2000,
+        "accuracy_loss_pp_95ci": [
+          0.0,
+          50.0
+        ],
+        "percent_saved_95ci": [
+          8.753709198813056,
+          45.90935844614479
+        ],
+        "caution": "Exploratory uncertainty; a small number of meetings cannot establish generalization."
+      }
+    },
+    "modernbert_conservative": {
+      "pairs": 18,
+      "meetings": 3,
+      "original_accuracy": 1.0,
+      "compressed_accuracy": 0.8333333333333334,
+      "accuracy_loss_pp": 16.666666666666668,
+      "regressions": 3,
+      "improvements": 0,
+      "regression_rate_given_original_correct": 0.16666666666666666,
+      "mean_completeness_loss_pp": 9.25925925925926,
+      "mean_original_completeness": 1.0,
+      "mean_compressed_completeness": 0.9074074074074074,
+      "completeness_measurement_coverage": 1.0,
+      "evidence_recall": 0.8888888888888888,
+      "token_measurement_coverage": 1.0,
+      "total_original_input_tokens": 4323,
+      "total_compressed_input_tokens": 3058,
+      "total_tokens_saved": 1265,
+      "overall_percent_saved": 29.262086513994912,
+      "mean_tokens_saved_per_call": 70.27777777777777,
+      "median_tokens_saved_per_call": 43.5,
+      "mean_percent_saved_per_call": 26.931506312926807,
+      "median_percent_saved_per_call": 20.745645863570395,
+      "error_pairs": 0,
+      "uncertainty": {
+        "method": "paired meeting-cluster percentile bootstrap",
+        "resamples": 2000,
+        "accuracy_loss_pp_95ci": [
+          0.0,
+          33.333333333333336
+        ],
+        "percent_saved_95ci": [
+          11.755485893416928,
+          52.61918775750441
+        ],
+        "caution": "Exploratory uncertainty; a small number of meetings cannot establish generalization."
+      }
+    },
+    "original_repeat": {
+      "pairs": 3,
+      "meetings": 1,
+      "original_accuracy": 1.0,
+      "compressed_accuracy": 1.0,
+      "accuracy_loss_pp": 0.0,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate_given_original_correct": 0.0,
+      "mean_completeness_loss_pp": 0.0,
+      "mean_original_completeness": 1.0,
+      "mean_compressed_completeness": 1.0,
+      "completeness_measurement_coverage": 1.0,
+      "evidence_recall": 1.0,
+      "token_measurement_coverage": 1.0,
+      "total_original_input_tokens": 643,
+      "total_compressed_input_tokens": 643,
+      "total_tokens_saved": 0,
+      "overall_percent_saved": 0.0,
+      "mean_tokens_saved_per_call": 0,
+      "median_tokens_saved_per_call": 0,
+      "mean_percent_saved_per_call": 0.0,
+      "median_percent_saved_per_call": 0.0,
+      "error_pairs": 0,
+      "uncertainty": {
+        "method": "meeting-cluster bootstrap",
+        "intervals": null,
+        "reason": "fewer than two meetings"
+      }
+    }
+  },
+  "actual_api_consumption": {
+    "started_calls": 259,
+    "completed_calls": 259,
+    "provider_reported_credits": null,
+    "note": "Includes answer, judge, and retry calls in this journal; comparison totals reuse the original arm."
+  },
+  "scoring": "Model judge with explicit grade review by Codex agent (source audit; arm identities visible); raw grades preserved separately; not independent human certification.",
+  "evidence_metric": "Strict complete annotated span retention; particularly conservative for token-pruning LLMLingua.",
+  "scope": "Public meeting-summary proxy for AI notes; limited pilot, not a production guarantee."
+}

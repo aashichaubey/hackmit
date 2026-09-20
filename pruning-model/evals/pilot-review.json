@@ -1,0 +1,557 @@
+{
+  "input_digest": "561bffbc1b0709bba2b049c6091e62eb32c96ab19ec74c9f15a4a8ec1ffdd8eb",
+  "reviewer": "Codex agent source review (not independent human certification)",
+  "examples": [
+    {
+      "id": "Bmr027:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr027:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr027:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr027:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr027:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr027:notes:5",
+      "verdict": "correct",
+      "reason": "IBM is explicitly named; an organization answers who.",
+      "correction": {
+        "answerable": true,
+        "reference_answer": "IBM performed the transcriptions.",
+        "keep_ids": [
+          3
+        ],
+        "facts": [
+          {
+            "claim": "IBM performed the transcriptions.",
+            "evidence_ids": [
+              3
+            ],
+            "quotes": [
+              "- The team also went over the transcriptions that IBM had done as well as storage space, which was finally looking up."
+            ]
+          }
+        ],
+        "tags": [
+          "attribution"
+        ]
+      }
+    },
+    {
+      "id": "ES2002a:notes:0",
+      "verdict": "correct",
+      "reason": "Distinguish the project goal from the purpose of a kickoff meeting.",
+      "correction": {
+        "question": "What product was the project aiming to design?"
+      }
+    },
+    {
+      "id": "ES2002a:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2002a:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2002a:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2002a:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2002a:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1001a:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1001a:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1001a:notes:2",
+      "verdict": "correct",
+      "reason": "The notes do not name the three steps; ask only the supported follow-up activity.",
+      "correction": {
+        "question": "What activity followed the explanation of the three design-process steps?",
+        "reference_answer": "Drawings of favourite animals followed as an imagination-inspiring activity.",
+        "facts": [
+          {
+            "claim": "Drawings of favourite animals followed as an imagination-inspiring activity.",
+            "evidence_ids": [
+              3
+            ],
+            "quotes": [
+              "- Then three steps of the design process were respectively introduced and explained by Project Manager, and drawings of favourite animals then followed as an imagination-inspiring activity."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "IS1001a:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1001a:notes:4",
+      "verdict": "correct",
+      "reason": "The specific requirements are absent; ask whether they were discussed.",
+      "correction": {
+        "question": "Were competitiveness-endowing remote-control design requirements discussed?",
+        "reference_answer": "Yes, they were proposed and carefully discussed.",
+        "facts": [
+          {
+            "claim": "Competitiveness-endowing requirements were proposed and carefully discussed.",
+            "evidence_ids": [
+              5
+            ],
+            "quotes": [
+              "- Competitiveness-endowing requirements for remote control design were then proposed and carefully discussed."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "IS1001a:notes:5",
+      "verdict": "correct",
+      "reason": "A role is named, but the complete attendance roster is not.",
+      "correction": {
+        "question": "What are the full names of every person who attended the meeting?"
+      }
+    },
+    {
+      "id": "education_1:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_1:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_1:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_1:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_1:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_1:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr018:notes:0",
+      "verdict": "correct",
+      "reason": "An all-topics answer also needs the explicit cross-talk discussion.",
+      "correction": {
+        "reference_answer": "The group discussed the preparation of a data sample for IBM, manual adjustment of time bins by transcribers, recognition results for a test set of digits data, forced alignments, Eurospeech 2001 submissions, and comments on the proceedings of the Human Language Technologies conference (HLT'01). Efforts to deal with cross-talk and improve forced alignments for non-digits data were also discussed.",
+        "keep_ids": [
+          1,
+          2,
+          4
+        ],
+        "facts": [
+          {
+            "claim": "The group discussed the preparation of a data sample for IBM, manual adjustment of time bins by transcribers, recognition results for a test set of digits data, and forced alignments.",
+            "evidence_ids": [
+              1
+            ],
+            "quotes": [
+              "- The group discussed the preparation of a data sample for IBM, the manual adjustment of time bins by transcribers, recognition results for a test set of digits data, and forced alignments."
+            ]
+          },
+          {
+            "claim": "Participants also talked about Eurospeech 2001 submissions and exchanged comments on the proceedings of the Human Language Technologies conference (HLT'01).",
+            "evidence_ids": [
+              2
+            ],
+            "quotes": [
+              "- Participants also talked about Eurospeech 2001 submissions, and exchanged comments on the proceedings of the recently attended Human Language Technologies conference (HLT'01)."
+            ]
+          },
+          {
+            "claim": "Efforts to deal with cross-talk and improve forced alignments for non-digits data were discussed.",
+            "evidence_ids": [
+              4
+            ],
+            "quotes": [
+              "- Efforts to deal with cross-talk and improve forced alignments for non-digits data were also discussed."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "Bmr018:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr018:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr018:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bmr018:notes:4",
+      "verdict": "reject",
+      "reason": "Ambiguous request for topics involving multiple items; redundant with the all-topics question."
+    },
+    {
+      "id": "Bmr018:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1008d:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1008d:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1008d:notes:2",
+      "verdict": "correct",
+      "reason": "The request for all subsequent topics omitted the final sports-season user-research strategy.",
+      "correction": {
+        "reference_answer": "After the presentations, the group discussed: budget calculations and profit goal, Marketing's challenges, using the internet for promotion and ordering/drop-shipping, product evaluation by market testing and feedback analysis, and whether to spare time for redesign before release. Finally, Industrial Designer proposed choosing sports seasons for effective user research.",
+        "keep_ids": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "facts": [
+          {
+            "claim": "The group did calculations on the budget and profit goal.",
+            "evidence_ids": [
+              3
+            ],
+            "quotes": [
+              "- Next, the group did calculations on the budget as well as the profit goal before Marketing showed the challenges of this project in terms of budget control and reaching the profit target."
+            ]
+          },
+          {
+            "claim": "Marketing showed challenges of budget control and reaching profit target.",
+            "evidence_ids": [
+              3
+            ],
+            "quotes": [
+              "- Next, the group did calculations on the budget as well as the profit goal before Marketing showed the challenges of this project in terms of budget control and reaching the profit target."
+            ]
+          },
+          {
+            "claim": "The group discussed using the internet for promotion and ordering/drop-shipping.",
+            "evidence_ids": [
+              4
+            ],
+            "quotes": [
+              "- The group then discussed using the internet for promotion and ordering and drop-shipping the product to the customer's residence."
+            ]
+          },
+          {
+            "claim": "The group discussed product evaluation by putting the prototype on the market and analyzing feedback.",
+            "evidence_ids": [
+              5
+            ],
+            "quotes": [
+              "- Finally, the subject moved to product evaluation by putting the prototype on the market and analyzing the feedback."
+            ]
+          },
+          {
+            "claim": "The group discussed whether to spare time for redesign before releasing to market.",
+            "evidence_ids": [
+              6
+            ],
+            "quotes": [
+              "- The group discussed whether they should spare time for the redesign process before releasing the product to the market."
+            ]
+          },
+          {
+            "claim": "Industrial Designer proposed choosing sports seasons for effective user research.",
+            "evidence_ids": [
+              7
+            ],
+            "quotes": [
+              "- Then Industrial Designer put up a strategy to do effective user research by choosing sports seasons."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "IS1008d:notes:3",
+      "verdict": "correct",
+      "reason": "No separate approval condition is stated; remove that unsupported question component.",
+      "correction": {
+        "question": "What strategy did the Industrial Designer propose for effective user research?"
+      }
+    },
+    {
+      "id": "IS1008d:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1008d:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bed009:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bed009:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bed009:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bed009:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "Bed009:notes:4",
+      "verdict": "correct",
+      "reason": "The notes name areas of concern, not the specific concerns themselves.",
+      "correction": {
+        "question": "What aspects of SmartKom were the subject of plans and concerns?"
+      }
+    },
+    {
+      "id": "Bed009:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2008a:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2008a:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2008a:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2008a:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "ES2008a:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_5:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_5:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_5:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_5:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_5:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_5:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1005a:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1005a:notes:1",
+      "verdict": "correct",
+      "reason": "Avoid incorrectly restricting the whiteboard activity to the start.",
+      "correction": {
+        "question": "What two introductory activities were the team members asked to do?"
+      }
+    },
+    {
+      "id": "IS1005a:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1005a:notes:3",
+      "verdict": "correct",
+      "reason": "Restrict the question to the two aspects actually covered by the reference.",
+      "correction": {
+        "question": "What suggestions were made about volume control and transmission technology?"
+      }
+    },
+    {
+      "id": "IS1005a:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "IS1005a:notes:5",
+      "verdict": "correct",
+      "reason": "The expected profit is explicitly about fifty million Euro.",
+      "correction": {
+        "answerable": true,
+        "reference_answer": "The expected profit was around fifty million Euro.",
+        "keep_ids": [
+          3
+        ],
+        "facts": [
+          {
+            "claim": "The expected profit was around fifty million Euro.",
+            "evidence_ids": [
+              3
+            ],
+            "quotes": [
+              "- Project manager wanted to sell this remote control for twenty five Euro and expected profit would be around fifty million Euro."
+            ]
+          }
+        ],
+        "tags": [
+          "exact_value"
+        ]
+      }
+    },
+    {
+      "id": "education_16:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_16:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_16:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_16:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_16:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "education_16:notes:5",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "TS3006d:notes:0",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "TS3006d:notes:1",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "TS3006d:notes:2",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "TS3006d:notes:3",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "TS3006d:notes:4",
+      "verdict": "accept",
+      "reason": "Read the complete notes and checked the question, reference answer, and selected evidence before training."
+    },
+    {
+      "id": "TS3006d:notes:5",
+      "verdict": "correct",
+      "reason": "Avoid the ambiguity between offering and conducting the questionnaire.",
+      "correction": {
+        "question": "How many respondents completed the questionnaire?"
+      }
+    }
+  ]
+}

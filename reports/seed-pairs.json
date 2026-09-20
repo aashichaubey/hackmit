@@ -1,0 +1,193 @@
+{
+  "kind": "parallel-pair token counts; assumes translation equivalence",
+  "tiktoken_version": "0.14.0",
+  "dictionary_sha256": "8189051f18b11a82b1434a0fd2337504a58c051c08adb62f0808d03b40d9bb89",
+  "encodings": {
+    "cl100k_base": {
+      "pairs": 9,
+      "english_tokens": 43,
+      "mandarin_tokens": 56,
+      "per_pair_min_tokens": 42,
+      "per_pair_savings_vs_english_percent": 2.33,
+      "english_wins": 5,
+      "mandarin_wins": 1,
+      "ties": 3,
+      "rows": [
+        {
+          "id": "ai",
+          "en": "artificial intelligence",
+          "zh": "人工智能",
+          "en_tokens": 3,
+          "zh_tokens": 5,
+          "preferred": "en",
+          "enabled": true
+        },
+        {
+          "id": "ml",
+          "en": "machine learning",
+          "zh": "机器学习",
+          "en_tokens": 2,
+          "zh_tokens": 5,
+          "preferred": "en",
+          "enabled": true
+        },
+        {
+          "id": "os",
+          "en": "operating system",
+          "zh": "操作系统",
+          "en_tokens": 3,
+          "zh_tokens": 2,
+          "preferred": "zh",
+          "enabled": true
+        },
+        {
+          "id": "asap",
+          "en": "as soon as possible",
+          "zh": "尽快",
+          "en_tokens": 4,
+          "zh_tokens": 4,
+          "preferred": "tie",
+          "enabled": true
+        },
+        {
+          "id": "detail",
+          "en": "Please provide a detailed explanation.",
+          "zh": "请详细解释。",
+          "en_tokens": 6,
+          "zh_tokens": 7,
+          "preferred": "en",
+          "enabled": true
+        },
+        {
+          "id": "keep-file",
+          "en": "Do not delete the file.",
+          "zh": "不要删除该文件。",
+          "en_tokens": 6,
+          "zh_tokens": 6,
+          "preferred": "tie",
+          "enabled": true
+        },
+        {
+          "id": "inheritance",
+          "en": "Python supports multiple inheritance.",
+          "zh": "Python 支持多重继承。",
+          "en_tokens": 5,
+          "zh_tokens": 11,
+          "preferred": "en",
+          "enabled": true
+        },
+        {
+          "id": "return-list",
+          "en": "This function returns a list.",
+          "zh": "此函数返回一个列表。",
+          "en_tokens": 6,
+          "zh_tokens": 6,
+          "preferred": "tie",
+          "enabled": true
+        },
+        {
+          "id": "meeting",
+          "en": "The meeting has been postponed until tomorrow.",
+          "zh": "会议已推迟到明天。",
+          "en_tokens": 8,
+          "zh_tokens": 10,
+          "preferred": "en",
+          "enabled": true
+        }
+      ]
+    },
+    "o200k_base": {
+      "pairs": 9,
+      "english_tokens": 43,
+      "mandarin_tokens": 39,
+      "per_pair_min_tokens": 36,
+      "per_pair_savings_vs_english_percent": 16.28,
+      "english_wins": 1,
+      "mandarin_wins": 5,
+      "ties": 3,
+      "rows": [
+        {
+          "id": "ai",
+          "en": "artificial intelligence",
+          "zh": "人工智能",
+          "en_tokens": 3,
+          "zh_tokens": 2,
+          "preferred": "zh",
+          "enabled": true
+        },
+        {
+          "id": "ml",
+          "en": "machine learning",
+          "zh": "机器学习",
+          "en_tokens": 2,
+          "zh_tokens": 2,
+          "preferred": "tie",
+          "enabled": true
+        },
+        {
+          "id": "os",
+          "en": "operating system",
+          "zh": "操作系统",
+          "en_tokens": 3,
+          "zh_tokens": 2,
+          "preferred": "zh",
+          "enabled": true
+        },
+        {
+          "id": "asap",
+          "en": "as soon as possible",
+          "zh": "尽快",
+          "en_tokens": 4,
+          "zh_tokens": 2,
+          "preferred": "zh",
+          "enabled": true
+        },
+        {
+          "id": "detail",
+          "en": "Please provide a detailed explanation.",
+          "zh": "请详细解释。",
+          "en_tokens": 6,
+          "zh_tokens": 4,
+          "preferred": "zh",
+          "enabled": true
+        },
+        {
+          "id": "keep-file",
+          "en": "Do not delete the file.",
+          "zh": "不要删除该文件。",
+          "en_tokens": 6,
+          "zh_tokens": 5,
+          "preferred": "zh",
+          "enabled": true
+        },
+        {
+          "id": "inheritance",
+          "en": "Python supports multiple inheritance.",
+          "zh": "Python 支持多重继承。",
+          "en_tokens": 5,
+          "zh_tokens": 8,
+          "preferred": "en",
+          "enabled": true
+        },
+        {
+          "id": "return-list",
+          "en": "This function returns a list.",
+          "zh": "此函数返回一个列表。",
+          "en_tokens": 6,
+          "zh_tokens": 6,
+          "preferred": "tie",
+          "enabled": true
+        },
+        {
+          "id": "meeting",
+          "en": "The meeting has been postponed until tomorrow.",
+          "zh": "会议已推迟到明天。",
+          "en_tokens": 8,
+          "zh_tokens": 8,
+          "preferred": "tie",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

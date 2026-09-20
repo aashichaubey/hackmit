@@ -1,0 +1,27 @@
+{
+  "kind": "parallel-pair token counts; assumes translation equivalence",
+  "tiktoken_version": "0.14.0",
+  "dictionary_sha256": "c1dca4c4b03c53daa21e2543135d73fca69a9f6304e8be3e95921da1f9147c49",
+  "encodings": {
+    "cl100k_base": {
+      "pairs": 225,
+      "english_tokens": 8939,
+      "mandarin_tokens": 10630,
+      "per_pair_min_tokens": 8905,
+      "per_pair_savings_vs_english_percent": 0.38,
+      "english_wins": 149,
+      "mandarin_wins": 11,
+      "ties": 65
+    },
+    "o200k_base": {
+      "pairs": 225,
+      "english_tokens": 8925,
+      "mandarin_tokens": 9195,
+      "per_pair_min_tokens": 8733,
+      "per_pair_savings_vs_english_percent": 2.15,
+      "english_wins": 101,
+      "mandarin_wins": 50,
+      "ties": 74
+    }
+  }
+}
