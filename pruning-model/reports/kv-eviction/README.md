@@ -1,5 +1,9 @@
 # Actual KV eviction with the 149M pruner
 
+This experiment tests selective KV deletion. It does **not** solve cache reuse
+after rewriting already-cached text; that separate question is tested in the
+[cache-repair experiment](../cache-repair/README.md).
+
 The prototype removes selected entries from a local answering model's real KV
 cache and continues inference without replaying history. In this small diagnostic,
 it reduced retained KV storage by **73.2%**, but factual answer correctness fell

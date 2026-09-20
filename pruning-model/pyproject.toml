@@ -19,6 +19,7 @@ dependencies = [
 
 [project.optional-dependencies]
 baselines = ["llmlingua>=0.2.2,<0.3"]
+bear2 = ["the-token-company==0.5.1"]
 
 [project.scripts]
 pruning-model = "pruning_model.cli:main"
