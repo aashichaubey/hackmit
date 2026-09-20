@@ -1,0 +1,15 @@
+{
+  "benchmark_sha256": "ad7b34f0308183d28de4e0f67184bda72a50c918dcbe6e0dfc38668fc74739d6",
+  "contexts": 5,
+  "qa_pairs": 25,
+  "models": {
+    "generation": "gpt-4.1-mini",
+    "answer": "gpt-4.1-mini",
+    "judge": "gpt-4.1-mini"
+  },
+  "target_model": "gpt-4.1-mini",
+  "tokenizer": "o200k_base",
+  "candidate_count": 3,
+  "bootstrap_seed": 1729,
+  "bootstrap_draws": 10000
+}
