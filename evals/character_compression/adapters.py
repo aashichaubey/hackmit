@@ -5,7 +5,7 @@ offline mock:
 
     compress(messages, compression_config)  -> CompressionResult
     generate(messages, generation_config)   -> GenerationResult
-    count_request_tokens(messages)          -> TokenCount
+    count_request_tokens(request)           -> TokenCount
 
 Two invariants are enforced structurally rather than by convention:
 
@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 import urllib.error
 import urllib.request
@@ -211,35 +212,92 @@ class DeepSeekTokenCounter:
 class RepoCompressor:
     """Adapter for this repository's real hybrid encoder.
 
-    The encoder is not implemented yet (`src/token_language/encoder/` is empty),
-    so construction fails loudly with the precise missing integration rather
-    than degrading to an identity transform.
+    Substitutes English spans with Mandarin ones only where the TARGET
+    tokenizer says it is cheaper, then prepends a codebook covering exactly
+    the entries used. This adapter owns the dictionary overhead; the runner
+    never adds it, so it cannot be double-counted.
     """
 
     name = "repo_hybrid_encoder"
     is_mock = False
+    VERSION = "encoder-0.1.0-greedy"
 
-    def __init__(self, dictionary_path: str | Path, **kwargs: Any) -> None:
+    #: Regions treated as quoted source data. Compressing inside them risks
+    #: literal-fidelity failures and would alter text the task asks the model
+    #: to copy verbatim, so they are protected by default.
+    SOURCE_BLOCK = re.compile(r"<(passage|data)>.*?</\1>", re.DOTALL | re.IGNORECASE)
+
+    def __init__(self, dictionary_path: str | Path, protect_source_blocks: bool = True,
+                 **kwargs: Any) -> None:
         import sys
 
         repo_src = Path(__file__).resolve().parents[2] / "src"
         if str(repo_src) not in sys.path:
             sys.path.insert(0, str(repo_src))
         try:
-            from token_language.encoder.encoder import Encoder  # type: ignore # noqa
+            from token_language.encoder.encoder import Encoder  # type: ignore
         except ImportError as exc:
             raise NotImplementedError(
-                "RepoCompressor requires token_language.encoder.encoder.Encoder, which "
-                "does not exist yet. Missing integration: (1) build the phrase "
-                "dictionary via scripts/build_dictionary.py, (2) implement the "
-                "Encoder with .encode(text) -> EncodingResult. Until then use "
-                "--compressor mock for offline harness tests; live mode is refused."
+                "RepoCompressor requires token_language.encoder.encoder.Encoder. "
+                "Build the dictionary via scripts/build_dictionary.py and implement "
+                "the Encoder. Live mode is refused until then."
             ) from exc
-        self._encoder = Encoder.from_dictionary(dictionary_path, **kwargs)
-        self.dictionary_path = str(dictionary_path)
+
+        path = Path(dictionary_path)
+        if not path.is_absolute():
+            path = (Path(__file__).resolve().parent / path).resolve()
+        self._encoder = Encoder.from_dictionary(path, **kwargs)
+        self.dictionary_path = str(path)
+        self.protect_source_blocks = protect_source_blocks
 
     def compress(self, messages: Messages, config: dict[str, Any]) -> CompressionResult:
-        raise NotImplementedError  # pragma: no cover - unreachable until Encoder lands
+        assert_no_gold_fields(messages, "RepoCompressor.compress")
+        started = time.perf_counter()
+
+        scope = config.get("scope", "user_only")
+        out: Messages = []
+        all_replacements = []
+        for m in sanitize_messages(messages):
+            if scope == "user_only" and m["role"] != "user":
+                out.append(m)
+                continue
+            protect = (
+                [(mm.start(), mm.end()) for mm in self.SOURCE_BLOCK.finditer(m["content"])]
+                if self.protect_source_blocks else []
+            )
+            result = self._encoder.encode(m["content"], protect=protect)
+            all_replacements.extend(result.replacements)
+            out.append({"role": m["role"], "content": result.encoded_text})
+
+        preamble = self._encoder.decoder_preamble(all_replacements)
+        if preamble:
+            if out and out[0]["role"] == "system":
+                out[0] = {"role": "system", "content": out[0]["content"] + "\n\n" + preamble}
+            else:
+                out.insert(0, {"role": "system", "content": preamble})
+
+        return CompressionResult(
+            messages=out,
+            metadata={
+                "substitutions": len(all_replacements),
+                "replacements": [
+                    {"original": r.original, "replacement": r.replacement,
+                     "tokens_before": r.tokens_before, "tokens_after": r.tokens_after,
+                     "semantic_score": r.semantic_score}
+                    for r in all_replacements
+                ],
+                "decoder_preamble_tokens": (
+                    self._encoder.tokenizer.count_tokens(preamble) if preamble else 0
+                ),
+                "scope": scope,
+                "source_blocks_protected": self.protect_source_blocks,
+                "dictionary_included_by": "compressor",
+                "dictionary_entries": len(self._encoder.entries),
+            },
+            latency_ms=(time.perf_counter() - started) * 1000,
+            compressor_version=self.VERSION,
+            dictionary_version=self._encoder.dictionary_version,
+        )
 
 
 class MockCompressor:

@@ -1,0 +1,28 @@
+{"id": "st_attribution_a", "pair_id": "st_attribution", "kind": "attribution", "text": "Sarah said John would finish it.", "question": "Who will finish it? Return only the name.", "answer": "John"}
+{"id": "st_attribution_b", "pair_id": "st_attribution", "kind": "attribution", "text": "Sarah would finish it, not John.", "question": "Who will finish it? Return only the name.", "answer": "Sarah"}
+{"id": "st_deadline_move_a", "pair_id": "st_deadline_move", "kind": "negation", "text": "The deadline moved from Thursday to Friday.", "question": "Is the deadline now Friday? Answer YES or NO.", "answer": "YES"}
+{"id": "st_deadline_move_b", "pair_id": "st_deadline_move", "kind": "negation", "text": "The deadline did not move from Thursday to Friday.", "question": "Is the deadline now Friday? Answer YES or NO.", "answer": "NO"}
+{"id": "st_agreement_a", "pair_id": "st_agreement", "kind": "negation", "text": "John agreed with Sarah.", "question": "Did John agree with Sarah? Answer YES or NO.", "answer": "YES"}
+{"id": "st_agreement_b", "pair_id": "st_agreement", "kind": "negation", "text": "John did not agree with Sarah.", "question": "Did John agree with Sarah? Answer YES or NO.", "answer": "NO"}
+{"id": "st_13_30_a", "pair_id": "st_13_30", "kind": "number", "text": "The batch contains 13 samples.", "question": "How many samples does the batch contain? Return only the number.", "answer": "13"}
+{"id": "st_13_30_b", "pair_id": "st_13_30", "kind": "number", "text": "The batch contains 30 samples.", "question": "How many samples does the batch contain? Return only the number.", "answer": "30"}
+{"id": "st_money_a", "pair_id": "st_money", "kind": "number", "text": "The contract is worth $1.5M.", "question": "What is the contract worth? Return only the amount.", "answer": "$1.5M"}
+{"id": "st_money_b", "pair_id": "st_money", "kind": "number", "text": "The contract is worth $15M.", "question": "What is the contract worth? Return only the amount.", "answer": "$15M"}
+{"id": "st_june_a", "pair_id": "st_june", "kind": "date", "text": "The filing is due June 3.", "question": "When is the filing due? Return only the date.", "answer": "June 3"}
+{"id": "st_june_b", "pair_id": "st_june", "kind": "date", "text": "The filing is due June 30.", "question": "When is the filing due? Return only the date.", "answer": "June 30"}
+{"id": "st_thursday_a", "pair_id": "st_thursday", "kind": "relative_date", "text": "The audit is due Thursday.", "question": "When is the audit due? Return only the day.", "answer": "Thursday"}
+{"id": "st_thursday_b", "pair_id": "st_thursday", "kind": "relative_date", "text": "The audit is due next Thursday.", "question": "When is the audit due? Return only the day.", "answer": "next Thursday"}
+{"id": "st_percent_a", "pair_id": "st_percent", "kind": "percentage", "text": "Coverage increased to 10%.", "question": "What is the coverage now? Return only the percentage.", "answer": "10%"}
+{"id": "st_percent_b", "pair_id": "st_percent", "kind": "percentage", "text": "Coverage increased to 100%.", "question": "What is the coverage now? Return only the percentage.", "answer": "100%"}
+{"id": "st_names_a", "pair_id": "st_names", "kind": "similar_names", "text": "Alice approved the budget.", "question": "Who approved the budget? Return only the name.", "answer": "Alice"}
+{"id": "st_names_b", "pair_id": "st_names", "kind": "similar_names", "text": "Alicia approved the budget.", "question": "Who approved the budget? Return only the name.", "answer": "Alicia"}
+{"id": "st_projects_a", "pair_id": "st_projects", "kind": "project_names", "text": "Project A shipped on time.", "question": "Which project shipped on time? Return only the project name.", "answer": "Project A"}
+{"id": "st_projects_b", "pair_id": "st_projects", "kind": "project_names", "text": "Project B shipped on time.", "question": "Which project shipped on time? Return only the project name.", "answer": "Project B"}
+{"id": "st_owner_swap_a", "pair_id": "st_owner_swap", "kind": "owner", "text": "Dan owns the migration; Priya owns the rollback.", "question": "Who owns the migration? Return only the name.", "answer": "Dan"}
+{"id": "st_owner_swap_b", "pair_id": "st_owner_swap", "kind": "owner", "text": "Priya owns the migration; Dan owns the rollback.", "question": "Who owns the migration? Return only the name.", "answer": "Priya"}
+{"id": "st_blocker_a", "pair_id": "st_blocker", "kind": "negation", "text": "The export is blocked on the migration.", "question": "Is the export blocked on the migration? Answer YES or NO.", "answer": "YES"}
+{"id": "st_blocker_b", "pair_id": "st_blocker", "kind": "negation", "text": "The export is not blocked on the migration.", "question": "Is the export blocked on the migration? Answer YES or NO.", "answer": "NO"}
+{"id": "st_conditional_a", "pair_id": "st_conditional", "kind": "conditional", "text": "We ship on Friday if testing passes.", "question": "Does testing passing guarantee a Friday ship? Answer YES or NO.", "answer": "YES"}
+{"id": "st_conditional_b", "pair_id": "st_conditional", "kind": "conditional", "text": "We ship on Friday only if testing passes.", "question": "Does testing passing guarantee a Friday ship? Answer YES or NO.", "answer": "NO"}
+{"id": "st_quantifier_a", "pair_id": "st_quantifier", "kind": "quantifier", "text": "At least 3 reviewers approved.", "question": "Could exactly 3 reviewers have approved? Answer YES or NO.", "answer": "YES"}
+{"id": "st_quantifier_b", "pair_id": "st_quantifier", "kind": "quantifier", "text": "More than 3 reviewers approved.", "question": "Could exactly 3 reviewers have approved? Answer YES or NO.", "answer": "NO"}

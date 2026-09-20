@@ -1,0 +1,30 @@
+{
+  "mode": "live",
+  "experiment_mode": "baseline_vs_baseline",
+  "fixtures": "eval_cases.jsonl",
+  "compressor": "repo",
+  "compressor_options": {
+    "dictionary_path": "../../data/dictionaries/phrases.jsonl",
+    "protect_source_blocks": true
+  },
+  "target": "openrouter",
+  "target_options": {
+    "model": "deepseek/deepseek-v4-flash",
+    "timeout": 90.0,
+    "api_key_env": "OPENROUTER_API_KEY"
+  },
+  "token_counter": "deepseek_local",
+  "token_counter_options": {"model": "deepseek-v4-flash"},
+  "generation": {"temperature": 0.0, "max_tokens": 2048, "seed": 17},
+  "compression_config": {"scope": "user_only"},
+  "compression_scope": "user_only",
+  "repeats": 1,
+  "seed": 17,
+  "timeout_s": 90.0,
+  "max_live_calls": 20,
+  "retry": {"max_retries": 0, "fallback_to_original": false},
+  "out_root": "runs",
+  "experiment_id": "live-control-orig-vs-orig",
+  "pricing": null,
+  "notes": "Original-versus-original control. Both arms send the identical original prompt, so any measured difference is ordinary generation variability, not a compression effect. Provides the noise floor against which the paired results are read."
+}

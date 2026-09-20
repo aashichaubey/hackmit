@@ -51,12 +51,40 @@ class LiveModeGuardTest(unittest.TestCase):
         cfg = Config(mode="mock", compressor="mock", target="mock", token_counter=None)
         self.assertTrue(Runner(cfg, OUT).compressor.is_mock)
 
-    def test_repo_compressor_reports_missing_integration(self):
+    def test_repo_compressor_requires_a_real_dictionary(self):
+        """The encoder now exists; a missing dictionary must still fail loudly
+        rather than degrading to an identity transform."""
         from adapters import RepoCompressor
 
-        with self.assertRaises(NotImplementedError) as ctx:
-            RepoCompressor(dictionary_path="nonexistent.jsonl")
-        self.assertIn("does not exist yet", str(ctx.exception))
+        with self.assertRaises(FileNotFoundError) as ctx:
+            RepoCompressor(dictionary_path="definitely_not_here.jsonl")
+        self.assertIn("build_dictionary", str(ctx.exception))
+
+    def test_repo_compressor_loads_and_compresses(self):
+        from adapters import RepoCompressor
+
+        dict_path = KIT.parents[1] / "data" / "dictionaries" / "phrases.jsonl"
+        if not dict_path.exists():
+            self.skipTest("dictionary not built; run scripts/build_dictionary.py")
+        c = RepoCompressor(dictionary_path=dict_path)
+        self.assertFalse(c.is_mock)
+        out = c.compress(
+            [{"role": "user", "content": "I don't know what happened."}], {"scope": "user_only"}
+        )
+        self.assertEqual(out.metadata["dictionary_included_by"], "compressor")
+        self.assertIsInstance(out.metadata["substitutions"], int)
+
+    def test_repo_compressor_protects_quoted_source_blocks(self):
+        from adapters import RepoCompressor
+
+        dict_path = KIT.parents[1] / "data" / "dictionaries" / "phrases.jsonl"
+        if not dict_path.exists():
+            self.skipTest("dictionary not built")
+        c = RepoCompressor(dictionary_path=dict_path, protect_source_blocks=True)
+        passage = "<passage>\nI don't know what happened.\n</passage>\nWho knows?"
+        out = c.compress([{"role": "user", "content": passage}], {"scope": "user_only"})
+        # Text inside <passage> must survive byte-identical.
+        self.assertIn("I don't know what happened.", out.messages[-1]["content"])
 
 
 class LiveBudgetTest(unittest.TestCase):

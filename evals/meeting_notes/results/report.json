@@ -1,0 +1,292 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "notes": 12,
+  "stress_cases": 28,
+  "methods": [
+    "raw",
+    "en_zh",
+    "simple_compression",
+    "new_language"
+  ],
+  "layers_run": [
+    "1",
+    "5"
+  ],
+  "layer5_economics": {
+    "raw": {
+      "context_tokens": 360,
+      "grammar_tokens": 0,
+      "gross_savings": 0.0,
+      "net_savings_amortized": 0.0,
+      "net_savings_per_request": 0.0,
+      "breakeven_original_tokens": null,
+      "compression_ratio": 1.0
+    },
+    "en_zh": {
+      "context_tokens": 360,
+      "grammar_tokens": 0,
+      "gross_savings": 0.0,
+      "net_savings_amortized": 0.0,
+      "net_savings_per_request": 0.0,
+      "breakeven_original_tokens": null,
+      "compression_ratio": 1.0
+    },
+    "simple_compression": {
+      "context_tokens": 296,
+      "grammar_tokens": 0,
+      "gross_savings": 0.1778,
+      "net_savings_amortized": 0.1778,
+      "net_savings_per_request": 0.1778,
+      "breakeven_original_tokens": null,
+      "compression_ratio": 1.216
+    },
+    "new_language": {
+      "context_tokens": 322,
+      "grammar_tokens": 106,
+      "gross_savings": 0.1056,
+      "net_savings_amortized": -0.1889,
+      "net_savings_per_request": -3.4278,
+      "breakeven_original_tokens": 1004,
+      "compression_ratio": 1.118
+    },
+    "_base_tokens": 360,
+    "_notes": 12
+  },
+  "layer1_facts": {
+    "raw": {
+      "facts_total": 53,
+      "facts_recovered": 53,
+      "fact_accuracy": 1.0,
+      "critical_failures": 0,
+      "notes_with_broken_negation": 0,
+      "failures": []
+    },
+    "en_zh": {
+      "facts_total": 53,
+      "facts_recovered": 53,
+      "fact_accuracy": 1.0,
+      "critical_failures": 0,
+      "notes_with_broken_negation": 0,
+      "failures": []
+    },
+    "simple_compression": {
+      "facts_total": 53,
+      "facts_recovered": 46,
+      "fact_accuracy": 0.8679,
+      "critical_failures": 4,
+      "notes_with_broken_negation": 0,
+      "failures": [
+        {
+          "note": "mn_negation_agreement",
+          "fact": "negation",
+          "missing": [
+            "statement:John did not agree with Sarah"
+          ]
+        },
+        {
+          "note": "mn_numbers_percent",
+          "fact": "number",
+          "missing": [
+            "value:1.5M"
+          ]
+        },
+        {
+          "note": "mn_conditional",
+          "fact": "conditional",
+          "missing": [
+            "condition:load testing passes by Wednesday",
+            "consequence:ships on Friday"
+          ]
+        },
+        {
+          "note": "mn_conditional",
+          "fact": "decision",
+          "missing": [
+            "value:ships on Friday"
+          ]
+        },
+        {
+          "note": "mn_relative_date",
+          "fact": "negation",
+          "missing": [
+            "statement:not this Thursday"
+          ]
+        },
+        {
+          "note": "mn_project_ab",
+          "fact": "project",
+          "missing": [
+            "value:Project A"
+          ]
+        },
+        {
+          "note": "mn_project_ab",
+          "fact": "owner",
+          "missing": [
+            "object:Project A"
+          ]
+        }
+      ]
+    },
+    "new_language": {
+      "facts_total": 53,
+      "facts_recovered": 15,
+      "fact_accuracy": 0.283,
+      "critical_failures": 27,
+      "notes_with_broken_negation": 0,
+      "failures": [
+        {
+          "note": "mn_simple_action",
+          "fact": "person",
+          "missing": [
+            "value:Sarah"
+          ]
+        },
+        {
+          "note": "mn_simple_action",
+          "fact": "person",
+          "missing": [
+            "value:Dan"
+          ]
+        },
+        {
+          "note": "mn_simple_action",
+          "fact": "project",
+          "missing": [
+            "value:API integration"
+          ]
+        },
+        {
+          "note": "mn_simple_action",
+          "fact": "action_item",
+          "missing": [
+            "action:finish",
+            "deadline:Thursday",
+            "object:API integration",
+            "person:Sarah"
+          ]
+        },
+        {
+          "note": "mn_simple_action",
+          "fact": "deadline",
+          "missing": [
+            "person:Sarah",
+            "value:Thursday"
+          ]
+        },
+        {
+          "note": "mn_changed_deadline",
+          "fact": "project",
+          "missing": [
+            "value:billing rollout"
+          ]
+        },
+        {
+          "note": "mn_changed_deadline",
+          "fact": "status_change",
+          "missing": [
+            "from_value:Thursday",
+            "object:billing rollout deadline"
+          ]
+        },
+        {
+          "note": "mn_changed_deadline",
+          "fact": "deadline",
+          "missing": [
+            "project:billing rollout"
+          ]
+        },
+        {
+          "note": "mn_negation_agreement",
+          "fact": "person",
+          "missing": [
+            "value:John"
+          ]
+        },
+        {
+          "note": "mn_negation_agreement",
+          "fact": "person",
+          "missing": [
+            "value:Sarah"
+          ]
+        },
+        {
+          "note": "mn_negation_agreement",
+          "fact": "disagreement",
+          "missing": [
+            "and_:Sarah",
+            "between:John"
+          ]
+        },
+        {
+          "note": "mn_negation_agreement",
+          "fact": "negation",
+          "missing": [
+            "statement:John did not agree with Sarah"
+          ]
+        },
+        {
+          "note": "mn_numbers_percent",
+          "fact": "percentage",
+          "missing": [
+            "from_value:13%"
+          ]
+        },
+        {
+          "note": "mn_numbers_percent",
+          "fact": "status_change",
+          "missing": [
+            "from_value:13%",
+            "object:checkout conversion"
+          ]
+        },
+        {
+          "note": "mn_similar_names",
+          "fact": "person",
+          "missing": [
+            "value:Alice"
+          ]
+        },
+        {
+          "note": "mn_similar_names",
+          "fact": "person",
+          "missing": [
+            "value:Alicia"
+          ]
+        },
+        {
+          "note": "mn_similar_names",
+          "fact": "owner",
+          "missing": [
+            "object:search reindex",
+            "person:Alice"
+          ]
+        },
+        {
+          "note": "mn_similar_names",
+          "fact": "owner",
+          "missing": [
+            "object:billing export",
+            "person:Alicia"
+          ]
+        },
+        {
+          "note": "mn_blocker_dependency",
+          "fact": "blocker",
+          "missing": [
+            "blocked_on:schema migration",
+            "object:data export"
+          ]
+        },
+        {
+          "note": "mn_blocker_dependency",
+          "fact": "dependency",
+          "missing": [
+            "depends_on:schema migration",
+            "object:data export"
+          ]
+        }
+      ]
+    }
+  }
+}

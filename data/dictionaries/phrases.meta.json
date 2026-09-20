@@ -1,0 +1,17 @@
+{
+  "dictionary_version": "52146e43bf31c6df",
+  "entries": 107,
+  "tokenizer_id": "deepseek-v4-flash",
+  "translation_model": "deepseek/deepseek-v4-flash",
+  "embedding_model": "labse",
+  "semantic_threshold": 0.7,
+  "source": "data/processed/train.jsonl",
+  "provenance": "mined from the TRAIN split of the parallel corpus; evaluation fixtures were never used",
+  "stats": {
+    "translated": 220,
+    "reject_not_cheaper": 94,
+    "kept": 107,
+    "reject_similarity": 18,
+    "reject_invariant": 1
+  }
+}

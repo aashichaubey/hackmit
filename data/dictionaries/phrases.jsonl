@@ -1,0 +1,107 @@
+{"concept_id":"479dca757111","english":"lived after he became the father","mandarin":"他成为父亲后活着","english_tokens":7,"mandarin_tokens":5,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.838,"frequency":4,"domains":[]}
+{"concept_id":"50d22ec1f665","english":"years after he became the father","mandarin":"他成为父亲...年后","english_tokens":6,"mandarin_tokens":5,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7793,"frequency":7,"domains":[]}
+{"concept_id":"da6e2f02812d","english":"command is an alias of setarch","mandarin":"命令是setarch的别名","english_tokens":7,"mandarin_tokens":6,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8501,"frequency":5,"domains":[]}
+{"concept_id":"96adb76b1d23","english":"command is an alias of pacman","mandarin":"命令是pacman的别名","english_tokens":7,"mandarin_tokens":6,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8406,"frequency":7,"domains":[]}
+{"concept_id":"560e6d652398","english":"filesystem inside a partition","mandarin":"分区内的文件系统","english_tokens":5,"mandarin_tokens":4,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8187,"frequency":6,"domains":[]}
+{"concept_id":"919bfc34920c","english":"evening and there was morning","mandarin":"有晚上，有早晨","english_tokens":6,"mandarin_tokens":5,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7398,"frequency":5,"domains":[]}
+{"concept_id":"6e56a1d1cb16","english":"father of sons and daughters","mandarin":"儿女之父","english_tokens":5,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7799,"frequency":12,"domains":[]}
+{"concept_id":"6430a4b558fa","english":"after he became the father","mandarin":"在他成为父亲之后","english_tokens":5,"mandarin_tokens":4,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8981,"frequency":12,"domains":[]}
+{"concept_id":"7930ddbb80df","english":"compact engineer's room","mandarin":"紧凑工程师的房间","english_tokens":4,"mandarin_tokens":3,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8502,"frequency":3,"domains":[]}
+{"concept_id":"e2e254080c0e","english":"lived after he became","mandarin":"他成为后活着","english_tokens":5,"mandarin_tokens":4,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7964,"frequency":4,"domains":[]}
+{"concept_id":"7638488c8f98","english":"he became the father","mandarin":"他成为父亲","english_tokens":4,"mandarin_tokens":3,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9115,"frequency":12,"domains":[]}
+{"concept_id":"55b57684805f","english":"creeps on the earth","mandarin":"在地上爬行","english_tokens":5,"mandarin_tokens":3,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.706,"frequency":5,"domains":[]}
+{"concept_id":"c247e612787b","english":"economic and social","mandarin":"经济和社会","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8696,"frequency":3,"domains":[]}
+{"concept_id":"4ea3d5c256b7","english":"sons and daughters","mandarin":"儿女","english_tokens":4,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7593,"frequency":12,"domains":[]}
+{"concept_id":"6c940a027254","english":"inside a partition","mandarin":"分区内部","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7526,"frequency":6,"domains":[]}
+{"concept_id":"1d2c67c6e925","english":"became the father","mandarin":"成为父亲","english_tokens":4,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8668,"frequency":46,"domains":[]}
+{"concept_id":"002e9a288d28","english":"evening and there","mandarin":"晚上和","english_tokens":4,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7922,"frequency":5,"domains":[]}
+{"concept_id":"2b0d0d730e64","english":"There was evening","mandarin":"有晚上","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8142,"frequency":5,"domains":[]}
+{"concept_id":"31cc5a68ea98","english":"there was morning","mandarin":"有早晨","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7902,"frequency":5,"domains":[]}
+{"concept_id":"e5094029329b","english":"day of the month","mandarin":"月中的日","english_tokens":4,"mandarin_tokens":3,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9104,"frequency":4,"domains":[]}
+{"concept_id":"2d5c8ec70f18","english":"specified string","mandarin":"指定字符串","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8354,"frequency":4,"domains":[]}
+{"concept_id":"455d05c26c0a","english":"don't know what","mandarin":"不知道什么","english_tokens":4,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8726,"frequency":5,"domains":[]}
+{"concept_id":"129423a02460","english":"male and female","mandarin":"男女","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8006,"frequency":5,"domains":[]}
+{"concept_id":"58486f287ad9","english":"engineer's room","mandarin":"工程师的房间","english_tokens":4,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8443,"frequency":4,"domains":[]}
+{"concept_id":"2f3957e13199","english":"water districts","mandarin":"水域","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7254,"frequency":5,"domains":[]}
+{"concept_id":"05b0c1fd7f1b","english":"shooting season","mandarin":"狩猎季节","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7708,"frequency":3,"domains":[]}
+{"concept_id":"e2495633c13c","english":"United Nations","mandarin":"联合国","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8656,"frequency":17,"domains":[]}
+{"concept_id":"2fb97c01e148","english":"all the earth","mandarin":"全地","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.774,"frequency":5,"domains":[]}
+{"concept_id":"3ed03a05c06e","english":"shall not eat","mandarin":"不可吃","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8378,"frequency":5,"domains":[]}
+{"concept_id":"b8a2b748a495","english":"three hundred","mandarin":"三百","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8909,"frequency":4,"domains":[]}
+{"concept_id":"35041450a00e","english":"I don't want","mandarin":"我不想","english_tokens":4,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9591,"frequency":7,"domains":[]}
+{"concept_id":"c02a68f5c2a3","english":"I don't know","mandarin":"我不知道","english_tokens":4,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9479,"frequency":6,"domains":[]}
+{"concept_id":"cb490a800cb5","english":"Human Rights","mandarin":"人权","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8703,"frequency":8,"domains":[]}
+{"concept_id":"3020899ada4d","english":"All the days","mandarin":"所有的日子","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9328,"frequency":8,"domains":[]}
+{"concept_id":"cbc6096e9230","english":"human rights","mandarin":"人权","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8626,"frequency":7,"domains":[]}
+{"concept_id":"bf29a65f398a","english":"mirror sites","mandarin":"镜像站点","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7964,"frequency":6,"domains":[]}
+{"concept_id":"0f6ff88620ee","english":"thirty years","mandarin":"三十年","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8918,"frequency":6,"domains":[]}
+{"concept_id":"c396de52fe1a","english":"nine hundred","mandarin":"九百","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8462,"frequency":6,"domains":[]}
+{"concept_id":"7fea2d0ff0aa","english":"four hundred","mandarin":"四百","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.895,"frequency":4,"domains":[]}
+{"concept_id":"be6d3b3232d6","english":"said to him","mandarin":"对他说","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8546,"frequency":5,"domains":[]}
+{"concept_id":"a8162c7cdbaa","english":"carried out","mandarin":"执行","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.738,"frequency":4,"domains":[]}
+{"concept_id":"0eb3db6afe75","english":"Yahweh said","mandarin":"耶和华说","english_tokens":4,"mandarin_tokens":3,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8765,"frequency":11,"domains":[]}
+{"concept_id":"bccd7fa3f2aa","english":"years after","mandarin":"年后","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9029,"frequency":9,"domains":[]}
+{"concept_id":"07110cb4d0c1","english":"source code","mandarin":"源代码","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8847,"frequency":9,"domains":[]}
+{"concept_id":"4e4592a97867","english":"one hundred","mandarin":"一百","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8747,"frequency":6,"domains":[]}
+{"concept_id":"e21319db63e6","english":"three years","mandarin":"三年","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9092,"frequency":5,"domains":[]}
+{"concept_id":"820ce1c286b3","english":"go to sleep","mandarin":"去睡觉","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9025,"frequency":4,"domains":[]}
+{"concept_id":"683c896911e4","english":"even though","mandarin":"尽管","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9175,"frequency":3,"domains":[]}
+{"concept_id":"36e4d2e302b0","english":"don't know","mandarin":"不知道","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9059,"frequency":11,"domains":[]}
+{"concept_id":"7f1b54124270","english":"don't want","mandarin":"不想","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8991,"frequency":7,"domains":[]}
+{"concept_id":"c09f6b9c4a50","english":"want to do","mandarin":"想做","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8748,"frequency":3,"domains":[]}
+{"concept_id":"cf9cfbdad63c","english":"Yahweh God","mandarin":"耶和华神","english_tokens":4,"mandarin_tokens":3,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9022,"frequency":13,"domains":[]}
+{"concept_id":"c72b618625b3","english":"you should","mandarin":"你应该","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9117,"frequency":6,"domains":[]}
+{"concept_id":"5f856f560eac","english":"five years","mandarin":"五年","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.925,"frequency":4,"domains":[]}
+{"concept_id":"829d00add759","english":"You should","mandarin":"你应该","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.968,"frequency":4,"domains":[]}
+{"concept_id":"1c28dc2a120e","english":"forty days","mandarin":"四十天","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9074,"frequency":4,"domains":[]}
+{"concept_id":"c15c9f1f26f4","english":"gold medal","mandarin":"金牌","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7904,"frequency":3,"domains":[]}
+{"concept_id":"e13437d894bd","english":"people who","mandarin":"的人","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8624,"frequency":3,"domains":[]}
+{"concept_id":"a0ef47bed802","english":"he and his","mandarin":"他和他","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8577,"frequency":3,"domains":[]}
+{"concept_id":"b73293557603","english":"never have","mandarin":"从未","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9159,"frequency":3,"domains":[]}
+{"concept_id":"3b2c3c54350a","english":"lifted up","mandarin":"举起","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8037,"frequency":5,"domains":[]}
+{"concept_id":"c6ca567a03da","english":"have been","mandarin":"已经","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7885,"frequency":19,"domains":[]}
+{"concept_id":"f9c07b5f6862","english":"more than","mandarin":"超过","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8771,"frequency":8,"domains":[]}
+{"concept_id":"dad2bf046ede","english":"they will","mandarin":"他们将","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8893,"frequency":6,"domains":[]}
+{"concept_id":"a7d16ee6fb39","english":"last year","mandarin":"去年","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9159,"frequency":5,"domains":[]}
+{"concept_id":"70039cc797fe","english":"they have","mandarin":"他们有","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.892,"frequency":5,"domains":[]}
+{"concept_id":"634742c0eff3","english":"you shall","mandarin":"你要","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8406,"frequency":5,"domains":[]}
+{"concept_id":"2c9991d01ed4","english":"will also","mandarin":"也将","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9029,"frequency":4,"domains":[]}
+{"concept_id":"d4475247733d","english":"his heart","mandarin":"他的心","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9313,"frequency":3,"domains":[]}
+{"concept_id":"7d0ff1b44cff","english":"I'll take","mandarin":"我拿","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8901,"frequency":3,"domains":[]}
+{"concept_id":"34916cb8e074","english":"I'm just","mandarin":"我只是","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9422,"frequency":3,"domains":[]}
+{"concept_id":"2f83b5ec7791","english":"you have","mandarin":"你有","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8944,"frequency":14,"domains":[]}
+{"concept_id":"6944b671e469","english":"you will","mandarin":"你将","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9141,"frequency":11,"domains":[]}
+{"concept_id":"dcf37499644a","english":"had been","mandarin":"曾经","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.759,"frequency":10,"domains":[]}
+{"concept_id":"7123605a27ed","english":"you want","mandarin":"你想要","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9283,"frequency":10,"domains":[]}
+{"concept_id":"212bdbba8ea5","english":"has been","mandarin":"已经","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8132,"frequency":9,"domains":[]}
+{"concept_id":"b4b7b761b294","english":"How do I","mandarin":"我怎么做","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9122,"frequency":8,"domains":[]}
+{"concept_id":"91786e357c5f","english":"went out","mandarin":"出去了","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7944,"frequency":7,"domains":[]}
+{"concept_id":"c4126be9f00a","english":"when you","mandarin":"当你","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9213,"frequency":6,"domains":[]}
+{"concept_id":"7fd21c3d4471","english":"say they","mandarin":"他们说","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8545,"frequency":3,"domains":[]}
+{"concept_id":"33a2ce8c349d","english":"too much","mandarin":"太多","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9009,"frequency":3,"domains":[]}
+{"concept_id":"631aa7260de8","english":"may have","mandarin":"可能有","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8983,"frequency":3,"domains":[]}
+{"concept_id":"315e9216e160","english":"You must","mandarin":"你必须","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9611,"frequency":3,"domains":[]}
+{"concept_id":"68f7ef90eefb","english":"I'll get","mandarin":"我去拿","english_tokens":3,"mandarin_tokens":2,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.855,"frequency":3,"domains":[]}
+{"concept_id":"98a65bb41224","english":"I don't","mandarin":"我不","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9581,"frequency":19,"domains":[]}
+{"concept_id":"d3b5dcf77e0b","english":"I can't","mandarin":"我不能","english_tokens":3,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9575,"frequency":5,"domains":[]}
+{"concept_id":"978e592f7a54","english":"you can","mandarin":"你可以","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8905,"frequency":18,"domains":[]}
+{"concept_id":"26891632555d","english":"You can","mandarin":"你可以","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9344,"frequency":14,"domains":[]}
+{"concept_id":"faa64a2e9825","english":"He said","mandarin":"他说","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9431,"frequency":9,"domains":[]}
+{"concept_id":"fe5f5f3a69c7","english":"said he","mandarin":"他说","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8977,"frequency":4,"domains":[]}
+{"concept_id":"0b8ba34d2f6f","english":"she had","mandarin":"她有","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8567,"frequency":4,"domains":[]}
+{"concept_id":"ed6e92089eb6","english":"Even if","mandarin":"即使","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9224,"frequency":4,"domains":[]}
+{"concept_id":"52bf6644b0a5","english":"he said","mandarin":"他说","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.912,"frequency":4,"domains":[]}
+{"concept_id":"aa1ed7088231","english":"I could","mandarin":"我能","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9152,"frequency":4,"domains":[]}
+{"concept_id":"8e200d425dd2","english":"He will","mandarin":"他将","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9482,"frequency":3,"domains":[]}
+{"concept_id":"8419df2ab51f","english":"we have","mandarin":"我们有","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.891,"frequency":3,"domains":[]}
+{"concept_id":"7085b39f645c","english":"I will","mandarin":"我将","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.953,"frequency":29,"domains":[]}
+{"concept_id":"0ac523288e89","english":"If you","mandarin":"如果你","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9672,"frequency":23,"domains":[]}
+{"concept_id":"42180e3af4d4","english":"I have","mandarin":"我有","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9511,"frequency":21,"domains":[]}
+{"concept_id":"669b99490bcb","english":"if you","mandarin":"如果你","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9428,"frequency":15,"domains":[]}
+{"concept_id":"c32914d2fab0","english":"How do","mandarin":"怎么做","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9409,"frequency":9,"domains":[]}
+{"concept_id":"dacb4f2da010","english":"you go","mandarin":"你去","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.8793,"frequency":7,"domains":[]}
+{"concept_id":"113c66fb754a","english":"you do","mandarin":"你做","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9127,"frequency":6,"domains":[]}
+{"concept_id":"c53d9f974dec","english":"do you","mandarin":"你是否","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9142,"frequency":5,"domains":[]}
+{"concept_id":"6c34821c49d1","english":"I want","mandarin":"我要","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9046,"frequency":3,"domains":[]}
+{"concept_id":"8f22f135742f","english":"do I","mandarin":"我","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.7942,"frequency":11,"domains":[]}
+{"concept_id":"e3683d0554cb","english":"I am","mandarin":"我是","english_tokens":2,"mandarin_tokens":1,"tokenizer_id":"deepseek-v4-flash","semantic_score":0.9296,"frequency":10,"domains":[]}

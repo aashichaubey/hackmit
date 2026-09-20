@@ -27,6 +27,11 @@ experiments/results/
 !data/processed/.gitkeep
 !experiments/results/.gitkeep
 
+# safety net: HFTokenizer's default cache is relative to CWD, so running a
+# script from within evals/<suite>/ can spawn a second 6MB tokenizer copy
+# there. The pattern above is anchored to the repo root and misses these.
+**/data/raw/
+
 # keep small committed example dictionaries
 !data/dictionaries/
 
