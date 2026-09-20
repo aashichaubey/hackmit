@@ -8,6 +8,12 @@ The completed local pilot, measured comparison, and artifact links are in
 [the pilot report](reports/pilot/README.md). The initial checkpoint
 loses answer accuracy; it is an experimental model, not a lossless compressor.
 
+An [actual KV-eviction prototype and public-data test](reports/kv-eviction/README.md)
+uses this saved 149M checkpoint to remove KV entries inside local
+Qwen2.5-1.5B-Instruct. It preserves surviving cache tensors without replaying
+history, but the initial diagnostic loses answer accuracy. No hosted inference
+is involved; this is separate from text compression and provider prompt caching.
+
 Run all commands below from this folder:
 
 ```sh
