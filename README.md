@@ -291,6 +291,12 @@ The [KV-eviction report](pruning-model/reports/kv-eviction/README.md) records
 73.2% lower retained KV storage with lower answer accuracy in a small public-data
 diagnostic. These results are separate from the representation experiments above.
 
+The [Bear-2 cache-repair experiment](pruning-model/reports/cache-repair/bear2-20260920.md)
+reuses Qwen KV states after real text compression. Selective repair reused 66.7%
+of compressed-history states and reduced median transition time from 587 ms to
+305 ms in a 14-case diagnostic. Fresh and repaired caches both scored 7/12
+on factual questions, but outputs differed; this remains approximate.
+
 ## Tokenmix dictionary experiment
 
 The meeting-note pruning project lives in [pruning-model](pruning-model/README.md),

@@ -275,6 +275,67 @@ Five separately marked synthetic edge cases are in
 attribution, multiple passages, absent answers, and negation. Run them as a
 separate diagnostic experiment, never pool them into the public held-out results.
 
+## Repair a cache after text compression
+
+The experimental [cache-repair module](src/pruning_model/cache_repair.py) operates
+on Qwen2.5-1.5B's actual K/V tensors after an already-processed history is shortened.
+`continue_after_edit` defaults to exact common-prefix reuse and suffix recomputation.
+Passing `fraction` and a source-token `mapping` explicitly enables approximate
+selective repair. Retokenized joins are always recomputed; surviving keys are
+adjusted to the shortened prompt's positions. The original cache is not mutated.
+This is a fixed edit-distance selection prototype, not an implementation of
+CacheBlend or a trained repair model.
+
+Run the local diagnostic against saved public-data pruning plans:
+
+```sh
+.venv/bin/python -m pruning_model.cache_repair_benchmark \
+  --prior-run runs/kv-longmemeval-20260920 --checkpoint runs/model \
+  --output runs/cache-repair-new-run --limit 14 \
+  --repetitions 3 --max-new-tokens 128 --device mps
+```
+
+The model and pruning artifacts must already be available locally. Each arm
+receives the same freshly tokenized compressed text. Controls include a fresh
+rebuild, exact prefix reuse, and full repair. The harness records original-history
+answers separately, plus reference agreement, distribution drift, transition
+timing, decoding timing, and cache tensor bytes. Answer correctness needs a
+separate source-aware review; matching the reference alone is not correctness.
+The compressor's prior outputs are reused and its runtime is outside transition
+timing. This is a small diagnostic on previously inspected cases, not a holdout
+evaluation or a comparison against The Token Company's product.
+
+See the [verified benchmark report](reports/cache-repair/verified-20260920.md).
+
+### Use Bear-2 compression
+
+The [Bear-2 adapter](src/pruning_model/bear2_cache_inputs.py) compresses each public
+historical session through The Token Company's API, saves its exact output, and
+aligns that output with the original Qwen tokens. The final question and reference
+answer are never sent to the compressor. Tokens without an unambiguous alignment
+must be rebuilt, so the requested repair fraction is a minimum budget.
+
+```sh
+uv sync --extra bear2 --dev
+# Read TTC_API_KEY from the environment or ../.env; alternatively add --prompt-key.
+.venv/bin/python -m pruning_model.bear2_cache_inputs \
+  --prior-run runs/kv-longmemeval-20260920 \
+  --output runs/bear2-inputs-new-run --aggressiveness 0.2 --limit 14 --max-calls 32
+.venv/bin/python -m pruning_model.cache_repair_benchmark \
+  --bear2-run runs/bear2-inputs-new-run \
+  --output runs/cache-repair-bear2-new-run --limit 14 \
+  --repetitions 3 --max-new-tokens 128 --device mps \
+  --arms fresh_compressed exact_prefix repair_10 repair_25 repair_100
+```
+
+Preparation makes paid API calls and records receipts; failed calls stop the run
+without automatic retries or compressor fallback. The cache experiment then runs
+entirely locally against the saved outputs. API latency, cache transition time,
+and answer decoding are recorded separately. This integrates Bear-2's text output
+with our local Qwen cache implementation; it does not change TTC's hosted service.
+
+See the [Bear-2 benchmark report](reports/cache-repair/bear2-20260920.md).
+
 ## Checks
 
 ```sh
