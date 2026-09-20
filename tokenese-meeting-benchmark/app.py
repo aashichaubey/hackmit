@@ -9,19 +9,25 @@ from tokenese import MODEL
 from tokenese.benchmark import choose_encoding, load_cases, method_input
 from tokenese.facts import Answer, MeetingFacts
 from tokenese.judges import grade_exact
-from tokenese.model import answer_question, extract_facts
+from tokenese.model import answer_question
 from tokenese.tokens import count_tokens
 from tokenese.evo_view import render_evolution, render_workspace
+from tokenese.v1_workspace import compilation_key, compile_once
 
-st.set_page_config(page_title="Tokenese · Language lab", page_icon="↳", layout="wide")
+st.set_page_config(page_title="Tokenese · V1 demo", page_icon="↳", layout="wide")
 load_dotenv(Path(__file__).parent / ".env")
 st.title("Tokenese")
-st.caption("Less language. More meaning per token. An experiment in evolving compact, readable meeting memory.")
+st.caption("Compile meeting notes once. Compare compact representations for repeated questions.")
 report_path = Path(__file__).parent / "reports" / "latest.json"
 report = json.loads(report_path.read_text()) if report_path.exists() else {}
 stress_path = Path(__file__).parent / "reports" / "stress.json"
 stress = json.loads(stress_path.read_text()) if stress_path.exists() else {}
-evolution_tab, workspace_tab, benchmark_tab, try_tab = st.tabs(["Language lab", "Meeting workspace", "V1 benchmark", "V1 comparison"])
+try_tab, benchmark_tab, evolution_tab, workspace_tab = st.tabs([
+    "V1 demo",
+    "V1 benchmark",
+    "Research archive",
+    "V2 transcript study",
+])
 with evolution_tab:
     render_evolution()
 with workspace_tab:
@@ -61,6 +67,10 @@ with benchmark_tab:
         st.dataframe(rows)
         st.json(run)
 with try_tab:
+    st.subheader("Turn meeting notes into compact facts")
+    st.caption("V1 extracts explicit facts once, then compares raw notes, compact English, and two experimental Tokenese representations on the same question.")
+    if not report.get("qualified_profiles"):
+        st.warning("No symbolic Tokenese profile passed the saved validation gate. The demo still shows those profiles for an honest side-by-side comparison; compact English remains the selected V1 route.")
     cases = load_cases()
     example = st.selectbox("Example", ["Custom"] + [case["id"] for case in cases])
     selected = next((case for case in cases if case["id"] == example), None)
@@ -74,7 +84,9 @@ with try_tab:
         else:
             try:
                 client = OpenAI()
-                facts, extraction_usage = extract_facts(client, notes, MODEL)
+                compilation = compile_once(st.session_state, notes, client)
+                facts = compilation.facts
+                extraction_usage = compilation.usage
                 qualified = report.get("qualified_profiles", [])
                 chosen_context, chosen_method = choose_encoding(facts, question, MODEL, qualified)
                 methods = ["raw", "english", "symbols", "mixed"]
@@ -84,21 +96,23 @@ with try_tab:
                     answer, usage = answer_question(client, prompt, MODEL)
                     rows[method] = {"context": context, "prompt": prompt, "context_tokens": count_tokens(context, MODEL), "full_input_tokens": count_tokens(prompt, MODEL), "answer": answer.model_dump(), "usage": usage.model_dump()}
                 gold = next((item for item in selected["questions"] if item["question"] == question), None) if selected else None
-                st.session_state["result"] = {"facts": facts.model_dump(), "extraction_usage": extraction_usage.model_dump(), "methods": rows, "chosen_method": chosen_method, "chosen_context": chosen_context, "gold": gold}
+                st.session_state["v1_result"] = {"compilation_key": compilation_key(notes), "facts": facts.model_dump(), "extraction_usage": extraction_usage.model_dump(), "extraction_reused": compilation.reused, "methods": rows, "chosen_method": chosen_method, "chosen_context": chosen_context, "gold": gold}
             except Exception as exc:
                 st.error(str(exc))
-    if "result" in st.session_state:
-        result = st.session_state["result"]
+    if st.session_state.get("v1_result", {}).get("compilation_key") == compilation_key(notes):
+        result = st.session_state["v1_result"]
         st.subheader("Extracted facts")
         st.json(result["facts"])
+        st.write("Extraction:", "reused from this session" if result["extraction_reused"] else "new model call")
         st.write("Extraction API usage:", result["extraction_usage"])
         st.write("Selected runtime encoding:", result["chosen_method"])
         raw_usage = result["methods"]["raw"]["usage"]
         chosen_usage = result["methods"][result["chosen_method"]]["usage"]
-        extraction_tokens = sum(result["extraction_usage"].values())
+        extraction_tokens = 0 if result["extraction_reused"] else sum(result["extraction_usage"].values())
+        original_extraction_tokens = sum(result["extraction_usage"].values())
         saved_per_question = sum(raw_usage.values()) - sum(chosen_usage.values())
         st.write("Full workflow tokens for this question:", sum(chosen_usage.values()) + extraction_tokens)
-        st.write("Questions to recover extraction tokens:", math.ceil(extraction_tokens / saved_per_question) if saved_per_question > 0 else "never at this per-question rate")
+        st.write("Questions to recover extraction tokens:", math.ceil(original_extraction_tokens / saved_per_question) if saved_per_question > 0 else "never at this per-question rate")
         st.caption("The same structured answer schema is sent with every method. API token usage includes it.")
         with st.expander("Shared structured-output schemas"):
             st.json({"extraction": MeetingFacts.model_json_schema(), "answer": Answer.model_json_schema()})

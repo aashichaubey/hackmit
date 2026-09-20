@@ -17,7 +17,12 @@ def test_whole_application_renders_without_api_calls(monkeypatch):
     monkeypatch.setattr(OpenAI,'__init__',forbid_client)
     app = AppTest.from_file(Path(__file__).resolve().parents[1] / 'app.py').run(timeout=20)
     assert not app.exception
-    assert len(app.tabs) == 4
+    assert [tab.label for tab in app.tabs] == [
+        'V1 demo',
+        'V1 benchmark',
+        'Research archive',
+        'V2 transcript study',
+    ]
 
 
 def test_view_renders_tiny_saved_trace(tmp_path):
