@@ -1,0 +1,4 @@
+strategy,contexts,qa_pairs,mean_tokens,mean_reduction,median_reduction,reduction_stddev,deterministic_accuracy,judge_accuracy,additional_failures_vs_original
+ORIGINAL,16,80,254.5625,0.0,0.0,0.0,0.9,0.9375,0
+COMPACT_ENGLISH,16,80,171.1875,0.3267697897435527,0.3262421208750464,0.06871217664062299,0.525,0.6875,21
+RISK_AWARE_COMPACT,16,80,194,0.23613431386961076,0.21607782898105482,0.0990995659407171,0.675,0.7375,18

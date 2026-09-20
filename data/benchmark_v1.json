@@ -1,0 +1,1352 @@
+[
+  {
+    "id": "lecture_academic_notes-01",
+    "category": "lecture_academic_notes",
+    "context": "Dr. Alvarez's Monday lecture surveyed ocean circulation and began by connecting the topic to the previous unit. Students first reviewed the terminology on the opening slide and compared two examples from the assigned reading. The main proposition was that thermohaline circulation is driven by density differences caused by temperature and salinity. Dr. Alvarez returned to that point after a diagram and explained how it affects interpretation of later examples. A related distinction was that surface currents are mainly driven by wind. The distinction matters because similar-looking cases can require different explanations. During the historical section, the lecture associated a foundational contribution with Fridtjof Nansen, while noting that later researchers refined the original account. A short demonstration followed, and students recorded observations before discussing sources of measurement or reasoning error. The instructor emphasized a methodological caution: the Coriolis effect changes direction but does not initiate the flow. That caution limits the conclusion but does not invalidate the main example. Questions near the end covered terminology, the contrast between the two cases, and how assumptions change an analysis. The required follow-up is chapter 9, due before the next class. The normal help session was rescheduled, so office hours will be Thursday at 15:00. Slides and a practice problem are posted on the course site, and the optional reading provides additional background rather than replacing the required assignment.",
+    "questions": [
+      {
+        "question": "What was the lecture's main proposition?",
+        "expected_answer": "thermohaline circulation is driven by density differences caused by temperature and salinity"
+      },
+      {
+        "question": "What related distinction was emphasized?",
+        "expected_answer": "surface currents are mainly driven by wind"
+      },
+      {
+        "question": "Which person was associated with the foundational contribution?",
+        "expected_answer": "Fridtjof Nansen"
+      },
+      {
+        "question": "When are the rescheduled office hours?",
+        "expected_answer": "Thursday at 15:00"
+      },
+      {
+        "question": "What methodological caution limited the example?",
+        "expected_answer": "the Coriolis effect changes direction but does not initiate the flow"
+      }
+    ]
+  },
+  {
+    "id": "lecture_academic_notes-02",
+    "category": "lecture_academic_notes",
+    "context": "Professor Mensah's Tuesday lecture surveyed behavioral economics and began by connecting the topic to the previous unit. Students first reviewed the terminology on the opening slide and compared two examples from the assigned reading. The main proposition was that loss aversion means losses often feel more significant than equal-sized gains. Professor Mensah returned to that point after a diagram and explained how it affects interpretation of later examples. A related distinction was that a sunk cost should not affect a forward-looking decision. The distinction matters because similar-looking cases can require different explanations. During the historical section, the lecture associated a foundational contribution with Daniel Kahneman and Amos Tversky, while noting that later researchers refined the original account. A short demonstration followed, and students recorded observations before discussing sources of measurement or reasoning error. The instructor emphasized a methodological caution: the classroom example assumed participants understood the probabilities. That caution limits the conclusion but does not invalidate the main example. Questions near the end covered terminology, the contrast between the two cases, and how assumptions change an analysis. The required follow-up is pages 112–138, due before the next class. The normal help session was rescheduled, so office hours will be Friday at 10:30. Slides and a practice problem are posted on the course site, and the optional reading provides additional background rather than replacing the required assignment.",
+    "questions": [
+      {
+        "question": "What was the lecture's main proposition?",
+        "expected_answer": "loss aversion means losses often feel more significant than equal-sized gains"
+      },
+      {
+        "question": "What related distinction was emphasized?",
+        "expected_answer": "a sunk cost should not affect a forward-looking decision"
+      },
+      {
+        "question": "Which person was associated with the foundational contribution?",
+        "expected_answer": "Daniel Kahneman and Amos Tversky"
+      },
+      {
+        "question": "When are the rescheduled office hours?",
+        "expected_answer": "Friday at 10:30"
+      },
+      {
+        "question": "What methodological caution limited the example?",
+        "expected_answer": "the classroom example assumed participants understood the probabilities"
+      }
+    ]
+  },
+  {
+    "id": "lecture_academic_notes-03",
+    "category": "lecture_academic_notes",
+    "context": "Dr. Iqbal's Wednesday lecture surveyed database systems and began by connecting the topic to the previous unit. Students first reviewed the terminology on the opening slide and compared two examples from the assigned reading. The main proposition was that a transaction should satisfy atomicity, consistency, isolation, and durability. Dr. Iqbal returned to that point after a diagram and explained how it affects interpretation of later examples. A related distinction was that an index speeds reads but can add write overhead. The distinction matters because similar-looking cases can require different explanations. During the historical section, the lecture associated a foundational contribution with Edgar F. Codd, while noting that later researchers refined the original account. A short demonstration followed, and students recorded observations before discussing sources of measurement or reasoning error. The instructor emphasized a methodological caution: serializable isolation was discussed as the strongest standard level. That caution limits the conclusion but does not invalidate the main example. Questions near the end covered terminology, the contrast between the two cases, and how assumptions change an analysis. The required follow-up is chapter 12, due before the next class. The normal help session was rescheduled, so office hours will be Monday at 14:00. Slides and a practice problem are posted on the course site, and the optional reading provides additional background rather than replacing the required assignment.",
+    "questions": [
+      {
+        "question": "What was the lecture's main proposition?",
+        "expected_answer": "a transaction should satisfy atomicity, consistency, isolation, and durability"
+      },
+      {
+        "question": "What related distinction was emphasized?",
+        "expected_answer": "an index speeds reads but can add write overhead"
+      },
+      {
+        "question": "Which person was associated with the foundational contribution?",
+        "expected_answer": "Edgar F. Codd"
+      },
+      {
+        "question": "When are the rescheduled office hours?",
+        "expected_answer": "Monday at 14:00"
+      },
+      {
+        "question": "What methodological caution limited the example?",
+        "expected_answer": "serializable isolation was discussed as the strongest standard level"
+      }
+    ]
+  },
+  {
+    "id": "lecture_academic_notes-04",
+    "category": "lecture_academic_notes",
+    "context": "Professor Sato's Thursday lecture surveyed ecology and began by connecting the topic to the previous unit. Students first reviewed the terminology on the opening slide and compared two examples from the assigned reading. The main proposition was that keystone species have effects disproportionately large relative to their abundance. Professor Sato returned to that point after a diagram and explained how it affects interpretation of later examples. A related distinction was that primary succession begins without established soil while secondary succession does not. The distinction matters because similar-looking cases can require different explanations. During the historical section, the lecture associated a foundational contribution with Robert Paine, while noting that later researchers refined the original account. A short demonstration followed, and students recorded observations before discussing sources of measurement or reasoning error. The instructor emphasized a methodological caution: the island example excluded newly introduced invasive species. That caution limits the conclusion but does not invalidate the main example. Questions near the end covered terminology, the contrast between the two cases, and how assumptions change an analysis. The required follow-up is lab worksheet 4, due before the next class. The normal help session was rescheduled, so office hours will be Tuesday at 16:15. Slides and a practice problem are posted on the course site, and the optional reading provides additional background rather than replacing the required assignment.",
+    "questions": [
+      {
+        "question": "What was the lecture's main proposition?",
+        "expected_answer": "keystone species have effects disproportionately large relative to their abundance"
+      },
+      {
+        "question": "What related distinction was emphasized?",
+        "expected_answer": "primary succession begins without established soil while secondary succession does not"
+      },
+      {
+        "question": "Which person was associated with the foundational contribution?",
+        "expected_answer": "Robert Paine"
+      },
+      {
+        "question": "When are the rescheduled office hours?",
+        "expected_answer": "Tuesday at 16:15"
+      },
+      {
+        "question": "What methodological caution limited the example?",
+        "expected_answer": "the island example excluded newly introduced invasive species"
+      }
+    ]
+  },
+  {
+    "id": "lecture_academic_notes-05",
+    "category": "lecture_academic_notes",
+    "context": "Dr. Bennett's Friday lecture surveyed constitutional law and began by connecting the topic to the previous unit. Students first reviewed the terminology on the opening slide and compared two examples from the assigned reading. The main proposition was that judicial review allows courts to assess whether laws conflict with a constitution. Dr. Bennett returned to that point after a diagram and explained how it affects interpretation of later examples. A related distinction was that binding precedent differs from persuasive authority. The distinction matters because similar-looking cases can require different explanations. During the historical section, the lecture associated a foundational contribution with John Marshall, while noting that later researchers refined the original account. A short demonstration followed, and students recorded observations before discussing sources of measurement or reasoning error. The instructor emphasized a methodological caution: the hypothetical assumed federal rather than state jurisdiction. That caution limits the conclusion but does not invalidate the main example. Questions near the end covered terminology, the contrast between the two cases, and how assumptions change an analysis. The required follow-up is case brief 6, due before the next class. The normal help session was rescheduled, so office hours will be Wednesday at 13:30. Slides and a practice problem are posted on the course site, and the optional reading provides additional background rather than replacing the required assignment.",
+    "questions": [
+      {
+        "question": "What was the lecture's main proposition?",
+        "expected_answer": "judicial review allows courts to assess whether laws conflict with a constitution"
+      },
+      {
+        "question": "What related distinction was emphasized?",
+        "expected_answer": "binding precedent differs from persuasive authority"
+      },
+      {
+        "question": "Which person was associated with the foundational contribution?",
+        "expected_answer": "John Marshall"
+      },
+      {
+        "question": "When are the rescheduled office hours?",
+        "expected_answer": "Wednesday at 13:30"
+      },
+      {
+        "question": "What methodological caution limited the example?",
+        "expected_answer": "the hypothetical assumed federal rather than state jurisdiction"
+      }
+    ]
+  },
+  {
+    "id": "meeting_notes-01",
+    "category": "meeting_notes",
+    "context": "The working group met for forty-five minutes to review the Atlas redesign. Mira facilitated and began with decisions carried over from the previous session. The team agreed that the next formal review will occur on April 18, with a short written update circulated one day earlier. The highest-priority deliverable is the accessibility audit. Noah owns that work and committed to completing it by May 2. Other members will provide source material, but ownership remains with Noah. Finance confirmed a remaining discretionary budget of $8,000; spending above that amount requires steering-committee approval. The group chose to reserve part of the budget for testing rather than use all of it on launch materials. One dependency could change the schedule: vendor photography requires legal approval. If that dependency slips, the owner should flag it in the shared tracker rather than silently moving the due date. The communications discussion produced two decisions: use plain-language status labels and send external announcements only after the formal review. The team rejected a proposal to add a second approval meeting because it would duplicate the steering review. Progress meetings will recur weekly on Wednesdays. Notes will be stored with the project files, and unresolved risks will remain visible until an owner closes them with evidence. The meeting ended with a reminder that dates in the tracker are authoritative when they conflict with informal chat messages.",
+    "questions": [
+      {
+        "question": "Who facilitated the meeting?",
+        "expected_answer": "Mira"
+      },
+      {
+        "question": "When is the next formal review?",
+        "expected_answer": "April 18"
+      },
+      {
+        "question": "Who owns the highest-priority deliverable?",
+        "expected_answer": "Noah"
+      },
+      {
+        "question": "What is the remaining discretionary budget?",
+        "expected_answer": "$8,000"
+      },
+      {
+        "question": "What dependency could change the schedule?",
+        "expected_answer": "vendor photography requires legal approval"
+      }
+    ]
+  },
+  {
+    "id": "meeting_notes-02",
+    "category": "meeting_notes",
+    "context": "The working group met for forty-five minutes to review the community garden launch. Elena facilitated and began with decisions carried over from the previous session. The team agreed that the next formal review will occur on June 6, with a short written update circulated one day earlier. The highest-priority deliverable is the irrigation plan. Marcus owns that work and committed to completing it by June 20. Other members will provide source material, but ownership remains with Marcus. Finance confirmed a remaining discretionary budget of $3,500; spending above that amount requires steering-committee approval. The group chose to reserve part of the budget for testing rather than use all of it on launch materials. One dependency could change the schedule: soil delivery depends on the weather. If that dependency slips, the owner should flag it in the shared tracker rather than silently moving the due date. The communications discussion produced two decisions: use plain-language status labels and send external announcements only after the formal review. The team rejected a proposal to add a second approval meeting because it would duplicate the steering review. Progress meetings will recur every other Monday. Notes will be stored with the project files, and unresolved risks will remain visible until an owner closes them with evidence. The meeting ended with a reminder that dates in the tracker are authoritative when they conflict with informal chat messages.",
+    "questions": [
+      {
+        "question": "Who facilitated the meeting?",
+        "expected_answer": "Elena"
+      },
+      {
+        "question": "When is the next formal review?",
+        "expected_answer": "June 6"
+      },
+      {
+        "question": "Who owns the highest-priority deliverable?",
+        "expected_answer": "Marcus"
+      },
+      {
+        "question": "What is the remaining discretionary budget?",
+        "expected_answer": "$3,500"
+      },
+      {
+        "question": "What dependency could change the schedule?",
+        "expected_answer": "soil delivery depends on the weather"
+      }
+    ]
+  },
+  {
+    "id": "meeting_notes-03",
+    "category": "meeting_notes",
+    "context": "The working group met for forty-five minutes to review the library catalog migration. Priya facilitated and began with decisions carried over from the previous session. The team agreed that the next formal review will occur on August 14, with a short written update circulated one day earlier. The highest-priority deliverable is the duplicate-record review. Jon owns that work and committed to completing it by September 1. Other members will provide source material, but ownership remains with Jon. Finance confirmed a remaining discretionary budget of $12,000; spending above that amount requires steering-committee approval. The group chose to reserve part of the budget for testing rather than use all of it on launch materials. One dependency could change the schedule: rare-book records cannot be auto-merged. If that dependency slips, the owner should flag it in the shared tracker rather than silently moving the due date. The communications discussion produced two decisions: use plain-language status labels and send external announcements only after the formal review. The team rejected a proposal to add a second approval meeting because it would duplicate the steering review. Progress meetings will recur Tuesdays at 09:30. Notes will be stored with the project files, and unresolved risks will remain visible until an owner closes them with evidence. The meeting ended with a reminder that dates in the tracker are authoritative when they conflict with informal chat messages.",
+    "questions": [
+      {
+        "question": "Who facilitated the meeting?",
+        "expected_answer": "Priya"
+      },
+      {
+        "question": "When is the next formal review?",
+        "expected_answer": "August 14"
+      },
+      {
+        "question": "Who owns the highest-priority deliverable?",
+        "expected_answer": "Jon"
+      },
+      {
+        "question": "What is the remaining discretionary budget?",
+        "expected_answer": "$12,000"
+      },
+      {
+        "question": "What dependency could change the schedule?",
+        "expected_answer": "rare-book records cannot be auto-merged"
+      }
+    ]
+  },
+  {
+    "id": "meeting_notes-04",
+    "category": "meeting_notes",
+    "context": "The working group met for forty-five minutes to review the winter conference. Sam facilitated and began with decisions carried over from the previous session. The team agreed that the next formal review will occur on October 9, with a short written update circulated one day earlier. The highest-priority deliverable is the speaker confirmations. Aisha owns that work and committed to completing it by October 23. Other members will provide source material, but ownership remains with Aisha. Finance confirmed a remaining discretionary budget of $6,200; spending above that amount requires steering-committee approval. The group chose to reserve part of the budget for testing rather than use all of it on launch materials. One dependency could change the schedule: travel bookings wait until contracts are signed. If that dependency slips, the owner should flag it in the shared tracker rather than silently moving the due date. The communications discussion produced two decisions: use plain-language status labels and send external announcements only after the formal review. The team rejected a proposal to add a second approval meeting because it would duplicate the steering review. Progress meetings will recur Fridays at 11:00. Notes will be stored with the project files, and unresolved risks will remain visible until an owner closes them with evidence. The meeting ended with a reminder that dates in the tracker are authoritative when they conflict with informal chat messages.",
+    "questions": [
+      {
+        "question": "Who facilitated the meeting?",
+        "expected_answer": "Sam"
+      },
+      {
+        "question": "When is the next formal review?",
+        "expected_answer": "October 9"
+      },
+      {
+        "question": "Who owns the highest-priority deliverable?",
+        "expected_answer": "Aisha"
+      },
+      {
+        "question": "What is the remaining discretionary budget?",
+        "expected_answer": "$6,200"
+      },
+      {
+        "question": "What dependency could change the schedule?",
+        "expected_answer": "travel bookings wait until contracts are signed"
+      }
+    ]
+  },
+  {
+    "id": "meeting_notes-05",
+    "category": "meeting_notes",
+    "context": "The working group met for forty-five minutes to review the mobile app pilot. Leo facilitated and began with decisions carried over from the previous session. The team agreed that the next formal review will occur on January 12, with a short written update circulated one day earlier. The highest-priority deliverable is the consent-flow prototype. Rina owns that work and committed to completing it by January 26. Other members will provide source material, but ownership remains with Rina. Finance confirmed a remaining discretionary budget of $9,500; spending above that amount requires steering-committee approval. The group chose to reserve part of the budget for testing rather than use all of it on launch materials. One dependency could change the schedule: pilot analytics must exclude personal identifiers. If that dependency slips, the owner should flag it in the shared tracker rather than silently moving the due date. The communications discussion produced two decisions: use plain-language status labels and send external announcements only after the formal review. The team rejected a proposal to add a second approval meeting because it would duplicate the steering review. Progress meetings will recur Thursdays at 14:00. Notes will be stored with the project files, and unresolved risks will remain visible until an owner closes them with evidence. The meeting ended with a reminder that dates in the tracker are authoritative when they conflict with informal chat messages.",
+    "questions": [
+      {
+        "question": "Who facilitated the meeting?",
+        "expected_answer": "Leo"
+      },
+      {
+        "question": "When is the next formal review?",
+        "expected_answer": "January 12"
+      },
+      {
+        "question": "Who owns the highest-priority deliverable?",
+        "expected_answer": "Rina"
+      },
+      {
+        "question": "What is the remaining discretionary budget?",
+        "expected_answer": "$9,500"
+      },
+      {
+        "question": "What dependency could change the schedule?",
+        "expected_answer": "pilot analytics must exclude personal identifiers"
+      }
+    ]
+  },
+  {
+    "id": "policies_handbooks-01",
+    "category": "policies_handbooks",
+    "context": "The organization adopted this equipment lending policy to make routine decisions consistent across departments. It applies to staff and registered students, provided all required records are current. The standard limit is 14 days. Requests beyond that limit are not automatically denied, but they must be reviewed by the designated administrator before any commitment is made. The ordinary requirement is one 7-day renewal; verbal permission does not substitute for the recorded approval. Missing a required return, response, or reporting deadline triggers a consequence of $15 per day. Staff should document the event in the central system so that later reviewers can distinguish an approved exception from an oversight. The policy does not apply in the usual way to medical equipment. That case is permitted only with written department approval. Emergencies may justify immediate protective action, but the responsible person must still create a record afterward. Supervisors may clarify procedures but cannot waive eligibility rules on their own. Appeals go to the operations director within ten business days and must identify the disputed decision. Annual audits sample both approved and rejected requests. Personal convenience alone is not a sufficient reason for an exception. When two versions of the policy appear to conflict, the version in the controlled handbook governs. Questions should be sent to operations rather than resolved through informal precedent.",
+    "questions": [
+      {
+        "question": "Who is eligible under the policy?",
+        "expected_answer": "staff and registered students"
+      },
+      {
+        "question": "What is the standard limit?",
+        "expected_answer": "14 days"
+      },
+      {
+        "question": "What is the ordinary requirement?",
+        "expected_answer": "one 7-day renewal"
+      },
+      {
+        "question": "What consequence follows a missed deadline?",
+        "expected_answer": "$15 per day"
+      },
+      {
+        "question": "Under what condition is the exception for medical equipment permitted?",
+        "expected_answer": "written department approval"
+      }
+    ]
+  },
+  {
+    "id": "policies_handbooks-02",
+    "category": "policies_handbooks",
+    "context": "The organization adopted this remote-work policy to make routine decisions consistent across departments. It applies to full-time employees, provided all required records are current. The standard limit is three days per week. Requests beyond that limit are not automatically denied, but they must be reviewed by the designated administrator before any commitment is made. The ordinary requirement is manager approval; verbal permission does not substitute for the recorded approval. Missing a required return, response, or reporting deadline triggers a consequence of within 24 hours. Staff should document the event in the central system so that later reviewers can distinguish an approved exception from an oversight. The policy does not apply in the usual way to positions requiring daily laboratory access. That case is permitted only with a documented accommodation. Emergencies may justify immediate protective action, but the responsible person must still create a record afterward. Supervisors may clarify procedures but cannot waive eligibility rules on their own. Appeals go to the operations director within ten business days and must identify the disputed decision. Annual audits sample both approved and rejected requests. Personal convenience alone is not a sufficient reason for an exception. When two versions of the policy appear to conflict, the version in the controlled handbook governs. Questions should be sent to operations rather than resolved through informal precedent.",
+    "questions": [
+      {
+        "question": "Who is eligible under the policy?",
+        "expected_answer": "full-time employees"
+      },
+      {
+        "question": "What is the standard limit?",
+        "expected_answer": "three days per week"
+      },
+      {
+        "question": "What is the ordinary requirement?",
+        "expected_answer": "manager approval"
+      },
+      {
+        "question": "What consequence follows a missed deadline?",
+        "expected_answer": "within 24 hours"
+      },
+      {
+        "question": "Under what condition is the exception for positions requiring daily laboratory access permitted?",
+        "expected_answer": "a documented accommodation"
+      }
+    ]
+  },
+  {
+    "id": "policies_handbooks-03",
+    "category": "policies_handbooks",
+    "context": "The organization adopted this visitor access policy to make routine decisions consistent across departments. It applies to sponsored visitors, provided all required records are current. The standard limit is 08:00–18:00. Requests beyond that limit are not automatically denied, but they must be reviewed by the designated administrator before any commitment is made. The ordinary requirement is an active temporary badge; verbal permission does not substitute for the recorded approval. Missing a required return, response, or reporting deadline triggers a consequence of 30 minutes. Staff should document the event in the central system so that later reviewers can distinguish an approved exception from an oversight. The policy does not apply in the usual way to restricted archives. That case is permitted only with escort by an authorized archivist. Emergencies may justify immediate protective action, but the responsible person must still create a record afterward. Supervisors may clarify procedures but cannot waive eligibility rules on their own. Appeals go to the operations director within ten business days and must identify the disputed decision. Annual audits sample both approved and rejected requests. Personal convenience alone is not a sufficient reason for an exception. When two versions of the policy appear to conflict, the version in the controlled handbook governs. Questions should be sent to operations rather than resolved through informal precedent.",
+    "questions": [
+      {
+        "question": "Who is eligible under the policy?",
+        "expected_answer": "sponsored visitors"
+      },
+      {
+        "question": "What is the standard limit?",
+        "expected_answer": "08:00–18:00"
+      },
+      {
+        "question": "What is the ordinary requirement?",
+        "expected_answer": "an active temporary badge"
+      },
+      {
+        "question": "What consequence follows a missed deadline?",
+        "expected_answer": "30 minutes"
+      },
+      {
+        "question": "Under what condition is the exception for restricted archives permitted?",
+        "expected_answer": "escort by an authorized archivist"
+      }
+    ]
+  },
+  {
+    "id": "policies_handbooks-04",
+    "category": "policies_handbooks",
+    "context": "The organization adopted this training reimbursement policy to make routine decisions consistent across departments. It applies to employees past probation, provided all required records are current. The standard limit is $1,200 per year. Requests beyond that limit are not automatically denied, but they must be reviewed by the designated administrator before any commitment is made. The ordinary requirement is preapproval from a supervisor; verbal permission does not substitute for the recorded approval. Missing a required return, response, or reporting deadline triggers a consequence of 60 days. Staff should document the event in the central system so that later reviewers can distinguish an approved exception from an oversight. The policy does not apply in the usual way to recreational courses. That case is permitted only with direct job relevance documented by the director. Emergencies may justify immediate protective action, but the responsible person must still create a record afterward. Supervisors may clarify procedures but cannot waive eligibility rules on their own. Appeals go to the operations director within ten business days and must identify the disputed decision. Annual audits sample both approved and rejected requests. Personal convenience alone is not a sufficient reason for an exception. When two versions of the policy appear to conflict, the version in the controlled handbook governs. Questions should be sent to operations rather than resolved through informal precedent.",
+    "questions": [
+      {
+        "question": "Who is eligible under the policy?",
+        "expected_answer": "employees past probation"
+      },
+      {
+        "question": "What is the standard limit?",
+        "expected_answer": "$1,200 per year"
+      },
+      {
+        "question": "What is the ordinary requirement?",
+        "expected_answer": "preapproval from a supervisor"
+      },
+      {
+        "question": "What consequence follows a missed deadline?",
+        "expected_answer": "60 days"
+      },
+      {
+        "question": "Under what condition is the exception for recreational courses permitted?",
+        "expected_answer": "direct job relevance documented by the director"
+      }
+    ]
+  },
+  {
+    "id": "policies_handbooks-05",
+    "category": "policies_handbooks",
+    "context": "The organization adopted this data retention policy to make routine decisions consistent across departments. It applies to project teams, provided all required records are current. The standard limit is three years. Requests beyond that limit are not automatically denied, but they must be reviewed by the designated administrator before any commitment is made. The ordinary requirement is encrypted institutional storage; verbal permission does not substitute for the recorded approval. Missing a required return, response, or reporting deadline triggers a consequence of 72 hours. Staff should document the event in the central system so that later reviewers can distinguish an approved exception from an oversight. The policy does not apply in the usual way to legal-hold records. That case is permitted only with written release from counsel. Emergencies may justify immediate protective action, but the responsible person must still create a record afterward. Supervisors may clarify procedures but cannot waive eligibility rules on their own. Appeals go to the operations director within ten business days and must identify the disputed decision. Annual audits sample both approved and rejected requests. Personal convenience alone is not a sufficient reason for an exception. When two versions of the policy appear to conflict, the version in the controlled handbook governs. Questions should be sent to operations rather than resolved through informal precedent.",
+    "questions": [
+      {
+        "question": "Who is eligible under the policy?",
+        "expected_answer": "project teams"
+      },
+      {
+        "question": "What is the standard limit?",
+        "expected_answer": "three years"
+      },
+      {
+        "question": "What is the ordinary requirement?",
+        "expected_answer": "encrypted institutional storage"
+      },
+      {
+        "question": "What consequence follows a missed deadline?",
+        "expected_answer": "72 hours"
+      },
+      {
+        "question": "Under what condition is the exception for legal-hold records permitted?",
+        "expected_answer": "written release from counsel"
+      }
+    ]
+  },
+  {
+    "id": "schedules_events-01",
+    "category": "schedules_events",
+    "context": "The innovation summit takes place on May 11. Registration opens at 08:15 in Room 4-270, where attendees can collect badges and revised maps. The welcome remarks begin twenty minutes later in the same room. Two morning sessions then run in parallel; participants may switch rooms only during the scheduled break to avoid disrupting speakers. The featured keynote starts at 11:40 in Kresge Auditorium, and doors close five minutes after it begins. Lunch follows in the central dining area, with dietary requests identified on badge records rather than at the serving line. An afternoon hands-on session begins at 15:10 in Lobby 7. Because equipment must remain calibrated, late arrivals to that session may observe but cannot join the first exercise. A poster walk and moderated discussion follow. The closing program begins at 17:30; awards are announced near its end. Shuttle service from the main entrance runs every 20 minutes beginning thirty minutes before registration and continues until one hour after closing. Lost badges are replaced at registration after identity verification, while other lost property goes to venue security. The online program is authoritative for room changes, but the date and listed keynote time will not change. Volunteers should arrive forty-five minutes before registration.",
+    "questions": [
+      {
+        "question": "On what date does the event take place?",
+        "expected_answer": "May 11"
+      },
+      {
+        "question": "Where does registration open?",
+        "expected_answer": "Room 4-270"
+      },
+      {
+        "question": "When does the keynote start?",
+        "expected_answer": "11:40"
+      },
+      {
+        "question": "Where is the afternoon hands-on session?",
+        "expected_answer": "Lobby 7"
+      },
+      {
+        "question": "How frequently does the shuttle run?",
+        "expected_answer": "every 20 minutes"
+      }
+    ]
+  },
+  {
+    "id": "schedules_events-02",
+    "category": "schedules_events",
+    "context": "The public history forum takes place on June 22. Registration opens at 09:00 in Archive Hall, where attendees can collect badges and revised maps. The welcome remarks begin twenty minutes later in the same room. Two morning sessions then run in parallel; participants may switch rooms only during the scheduled break to avoid disrupting speakers. The featured keynote starts at 12:15 in River Room, and doors close five minutes after it begins. Lunch follows in the central dining area, with dietary requests identified on badge records rather than at the serving line. An afternoon hands-on session begins at 14:45 in Gallery B. Because equipment must remain calibrated, late arrivals to that session may observe but cannot join the first exercise. A poster walk and moderated discussion follow. The closing program begins at 18:00; awards are announced near its end. Shuttle service from the main entrance runs every 30 minutes beginning thirty minutes before registration and continues until one hour after closing. Lost badges are replaced at registration after identity verification, while other lost property goes to venue security. The online program is authoritative for room changes, but the date and listed keynote time will not change. Volunteers should arrive forty-five minutes before registration.",
+    "questions": [
+      {
+        "question": "On what date does the event take place?",
+        "expected_answer": "June 22"
+      },
+      {
+        "question": "Where does registration open?",
+        "expected_answer": "Archive Hall"
+      },
+      {
+        "question": "When does the keynote start?",
+        "expected_answer": "12:15"
+      },
+      {
+        "question": "Where is the afternoon hands-on session?",
+        "expected_answer": "Gallery B"
+      },
+      {
+        "question": "How frequently does the shuttle run?",
+        "expected_answer": "every 30 minutes"
+      }
+    ]
+  },
+  {
+    "id": "schedules_events-03",
+    "category": "schedules_events",
+    "context": "The robotics open house takes place on July 8. Registration opens at 10:20 in Maker Bay 2, where attendees can collect badges and revised maps. The welcome remarks begin twenty minutes later in the same room. Two morning sessions then run in parallel; participants may switch rooms only during the scheduled break to avoid disrupting speakers. The featured keynote starts at 13:00 in Demo Arena, and doors close five minutes after it begins. Lunch follows in the central dining area, with dietary requests identified on badge records rather than at the serving line. An afternoon hands-on session begins at 16:35 in Lab 5. Because equipment must remain calibrated, late arrivals to that session may observe but cannot join the first exercise. A poster walk and moderated discussion follow. The closing program begins at 19:10; awards are announced near its end. Shuttle service from the main entrance runs every 15 minutes beginning thirty minutes before registration and continues until one hour after closing. Lost badges are replaced at registration after identity verification, while other lost property goes to venue security. The online program is authoritative for room changes, but the date and listed keynote time will not change. Volunteers should arrive forty-five minutes before registration.",
+    "questions": [
+      {
+        "question": "On what date does the event take place?",
+        "expected_answer": "July 8"
+      },
+      {
+        "question": "Where does registration open?",
+        "expected_answer": "Maker Bay 2"
+      },
+      {
+        "question": "When does the keynote start?",
+        "expected_answer": "13:00"
+      },
+      {
+        "question": "Where is the afternoon hands-on session?",
+        "expected_answer": "Lab 5"
+      },
+      {
+        "question": "How frequently does the shuttle run?",
+        "expected_answer": "every 15 minutes"
+      }
+    ]
+  },
+  {
+    "id": "schedules_events-04",
+    "category": "schedules_events",
+    "context": "The climate workshop takes place on September 16. Registration opens at 08:40 in Earth Sciences 102, where attendees can collect badges and revised maps. The welcome remarks begin twenty minutes later in the same room. Two morning sessions then run in parallel; participants may switch rooms only during the scheduled break to avoid disrupting speakers. The featured keynote starts at 11:15 in Green Auditorium, and doors close five minutes after it begins. Lunch follows in the central dining area, with dietary requests identified on badge records rather than at the serving line. An afternoon hands-on session begins at 15:30 in Map Room. Because equipment must remain calibrated, late arrivals to that session may observe but cannot join the first exercise. A poster walk and moderated discussion follow. The closing program begins at 17:50; awards are announced near its end. Shuttle service from the main entrance runs every 25 minutes beginning thirty minutes before registration and continues until one hour after closing. Lost badges are replaced at registration after identity verification, while other lost property goes to venue security. The online program is authoritative for room changes, but the date and listed keynote time will not change. Volunteers should arrive forty-five minutes before registration.",
+    "questions": [
+      {
+        "question": "On what date does the event take place?",
+        "expected_answer": "September 16"
+      },
+      {
+        "question": "Where does registration open?",
+        "expected_answer": "Earth Sciences 102"
+      },
+      {
+        "question": "When does the keynote start?",
+        "expected_answer": "11:15"
+      },
+      {
+        "question": "Where is the afternoon hands-on session?",
+        "expected_answer": "Map Room"
+      },
+      {
+        "question": "How frequently does the shuttle run?",
+        "expected_answer": "every 25 minutes"
+      }
+    ]
+  },
+  {
+    "id": "schedules_events-05",
+    "category": "schedules_events",
+    "context": "The writers festival takes place on November 4. Registration opens at 09:30 in Library Theater, where attendees can collect badges and revised maps. The welcome remarks begin twenty minutes later in the same room. Two morning sessions then run in parallel; participants may switch rooms only during the scheduled break to avoid disrupting speakers. The featured keynote starts at 12:45 in Courtyard Tent, and doors close five minutes after it begins. Lunch follows in the central dining area, with dietary requests identified on badge records rather than at the serving line. An afternoon hands-on session begins at 16:00 in Studio C. Because equipment must remain calibrated, late arrivals to that session may observe but cannot join the first exercise. A poster walk and moderated discussion follow. The closing program begins at 20:00; awards are announced near its end. Shuttle service from the main entrance runs every 40 minutes beginning thirty minutes before registration and continues until one hour after closing. Lost badges are replaced at registration after identity verification, while other lost property goes to venue security. The online program is authoritative for room changes, but the date and listed keynote time will not change. Volunteers should arrive forty-five minutes before registration.",
+    "questions": [
+      {
+        "question": "On what date does the event take place?",
+        "expected_answer": "November 4"
+      },
+      {
+        "question": "Where does registration open?",
+        "expected_answer": "Library Theater"
+      },
+      {
+        "question": "When does the keynote start?",
+        "expected_answer": "12:45"
+      },
+      {
+        "question": "Where is the afternoon hands-on session?",
+        "expected_answer": "Studio C"
+      },
+      {
+        "question": "How frequently does the shuttle run?",
+        "expected_answer": "every 40 minutes"
+      }
+    ]
+  },
+  {
+    "id": "technical_documentation-01",
+    "category": "technical_documentation",
+    "context": "The Orchid API service is intended for internal applications that need predictable automated access. Clients connect using HTTPS on port 443. Every request must include the credential in the X-Orchid-Key header; credentials in query strings are rejected because URLs may be logged. The default service limit is 120 requests per minute per project. Bursts above the limit receive error 429, and clients should retry with exponential backoff rather than immediately repeat the request. Successful create operations return an identifier that can be checked at /v2/jobs/{id}. Status responses distinguish queued, running, completed, and failed work. Clients should treat unknown fields as forward-compatible additions and must not depend on field ordering. Completed operational records are retained for 24 hours, after which the service may remove them without another notice. Deleting a client-side reference does not cancel server-side work. Cancellation is accepted only while a job is queued or running, and a completed job cannot be reopened. Timestamps use UTC in ISO 8601 form. Text is UTF-8, numeric sizes are bytes, and an omitted optional value differs from an explicit zero. Client logs should retain request identifiers so support can trace failures without receiving credential values. The service team publishes maintenance windows at least two business days ahead when possible. Sandbox credentials cannot access production records.",
+    "questions": [
+      {
+        "question": "Which protocol does the service use?",
+        "expected_answer": "HTTPS on port 443"
+      },
+      {
+        "question": "Which header carries the credential?",
+        "expected_answer": "X-Orchid-Key"
+      },
+      {
+        "question": "What is the default service limit?",
+        "expected_answer": "120 requests per minute"
+      },
+      {
+        "question": "Which error indicates the limit was exceeded?",
+        "expected_answer": "429"
+      },
+      {
+        "question": "How long are completed operational records retained?",
+        "expected_answer": "24 hours"
+      }
+    ]
+  },
+  {
+    "id": "technical_documentation-02",
+    "category": "technical_documentation",
+    "context": "The Beacon sensor service is intended for internal applications that need predictable automated access. Clients connect using Bluetooth Low Energy. Every request must include the credential in the Beacon-Token header; credentials in query strings are rejected because URLs may be logged. The default service limit is 10 readings per second per project. Bursts above the limit receive error E17, and clients should retry with exponential backoff rather than immediately repeat the request. Successful create operations return an identifier that can be checked at /device/status. Status responses distinguish queued, running, completed, and failed work. Clients should treat unknown fields as forward-compatible additions and must not depend on field ordering. Completed operational records are retained for 30 days, after which the service may remove them without another notice. Deleting a client-side reference does not cancel server-side work. Cancellation is accepted only while a job is queued or running, and a completed job cannot be reopened. Timestamps use UTC in ISO 8601 form. Text is UTF-8, numeric sizes are bytes, and an omitted optional value differs from an explicit zero. Client logs should retain request identifiers so support can trace failures without receiving credential values. The service team publishes maintenance windows at least two business days ahead when possible. Sandbox credentials cannot access production records.",
+    "questions": [
+      {
+        "question": "Which protocol does the service use?",
+        "expected_answer": "Bluetooth Low Energy"
+      },
+      {
+        "question": "Which header carries the credential?",
+        "expected_answer": "Beacon-Token"
+      },
+      {
+        "question": "What is the default service limit?",
+        "expected_answer": "10 readings per second"
+      },
+      {
+        "question": "Which error indicates the limit was exceeded?",
+        "expected_answer": "E17"
+      },
+      {
+        "question": "How long are completed operational records retained?",
+        "expected_answer": "30 days"
+      }
+    ]
+  },
+  {
+    "id": "technical_documentation-03",
+    "category": "technical_documentation",
+    "context": "The Cedar backup agent service is intended for internal applications that need predictable automated access. Clients connect using TLS 1.3. Every request must include the credential in the Cedar-Auth header; credentials in query strings are rejected because URLs may be logged. The default service limit is 4 concurrent uploads per project. Bursts above the limit receive error B04, and clients should retry with exponential backoff rather than immediately repeat the request. Successful create operations return an identifier that can be checked at /api/backups/{id}. Status responses distinguish queued, running, completed, and failed work. Clients should treat unknown fields as forward-compatible additions and must not depend on field ordering. Completed operational records are retained for 14 days, after which the service may remove them without another notice. Deleting a client-side reference does not cancel server-side work. Cancellation is accepted only while a job is queued or running, and a completed job cannot be reopened. Timestamps use UTC in ISO 8601 form. Text is UTF-8, numeric sizes are bytes, and an omitted optional value differs from an explicit zero. Client logs should retain request identifiers so support can trace failures without receiving credential values. The service team publishes maintenance windows at least two business days ahead when possible. Sandbox credentials cannot access production records.",
+    "questions": [
+      {
+        "question": "Which protocol does the service use?",
+        "expected_answer": "TLS 1.3"
+      },
+      {
+        "question": "Which header carries the credential?",
+        "expected_answer": "Cedar-Auth"
+      },
+      {
+        "question": "What is the default service limit?",
+        "expected_answer": "4 concurrent uploads"
+      },
+      {
+        "question": "Which error indicates the limit was exceeded?",
+        "expected_answer": "B04"
+      },
+      {
+        "question": "How long are completed operational records retained?",
+        "expected_answer": "14 days"
+      }
+    ]
+  },
+  {
+    "id": "technical_documentation-04",
+    "category": "technical_documentation",
+    "context": "The Nimbus queue service is intended for internal applications that need predictable automated access. Clients connect using AMQP on port 5671. Every request must include the credential in the Nimbus-Key header; credentials in query strings are rejected because URLs may be logged. The default service limit is 500 messages per second per project. Bursts above the limit receive error Q09, and clients should retry with exponential backoff rather than immediately repeat the request. Successful create operations return an identifier that can be checked at /queues/{name}/metrics. Status responses distinguish queued, running, completed, and failed work. Clients should treat unknown fields as forward-compatible additions and must not depend on field ordering. Completed operational records are retained for 7 days, after which the service may remove them without another notice. Deleting a client-side reference does not cancel server-side work. Cancellation is accepted only while a job is queued or running, and a completed job cannot be reopened. Timestamps use UTC in ISO 8601 form. Text is UTF-8, numeric sizes are bytes, and an omitted optional value differs from an explicit zero. Client logs should retain request identifiers so support can trace failures without receiving credential values. The service team publishes maintenance windows at least two business days ahead when possible. Sandbox credentials cannot access production records.",
+    "questions": [
+      {
+        "question": "Which protocol does the service use?",
+        "expected_answer": "AMQP on port 5671"
+      },
+      {
+        "question": "Which header carries the credential?",
+        "expected_answer": "Nimbus-Key"
+      },
+      {
+        "question": "What is the default service limit?",
+        "expected_answer": "500 messages per second"
+      },
+      {
+        "question": "Which error indicates the limit was exceeded?",
+        "expected_answer": "Q09"
+      },
+      {
+        "question": "How long are completed operational records retained?",
+        "expected_answer": "7 days"
+      }
+    ]
+  },
+  {
+    "id": "technical_documentation-05",
+    "category": "technical_documentation",
+    "context": "The Quartz renderer service is intended for internal applications that need predictable automated access. Clients connect using gRPC on port 7443. Every request must include the credential in the Quartz-Credential header; credentials in query strings are rejected because URLs may be logged. The default service limit is 8 jobs per worker per project. Bursts above the limit receive error R12, and clients should retry with exponential backoff rather than immediately repeat the request. Successful create operations return an identifier that can be checked at /render/jobs/{id}. Status responses distinguish queued, running, completed, and failed work. Clients should treat unknown fields as forward-compatible additions and must not depend on field ordering. Completed operational records are retained for 48 hours, after which the service may remove them without another notice. Deleting a client-side reference does not cancel server-side work. Cancellation is accepted only while a job is queued or running, and a completed job cannot be reopened. Timestamps use UTC in ISO 8601 form. Text is UTF-8, numeric sizes are bytes, and an omitted optional value differs from an explicit zero. Client logs should retain request identifiers so support can trace failures without receiving credential values. The service team publishes maintenance windows at least two business days ahead when possible. Sandbox credentials cannot access production records.",
+    "questions": [
+      {
+        "question": "Which protocol does the service use?",
+        "expected_answer": "gRPC on port 7443"
+      },
+      {
+        "question": "Which header carries the credential?",
+        "expected_answer": "Quartz-Credential"
+      },
+      {
+        "question": "What is the default service limit?",
+        "expected_answer": "8 jobs per worker"
+      },
+      {
+        "question": "Which error indicates the limit was exceeded?",
+        "expected_answer": "R12"
+      },
+      {
+        "question": "How long are completed operational records retained?",
+        "expected_answer": "48 hours"
+      }
+    ]
+  },
+  {
+    "id": "factual_passages-01",
+    "category": "factual_passages",
+    "context": "Lake Baikal is located in Siberia and is widely studied for both physical and ecological reasons. A commonly cited measurement is about 1,642 meters, although exact values can vary slightly with the method and reference point used. The feature is also notable for roughly 20 percent. Its present form reflects long-term geological and climatic processes rather than a single event. Water, wind, ice, or volcanic activity continues to shape the surrounding landscape. A particularly important connected feature is the Angara River. Seasonal observations often focus on winter ice, which affects access, habitats, or measurement conditions. Scientists use satellite data together with field instruments because neither source alone captures every relevant scale. Repeated measurements use documented reference points so that changes can be compared across years. Local communities have long histories connected to the region, and modern conservation decisions therefore involve cultural as well as environmental considerations. The site is associated with a UNESCO World Heritage Site in 1996. That status draws attention but does not by itself eliminate pollution, climate, tourism, or development pressures. Researchers caution against treating one annual measurement as a complete trend. Educational displays often simplify the system, while technical reports separate measured values from estimates. Visitors are asked to follow local access guidance and avoid disturbing monitored areas.",
+    "questions": [
+      {
+        "question": "Where is the subject located?",
+        "expected_answer": "Siberia"
+      },
+      {
+        "question": "What commonly cited measurement is given?",
+        "expected_answer": "about 1,642 meters"
+      },
+      {
+        "question": "What is it also notable for?",
+        "expected_answer": "roughly 20 percent"
+      },
+      {
+        "question": "What connected feature is identified?",
+        "expected_answer": "the Angara River"
+      },
+      {
+        "question": "What designation or recognized association is mentioned?",
+        "expected_answer": "a UNESCO World Heritage Site in 1996"
+      }
+    ]
+  },
+  {
+    "id": "factual_passages-02",
+    "category": "factual_passages",
+    "context": "the Atacama Desert is located in northern Chile and is widely studied for both physical and ecological reasons. A commonly cited measurement is some stations record years without measurable rain, although exact values can vary slightly with the method and reference point used. The feature is also notable for salt flats and volcanic terrain. Its present form reflects long-term geological and climatic processes rather than a single event. Water, wind, ice, or volcanic activity continues to shape the surrounding landscape. A particularly important connected feature is the Pacific subtropical high. Seasonal observations often focus on large daily temperature changes, which affects access, habitats, or measurement conditions. Scientists use satellite data together with field instruments because neither source alone captures every relevant scale. Repeated measurements use documented reference points so that changes can be compared across years. Local communities have long histories connected to the region, and modern conservation decisions therefore involve cultural as well as environmental considerations. The site is associated with major astronomical observatories. That status draws attention but does not by itself eliminate pollution, climate, tourism, or development pressures. Researchers caution against treating one annual measurement as a complete trend. Educational displays often simplify the system, while technical reports separate measured values from estimates. Visitors are asked to follow local access guidance and avoid disturbing monitored areas.",
+    "questions": [
+      {
+        "question": "Where is the subject located?",
+        "expected_answer": "northern Chile"
+      },
+      {
+        "question": "What commonly cited measurement is given?",
+        "expected_answer": "some stations record years without measurable rain"
+      },
+      {
+        "question": "What is it also notable for?",
+        "expected_answer": "salt flats and volcanic terrain"
+      },
+      {
+        "question": "What connected feature is identified?",
+        "expected_answer": "the Pacific subtropical high"
+      },
+      {
+        "question": "What designation or recognized association is mentioned?",
+        "expected_answer": "major astronomical observatories"
+      }
+    ]
+  },
+  {
+    "id": "factual_passages-03",
+    "category": "factual_passages",
+    "context": "the Great Barrier Reef is located in off northeastern Australia and is widely studied for both physical and ecological reasons. A commonly cited measurement is more than 2,300 kilometers, although exact values can vary slightly with the method and reference point used. The feature is also notable for thousands of individual reefs. Its present form reflects long-term geological and climatic processes rather than a single event. Water, wind, ice, or volcanic activity continues to shape the surrounding landscape. A particularly important connected feature is coral bleaching. Seasonal observations often focus on warm shallow seas, which affects access, habitats, or measurement conditions. Scientists use satellite data together with field instruments because neither source alone captures every relevant scale. Repeated measurements use documented reference points so that changes can be compared across years. Local communities have long histories connected to the region, and modern conservation decisions therefore involve cultural as well as environmental considerations. The site is associated with World Heritage listing in 1981. That status draws attention but does not by itself eliminate pollution, climate, tourism, or development pressures. Researchers caution against treating one annual measurement as a complete trend. Educational displays often simplify the system, while technical reports separate measured values from estimates. Visitors are asked to follow local access guidance and avoid disturbing monitored areas.",
+    "questions": [
+      {
+        "question": "Where is the subject located?",
+        "expected_answer": "off northeastern Australia"
+      },
+      {
+        "question": "What commonly cited measurement is given?",
+        "expected_answer": "more than 2,300 kilometers"
+      },
+      {
+        "question": "What is it also notable for?",
+        "expected_answer": "thousands of individual reefs"
+      },
+      {
+        "question": "What connected feature is identified?",
+        "expected_answer": "coral bleaching"
+      },
+      {
+        "question": "What designation or recognized association is mentioned?",
+        "expected_answer": "World Heritage listing in 1981"
+      }
+    ]
+  },
+  {
+    "id": "factual_passages-04",
+    "category": "factual_passages",
+    "context": "the Danube River is located in central and southeastern Europe and is widely studied for both physical and ecological reasons. A commonly cited measurement is about 2,850 kilometers, although exact values can vary slightly with the method and reference point used. The feature is also notable for ten countries. Its present form reflects long-term geological and climatic processes rather than a single event. Water, wind, ice, or volcanic activity continues to shape the surrounding landscape. A particularly important connected feature is the Black Sea. Seasonal observations often focus on seasonal flooding, which affects access, habitats, or measurement conditions. Scientists use satellite data together with field instruments because neither source alone captures every relevant scale. Repeated measurements use documented reference points so that changes can be compared across years. Local communities have long histories connected to the region, and modern conservation decisions therefore involve cultural as well as environmental considerations. The site is associated with the Danube Delta Biosphere Reserve. That status draws attention but does not by itself eliminate pollution, climate, tourism, or development pressures. Researchers caution against treating one annual measurement as a complete trend. Educational displays often simplify the system, while technical reports separate measured values from estimates. Visitors are asked to follow local access guidance and avoid disturbing monitored areas.",
+    "questions": [
+      {
+        "question": "Where is the subject located?",
+        "expected_answer": "central and southeastern Europe"
+      },
+      {
+        "question": "What commonly cited measurement is given?",
+        "expected_answer": "about 2,850 kilometers"
+      },
+      {
+        "question": "What is it also notable for?",
+        "expected_answer": "ten countries"
+      },
+      {
+        "question": "What connected feature is identified?",
+        "expected_answer": "the Black Sea"
+      },
+      {
+        "question": "What designation or recognized association is mentioned?",
+        "expected_answer": "the Danube Delta Biosphere Reserve"
+      }
+    ]
+  },
+  {
+    "id": "factual_passages-05",
+    "category": "factual_passages",
+    "context": "Mauna Loa is located in the island of Hawaiʻi and is widely studied for both physical and ecological reasons. A commonly cited measurement is 4,169 meters above sea level, although exact values can vary slightly with the method and reference point used. The feature is also notable for a broad shield volcano. Its present form reflects long-term geological and climatic processes rather than a single event. Water, wind, ice, or volcanic activity continues to shape the surrounding landscape. A particularly important connected feature is the Pacific Plate hotspot. Seasonal observations often focus on long fluid lava flows, which affects access, habitats, or measurement conditions. Scientists use satellite data together with field instruments because neither source alone captures every relevant scale. Repeated measurements use documented reference points so that changes can be compared across years. Local communities have long histories connected to the region, and modern conservation decisions therefore involve cultural as well as environmental considerations. The site is associated with systematic atmospheric CO2 measurements nearby. That status draws attention but does not by itself eliminate pollution, climate, tourism, or development pressures. Researchers caution against treating one annual measurement as a complete trend. Educational displays often simplify the system, while technical reports separate measured values from estimates. Visitors are asked to follow local access guidance and avoid disturbing monitored areas.",
+    "questions": [
+      {
+        "question": "Where is the subject located?",
+        "expected_answer": "the island of Hawaiʻi"
+      },
+      {
+        "question": "What commonly cited measurement is given?",
+        "expected_answer": "4,169 meters above sea level"
+      },
+      {
+        "question": "What is it also notable for?",
+        "expected_answer": "a broad shield volcano"
+      },
+      {
+        "question": "What connected feature is identified?",
+        "expected_answer": "the Pacific Plate hotspot"
+      },
+      {
+        "question": "What designation or recognized association is mentioned?",
+        "expected_answer": "systematic atmospheric CO2 measurements nearby"
+      }
+    ]
+  },
+  {
+    "id": "procedural_instructions-01",
+    "category": "procedural_instructions",
+    "context": "Use the following controlled procedure to calibrate the water-quality probe. Before starting, confirm that the work area is available and that the current procedure revision is displayed. The first operational step is to rinse the sensor with deionized water. If that inspection or confirmation fails, stop and resolve the issue rather than continuing with incomplete information. Next, pH 7 buffer. Keep unrelated items away from the work surface so they cannot be confused with the materials in use. Then wait until the reading changes by less than 0.02 for 30 seconds. This verification is the acceptance checkpoint; a result outside the stated condition requires repeating the preceding preparation step. Once the checkpoint passes, record the slope in the designated log. The log entry should identify the operator and use the current date. After recording, repeat with pH 4 buffer. Confirm the result is readable and associated with the correct project or sample. The most important prohibition is: do not wipe the glass bulb. This restriction applies even when the schedule is tight. If equipment, packaging, or source records appear damaged, isolate the item and notify the responsible coordinator. Do not improvise a repair unless the procedure explicitly authorizes it. At completion, restore shared tools, remove temporary materials, and mark the task complete. A second person is required only when the acceptance checkpoint or local safety notice says so.",
+    "questions": [
+      {
+        "question": "What is the first operational step?",
+        "expected_answer": "rinse the sensor with deionized water"
+      },
+      {
+        "question": "What is the next preparation step?",
+        "expected_answer": "pH 7 buffer"
+      },
+      {
+        "question": "What is the acceptance checkpoint?",
+        "expected_answer": "wait until the reading changes by less than 0.02 for 30 seconds"
+      },
+      {
+        "question": "What must be recorded?",
+        "expected_answer": "record the slope"
+      },
+      {
+        "question": "What action is explicitly prohibited?",
+        "expected_answer": "do not wipe the glass bulb"
+      }
+    ]
+  },
+  {
+    "id": "procedural_instructions-02",
+    "category": "procedural_instructions",
+    "context": "Use the following controlled procedure to archive a completed project. Before starting, confirm that the work area is available and that the current procedure revision is displayed. The first operational step is to confirm all deliverables are final. If that inspection or confirmation fails, stop and resolve the issue rather than continuing with incomplete information. Next, create a read-only snapshot. Keep unrelated items away from the work surface so they cannot be confused with the materials in use. Then verify its checksum against the manifest. This verification is the acceptance checkpoint; a result outside the stated condition requires repeating the preceding preparation step. Once the checkpoint passes, record the archive identifier in the designated log. The log entry should identify the operator and use the current date. After recording, move working drafts to the temporary folder. Confirm the result is readable and associated with the correct project or sample. The most important prohibition is: do not delete legal-hold material. This restriction applies even when the schedule is tight. If equipment, packaging, or source records appear damaged, isolate the item and notify the responsible coordinator. Do not improvise a repair unless the procedure explicitly authorizes it. At completion, restore shared tools, remove temporary materials, and mark the task complete. A second person is required only when the acceptance checkpoint or local safety notice says so.",
+    "questions": [
+      {
+        "question": "What is the first operational step?",
+        "expected_answer": "confirm all deliverables are final"
+      },
+      {
+        "question": "What is the next preparation step?",
+        "expected_answer": "create a read-only snapshot"
+      },
+      {
+        "question": "What is the acceptance checkpoint?",
+        "expected_answer": "verify its checksum against the manifest"
+      },
+      {
+        "question": "What must be recorded?",
+        "expected_answer": "record the archive identifier"
+      },
+      {
+        "question": "What action is explicitly prohibited?",
+        "expected_answer": "do not delete legal-hold material"
+      }
+    ]
+  },
+  {
+    "id": "procedural_instructions-03",
+    "category": "procedural_instructions",
+    "context": "Use the following controlled procedure to prepare the laser cutter. Before starting, confirm that the work area is available and that the current procedure revision is displayed. The first operational step is to inspect the exhaust filter. If that inspection or confirmation fails, stop and resolve the issue rather than continuing with incomplete information. Next, place material flat on the bed. Keep unrelated items away from the work surface so they cannot be confused with the materials in use. Then run the focus gauge at the material surface. This verification is the acceptance checkpoint; a result outside the stated condition requires repeating the preceding preparation step. Once the checkpoint passes, record the material preset in the designated log. The log entry should identify the operator and use the current date. After recording, perform a low-power outline test. Confirm the result is readable and associated with the correct project or sample. The most important prohibition is: never cut PVC. This restriction applies even when the schedule is tight. If equipment, packaging, or source records appear damaged, isolate the item and notify the responsible coordinator. Do not improvise a repair unless the procedure explicitly authorizes it. At completion, restore shared tools, remove temporary materials, and mark the task complete. A second person is required only when the acceptance checkpoint or local safety notice says so.",
+    "questions": [
+      {
+        "question": "What is the first operational step?",
+        "expected_answer": "inspect the exhaust filter"
+      },
+      {
+        "question": "What is the next preparation step?",
+        "expected_answer": "place material flat on the bed"
+      },
+      {
+        "question": "What is the acceptance checkpoint?",
+        "expected_answer": "run the focus gauge at the material surface"
+      },
+      {
+        "question": "What must be recorded?",
+        "expected_answer": "record the material preset"
+      },
+      {
+        "question": "What action is explicitly prohibited?",
+        "expected_answer": "never cut PVC"
+      }
+    ]
+  },
+  {
+    "id": "procedural_instructions-04",
+    "category": "procedural_instructions",
+    "context": "Use the following controlled procedure to receive a refrigerated shipment. Before starting, confirm that the work area is available and that the current procedure revision is displayed. The first operational step is to inspect the temperature indicator. If that inspection or confirmation fails, stop and resolve the issue rather than continuing with incomplete information. Next, compare the packing list with the order. Keep unrelated items away from the work surface so they cannot be confused with the materials in use. Then photograph any damaged seal before opening. This verification is the acceptance checkpoint; a result outside the stated condition requires repeating the preceding preparation step. Once the checkpoint passes, record the arrival temperature in the designated log. The log entry should identify the operator and use the current date. After recording, transfer contents to labeled cold storage. Confirm the result is readable and associated with the correct project or sample. The most important prohibition is: do not accept an unlabeled specimen. This restriction applies even when the schedule is tight. If equipment, packaging, or source records appear damaged, isolate the item and notify the responsible coordinator. Do not improvise a repair unless the procedure explicitly authorizes it. At completion, restore shared tools, remove temporary materials, and mark the task complete. A second person is required only when the acceptance checkpoint or local safety notice says so.",
+    "questions": [
+      {
+        "question": "What is the first operational step?",
+        "expected_answer": "inspect the temperature indicator"
+      },
+      {
+        "question": "What is the next preparation step?",
+        "expected_answer": "compare the packing list with the order"
+      },
+      {
+        "question": "What is the acceptance checkpoint?",
+        "expected_answer": "photograph any damaged seal before opening"
+      },
+      {
+        "question": "What must be recorded?",
+        "expected_answer": "record the arrival temperature"
+      },
+      {
+        "question": "What action is explicitly prohibited?",
+        "expected_answer": "do not accept an unlabeled specimen"
+      }
+    ]
+  },
+  {
+    "id": "procedural_instructions-05",
+    "category": "procedural_instructions",
+    "context": "Use the following controlled procedure to publish the monthly report. Before starting, confirm that the work area is available and that the current procedure revision is displayed. The first operational step is to lock the reporting period. If that inspection or confirmation fails, stop and resolve the issue rather than continuing with incomplete information. Next, reconcile totals with the ledger. Keep unrelated items away from the work surface so they cannot be confused with the materials in use. Then have a second analyst verify exceptions. This verification is the acceptance checkpoint; a result outside the stated condition requires repeating the preceding preparation step. Once the checkpoint passes, record the approval timestamp in the designated log. The log entry should identify the operator and use the current date. After recording, export both PDF and accessible HTML. Confirm the result is readable and associated with the correct project or sample. The most important prohibition is: do not include customer identifiers. This restriction applies even when the schedule is tight. If equipment, packaging, or source records appear damaged, isolate the item and notify the responsible coordinator. Do not improvise a repair unless the procedure explicitly authorizes it. At completion, restore shared tools, remove temporary materials, and mark the task complete. A second person is required only when the acceptance checkpoint or local safety notice says so.",
+    "questions": [
+      {
+        "question": "What is the first operational step?",
+        "expected_answer": "lock the reporting period"
+      },
+      {
+        "question": "What is the next preparation step?",
+        "expected_answer": "reconcile totals with the ledger"
+      },
+      {
+        "question": "What is the acceptance checkpoint?",
+        "expected_answer": "have a second analyst verify exceptions"
+      },
+      {
+        "question": "What must be recorded?",
+        "expected_answer": "record the approval timestamp"
+      },
+      {
+        "question": "What action is explicitly prohibited?",
+        "expected_answer": "do not include customer identifiers"
+      }
+    ]
+  },
+  {
+    "id": "project_status_reports-01",
+    "category": "project_status_reports",
+    "context": "The latest status report covers the Harbor dashboard. Overall status is green, and the team estimates 72 percent of planned work is complete. Progress since the previous report includes closing several review comments and updating the shared schedule to reflect actual completion dates. The next major milestone is data ingestion, due June 28. Work feeding that milestone is underway, but reviewers should not treat draft outputs as final. The leading risk is schema changes from the vendor. The risk remains open because its trigger has not been eliminated, although the team has documented a mitigation and a fallback. Nina is accountable for coordinating the mitigation and reporting any change in severity. The approved remaining budget is $24,000; committed amounts are tracked separately from invoices already paid. No scope change has been approved this period. Two low-priority requests were moved to the backlog so the milestone team can protect the due date. Quality checks found minor documentation gaps but no critical defect in completed work. Stakeholders will receive another update after the milestone review. If the leading risk occurs before then, the project owner must issue an interim notice within one business day. The report distinguishes schedule confidence from percent complete: a high completion percentage does not automatically mean the due date is safe.",
+    "questions": [
+      {
+        "question": "What is the project's overall status?",
+        "expected_answer": "green"
+      },
+      {
+        "question": "What percentage of planned work is complete?",
+        "expected_answer": "72 percent"
+      },
+      {
+        "question": "What is the next major milestone?",
+        "expected_answer": "data ingestion"
+      },
+      {
+        "question": "What is the leading risk?",
+        "expected_answer": "schema changes from the vendor"
+      },
+      {
+        "question": "Who owns coordination of the mitigation?",
+        "expected_answer": "Nina"
+      }
+    ]
+  },
+  {
+    "id": "project_status_reports-02",
+    "category": "project_status_reports",
+    "context": "The latest status report covers the Maple renovation. Overall status is amber, and the team estimates 48 percent of planned work is complete. Progress since the previous report includes closing several review comments and updating the shared schedule to reflect actual completion dates. The next major milestone is electrical rough-in, due August 9. Work feeding that milestone is underway, but reviewers should not treat draft outputs as final. The leading risk is permit review taking longer than planned. The risk remains open because its trigger has not been eliminated, although the team has documented a mitigation and a fallback. Owen is accountable for coordinating the mitigation and reporting any change in severity. The approved remaining budget is $61,500; committed amounts are tracked separately from invoices already paid. No scope change has been approved this period. Two low-priority requests were moved to the backlog so the milestone team can protect the due date. Quality checks found minor documentation gaps but no critical defect in completed work. Stakeholders will receive another update after the milestone review. If the leading risk occurs before then, the project owner must issue an interim notice within one business day. The report distinguishes schedule confidence from percent complete: a high completion percentage does not automatically mean the due date is safe.",
+    "questions": [
+      {
+        "question": "What is the project's overall status?",
+        "expected_answer": "amber"
+      },
+      {
+        "question": "What percentage of planned work is complete?",
+        "expected_answer": "48 percent"
+      },
+      {
+        "question": "What is the next major milestone?",
+        "expected_answer": "electrical rough-in"
+      },
+      {
+        "question": "What is the leading risk?",
+        "expected_answer": "permit review taking longer than planned"
+      },
+      {
+        "question": "Who owns coordination of the mitigation?",
+        "expected_answer": "Owen"
+      }
+    ]
+  },
+  {
+    "id": "project_status_reports-03",
+    "category": "project_status_reports",
+    "context": "The latest status report covers the Civic survey. Overall status is green, and the team estimates 83 percent of planned work is complete. Progress since the previous report includes closing several review comments and updating the shared schedule to reflect actual completion dates. The next major milestone is response cleaning, due March 15. Work feeding that milestone is underway, but reviewers should not treat draft outputs as final. The leading risk is lower participation from two districts. The risk remains open because its trigger has not been eliminated, although the team has documented a mitigation and a fallback. Fatima is accountable for coordinating the mitigation and reporting any change in severity. The approved remaining budget is $18,200; committed amounts are tracked separately from invoices already paid. No scope change has been approved this period. Two low-priority requests were moved to the backlog so the milestone team can protect the due date. Quality checks found minor documentation gaps but no critical defect in completed work. Stakeholders will receive another update after the milestone review. If the leading risk occurs before then, the project owner must issue an interim notice within one business day. The report distinguishes schedule confidence from percent complete: a high completion percentage does not automatically mean the due date is safe.",
+    "questions": [
+      {
+        "question": "What is the project's overall status?",
+        "expected_answer": "green"
+      },
+      {
+        "question": "What percentage of planned work is complete?",
+        "expected_answer": "83 percent"
+      },
+      {
+        "question": "What is the next major milestone?",
+        "expected_answer": "response cleaning"
+      },
+      {
+        "question": "What is the leading risk?",
+        "expected_answer": "lower participation from two districts"
+      },
+      {
+        "question": "Who owns coordination of the mitigation?",
+        "expected_answer": "Fatima"
+      }
+    ]
+  },
+  {
+    "id": "project_status_reports-04",
+    "category": "project_status_reports",
+    "context": "The latest status report covers the Orion migration. Overall status is red, and the team estimates 39 percent of planned work is complete. Progress since the previous report includes closing several review comments and updating the shared schedule to reflect actual completion dates. The next major milestone is identity integration, due November 3. Work feeding that milestone is underway, but reviewers should not treat draft outputs as final. The leading risk is legacy accounts missing stable identifiers. The risk remains open because its trigger has not been eliminated, although the team has documented a mitigation and a fallback. Chen is accountable for coordinating the mitigation and reporting any change in severity. The approved remaining budget is $47,000; committed amounts are tracked separately from invoices already paid. No scope change has been approved this period. Two low-priority requests were moved to the backlog so the milestone team can protect the due date. Quality checks found minor documentation gaps but no critical defect in completed work. Stakeholders will receive another update after the milestone review. If the leading risk occurs before then, the project owner must issue an interim notice within one business day. The report distinguishes schedule confidence from percent complete: a high completion percentage does not automatically mean the due date is safe.",
+    "questions": [
+      {
+        "question": "What is the project's overall status?",
+        "expected_answer": "red"
+      },
+      {
+        "question": "What percentage of planned work is complete?",
+        "expected_answer": "39 percent"
+      },
+      {
+        "question": "What is the next major milestone?",
+        "expected_answer": "identity integration"
+      },
+      {
+        "question": "What is the leading risk?",
+        "expected_answer": "legacy accounts missing stable identifiers"
+      },
+      {
+        "question": "Who owns coordination of the mitigation?",
+        "expected_answer": "Chen"
+      }
+    ]
+  },
+  {
+    "id": "project_status_reports-05",
+    "category": "project_status_reports",
+    "context": "The latest status report covers the Studio curriculum. Overall status is amber, and the team estimates 65 percent of planned work is complete. Progress since the previous report includes closing several review comments and updating the shared schedule to reflect actual completion dates. The next major milestone is instructor review, due January 19. Work feeding that milestone is underway, but reviewers should not treat draft outputs as final. The leading risk is two modules need accessibility revisions. The risk remains open because its trigger has not been eliminated, although the team has documented a mitigation and a fallback. Grace is accountable for coordinating the mitigation and reporting any change in severity. The approved remaining budget is $13,750; committed amounts are tracked separately from invoices already paid. No scope change has been approved this period. Two low-priority requests were moved to the backlog so the milestone team can protect the due date. Quality checks found minor documentation gaps but no critical defect in completed work. Stakeholders will receive another update after the milestone review. If the leading risk occurs before then, the project owner must issue an interim notice within one business day. The report distinguishes schedule confidence from percent complete: a high completion percentage does not automatically mean the due date is safe.",
+    "questions": [
+      {
+        "question": "What is the project's overall status?",
+        "expected_answer": "amber"
+      },
+      {
+        "question": "What percentage of planned work is complete?",
+        "expected_answer": "65 percent"
+      },
+      {
+        "question": "What is the next major milestone?",
+        "expected_answer": "instructor review"
+      },
+      {
+        "question": "What is the leading risk?",
+        "expected_answer": "two modules need accessibility revisions"
+      },
+      {
+        "question": "Who owns coordination of the mitigation?",
+        "expected_answer": "Grace"
+      }
+    ]
+  },
+  {
+    "id": "structured_business-01",
+    "category": "structured_business",
+    "context": "The quarterly business review summarizes the North region. Recognized revenue was $1.84 million, representing 12 percent growth from the comparable quarter. The strongest product family was the Aster line, supported by renewals as well as new orders. Gross margin for the region was 38 percent; freight and temporary staffing were the largest deviations from plan. The largest named customer relationship in the report is the Cedar account. Its open receivable is $210,000 under net 30 payment terms, and the amount is not yet past due. Sales leadership expects normal collection but asked finance to monitor any change in the customer's purchasing schedule. New pipeline is spread across several industries, reducing dependence on a single pending deal. One proposed discount was declined because it would have reduced margin below the regional floor. Inventory availability improved during the quarter, although two specialty components still have longer lead times. The forecast assumes no major currency movement and no unplanned price increase from the primary carrier. Operating expenses remained within the approved envelope. Regional leaders will review collections and inventory again at the next monthly close. The review separates bookings from recognized revenue and excludes unsigned letters of intent. Managers agreed to revisit hiring only if two consecutive monthly forecasts remain above plan.",
+    "questions": [
+      {
+        "question": "What recognized revenue did the region report?",
+        "expected_answer": "$1.84 million"
+      },
+      {
+        "question": "What was the year-over-year growth?",
+        "expected_answer": "12 percent"
+      },
+      {
+        "question": "Which product family was strongest?",
+        "expected_answer": "Aster line"
+      },
+      {
+        "question": "What gross margin was reported?",
+        "expected_answer": "38 percent"
+      },
+      {
+        "question": "What is the open receivable for the largest named account?",
+        "expected_answer": "$210,000"
+      }
+    ]
+  },
+  {
+    "id": "structured_business-02",
+    "category": "structured_business",
+    "context": "The quarterly business review summarizes the South region. Recognized revenue was $2.15 million, representing 8 percent growth from the comparable quarter. The strongest product family was the Beacon line, supported by renewals as well as new orders. Gross margin for the region was 42 percent; freight and temporary staffing were the largest deviations from plan. The largest named customer relationship in the report is the Harbor account. Its open receivable is $185,000 under net 45 payment terms, and the amount is not yet past due. Sales leadership expects normal collection but asked finance to monitor any change in the customer's purchasing schedule. New pipeline is spread across several industries, reducing dependence on a single pending deal. One proposed discount was declined because it would have reduced margin below the regional floor. Inventory availability improved during the quarter, although two specialty components still have longer lead times. The forecast assumes no major currency movement and no unplanned price increase from the primary carrier. Operating expenses remained within the approved envelope. Regional leaders will review collections and inventory again at the next monthly close. The review separates bookings from recognized revenue and excludes unsigned letters of intent. Managers agreed to revisit hiring only if two consecutive monthly forecasts remain above plan.",
+    "questions": [
+      {
+        "question": "What recognized revenue did the region report?",
+        "expected_answer": "$2.15 million"
+      },
+      {
+        "question": "What was the year-over-year growth?",
+        "expected_answer": "8 percent"
+      },
+      {
+        "question": "Which product family was strongest?",
+        "expected_answer": "Beacon line"
+      },
+      {
+        "question": "What gross margin was reported?",
+        "expected_answer": "42 percent"
+      },
+      {
+        "question": "What is the open receivable for the largest named account?",
+        "expected_answer": "$185,000"
+      }
+    ]
+  },
+  {
+    "id": "structured_business-03",
+    "category": "structured_business",
+    "context": "The quarterly business review summarizes the West region. Recognized revenue was $1.62 million, representing 15 percent growth from the comparable quarter. The strongest product family was the Cobalt line, supported by renewals as well as new orders. Gross margin for the region was 35 percent; freight and temporary staffing were the largest deviations from plan. The largest named customer relationship in the report is the Juniper account. Its open receivable is $240,000 under net 30 payment terms, and the amount is not yet past due. Sales leadership expects normal collection but asked finance to monitor any change in the customer's purchasing schedule. New pipeline is spread across several industries, reducing dependence on a single pending deal. One proposed discount was declined because it would have reduced margin below the regional floor. Inventory availability improved during the quarter, although two specialty components still have longer lead times. The forecast assumes no major currency movement and no unplanned price increase from the primary carrier. Operating expenses remained within the approved envelope. Regional leaders will review collections and inventory again at the next monthly close. The review separates bookings from recognized revenue and excludes unsigned letters of intent. Managers agreed to revisit hiring only if two consecutive monthly forecasts remain above plan.",
+    "questions": [
+      {
+        "question": "What recognized revenue did the region report?",
+        "expected_answer": "$1.62 million"
+      },
+      {
+        "question": "What was the year-over-year growth?",
+        "expected_answer": "15 percent"
+      },
+      {
+        "question": "Which product family was strongest?",
+        "expected_answer": "Cobalt line"
+      },
+      {
+        "question": "What gross margin was reported?",
+        "expected_answer": "35 percent"
+      },
+      {
+        "question": "What is the open receivable for the largest named account?",
+        "expected_answer": "$240,000"
+      }
+    ]
+  },
+  {
+    "id": "structured_business-04",
+    "category": "structured_business",
+    "context": "The quarterly business review summarizes the Central region. Recognized revenue was $2.48 million, representing 5 percent growth from the comparable quarter. The strongest product family was the Delta line, supported by renewals as well as new orders. Gross margin for the region was 31 percent; freight and temporary staffing were the largest deviations from plan. The largest named customer relationship in the report is the Maple account. Its open receivable is $195,000 under net 60 payment terms, and the amount is not yet past due. Sales leadership expects normal collection but asked finance to monitor any change in the customer's purchasing schedule. New pipeline is spread across several industries, reducing dependence on a single pending deal. One proposed discount was declined because it would have reduced margin below the regional floor. Inventory availability improved during the quarter, although two specialty components still have longer lead times. The forecast assumes no major currency movement and no unplanned price increase from the primary carrier. Operating expenses remained within the approved envelope. Regional leaders will review collections and inventory again at the next monthly close. The review separates bookings from recognized revenue and excludes unsigned letters of intent. Managers agreed to revisit hiring only if two consecutive monthly forecasts remain above plan.",
+    "questions": [
+      {
+        "question": "What recognized revenue did the region report?",
+        "expected_answer": "$2.48 million"
+      },
+      {
+        "question": "What was the year-over-year growth?",
+        "expected_answer": "5 percent"
+      },
+      {
+        "question": "Which product family was strongest?",
+        "expected_answer": "Delta line"
+      },
+      {
+        "question": "What gross margin was reported?",
+        "expected_answer": "31 percent"
+      },
+      {
+        "question": "What is the open receivable for the largest named account?",
+        "expected_answer": "$195,000"
+      }
+    ]
+  },
+  {
+    "id": "structured_business-05",
+    "category": "structured_business",
+    "context": "The quarterly business review summarizes the East region. Recognized revenue was $1.97 million, representing 10 percent growth from the comparable quarter. The strongest product family was the Ember line, supported by renewals as well as new orders. Gross margin for the region was 40 percent; freight and temporary staffing were the largest deviations from plan. The largest named customer relationship in the report is the Orchid account. Its open receivable is $225,000 under net 45 payment terms, and the amount is not yet past due. Sales leadership expects normal collection but asked finance to monitor any change in the customer's purchasing schedule. New pipeline is spread across several industries, reducing dependence on a single pending deal. One proposed discount was declined because it would have reduced margin below the regional floor. Inventory availability improved during the quarter, although two specialty components still have longer lead times. The forecast assumes no major currency movement and no unplanned price increase from the primary carrier. Operating expenses remained within the approved envelope. Regional leaders will review collections and inventory again at the next monthly close. The review separates bookings from recognized revenue and excludes unsigned letters of intent. Managers agreed to revisit hiring only if two consecutive monthly forecasts remain above plan.",
+    "questions": [
+      {
+        "question": "What recognized revenue did the region report?",
+        "expected_answer": "$1.97 million"
+      },
+      {
+        "question": "What was the year-over-year growth?",
+        "expected_answer": "10 percent"
+      },
+      {
+        "question": "Which product family was strongest?",
+        "expected_answer": "Ember line"
+      },
+      {
+        "question": "What gross margin was reported?",
+        "expected_answer": "40 percent"
+      },
+      {
+        "question": "What is the open receivable for the largest named account?",
+        "expected_answer": "$225,000"
+      }
+    ]
+  },
+  {
+    "id": "mixed_narrative_factual-01",
+    "category": "mixed_narrative_factual",
+    "context": "Rosa arrived at the field station shortly after the morning briefing. The team had already reviewed the weather, checked the day's visitor list, and posted a revised notice near the entrance. Rosa was carrying a blue sample case, which had been signed out the previous afternoon for a scheduled task. After confirming the label with the coordinator, Rosa placed it in the north storage room. Jamal witnessed the transfer and entered the time in the local register. The group then discussed a separate logistics update: the replacement bridge opened at 16:00. That change affected travel plans but did not alter the location of the transferred item. During lunch, two visitors asked whether the item would be available for public viewing; the coordinator explained that access required an appointment. Later, a delivery arrived with routine supplies and was moved to a different room. Before leaving, Rosa checked the register again and noticed that the paper log remained in the main office. This detail mattered because another staff member had expected it to travel with the item. The coordinator sent a short clarification and assigned a follow-up for the next workday. Nothing was reported missing or damaged. At closing, doors were checked in sequence, and the person on duty kept the register rather than sending it with the evening courier.",
+    "questions": [
+      {
+        "question": "Who arrived after the morning briefing?",
+        "expected_answer": "Rosa"
+      },
+      {
+        "question": "What item was being carried?",
+        "expected_answer": "a blue sample case"
+      },
+      {
+        "question": "Where was the item placed?",
+        "expected_answer": "the north storage room"
+      },
+      {
+        "question": "Who witnessed the transfer?",
+        "expected_answer": "Jamal"
+      },
+      {
+        "question": "What separate logistics update was discussed?",
+        "expected_answer": "the replacement bridge opened at 16:00"
+      }
+    ]
+  },
+  {
+    "id": "mixed_narrative_factual-02",
+    "category": "mixed_narrative_factual",
+    "context": "Evan arrived at the community theater shortly after the morning briefing. The team had already reviewed the weather, checked the day's visitor list, and posted a revised notice near the entrance. Evan was carrying a brass key ring, which had been signed out the previous afternoon for a scheduled task. After confirming the label with the coordinator, Evan placed it in the costume workshop. Maya witnessed the transfer and entered the time in the local register. The group then discussed a separate logistics update: the evening rehearsal moved to 19:30. That change affected travel plans but did not alter the location of the transferred item. During lunch, two visitors asked whether the item would be available for public viewing; the coordinator explained that access required an appointment. Later, a delivery arrived with routine supplies and was moved to a different room. Before leaving, Evan checked the register again and noticed that the lighting plan stayed with the stage manager. This detail mattered because another staff member had expected it to travel with the item. The coordinator sent a short clarification and assigned a follow-up for the next workday. Nothing was reported missing or damaged. At closing, doors were checked in sequence, and the person on duty kept the register rather than sending it with the evening courier.",
+    "questions": [
+      {
+        "question": "Who arrived after the morning briefing?",
+        "expected_answer": "Evan"
+      },
+      {
+        "question": "What item was being carried?",
+        "expected_answer": "a brass key ring"
+      },
+      {
+        "question": "Where was the item placed?",
+        "expected_answer": "the costume workshop"
+      },
+      {
+        "question": "Who witnessed the transfer?",
+        "expected_answer": "Maya"
+      },
+      {
+        "question": "What separate logistics update was discussed?",
+        "expected_answer": "the evening rehearsal moved to 19:30"
+      }
+    ]
+  },
+  {
+    "id": "mixed_narrative_factual-03",
+    "category": "mixed_narrative_factual",
+    "context": "Leila arrived at the coastal archive shortly after the morning briefing. The team had already reviewed the weather, checked the day's visitor list, and posted a revised notice near the entrance. Leila was carrying a sealed map tube, which had been signed out the previous afternoon for a scheduled task. After confirming the label with the coordinator, Leila placed it in shelf C-14. Tom witnessed the transfer and entered the time in the local register. The group then discussed a separate logistics update: the ferry resumed service at 11:20. That change affected travel plans but did not alter the location of the transferred item. During lunch, two visitors asked whether the item would be available for public viewing; the coordinator explained that access required an appointment. Later, a delivery arrived with routine supplies and was moved to a different room. Before leaving, Leila checked the register again and noticed that the digital copy remained under review. This detail mattered because another staff member had expected it to travel with the item. The coordinator sent a short clarification and assigned a follow-up for the next workday. Nothing was reported missing or damaged. At closing, doors were checked in sequence, and the person on duty kept the register rather than sending it with the evening courier.",
+    "questions": [
+      {
+        "question": "Who arrived after the morning briefing?",
+        "expected_answer": "Leila"
+      },
+      {
+        "question": "What item was being carried?",
+        "expected_answer": "a sealed map tube"
+      },
+      {
+        "question": "Where was the item placed?",
+        "expected_answer": "shelf C-14"
+      },
+      {
+        "question": "Who witnessed the transfer?",
+        "expected_answer": "Tom"
+      },
+      {
+        "question": "What separate logistics update was discussed?",
+        "expected_answer": "the ferry resumed service at 11:20"
+      }
+    ]
+  },
+  {
+    "id": "mixed_narrative_factual-04",
+    "category": "mixed_narrative_factual",
+    "context": "Marco arrived at the mountain lodge shortly after the morning briefing. The team had already reviewed the weather, checked the day's visitor list, and posted a revised notice near the entrance. Marco was carrying a red emergency radio, which had been signed out the previous afternoon for a scheduled task. After confirming the label with the coordinator, Marco placed it in the reception cabinet. Inez witnessed the transfer and entered the time in the local register. The group then discussed a separate logistics update: the east trail reopened on Saturday. That change affected travel plans but did not alter the location of the transferred item. During lunch, two visitors asked whether the item would be available for public viewing; the coordinator explained that access required an appointment. Later, a delivery arrived with routine supplies and was moved to a different room. Before leaving, Marco checked the register again and noticed that the spare batteries stayed in the guide room. This detail mattered because another staff member had expected it to travel with the item. The coordinator sent a short clarification and assigned a follow-up for the next workday. Nothing was reported missing or damaged. At closing, doors were checked in sequence, and the person on duty kept the register rather than sending it with the evening courier.",
+    "questions": [
+      {
+        "question": "Who arrived after the morning briefing?",
+        "expected_answer": "Marco"
+      },
+      {
+        "question": "What item was being carried?",
+        "expected_answer": "a red emergency radio"
+      },
+      {
+        "question": "Where was the item placed?",
+        "expected_answer": "the reception cabinet"
+      },
+      {
+        "question": "Who witnessed the transfer?",
+        "expected_answer": "Inez"
+      },
+      {
+        "question": "What separate logistics update was discussed?",
+        "expected_answer": "the east trail reopened on Saturday"
+      }
+    ]
+  },
+  {
+    "id": "mixed_narrative_factual-05",
+    "category": "mixed_narrative_factual",
+    "context": "Anika arrived at the neighborhood clinic shortly after the morning briefing. The team had already reviewed the weather, checked the day's visitor list, and posted a revised notice near the entrance. Anika was carrying a gray document pouch, which had been signed out the previous afternoon for a scheduled task. After confirming the label with the coordinator, Anika placed it in the records annex. Paul witnessed the transfer and entered the time in the local register. The group then discussed a separate logistics update: the mobile unit departed at 07:45. That change affected travel plans but did not alter the location of the transferred item. During lunch, two visitors asked whether the item would be available for public viewing; the coordinator explained that access required an appointment. Later, a delivery arrived with routine supplies and was moved to a different room. Before leaving, Anika checked the register again and noticed that the signed receipt remained at reception. This detail mattered because another staff member had expected it to travel with the item. The coordinator sent a short clarification and assigned a follow-up for the next workday. Nothing was reported missing or damaged. At closing, doors were checked in sequence, and the person on duty kept the register rather than sending it with the evening courier.",
+    "questions": [
+      {
+        "question": "Who arrived after the morning briefing?",
+        "expected_answer": "Anika"
+      },
+      {
+        "question": "What item was being carried?",
+        "expected_answer": "a gray document pouch"
+      },
+      {
+        "question": "Where was the item placed?",
+        "expected_answer": "the records annex"
+      },
+      {
+        "question": "Who witnessed the transfer?",
+        "expected_answer": "Paul"
+      },
+      {
+        "question": "What separate logistics update was discussed?",
+        "expected_answer": "the mobile unit departed at 07:45"
+      }
+    ]
+  }
+]

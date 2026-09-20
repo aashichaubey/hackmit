@@ -1,0 +1,11 @@
+.venv/
+.env
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.egg-info/
+reports/cache.json
+reports/embedding_cache.json
+reports/judge_cache.json
+data/publicqa/sources/
+reports/publicqa/*-rows.json
