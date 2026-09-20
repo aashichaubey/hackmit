@@ -1,0 +1,15 @@
+{
+  "description": "Explicit DeepSeek V4 Flash benchmark using Parasail after StreamLake, Baidu, and DeepInfra shared-pool throttling. Provider remains pinned identically for both arms; no fallback.",
+  "generation": {
+    "model": "deepseek/deepseek-v4-flash",
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 1024,
+    "reasoning": {"enabled": false},
+    "provider": {
+      "only": ["parasail/fp8"],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    }
+  }
+}

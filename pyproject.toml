@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tokenmix"
+version = "0.1.0"
+description = "Measure and explore English–Mandarin prompt compression."
+requires-python = ">=3.11"
+dependencies = ["tiktoken>=0.14,<0.15", "polib>=1.2,<2"]
+
+[project.scripts]
+tokenmix = "tokenmix.cli:main"
+tokenmix-eval = "tokenmix.evaluation.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "evals/character_compression"]

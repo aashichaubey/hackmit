@@ -1,0 +1,598 @@
+{
+  "input_sha256": "35e2b24d1310ebae3aa6d2b789f0965da1635166717a41f9a1918353b942fd1b",
+  "reviewer": "Codex agent (source audit; arm identities visible)",
+  "scope": "All saved original and compressed answers in this run inspected. Corrections concern clear unsupported-claim and coverage inconsistencies. This is not independent human review.",
+  "borderline_cases": "LLMLingua omits simple from vocal commands and changes buttons with LCD to buttons and LCD. The model judge accepts these as paraphrases; these borderline completeness decisions are retained and need independent human adjudication.",
+  "reviews": [
+    {
+      "case_id": "ES2011c:curated:18",
+      "arm": "original",
+      "grade_sha256": "8ec268df07e7b5f9e96c4b9f96a9532fe8240515afb36ebaf76f20d0a908fc23",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "ES2011c:curated:18",
+      "arm": "compressed",
+      "grade_sha256": "55019b04ff46335ed1f67e5ecd232e083e65400249f5f1ec63f76952db08a31b",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "ES2011c:curated:18",
+      "arm": "compressed",
+      "grade_sha256": "5b2acc9108f5f3e6ec4c9fadb326ca2f22cc351d3c43564dc647e38d9804eb1d",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "ES2011c:curated:18",
+      "arm": "compressed",
+      "grade_sha256": "85bbed23f81e523e2082457b80e768731573951e90d37c72a4596160b472c9e0",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "ES2011c:curated:18",
+      "arm": "compressed",
+      "grade_sha256": "9eae06e1d98460ba8071bc5fb75e635d7a71596c5b4277b45a11f3850db25dfb",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "original_repeat"
+    },
+    {
+      "case_id": "ES2011c:curated:19",
+      "arm": "original",
+      "grade_sha256": "87b71954f4e6e193370f87ef6a5a10dee3a499a0edfa7dec9a776fa3b68bedef",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "ES2011c:curated:19",
+      "arm": "compressed",
+      "grade_sha256": "f795e7f28d7bde984f277676780f609f1c879294a632f37e5544d53243072e9e",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "ES2011c:curated:19",
+      "arm": "compressed",
+      "grade_sha256": "cfef760ba3b6f66b65065d215f4bc477c8bdd8f7968856413e6384a8e7b5ae53",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "ES2011c:curated:19",
+      "arm": "compressed",
+      "grade_sha256": "cd33d5a6cb69070337eaa18c532e3a472d9e141df2b281c76929f03a27a4ad8b",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "ES2011c:curated:19",
+      "arm": "compressed",
+      "grade_sha256": "f795e7f28d7bde984f277676780f609f1c879294a632f37e5544d53243072e9e",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "original_repeat"
+    },
+    {
+      "case_id": "ES2011c:curated:20",
+      "arm": "original",
+      "grade_sha256": "d3ca82ee8b73a382121aa6f31315082f78c35ea5c733fa15f08d5a643994a533",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "ES2011c:curated:20",
+      "arm": "compressed",
+      "grade_sha256": "9d2eda07f2d5b7ece4ea10ef0803f2ba7cf959c7995a0bd329bc0a6d1582e805",
+      "reason": "Apply the same strict rule to every arm: both requested facts are present, but the added denial of a replacement is inconsistent with the explicit TV alternative. Completeness remains 1; correctness is false.",
+      "variant": "lexical_50",
+      "verdict": {
+        "covered_fact_ids": [
+          0,
+          1
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [
+          "The answer denies any stated screen replacement even though the source explicitly names TV as the alternative screen."
+        ],
+        "correct_abstention": false,
+        "explanation": "Apply the same strict rule to every arm: both requested facts are present, but the added denial of a replacement is inconsistent with the explicit TV alternative. Completeness remains 1; correctness is false."
+      }
+    },
+    {
+      "case_id": "ES2011c:curated:20",
+      "arm": "compressed",
+      "grade_sha256": "57fde087e19c0764d17a624016670067bf6306dd961f60e66ac3f5d6101111f7",
+      "reason": "Apply the same strict rule to every arm: both requested facts are present, but the added denial of a replacement is inconsistent with the explicit TV alternative. Completeness remains 1; correctness is false.",
+      "variant": "llmlingua2_50",
+      "verdict": {
+        "covered_fact_ids": [
+          0,
+          1
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [
+          "The answer denies any stated screen replacement even though the source explicitly names TV as the alternative screen."
+        ],
+        "correct_abstention": false,
+        "explanation": "Apply the same strict rule to every arm: both requested facts are present, but the added denial of a replacement is inconsistent with the explicit TV alternative. Completeness remains 1; correctness is false."
+      }
+    },
+    {
+      "case_id": "ES2011c:curated:20",
+      "arm": "compressed",
+      "grade_sha256": "37741df178c3fc6f2dd1afab705a6da0131982e5e17c8799e2ffc20f43d4b756",
+      "reason": "Apply the same strict rule to every arm: both requested facts are present, but the added denial of a replacement is inconsistent with the explicit TV alternative. Completeness remains 1; correctness is false.",
+      "variant": "modernbert_conservative+balanced+aggressive",
+      "verdict": {
+        "covered_fact_ids": [
+          0,
+          1
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [
+          "The answer denies any stated screen replacement even though the source explicitly names TV as the alternative screen."
+        ],
+        "correct_abstention": false,
+        "explanation": "Apply the same strict rule to every arm: both requested facts are present, but the added denial of a replacement is inconsistent with the explicit TV alternative. Completeness remains 1; correctness is false."
+      }
+    },
+    {
+      "case_id": "ES2011c:curated:20",
+      "arm": "compressed",
+      "grade_sha256": "c34c0b679ccb659acfc0e0a828fc9495c4fdb8c8943e71305a030fac0b667025",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "original_repeat"
+    },
+    {
+      "case_id": "ES2011c:curated:21",
+      "arm": "original",
+      "grade_sha256": "0cd0641b63807d54d18258611dac9398a7ab3aa8edeea319b498e021f9afb159",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "ES2011c:curated:21",
+      "arm": "compressed",
+      "grade_sha256": "b0a5b1bc813fb4c38e7a6cff6b835cce5c1751dbb615ba432672f8903d5dc9b5",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "ES2011c:curated:21",
+      "arm": "compressed",
+      "grade_sha256": "b3afb6ba0e676047140d56ece16b8cd9eb9291d003b1e5dc464df3a4bd199608",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "ES2011c:curated:21",
+      "arm": "compressed",
+      "grade_sha256": "f502bfc0e4e13d71e78745472d56217e3e82175084ef87d2151cb80c9fbb648c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "ES2011c:curated:22",
+      "arm": "original",
+      "grade_sha256": "211415548195582e63e18f3bac09136b26e8154b2ba7b7ed5b5ed187125043d6",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "ES2011c:curated:22",
+      "arm": "compressed",
+      "grade_sha256": "f404b684aa20d6dfb9701e37cfc17aba56f7066e760067fcacddf3af360d151c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "ES2011c:curated:22",
+      "arm": "compressed",
+      "grade_sha256": "2723157b3f8777660e5677561b2339fda407075ceab58c8ba022d530ee26c3bb",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "ES2011c:curated:22",
+      "arm": "compressed",
+      "grade_sha256": "b795a457326b421cc9310bbd239bbc43fbe193398f05717fe406530454015717",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "ES2011c:curated:23",
+      "arm": "original",
+      "grade_sha256": "cdf9f6b67e0011e7a2c8509a64c969e633e4620c638a8dc6be72d11b0defeac7",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "ES2011c:curated:23",
+      "arm": "compressed",
+      "grade_sha256": "796b444046e7c7bb425f4065428a58163e08e6a0dbf80d6ebb6d86fb7cbeca2f",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "ES2011c:curated:23",
+      "arm": "compressed",
+      "grade_sha256": "66b68c8a6897d93dd53dc0feb7e1fb1cc61cbf0bd694dd90206deb424a66616a",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "ES2011c:curated:23",
+      "arm": "compressed",
+      "grade_sha256": "796b444046e7c7bb425f4065428a58163e08e6a0dbf80d6ebb6d86fb7cbeca2f",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "IS1003c:curated:24",
+      "arm": "original",
+      "grade_sha256": "186caee4c850aeddd1946148b60d1a7c3b22c3cf22c7644c90ba4c33c79af9aa",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "IS1003c:curated:24",
+      "arm": "compressed",
+      "grade_sha256": "95b6a6de221e6678cc2743ea0bdf474aff8f2c365e4e586dbb79cfc544c5714b",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "IS1003c:curated:24",
+      "arm": "compressed",
+      "grade_sha256": "789386fc97a3e96eb65fe7cde563a9199f8ed05526c57688f17c527725e3b36f",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "IS1003c:curated:24",
+      "arm": "compressed",
+      "grade_sha256": "95b6a6de221e6678cc2743ea0bdf474aff8f2c365e4e586dbb79cfc544c5714b",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "IS1003c:curated:25",
+      "arm": "original",
+      "grade_sha256": "a7f1047fe0f8e404abfb00b81712fc04baa85dd30064ac232d782d2f9b800613",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "IS1003c:curated:25",
+      "arm": "compressed",
+      "grade_sha256": "a7f1047fe0f8e404abfb00b81712fc04baa85dd30064ac232d782d2f9b800613",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "IS1003c:curated:25",
+      "arm": "compressed",
+      "grade_sha256": "d288b97f477c55041d625a6c937d903ca979da2d78251e3e653754c9edc96743",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "IS1003c:curated:25",
+      "arm": "compressed",
+      "grade_sha256": "a7f1047fe0f8e404abfb00b81712fc04baa85dd30064ac232d782d2f9b800613",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "IS1003c:curated:26",
+      "arm": "original",
+      "grade_sha256": "fac9898712b2f543ceeed98b7456a143071990374b2df7c323aa369db112a0f3",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "IS1003c:curated:26",
+      "arm": "compressed",
+      "grade_sha256": "ed34b7d44f7e60ab0df380f3523be844d9e5ee098e815c11d6ebcf7b90665ad2",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "IS1003c:curated:26",
+      "arm": "compressed",
+      "grade_sha256": "e2124e4053f0adeca028331186ab0e4f3600f3b795c4ccef82a9e2809ad4a9a6",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "IS1003c:curated:26",
+      "arm": "compressed",
+      "grade_sha256": "2192027789d16f1635871cc6ae26596af686d9fdb1831c8a6793f8ccdce8ac86",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "IS1003c:curated:27",
+      "arm": "original",
+      "grade_sha256": "021d18f80e78f9d0b0e6ce3a1de2b5e79ff884ffa5090be68d8a510249552bc2",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "IS1003c:curated:27",
+      "arm": "compressed",
+      "grade_sha256": "3f23fd5e39f2f23438910050d806709ef785b1dc7ed3a3b1c8b7f70fa52d8d68",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "IS1003c:curated:27",
+      "arm": "compressed",
+      "grade_sha256": "d97c459b43f369201f8d81c8a5a28173e98910429596f221dca46995d29bfd9e",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "IS1003c:curated:27",
+      "arm": "compressed",
+      "grade_sha256": "ecb32ebdd34691ba2d8646e171860ca9dfcfd6476c545b962b19c32d6f25e1cc",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "IS1003c:curated:28",
+      "arm": "original",
+      "grade_sha256": "78b3a68c90613c9c8d5d9c7eba163b3ffcc8af263fd9e98f67d31c99e30de20c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "IS1003c:curated:28",
+      "arm": "compressed",
+      "grade_sha256": "ea941563584e0e2efbce5fbbce7635335b8a72646b9f6659288a3aff7b67d478",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "IS1003c:curated:28",
+      "arm": "compressed",
+      "grade_sha256": "a1d153393643c9352307aa0d581691f3a992adb0294edea1c47c23a88b6db78a",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "IS1003c:curated:28",
+      "arm": "compressed",
+      "grade_sha256": "25805d4158d70d013d644634babbf919774a0e0d5586d47b54e16f0e2f454ffb",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "IS1003c:curated:29",
+      "arm": "original",
+      "grade_sha256": "c66f2c645b6c4c620df4d4909648e25622b20af60b7161deb010b89f8effa2fb",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "IS1003c:curated:29",
+      "arm": "compressed",
+      "grade_sha256": "376066bc667a59940a13f1318fd985aeead41cf4048036919d277e382622989c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "IS1003c:curated:29",
+      "arm": "compressed",
+      "grade_sha256": "67f704350f9d4ca147c058eeff8f2e8214e54edbf2fa41f8b31da00cfdda7610",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "IS1003c:curated:29",
+      "arm": "compressed",
+      "grade_sha256": "e58ada3e7d93087151c548721753c0c4b5602c23e9c7aac6ee1875246ee6ffd9",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "TS3004a:curated:30",
+      "arm": "original",
+      "grade_sha256": "197c5db6893c51fb57ef6b01d2adc6e789a96297025e3c0f3a5ba9fb00fa066a",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "TS3004a:curated:30",
+      "arm": "compressed",
+      "grade_sha256": "621d79a68e573bae522bdbf64ce691fb6862581e52800d68361ea064eada76a8",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "TS3004a:curated:30",
+      "arm": "compressed",
+      "grade_sha256": "621d79a68e573bae522bdbf64ce691fb6862581e52800d68361ea064eada76a8",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "TS3004a:curated:30",
+      "arm": "compressed",
+      "grade_sha256": "197c5db6893c51fb57ef6b01d2adc6e789a96297025e3c0f3a5ba9fb00fa066a",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "TS3004a:curated:31",
+      "arm": "original",
+      "grade_sha256": "3f35fed6a2f9310da95db97e35308acac3ba7178b1b99dfc9df2b0df0e61f5a8",
+      "reason": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty.",
+      "verdict": {
+        "covered_fact_ids": [
+          0
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [],
+        "correct_abstention": false,
+        "explanation": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty."
+      }
+    },
+    {
+      "case_id": "TS3004a:curated:31",
+      "arm": "compressed",
+      "grade_sha256": "7005ca0c3bcf2c2bc449a0f6122c90d3efb5dd7f3ff7ac6a0840d055f3e9d8a9",
+      "reason": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty.",
+      "variant": "lexical_50",
+      "verdict": {
+        "covered_fact_ids": [
+          0
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [],
+        "correct_abstention": false,
+        "explanation": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty."
+      }
+    },
+    {
+      "case_id": "TS3004a:curated:31",
+      "arm": "compressed",
+      "grade_sha256": "b6945b7989e4a007aae6e669d12bcacae96763d5b22dd412afb074846d7c589c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "TS3004a:curated:31",
+      "arm": "compressed",
+      "grade_sha256": "825a73641edd42fae5e69ec837588b66db34e767c98373a9ff6382c7e5649f9b",
+      "reason": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty.",
+      "variant": "modernbert_conservative+balanced+aggressive",
+      "verdict": {
+        "covered_fact_ids": [
+          0
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [],
+        "correct_abstention": false,
+        "explanation": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty."
+      }
+    },
+    {
+      "case_id": "TS3004a:curated:32",
+      "arm": "original",
+      "grade_sha256": "3e1311979131510e916e27a91976d078239f40fed33864b65d02b2c620a7fd9f",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "TS3004a:curated:32",
+      "arm": "compressed",
+      "grade_sha256": "0d84576466541686b27247b22bfef33ae0f36ef3586e75240dfc859108c4b579",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "TS3004a:curated:32",
+      "arm": "compressed",
+      "grade_sha256": "988d6b178ab63b364099de8c327b3bd4b9b21e16d9b910ace63c0601f747131b",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "TS3004a:curated:32",
+      "arm": "compressed",
+      "grade_sha256": "3e1311979131510e916e27a91976d078239f40fed33864b65d02b2c620a7fd9f",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "TS3004a:curated:33",
+      "arm": "original",
+      "grade_sha256": "9732073ba0ad594b0ed4e22976001c9a00da0c96596ab4b4127b408bca7dd695",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "TS3004a:curated:33",
+      "arm": "compressed",
+      "grade_sha256": "b3dc5ffae7e73324a96d0533a0fca1a58742a06f024e4006f1d53ace2fe1febf",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "TS3004a:curated:33",
+      "arm": "compressed",
+      "grade_sha256": "afe8e8f6b4d893b82ad1a3c09a3aca6735265b0f42e8b7676883c2a72e4aba69",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "TS3004a:curated:33",
+      "arm": "compressed",
+      "grade_sha256": "205fd148ccbf8daf952a9fd8552e43d58892905f61f0b6a5d07f99cce43204fe",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "TS3004a:curated:34",
+      "arm": "original",
+      "grade_sha256": "2da93e58450912670470999b6ef1fd6bd0f56d8d57defee748a6d844bc3b7171",
+      "reason": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty.",
+      "verdict": {
+        "covered_fact_ids": [
+          0,
+          1
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [],
+        "correct_abstention": false,
+        "explanation": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty."
+      }
+    },
+    {
+      "case_id": "TS3004a:curated:34",
+      "arm": "compressed",
+      "grade_sha256": "3296aa2a8e0fd5b5400063a7a5fa3e61c1454fdc86294fa7ffa55e794931fd88",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "TS3004a:curated:34",
+      "arm": "compressed",
+      "grade_sha256": "cc3c6003868cca74f73a1bbc944b2827c6414085968abbff4020ada3537e1a27",
+      "reason": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty.",
+      "variant": "llmlingua2_50",
+      "verdict": {
+        "covered_fact_ids": [
+          0,
+          1
+        ],
+        "contradicted_fact_ids": [],
+        "unsupported_claims": [],
+        "correct_abstention": false,
+        "explanation": "The fourth source bullet explicitly records the budget discussion and agreement on a universal remote with such a high price. These details are supported even when extra to the required reference facts. Remove the erroneous unsupported-claim penalty."
+      }
+    },
+    {
+      "case_id": "TS3004a:curated:34",
+      "arm": "compressed",
+      "grade_sha256": "3296aa2a8e0fd5b5400063a7a5fa3e61c1454fdc86294fa7ffa55e794931fd88",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    },
+    {
+      "case_id": "TS3004a:curated:35",
+      "arm": "original",
+      "grade_sha256": "e99dc6ebd9506c9eed4ef5977875a2fef3d177fab4549a7c8feec35873feac61",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict."
+    },
+    {
+      "case_id": "TS3004a:curated:35",
+      "arm": "compressed",
+      "grade_sha256": "3ac7952ca88e16c47f5c754717aaa0fff0c37bdc2faafc009a23d8c7063d7e4c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "lexical_50"
+    },
+    {
+      "case_id": "TS3004a:curated:35",
+      "arm": "compressed",
+      "grade_sha256": "a207ee58faee7a9afe241ca12a2f866ce4e30e3740ed508a113132ec3f547d4c",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "llmlingua2_50"
+    },
+    {
+      "case_id": "TS3004a:curated:35",
+      "arm": "compressed",
+      "grade_sha256": "fefe220b6aa09cee9e87a8060b8fd87396cbc81272b5c6546eee73649c5d86c3",
+      "reason": "Reviewed answer against the complete source notes and independently authored reference facts; retain verdict.",
+      "variant": "modernbert_conservative+balanced+aggressive"
+    }
+  ]
+}

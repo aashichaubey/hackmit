@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "version": "illustrative-not-approved-v1",
+  "min_net_savings": 0.2,
+  "max_accuracy_decline_pp": 1.0,
+  "min_compressed_accuracy": null,
+  "max_regression_rate": null,
+  "min_cases": null,
+  "min_clusters": null,
+  "critical_limits": null,
+  "required_slices": null
+}

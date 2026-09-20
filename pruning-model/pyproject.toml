@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pruning-model"
+version = "0.1.0"
+description = "Question-conditioned meeting-note pruning and paired answer-quality benchmarks."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "tokenmix",
+  "torch>=2.6,<3",
+  "transformers>=4.51,<5",
+  "safetensors>=0.5,<1",
+  "numpy>=1.26,<3",
+  "matplotlib>=3.9,<4",
+]
+
+[project.optional-dependencies]
+baselines = ["llmlingua>=0.2.2,<0.3"]
+
+[project.scripts]
+pruning-model = "pruning_model.cli:main"
+tokenmix-pruner = "pruning_model.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.uv.sources]
+tokenmix = { path = "..", editable = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

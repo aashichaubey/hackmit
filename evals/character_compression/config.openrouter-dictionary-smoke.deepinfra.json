@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "mode": "live",
+  "fixture_path": "fixtures/integration-probes.jsonl",
+  "results_dir": "../../runs/character_compression",
+  "dataset": {
+    "version": "dictionary-integration-smoke-6-v1",
+    "held_out": false,
+    "split_before_dictionary": false,
+    "provenance": "Six unchanged development probes selected to exercise existing dictionary replacements and literal preservation; not held out"
+  },
+  "target": {
+    "adapter": "openrouter",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "version": "openrouter-chat-completions-v1"
+  },
+  "generation": {
+    "model": "deepseek/deepseek-v4-flash",
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 128,
+    "reasoning": {
+      "enabled": false
+    },
+    "provider": {
+      "only": [
+        "deepinfra/fp8"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    }
+  },
+  "compression": {
+    "adapter": "tokenmix",
+    "version": "tokenmix-0.1.0",
+    "dictionary_path": "../../src/tokenmix/seed.jsonl",
+    "dictionary_version": "illustrative-seed-9-v1",
+    "expected_dictionary_sha256": "8189051f18b11a82b1434a0fd2337504a58c051c08adb62f0808d03b40d9bb89",
+    "optimization_encoding": "o200k_base",
+    "domain": "technical",
+    "protect": [],
+    "max_changes": 100,
+    "requested_level": null,
+    "scope": "user_messages",
+    "delimiters": [
+      "<source>",
+      "</source>"
+    ],
+    "decoding": {
+      "strategy": "natural_bilingual",
+      "dictionary": "none",
+      "instruction": "",
+      "examples": [],
+      "version": "natural-bilingual-v1"
+    }
+  },
+  "scorer": {
+    "adapter": "starter",
+    "path": "starter/score_evals.py",
+    "version": "supplied-v1"
+  },
+  "experiment": "original_vs_compressed",
+  "repeats": 1,
+  "random_seed": 17,
+  "timeout_seconds": 45,
+  "concurrency": 1,
+  "pipeline": {
+    "mode": "first_attempt",
+    "max_retries": 0,
+    "fallback_to_original": false
+  },
+  "max_live_calls": 12,
+  "max_cases": null,
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 29
+  },
+  "policy_path": "release_policy.example.json",
+  "boundary_instruction": ""
+}
